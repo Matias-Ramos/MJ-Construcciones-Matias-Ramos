@@ -1,0 +1,679 @@
+/*******************************************************************************************************/
+/************************************Atributos globales y PRESETS***************************************/
+*
+{
+	font-family: 'Lato', sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+a
+{ 
+	text-decoration:none; 
+	color: black;
+} 
+li{list-style: none;} 
+h1
+{
+	font-family: 'Alfa Slab One', cursive;
+	font-weight: 1;
+	text-align: center;
+}
+header{grid-area: header;}
+main{grid-area: main;}
+footer{grid-area: footer;}
+.h1Container
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: lightgrey;
+	border: 1px solid black;
+	-moz-box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF;
+	-webkit-box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF;
+	box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF;
+}
+.CuadrosDeTexto
+{
+	margin: 0px 19px;
+	display: inline-block;
+	border: 1px solid black;
+	background-color: #F0F0F0;
+	padding: 9px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.40);
+}
+	/*Estilo y animación de los botones de navegación a enlaces relativos*/
+.navBtn
+{
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #CAF0F8;
+  border: none;
+  text-align: center;
+  font-size: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.navBtn span
+{
+	background-color: none;
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+.navBtn span:after
+{
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+.navBtn:hover{background-color: #78D7E3;}
+.navBtn:hover span {padding-right: 29px;}
+.navBtn:hover span:after
+{
+	opacity: 1;
+	right: 0;
+}
+/***************************************Grids Globales**************************************/
+
+/***************************/
+/* Grid header (Logos+Nav) */
+/***************************/
+header
+{
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 3fr 1fr;
+	grid-template-areas: 
+	"containerLogosHeader"
+	"navTop";
+}
+.containerLogosHeader{grid-area: containerLogosHeader;}
+.containerBtnsNavTop{grid-area: navTop;}
+
+/******************************************/
+/* Grid para los 3 botones del nav-header */
+.navTopUL
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	width: 100%;
+}
+/********HEADER***************************************************************************************/
+
+/*Logo MJ + Redes sociales*/
+.containerLogosHeader
+{
+	display: flex;
+	justify-content: center;
+	background-image: url("../images/header_imgs/background_wallp.png");
+}
+.containerBtnsNavTop{display: flex;}
+.containerBtnsNavTop ul li
+{
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/********Página: Index***************************************************************************************/
+
+/*******************/
+/* Grid main Index */
+/*******************/
+.h1Container{grid-area: title;}
+#seccionMision{grid-area: mision;}
+#seccionTrayectoria{grid-area: trayectoria;}
+#seccionCaracteristicasMJ{grid-area: caracteristicasMJ;}
+#seccionTestimonios{grid-area: testimonios;}
+#index .containerNavBottom{grid-area: navBot;}
+
+.cincoSeccionesIndex
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-image: url("../images/background_geometrics/bg1.jpg");
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	background-repeat: no-repeat; 
+	background-size: cover; 
+}
+#containerIndex h2{margin-bottom: 19px;}
+
+/*********************/
+/*     6 Razones    */
+/********************/
+
+.filas_CaractMJ
+{
+	display: flex;
+	flex-direction: column;
+}
+.filas_CaractMJ div
+{
+	display: inline-flex;
+	align-items: center;
+	padding: 19px;
+	background-color: white;
+	border: 1px solid black;
+	width: 300px;
+	background: rgba(240, 240, 240, 0.8);
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.40);
+	border-radius: 7px;
+	margin: 5px 0px;
+}
+/********************/
+/*    TESTIMONIOS   */
+/********************/
+
+#seccionTestimonios div
+{
+	display: flex;
+	align-items: center;
+	background-color: white;
+}
+#seccionTestimonios span
+{
+	font-family: 'Comic Neue', cursive;
+	font-size: 20px;
+}
+
+/********************/
+/*    Index NAV Bot */
+/********************/
+
+/*Alineacion de los botones de navegación inferiores*/
+.containerNavBottom
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
+#containerIndex .containerNavBottom{background-image: url("../images/background_geometrics/bg3.jpg");}
+.containerNavBottom nav
+{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.containerNavBottom .navBtn
+{
+  margin: 9px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+/********Página: Galería***************************************************************************************/
+#containerGaleria{background-image: url("../images/background_geometrics/bg3.jpg");}
+#containerGaleria .h1Container{height: 100px;}
+#contenedorfiltrosGaleria
+{
+	background-color: #818274;
+	margin-bottom: 1em;
+	top: 0;
+	padding: 3px 0px;
+	border-bottom: 1px solid black;
+	z-index: 2;
+}
+	/* Grid contenido principal Galeria */
+#containerProyectos
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 350px 350px 350px;
+	grid-gap: 15px;
+	margin: 0px 15px;
+}
+#containerProyectos div
+{
+	justify-self: center;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	background-color: white;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.40);
+	border-radius: 10px;
+	background-color: #F0F0F0;
+	border: 1px solid black;
+	transition: 0.3s ease-in-out;
+}
+#containerProyectos div:hover{transform: scale(1.04);}
+#containerProyectos h2{text-align: center;}
+#containerProyectos div a img
+{
+	width: 100%;
+	height: auto;
+}
+#containerGaleria .containerNavBottom{padding: 75px 0px}
+
+/********Página: Proyecto_X*********************************************************************************/
+
+.containerProyectoX{background-image: url("../images/background_geometrics/bg3.jpg");}
+
+/********Página: Servicios*****************************************************************************/
+/*.btnContratacionLink{font-family: 'Montserrat', sans-serif;}*/
+
+#containerServicios{background-image: url("../images/background_geometrics/bg3.jpg");}
+
+/********FOOTER***************************************************************************************/
+footer
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+	background-image: url("../images/header_imgs/background_wallp.png");
+}
+fieldset
+{
+	display: inline-block;
+	width: 400px;
+	height: 350px;
+	padding: 20px 20px 20px 20px;
+}
+form{background-color: lightgrey;}
+legend{padding-top: 9px;}
+form input{margin-bottom: 20px;}
+textarea{width: 100%;height: 4em;}
+input{width: 80%;}
+input[type=submit]
+{
+	background:#ccc;
+	padding: 19px 0px;
+	margin-top: 19px;
+	width: 100%;
+}
+.RedesSocialesFooter
+{
+	display: flex;
+	justify-content: space-around;
+}
+/***************************************Media Queries**************************************/
+/****************/
+/*    DESKTOP   */
+/****************/
+@media only screen and (min-width: 1024px)
+{
+		/* Grid toda la página */
+	body
+	{
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 200px auto 500px;
+		grid-template-areas: 
+		"header"
+		"main"
+		"footer";
+	}
+
+		/*Header*/ 
+	.containerRedesSociales
+	{
+		position: absolute;
+		right: 19px;
+	}
+
+		/*Index*/ 
+	#containerIndex
+	{
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 100px 500px 500px 500px 500px 350px;
+		grid-template-areas: 
+		"title"
+		"mision"
+		"trayectoria"
+		"caracteristicasMJ"
+		"testimonios"
+		"navBot";
+		width: 100%;
+		height: 100%;
+	}
+	#containerIndex h1{font-size: 50px;}
+
+		/*Mision*/
+	#seccionMision
+	{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+	#seccionMision .CuadrosDeTexto{width: 40%;}
+	
+		/*Trayectoria*/
+	#seccionTrayectoria .CuadrosDeTexto
+	{
+		width: 40%;
+		margin: 15px 10px;
+	}
+	#Matias
+	{
+		align-self: flex-start;
+		padding: 9px 9px 9px 10px;
+		border: 1px solid black;
+	}
+	#Javier
+	{
+		align-self: center;
+		text-align: center;
+		padding: 9px 9px 9px 9px;
+	}
+	#Abuelo
+	{
+		align-self: flex-end;
+		text-align: right;
+		padding: 9px 10px 9px 9px;
+	}
+
+	/*Por qué elegirnos*/
+	#columnasCaractMJ
+	{
+		display: flex;
+		width: 100%;
+		justify-content: space-evenly;
+	}
+	.containerNavBottom .navBtn{width: 27rem;}
+
+		/*Galeria*/ 
+	#containerGaleria h1{font-size: 50px;}
+	#contenedorfiltrosGaleria
+	{
+		position: -webkit-sticky;
+		position: sticky;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	#filtrosTitulo{display: inline-block;}
+	#filtrosContenedorDeOpciones{display: inline-block;}
+	.filtroOpcionX
+	{
+		display: inline-block;
+		margin: 0px 15px;
+		text-align: center;
+	}
+
+		/*ProyectoX*/ 
+	/* Grid ProyectoX */
+	.containerProyectoX
+	{
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 100px 500px 180px 400px 50px 450px 300px;
+		grid-template-areas:
+		"title"
+		"fotoPrincipal"
+		"descripcion"
+		"fotoSecundaria"
+		"fotosAdicionales"
+		"iframes"
+		"navBot";
+	}
+	.containerFotoPrincipalProyectoX{grid-area: fotoPrincipal;}
+	.containerDescripcionProyectoX{grid-area: descripcion;}
+	.containerFotoSecundariaProyectoX{grid-area: fotoSecundaria;}
+	.containerFotosAdicionalesProyectoX{grid-area: fotosAdicionales;}
+	.containeriframesProyectoX{grid-area: iframes;}
+
+	.containersCentradosProyectoX
+	{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.containerFotoPrincipalProyectoX img
+	{
+		height: 500px;
+		width: 100%;
+	}
+	.containerDescripcionProyectoX span
+	{
+		width: 80%;
+		padding: 20px 20px;
+	}
+	.containerFotoSecundariaProyectoX .fotoSecundaria
+	{
+		width: 70%;
+		height: 400px;
+	}
+	.containerFotosAdicionalesProyectoX img
+	{
+		magin-left: 3px;
+		margin-right: 3px;
+	}
+	
+	
+	.containeriframesProyectoX
+	{
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	.containeriframesProyectoX iframe{border: 1px solid black;}
+	.GoogleMapsProyectoX{border-radius: 10px;}
+
+		/*Servicios*/ 
+	#containerServicios
+	{
+		display: grid;
+		grid-template-rows: 200px auto 150px 150px;
+		grid-template-columns: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+	#containerServicios .CuadrosDeTexto
+	{
+		display: flex;
+		justify-self: center;
+		height: 50%;
+		width: 75%;
+	}
+	#containerServicios img
+	{
+		display: flex;
+		justify-self: center;
+		border-radius: 10px;
+		width: 80%;
+	}
+}
+/***************/
+/*    MOBILE   */
+/***************/ 
+@media only screen and (max-width: 660px) 
+{
+		/*Distribución header, content, footer*/ 
+	body
+	{
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 200px auto 900px;
+		grid-template-areas: 
+		"header"
+		"main"
+		"footer";
+	}
+
+		/*Header*/ 
+	.containerRedesSociales
+	{
+		position: absolute;
+		right: 3px;
+	}
+
+		/*Index*/ 
+	#containerIndex
+	{
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 100px 300px 650px 850px 500px 250px;
+		grid-template-areas: 
+		"title"
+		"mision"
+		"trayectoria"
+		"caracteristicasMJ"
+		"testimonios"
+		"navBot";
+		width: 100%;
+		height: 100%;
+	}
+	#containerIndex h1{font-size: 23px;}
+	#seccionMision .CuadrosDeTexto
+	{
+		width: 80%;
+		text-align: center;
+	}
+	#seccionTrayectoria .CuadrosDeTexto
+	{
+		width: 80%;
+		margin: 20px 0px;
+	}
+	.containerNavBottom .navBtn{width: 80%;}
+
+		/*Galeria*/
+	#containerGaleria h1{font-size: 18px;}
+	#containerProyectos {grid-template-rows: 250px 250px 250px;}
+	#contenedorfiltrosGaleria
+	{
+			display: grid;
+			grid-template-rows: 20px 1fr;
+			grid-template-columns: 1fr;
+			grid-template-areas:
+			"filtrosTitulo"
+			"filtros";
+	}
+	#contenedorfiltrosGaleria div
+	{
+		display: flex;
+		align-items: center;
+	}
+	#filtrosTitulo
+	{
+		grid-area: filtrosTitulo;
+		display: flex;
+		justify-content: center;
+	}
+	#filtrosContenedorDeOpciones
+	{
+		grid-area: filtros;
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+	}
+	.filtroOpcionX
+	{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 24%;
+		text-align: center;
+	}
+		/*ProyectoX*/ 
+	.containerProyectoX
+	{
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 100px 400px 300px 400px 100px 700px 250px;
+		grid-template-areas:
+		"title"
+		"fotoPrincipal"
+		"descripcion"
+		"fotoSecundaria"
+		"fotosAdicionales"
+		"iframes"
+		"navBot";
+	}
+	.containerFotoPrincipalProyectoX{grid-area: fotoPrincipal;}
+	.containerDescripcionProyectoX{grid-area: descripcion;}
+	.containerFotoSecundariaProyectoX{grid-area: fotoSecundaria;}
+	.containerFotosAdicionalesProyectoX{grid-area: fotosAdicionales;}
+	.containeriframesProyectoX{grid-area: iframes;}
+
+	.containersCentradosProyectoX
+	{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.containerFotoPrincipalProyectoX img
+	{
+		height: 400px;
+		width: 100%;
+	}
+	.containerDescripcionProyectoX span
+	{
+		width: 80%;
+		padding: 20px 20px;
+	}
+	.containerFotoSecundariaProyectoX .fotoSecundaria
+	{
+		width: 60%;
+		height: 300px;
+	}
+	.containerFotosAdicionalesProyectoX img
+	{
+		magin-left: 3px;
+		margin-right: 3px;
+	}
+	.containerFotoSecundariaProyectoX{border-top: 1px solid black;}
+	.containerFotosAdicionalesProyectoX{border-bottom: 1px solid black;}
+	/*.containeriframesProyectoX
+	{
+	}*/
+	.containeriframesProyectoX iframe
+	{
+		border: 1px solid black;
+		width: 100%;
+		display: inline-block;
+	}
+	.GoogleMapsProyectoX{border-radius: 10px;}
+
+
+		/*Servicios*/ 
+	#containerServicios
+	{
+		display: grid;
+		grid-template-rows: 300px auto 300px 150px;
+		grid-template-columns: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+	#containerServicios .CuadrosDeTexto
+	{
+		display: flex;
+		justify-self: center;
+		height: 50%;
+		width: 75%;
+	}
+	#containerServicios img
+	{
+		display: flex;
+		justify-self: center;
+		width: 100%;
+	}
+
+		/*Footer*/ 
+	fieldset
+	{
+		display: inline-block;
+		width: 300px;
+		height: 350px;
+		padding: 20px 20px 20px 20px;
+	}
+}
+
+/*************************/
+/*    TABLET - PENDING   */
+/*************************/
+
+/*@media only screen and (min-width: 661px) and (min-width: 1024px){ }*/
+
+/*****************************************************************************/
