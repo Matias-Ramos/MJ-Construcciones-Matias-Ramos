@@ -86,7 +86,7 @@ header
 {
 	display: grid;
 	grid-template-columns: 100%;
-	grid-template-rows: 3fr 1fr;
+	grid-template-rows: 3fr 2fr;
 	grid-template-areas: 
 	"containerLogosHeader"
 	"navTop";
@@ -99,10 +99,11 @@ header
 .navTopUL
 {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 10fr;
 	width: 100%;
 }
+
 /********HEADER***************************************************************************************/
 
 /*Logo MJ + Redes sociales*/
@@ -110,6 +111,7 @@ header
 {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	background-image: url("../images/header_imgs/background_wallp.png");
 }
 .containerBtnsNavTop{display: flex;}
@@ -119,6 +121,57 @@ header
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+.RedesSociales ul {display: flex;} 
+
+.RedesSociales ul li a
+{
+  background-color: #fff;
+  text-align: center;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 1;
+}
+
+.RedesSociales ul li a .icon 
+{
+  position: relative;
+  color: #262626;
+  transition: .5s;
+  z-index: 3;
+}
+
+.RedesSociales ul li a:hover .icon 
+{
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.RedesSociales ul li a:before
+{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: .5s;
+  z-index: 2;
+}
+
+.RedesSociales ul li a:hover:before {top: 0;}
+.RedesSociales ul li:nth-child(1) a:before{background: #25D366;}
+
+.RedesSociales ul li:nth-child(2) a:before
+{
+	background: #f09433; 
+	background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+	background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+	background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
 }
 /********Página: Index***************************************************************************************/
 
@@ -210,7 +263,7 @@ header
   border: 1px solid black;
 }
 
-/********Página: Galería***************************************************************************************/
+/********Página: Galería********************************/
 #containerGaleria{background-image: url("../images/background_geometrics/bg3.jpg");}
 #containerGaleria .h1Container{height: 100px;}
 #contenedorfiltrosGaleria
@@ -254,16 +307,34 @@ header
 }
 #containerGaleria .containerNavBottom{padding: 75px 0px}
 
-/********Página: Proyecto_X*********************************************************************************/
+/********Página: Proyecto_X*****/
 
 .containerProyectoX{background-image: url("../images/background_geometrics/bg3.jpg");}
 
-/********Página: Servicios*****************************************************************************/
+/********Página: Servicios********/
 /*.btnContratacionLink{font-family: 'Montserrat', sans-serif;}*/
 
 #containerServicios{background-image: url("../images/background_geometrics/bg3.jpg");}
 
-/********FOOTER***************************************************************************************/
+/********Página: Servicios********/
+
+#containerFAQ .filas_CaractMJ div
+{
+	margin: 5px 0px;
+	background: rgba(240, 240, 240, 1);
+}
+#containerFAQ h2{background: white;}
+#containerFAQ .filas_CaractMJ div{display: block;}
+#containerFAQ .containerNavBottom
+{
+	background-image: url("../images/background_geometrics/bg3.jpg");
+	padding: 30px 0px;
+}
+#containerFAQ #seccionCaracteristicasMJ{
+	padding: 50px 0px;
+}
+
+/********FOOTER******************************/
 footer
 {
 	display: flex;
@@ -278,7 +349,7 @@ fieldset
 	display: inline-block;
 	width: 400px;
 	height: 350px;
-	padding: 20px 20px 20px 20px;
+	padding: 20px 20px 40px 20px;
 }
 form{background-color: lightgrey;}
 legend{padding-top: 9px;}
@@ -292,12 +363,7 @@ input[type=submit]
 	margin-top: 19px;
 	width: 100%;
 }
-.RedesSocialesFooter
-{
-	display: flex;
-	justify-content: space-around;
-}
-/***************************************Media Queries**************************************/
+/***************************************Media Queries******************************************************/
 /****************/
 /*    DESKTOP   */
 /****************/
@@ -316,12 +382,20 @@ input[type=submit]
 	}
 
 		/*Header*/ 
-	.containerRedesSociales
-	{
-		position: absolute;
-		right: 19px;
-	}
-
+.RedesSocialesHeader
+{
+	position: absolute;
+	right: 3px;
+	top: 10px;
+}
+.RedesSociales ul li a
+{
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 35px;
+  margin: 0 10px;
+}
 		/*Index*/ 
 	#containerIndex
 	{
@@ -484,30 +558,69 @@ input[type=submit]
 		border-radius: 10px;
 		width: 80%;
 	}
+
+		/*FAQ*/ 
+	#containerFAQ .filas_CaractMJ div
+	{
+		width: 500px;
+		padding: 19px;
+		margin: 5px 0px;
+	}
+
+		/*FOOTER*/ 
+	.RedesSocialesFooter
+	{
+		display: flex;
+		justify-content: space-around;
+		margin-top: 5px;
+	}
 }
 /***************/
 /*    MOBILE   */
 /***************/ 
-@media only screen and (max-width: 660px) 
+@media only screen and (max-width: 660px)
 {
 		/*Distribución header, content, footer*/ 
 	body
 	{
 		display: grid;
 		grid-template-columns: 100%;
-		grid-template-rows: 200px auto 900px;
+		grid-template-rows: 250px auto 900px;
 		grid-template-areas: 
 		"header"
 		"main"
 		"footer";
 	}
 
-		/*Header*/ 
-	.containerRedesSociales
-	{
-		position: absolute;
-		right: 3px;
-	}
+		/*Header*/
+.RedesSocialesHeader
+{
+	display: flex;
+	align-self: flex-start;
+	position: absolute;
+	right: 3px;
+}
+
+.RedesSociales ul 
+{
+	display: flex;
+	flex-direction: row;
+}
+.RedesSociales ul li 
+{
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 10px;
+}
+
+.RedesSociales ul li a
+{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 30px;
+  margin: 0 5px;
+}
 
 		/*Index*/ 
 	#containerIndex
@@ -660,6 +773,14 @@ input[type=submit]
 		width: 100%;
 	}
 
+		/*FAQ*/ 
+	#containerFAQ .filas_CaractMJ div
+	{
+		width: 250px;
+		padding: 19px;
+		margin: 5px 0px;
+	}
+
 		/*Footer*/ 
 	fieldset
 	{
@@ -667,6 +788,12 @@ input[type=submit]
 		width: 300px;
 		height: 350px;
 		padding: 20px 20px 20px 20px;
+	}
+	.RedesSocialesFooter
+	{
+		display: flex;
+		justify-content: space-around;
+		margin-top: 5px;
 	}
 }
 
