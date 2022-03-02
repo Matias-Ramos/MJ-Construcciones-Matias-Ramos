@@ -33,7 +33,7 @@ footer{grid-area: footer;}
 	box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF;
 }
 .CuadrosDeTexto
-{
+{	
 	margin: 0px 19px;
 	display: inline-block;
 	border: 1px solid black;
