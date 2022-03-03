@@ -81,7 +81,6 @@ ul
 #index section{
   background-image: url("../images/background_geometrics/bg1.jpg");
   border: 1px solid black;
-  
   background-position: center; 
   background-repeat: no-repeat; 
   background-size: cover;  
@@ -94,22 +93,6 @@ ul
   background-color: #F0F0F0;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.40);
 }
-/**************MEDIAQUERY MOBILE******************/
-
-@media only screen and (max-width: 992px)
-{
-  /*HEADER*/
-  #whatsapp{margin-right: 0px!important;}/*Mata formato Bootstrap para icono Whatsapp*/
-  
-  /*Alineación al centro de íconos wpp e instagram*/
-  .navbar-nav div
-  {
-    width: 100%;
-    display: flex;
-    justify-content: center; 
-  }
-}
-
 
 body{
   background-image: url("../images/header_imgs/background_wallp.png");
@@ -127,3 +110,53 @@ body{
 .navbar{
   background-image: url("../images/header_imgs/background_wallp.png");
 }
+
+
+.navbar-light .navbar-nav .nav-link
+{
+  color: white;
+}
+/**************MEDIAQUERY MOBILE******************/
+
+@media only screen and (max-width: 992px)
+{
+  /*HEADER*/
+  #whatsapp{margin-right: 0px!important;}/*Mata formato Bootstrap para icono Whatsapp*/
+  
+  /*Alineación al centro de íconos wpp e instagram*/
+  .navbar-nav div
+  {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+  }
+  .mjLogoHeaderDesktop{display: none;}
+  #seccionMision .row
+  {
+    justify-content: flex-start;
+    margin-left: 10px;
+  }
+  footer .card
+  {
+    margin-top: 5px;
+  }
+}
+/**************MEDIAQUERY DESKTOP******************/
+@media only screen and (min-width: 992px)
+{
+  .contenedorRedesSocialesHeaderMobile li{display: inline-block;}
+  .mjLogoHeaderMobile{display: none;}
+
+.nav-item a:hover{
+  background-color: #48dbfb;
+  transition: 0.7s;
+  border-radius: 5px;
+  color: black!important;
+}
+#seccionMision .row{
+  justify-content: center;
+}
+
+}
+
+/*****************************************/

@@ -22,35 +22,39 @@
 				<div class="row">
 					<div class="col-12 col-sm-12 col-md-12">
 						<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
-							<div class="container-fluid">
-								<a class="navbar-brand mx-auto" href="index.html">
-									<img src="images/header_imgs/mj_logo.png" alt="Logo de MJ Construcciones">
-								</a>
-							</div>
+										<a class="navbar-brand mx-auto mjLogoHeaderDesktop" href="index.html">
+										<img class="mx-auto" src="images/header_imgs/mj_logo.png" alt="Logo de MJ Construcciones">
+										</a>
 							<button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+								<p>Menú</p>
 								<span class="navbar-toggler-icon"></span>
 							</button>
 							<div class="collapse navbar-collapse" id="navbarNav">
 								<ul class="navbar-nav w-100 align-items-center">
-									<li class="nav-item flex-grow-1 text-center">
-										<a class="nav-link active text-white" aria-current="page" href="index.html">Quienes Somos</a>
+									<li class="mjLogoHeaderMobile">
+										<a class="navbar-brand mx-auto" href="index.html">
+										<img class="mx-auto" src="images/header_imgs/mj_logo.png" alt="Logo de MJ Construcciones">
+										</a>
 									</li>
 									<li class="nav-item flex-grow-1 text-center">
-										<a class="nav-link text-white" href="galeria.html">Esto hemos construído</a>
+										<a class="nav-link" aria-current="page" href="index.html">Quienes Somos</a>
 									</li>
 									<li class="nav-item flex-grow-1 text-center">
-										<a class="nav-link text-white" href="servicios.html">Servicios</a>
+										<a class="nav-link" href="galeria.html">Esto hemos construído</a>
 									</li>
 									<li class="nav-item flex-grow-1 text-center">
-										<a class="nav-link text-white" href="faq.html">Preguntas Frecuentes</a>
+										<a class="nav-link" href="servicios.html">Servicios</a>
 									</li>
-									<div>
-										<li class="RedesSociales nav-item mr-auto text-center" id="whatsapp">
+									<li class="nav-item flex-grow-1 text-center">
+										<a class="nav-link" href="faq.html">Preguntas Frecuentes</a>
+									</li>
+									<div class="contenedorRedesSocialesHeaderMobile">
+										<li class="RedesSociales mr-auto text-center" id="whatsapp">
 											<a href="#">
 												<i class="fab fa-whatsapp icon"></i>
 											</a>
 										</li>
-										<li class="RedesSociales nav-item text-center">
+										<li class="RedesSociales text-center">
 										  	<a href="https://www.instagram.com/mj.construcciones_/?hl=en">
 										  		<i class="fab fa-instagram icon"></i>
 										  	</a>
@@ -72,10 +76,10 @@
 				</div>
 			</div>
 				<!--Misión-->
-				<section>
+				<section id="seccionMision">
 					<div class="container-fluid">
 						<div class="row py-5">
-							<div class="col-10 col-sm-10 col-md-10 CuadrosDeTexto text-left pl-3 pt-3">
+							<div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4 CuadrosDeTexto text-left pl-3 pt-3">
 								<h2>Nuestra misión</h2>
 								<p>Empresa de arquitectura y construcción.<br>Dirección y ejecución de las obras.<br>Etc.</p>
 							</div>
@@ -93,7 +97,7 @@
 						</div>
 
 						<div class="row pt-5 pb-5">
-							<div class="col-11 mx-auto">
+							<div class="col-8 col-sm-7 col-md-6 col-lg-6 col-xl-5 mx-auto">
 								<div id="accordion">
 									<!--CARTA UNO-->
 									<div class="card">
@@ -152,13 +156,13 @@
 				<!-- Por qué elegirnos -->
 				<section>
 					<div class="container-fluid">
-						<div class="row pt-5">
+						<div class="row pt-5 mb-5">
 							<div class="col-12">
-								<h2 class="bg-white">Por qué elegirnos</h2>
+								<h2 class="bg-white d-inline">Por qué elegirnos</h2>
 							</div>
 						</div>
 						<div class="row pb-5">
-							<div class="col-10 mx-auto">
+							<div class="col-9 col-sm-8 col-md-7 col-lg-5 col-xl-5 mx-auto">
 								<ul class="list-unstyled">
 									<li class="media">
 										<img src="images/no_bg_icons/icons8_1.png" class="align-self-center mr-3" alt="iconX">
@@ -178,7 +182,11 @@
 											<p>Are you brave enough to let me see your peacock? There’s no going back. This is the last time you say, after the last line you break. At the eh-end of it all.</p>
 										</div>
 									</li>
-									<li class="media my-4">
+								</ul>
+							</div>
+							<div class="col-9 col-sm-8 col-md-7 col-lg-5 col-xl-5 mx-auto">
+								<ul class="list-unstyled">
+									<li class="media mb-4">
 										<img src="images/no_bg_icons/icons8_4.png" class="align-self-center mr-3" alt="...">
 										<div class="media-body">
 											<p>All my girls vintage Chanel baby. So you can have your cake. Tonight, tonight, tonight, I'm walking on air. Slowly swallowing down my fear, yeah yeah.</p>
@@ -265,10 +273,10 @@
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 		</main>
 		<footer>
-			<!-- Formulario para ser contactado-->
 			<div class="container-fluid">
-				<div class="row pb-2 mt-5">
-					<div class="col-10 col-sm-10 col-md-10 bg-light mx-auto p-5">
+				<div class="row pb-2 my-2">
+				<!-- Formulario para ser contactado-->
+					<div class="col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 bg-light mx-auto p-5 my-3">
 						<form>
 							<h5 class="text-center mb-3">Podés completar este formulario <br> para que te contactemos.</h5>
 							<div class="form-group">
@@ -292,39 +300,35 @@
 							</div>
 						</form>
 					</div>
-				</div>
-			</div>
-			<!-- Datos para que el cliente se pueda comunicar por sus propios medios-->
-				<div class="container-fluid">
-					<div class="row my-5">	
-						<div class="col-10 col-sm-10 col-md-10 px-0 bg-light mx-auto">
-							<div class="card pt-3">
-								<h5 class="card-title">...o si deseas contactarnos, <br>estos son nuestros datos.</h5>
-								<div class="card-body p-0">
-									<p class="card-text">Nombre: xxxx</p>
-									<p class="card-text">Teléfono: xx-xxxx-xxxx</p>
-									<p class="card-text">Email: xxx@xxx.xxx</p>
-									<p class="card-text">Dirección: xxxxx</p>
-									<iframe src="https://www.google.com/maps/embed?		pb=!1m18!1m12!1m3!1d91746.13616726792!2d-123.03535276348553!3d44.06133015687239!2m3!1f0!2f!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54c0de472e7002bf%3A		0x536dbe99c4a3fd6!2sSpringfield%2C%20OR%2C%20SA!5e0!3m2!1sen!2sar!4v1642955758765!5m2!1sen!2sar" width="100%" height="200" style="border:1;" allowfullscreen="" loading="lazy"></iframe>
-									<div class="RedesSocialesBottom d-flex flex-row justify-content-center">
-										<ul class="d-flex">
-									        <li class="RedesSociales nav-item mr-auto text-center" id="whatsapp">
-												<a href="#">
-													<i class="fab fa-whatsapp icon"></i>
-												</a>
-									        </li>
-									        <li class="RedesSociales nav-item text-center">
-											  	<a href="https://www.instagram.com/mj.construcciones_/?hl=en">
-											  		<i class="fab fa-instagram icon"></i>
-											  	</a>
-											</li>
-								    	</ul>
-							    	</div>
-								</div>
+				<!-- Datos para que el cliente se pueda comunicar por sus propios medios-->
+					<div class="col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 px-0 bg-light mx-auto my-3">
+						<div class="card pt-3">
+							<h5 class="card-title">...o si deseas contactarnos, <br>estos son nuestros datos:</h5>
+							<div class="card-body p-0">
+								<p class="card-text">Nombre: xxxx</p>
+								<p class="card-text">Teléfono: xx-xxxx-xxxx</p>
+								<p class="card-text">Email: xxx@xxx.xxx</p>
+								<p class="card-text">Dirección: xxxxx</p>
+								<iframe src="https://www.google.com/maps/embed?		pb=!1m18!1m12!1m3!1d91746.13616726792!2d-123.03535276348553!3d44.06133015687239!2m3!1f0!2f!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54c0de472e7002bf%3A		0x536dbe99c4a3fd6!2sSpringfield%2C%20OR%2C%20SA!5e0!3m2!1sen!2sar!4v1642955758765!5m2!1sen!2sar" width="100%" height="300" style="border:1;" allowfullscreen="" loading="lazy"></iframe>
+								<div class="RedesSocialesBottom d-flex flex-row justify-content-center">
+									<ul class="d-flex">
+								        <li class="RedesSociales nav-item mr-auto text-center" id="whatsapp">
+											<a href="#">
+												<i class="fab fa-whatsapp icon"></i>
+											</a>
+								        </li>
+								        <li class="RedesSociales nav-item text-center">
+										  	<a href="https://www.instagram.com/mj.construcciones_/?hl=en">
+										  		<i class="fab fa-instagram icon"></i>
+										  	</a>
+										</li>
+							    	</ul>
+						    	</div>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
 		</footer>
 	</body>
 </html>
