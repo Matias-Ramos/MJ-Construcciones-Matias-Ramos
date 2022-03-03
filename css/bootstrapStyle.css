@@ -51,11 +51,7 @@ ul .RedesSociales a:before{
 /**************************************/
 h1{text-align: center;}
 #accordion{text-align: center;}
-a
-{
-  color: white;
-  text-decoration: none;
-}
+a{text-decoration: none;color: white}
 /**************************************/
 ul
 {
@@ -63,7 +59,7 @@ ul
   padding: 0;
 }
 .card{text-align: center;}
-#index{text-align: center;}
+#index, #faq{text-align: center;}
 .h1container
 {
   background-color: lightgrey;
@@ -78,7 +74,7 @@ ul
 
 
 
-#index section{
+#index section, #faq section{
   background-image: url("../images/background_geometrics/bg1.jpg");
   border: 1px solid black;
   background-position: center; 
@@ -136,10 +132,6 @@ body{
     justify-content: flex-start;
     margin-left: 10px;
   }
-  footer .card
-  {
-    margin-top: 5px;
-  }
 }
 /**************MEDIAQUERY DESKTOP******************/
 @media only screen and (min-width: 992px)
@@ -147,7 +139,7 @@ body{
   .contenedorRedesSocialesHeaderMobile li{display: inline-block;}
   .mjLogoHeaderMobile{display: none;}
 
-.nav-item a:hover{
+header .nav-item a:hover{
   background-color: #48dbfb;
   transition: 0.7s;
   border-radius: 5px;
@@ -160,3 +152,5 @@ body{
 }
 
 /*****************************************/
+
+

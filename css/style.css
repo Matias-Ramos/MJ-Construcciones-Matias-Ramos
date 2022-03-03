@@ -55,6 +55,7 @@ footer{grid-area: footer;}
 }
 .navBtn span
 {
+	display: inline-block; /*this breaks the animation?*/
 	background-color: none;
 	cursor: pointer;
 	display: inline-block;
