@@ -1,0 +1,109 @@
+section{border: 1px solid black;}
+
+#seccionTrayectoria
+{
+	padding-top: 50px;
+	.card
+	{
+		box-shadow: -5px 6px 2px #aaaaaa;
+
+		background-color: white;
+		.card-header
+		{
+			background-color: $colour-darker;
+			.btn
+			{
+				color: $colour-blueish-logo;
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+#seccionTestimonios
+{
+	.carousel-inner
+	{
+		.testimonio
+		{
+			text-align: left;
+			border-left: 1px solid black;
+		}
+	}
+	/*Saca los botones fuera del slideshow*/
+	.carousel-control-prev {margin-left: -100px;}
+	.carousel-control-next {margin-right: -100px;}
+}
+
+@media only screen and (max-width: 992px) 
+{
+	#seccionMision
+	{
+		padding-top:25px;
+
+		.CuadrosDeTexto
+		{
+			box-shadow: -10px 10px 5px #aaaaaa;
+		}
+		button
+		{
+			margin: 20px 0px;
+		}
+	}
+	#seccionTrayectoria
+	{
+		padding-top:25px;
+	}
+	#seccionPorQueElegirnos
+	{
+		.container-fluid
+		{
+			 padding-bottom:0;
+		}
+	}
+}
+
+@media only screen and (min-width: 992px)
+{
+	/*Shadowing effect*/
+	#seccionMision
+	{
+		padding: 50px 0px;
+
+		.container-fluid
+		{
+			.row
+			{
+				.CuadrosDeTexto
+				{
+					&:nth-child(1)
+					{
+						margin-left: 20px;
+						text-align: left;
+						box-shadow: 10px 10px 5px #aaaaaa;
+					}
+					&:nth-child(3)
+					{
+						margin-right: 20px;
+						box-shadow: -10px 10px 5px #aaaaaa;
+						text-align: right;
+					}
+				}
+				button
+				{
+					box-shadow: 1px 5px 3px #aaaaaa;
+					color: $colour-blueish-logo;
+				}
+			}
+		}
+	}
+	#seccionPorQueElegirnos
+	{
+		li
+		{
+			margin: 50px 0px;
+		}
+	}
+}
+
+.navBottom{padding: 30px 0px;}

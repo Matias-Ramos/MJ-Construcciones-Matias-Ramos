@@ -1,6 +1,40 @@
+/*Colours*/
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #EEEEEE; }
+  body main .container-fluid {
+    padding-top: 25px;
+    padding-bottom: 25px; }
+
+.h1container {
+  padding: 15px 0px;
+  background-color: lightgrey;
+  border: 1px solid black;
+  -moz-box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF;
+  -webkit-box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF;
+  box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF; }
+  .h1container h1 {
+    color: #393E46;
+    text-align: center;
+    font-weight: 500;
+    margin: 0; }
+
+section {
+  text-align: center; }
+
+.CuadrosDeTexto {
+  display: inline-block;
+  border: 1px solid black;
+  background-color: #F0F0F0;
+  padding: 9px;
+  border-radius: 3px; }
+
+.navBottom nav {
+  box-shadow: -5px 6px 2px #aaaaaa; }
+
 /*Footer global*/
 footer {
-  background-image: url("../images/header_imgs/background_wallp.png");
+  background-color: #393E46;
   padding: 40px 0px; }
 
 /*Form - 1er panel del footer*/
@@ -20,4 +54,69 @@ footer div .card {
     margin-top: 30px;
     padding: 0px; }
     footer div .card .card-title {
-      padding-top: 15px; } }
+      display: block;
+      padding: 15px 10px 0px 10px; } }
+
+section {
+  border: 1px solid black; }
+
+#seccionTrayectoria {
+  padding-top: 50px; }
+  #seccionTrayectoria .card {
+    box-shadow: -5px 6px 2px #aaaaaa;
+    background-color: white; }
+    #seccionTrayectoria .card .card-header {
+      background-color: #393E46; }
+      #seccionTrayectoria .card .card-header .btn {
+        color: #00ADB5;
+        font-size: 20px; }
+
+#seccionTestimonios {
+  /*Saca los botones fuera del slideshow*/ }
+  #seccionTestimonios .carousel-inner .testimonio {
+    text-align: left;
+    border-left: 1px solid black; }
+  #seccionTestimonios .carousel-control-prev {
+    margin-left: -100px; }
+  #seccionTestimonios .carousel-control-next {
+    margin-right: -100px; }
+
+@media only screen and (max-width: 992px) {
+  #seccionMision {
+    padding-top: 25px; }
+    #seccionMision .CuadrosDeTexto {
+      box-shadow: -10px 10px 5px #aaaaaa; }
+    #seccionMision button {
+      margin: 20px 0px; }
+  #seccionTrayectoria {
+    padding-top: 25px; }
+  #seccionPorQueElegirnos .container-fluid {
+    padding-bottom: 0; } }
+
+@media only screen and (min-width: 992px) {
+  /*Shadowing effect*/
+  #seccionMision {
+    padding: 50px 0px; }
+    #seccionMision .container-fluid .row .CuadrosDeTexto:nth-child(1) {
+      margin-left: 20px;
+      text-align: left;
+      box-shadow: 10px 10px 5px #aaaaaa; }
+    #seccionMision .container-fluid .row .CuadrosDeTexto:nth-child(3) {
+      margin-right: 20px;
+      box-shadow: -10px 10px 5px #aaaaaa;
+      text-align: right; }
+    #seccionMision .container-fluid .row button {
+      box-shadow: 1px 5px 3px #aaaaaa;
+      color: #00ADB5; }
+  #seccionPorQueElegirnos li {
+    margin: 50px 0px; } }
+
+.navBottom {
+  padding: 30px 0px; }
+
+a {
+  text-decoration: none;
+  color: #00ADB5; }
+  a:hover {
+    text-decoration: none;
+    color: #00ADB5; }

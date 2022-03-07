@@ -1,7 +1,7 @@
 /*Footer global*/
 footer
 {
-	background-image:url("../images/header_imgs/background_wallp.png");
+	background-color: $colour-darker;
 	padding:40px 0px;
 }
 
@@ -50,7 +50,8 @@ footer
 				
 				.card-title
 				{
-					padding-top: 15px;
+					display: block;
+					padding: 15px 10px 0px 10px;
 				}
 			}
 		}

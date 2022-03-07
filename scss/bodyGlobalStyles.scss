@@ -1,0 +1,47 @@
+body
+{
+	font-family: 'Poppins', sans-serif;
+	background-color: $colour-whiteish-cream;
+
+	main .container-fluid
+	{
+		padding-top:25px;
+		padding-bottom:25px;
+	}
+}
+
+.h1container
+{
+	padding: 15px 0px;
+	background-color: lightgrey;
+	border: 1px solid black;
+	-moz-box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF;
+	-webkit-box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF;
+	box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF;
+	h1
+	{
+		color: $colour-darker;
+		text-align: center;
+		font-weight: 500;
+		margin: 0;
+	}
+}
+
+section{text-align: center;}
+
+.CuadrosDeTexto
+{	
+	display: inline-block;
+	border: 1px solid black;
+	background-color: #F0F0F0;
+	padding: 9px;
+	border-radius:3px;
+}
+
+.navBottom
+{
+	nav
+	{
+		box-shadow: -5px 6px 2px #aaaaaa;
+	}
+}
