@@ -1,5 +1,96 @@
 section{border: 1px solid black;}
 
+/*Flecha #seccionMision*/
+.arrow-container
+{
+	width: 75px;
+	height: 75px;
+	padding:0;
+	/*Estela de alrededor del botón*/
+	.arrow-1
+	{
+		width: 75px;
+		height: 75px;
+		background: #00BCD4;
+		opacity: 0.5;
+		border-radius: 50%;
+		position: absolute;
+		top:0;
+	}
+	/*Círculo de color*/
+	.arrow-2
+	{
+		width: 45px;
+		height: 45px;
+		background: #00BCD4;
+		border-radius: 50%;
+		position: relative;
+		top: 15px;
+		left: 15px;
+		z-index: 1;
+		display: table;
+
+		&:before
+		{
+			width: 39px;
+			height: 39px;
+			content: "";
+			border: 2px solid #006064;
+			border-radius: 50%;
+			position: absolute;
+			top: 3px;
+			left: 3px;
+		}
+
+		/* ">" (flecha) */
+		i.fa
+		{
+			font-size: 25px;
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			color: #006064;
+		}
+	}
+}
+
+/* Animación flecha */
+.animated.hinge
+{
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	animation-iteration-count:infinite;
+}
+@-webkit-keyframes zoomIn 
+{
+	0%
+	{
+		opacity: 0;
+		-webkit-transform: scale3d(.4, .4, .4);
+		transform: scale3d(.4, .4, .4);
+	}
+	50% {opacity: 0.5;}
+	100% {opacity: 0;}
+}
+@keyframes zoomIn 
+{
+	0%
+	{
+		opacity: 0;
+		-webkit-transform: scale3d(.4, .4, .4);
+		transform: scale3d(.4, .4, .4);
+	}
+	50% {opacity: 0.5;}
+	100% {opacity: 0;}
+}
+.zoomIn
+{
+	-webkit-animation-name: zoomIn;
+	animation-name: zoomIn;
+}
+
+
+
 #seccionTrayectoria
 {
 	padding-top: 50px;
@@ -30,9 +121,6 @@ section{border: 1px solid black;}
 			border-left: 1px solid black;
 		}
 	}
-	/*Saca los botones fuera del slideshow*/
-	.carousel-control-prev {margin-left: -100px;}
-	.carousel-control-next {margin-right: -100px;}
 }
 
 @media only screen and (max-width: 992px) 
@@ -40,6 +128,11 @@ section{border: 1px solid black;}
 	#seccionMision
 	{
 		padding-top:25px;
+		padding-bottom:25px;
+		.fa-angle-right
+		{
+			display:none;
+		}
 
 		.CuadrosDeTexto
 		{
@@ -56,9 +149,33 @@ section{border: 1px solid black;}
 	}
 	#seccionPorQueElegirnos
 	{
+		padding-top:25px;
+		padding-bottom:25px;
+
 		.container-fluid
 		{
-			 padding-bottom:0;
+			.row:nth-child(2)
+			{
+				margin-top: 1.5rem;
+			}
+		}
+	}
+	#seccionTestimonios
+	{
+		padding-top:25px;
+
+		/*Saca los botones fuera del slideshow*/
+		.carousel-control-prev {display: flex;justify-content:flex-start;margin-left:-15px;}
+		.carousel-control-next {display: flex;justify-content:flex-end;margin-right:-15px;}
+	}
+
+	.navBottom
+	{
+		padding-bottom:25px;
+
+		h2
+		{
+			font-size: 1.5rem;
 		}
 	}
 }
@@ -69,7 +186,12 @@ section{border: 1px solid black;}
 	#seccionMision
 	{
 		padding: 50px 0px;
-
+		
+		.fa-angle-down
+			{
+				display:none;
+			}
+		
 		.container-fluid
 		{
 			.row
@@ -99,10 +221,20 @@ section{border: 1px solid black;}
 	}
 	#seccionPorQueElegirnos
 	{
+		padding-top:25px;
+
 		li
 		{
 			margin: 50px 0px;
 		}
+	}
+	#seccionTestimonios
+	{
+		padding-top:25px;
+
+		/*Saca los botones fuera del slideshow*/
+		.carousel-control-prev {margin-left: -100px;}
+		.carousel-control-next {margin-right: -100px;}
 	}
 }
 

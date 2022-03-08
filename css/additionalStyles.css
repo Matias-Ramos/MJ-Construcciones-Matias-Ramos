@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Colours*/
 body {
   font-family: 'Poppins', sans-serif;
@@ -60,6 +61,78 @@ footer div .card {
 section {
   border: 1px solid black; }
 
+/*Flecha #seccionMision*/
+.arrow-container {
+  width: 75px;
+  height: 75px;
+  padding: 0;
+  /*Estela de alrededor del botón*/
+  /*Círculo de color*/ }
+  .arrow-container .arrow-1 {
+    width: 75px;
+    height: 75px;
+    background: #00BCD4;
+    opacity: 0.5;
+    border-radius: 50%;
+    position: absolute;
+    top: 0; }
+  .arrow-container .arrow-2 {
+    width: 45px;
+    height: 45px;
+    background: #00BCD4;
+    border-radius: 50%;
+    position: relative;
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+    display: table;
+    /* ">" (flecha) */ }
+    .arrow-container .arrow-2:before {
+      width: 39px;
+      height: 39px;
+      content: "";
+      border: 2px solid #006064;
+      border-radius: 50%;
+      position: absolute;
+      top: 3px;
+      left: 3px; }
+    .arrow-container .arrow-2 i.fa {
+      font-size: 25px;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      color: #006064; }
+
+/* Animación flecha */
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; }
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.4, 0.4, 0.4);
+    transform: scale3d(0.4, 0.4, 0.4); }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 0; } }
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.4, 0.4, 0.4);
+    transform: scale3d(0.4, 0.4, 0.4); }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 0; } }
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn; }
+
 #seccionTrayectoria {
   padding-top: 50px; }
   #seccionTrayectoria .card {
@@ -71,32 +144,49 @@ section {
         color: #00ADB5;
         font-size: 20px; }
 
-#seccionTestimonios {
-  /*Saca los botones fuera del slideshow*/ }
-  #seccionTestimonios .carousel-inner .testimonio {
-    text-align: left;
-    border-left: 1px solid black; }
-  #seccionTestimonios .carousel-control-prev {
-    margin-left: -100px; }
-  #seccionTestimonios .carousel-control-next {
-    margin-right: -100px; }
+#seccionTestimonios .carousel-inner .testimonio {
+  text-align: left;
+  border-left: 1px solid black; }
 
 @media only screen and (max-width: 992px) {
   #seccionMision {
-    padding-top: 25px; }
+    padding-top: 25px;
+    padding-bottom: 25px; }
+    #seccionMision .fa-angle-right {
+      display: none; }
     #seccionMision .CuadrosDeTexto {
       box-shadow: -10px 10px 5px #aaaaaa; }
     #seccionMision button {
       margin: 20px 0px; }
   #seccionTrayectoria {
     padding-top: 25px; }
-  #seccionPorQueElegirnos .container-fluid {
-    padding-bottom: 0; } }
+  #seccionPorQueElegirnos {
+    padding-top: 25px;
+    padding-bottom: 25px; }
+    #seccionPorQueElegirnos .container-fluid .row:nth-child(2) {
+      margin-top: 1.5rem; }
+  #seccionTestimonios {
+    padding-top: 25px;
+    /*Saca los botones fuera del slideshow*/ }
+    #seccionTestimonios .carousel-control-prev {
+      display: flex;
+      justify-content: flex-start;
+      margin-left: -15px; }
+    #seccionTestimonios .carousel-control-next {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: -15px; }
+  .navBottom {
+    padding-bottom: 25px; }
+    .navBottom h2 {
+      font-size: 1.5rem; } }
 
 @media only screen and (min-width: 992px) {
   /*Shadowing effect*/
   #seccionMision {
     padding: 50px 0px; }
+    #seccionMision .fa-angle-down {
+      display: none; }
     #seccionMision .container-fluid .row .CuadrosDeTexto:nth-child(1) {
       margin-left: 20px;
       text-align: left;
@@ -108,8 +198,17 @@ section {
     #seccionMision .container-fluid .row button {
       box-shadow: 1px 5px 3px #aaaaaa;
       color: #00ADB5; }
-  #seccionPorQueElegirnos li {
-    margin: 50px 0px; } }
+  #seccionPorQueElegirnos {
+    padding-top: 25px; }
+    #seccionPorQueElegirnos li {
+      margin: 50px 0px; }
+  #seccionTestimonios {
+    padding-top: 25px;
+    /*Saca los botones fuera del slideshow*/ }
+    #seccionTestimonios .carousel-control-prev {
+      margin-left: -100px; }
+    #seccionTestimonios .carousel-control-next {
+      margin-right: -100px; } }
 
 .navBottom {
   padding: 30px 0px; }
