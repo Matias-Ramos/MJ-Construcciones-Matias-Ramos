@@ -3,9 +3,6 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #EEEEEE; }
-  body main .container-fluid {
-    padding-top: 25px;
-    padding-bottom: 25px; }
 
 .h1container {
   padding: 15px 0px;
@@ -59,7 +56,8 @@ footer div .card {
       padding: 15px 10px 0px 10px; } }
 
 section {
-  border: 1px solid black; }
+  border: 1px solid black;
+  padding: 50px 0px; }
 
 /*Flecha #seccionMision*/
 .arrow-container {
@@ -133,40 +131,35 @@ section {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn; }
 
-#seccionTrayectoria {
-  padding-top: 50px; }
-  #seccionTrayectoria .card {
-    box-shadow: -5px 6px 2px #aaaaaa;
-    background-color: white; }
-    #seccionTrayectoria .card .card-header {
-      background-color: #393E46; }
-      #seccionTrayectoria .card .card-header .btn {
-        color: #00ADB5;
-        font-size: 20px; }
+#seccionTrayectoria .card {
+  box-shadow: -5px 6px 2px #aaaaaa;
+  background-color: white; }
+  #seccionTrayectoria .card .card-header {
+    background-color: #393E46; }
+    #seccionTrayectoria .card .card-header .btn {
+      color: #00ADB5;
+      font-size: 20px; }
 
 #seccionTestimonios .carousel-inner .testimonio {
   text-align: left;
   border-left: 1px solid black; }
 
+#seccionTestimonios .carousel-control-prev-icon, #seccionTestimonios .carousel-control-next-icon {
+  background-color: #00ADB5;
+  border-radius: 3px;
+  padding: 15px; }
+
+/*Mobile and Tablets*/
 @media only screen and (max-width: 992px) {
-  #seccionMision {
-    padding-top: 25px;
-    padding-bottom: 25px; }
-    #seccionMision .fa-angle-right {
-      display: none; }
-    #seccionMision .CuadrosDeTexto {
-      box-shadow: -10px 10px 5px #aaaaaa; }
-    #seccionMision button {
-      margin: 20px 0px; }
-  #seccionTrayectoria {
-    padding-top: 25px; }
-  #seccionPorQueElegirnos {
-    padding-top: 25px;
-    padding-bottom: 25px; }
-    #seccionPorQueElegirnos .container-fluid .row:nth-child(2) {
-      margin-top: 1.5rem; }
+  #seccionMision .fa-angle-right {
+    display: none; }
+  #seccionMision .CuadrosDeTexto {
+    box-shadow: -10px 10px 5px #aaaaaa; }
+  #seccionMision button {
+    margin: 20px 0px; }
+  #seccionPorQueElegirnos .container-fluid .row:nth-child(2) {
+    margin-top: 1.5rem; }
   #seccionTestimonios {
-    padding-top: 25px;
     /*Saca los botones fuera del slideshow*/ }
     #seccionTestimonios .carousel-control-prev {
       display: flex;
@@ -176,15 +169,14 @@ section {
       display: flex;
       justify-content: flex-end;
       margin-right: -15px; }
-  .navBottom {
-    padding-bottom: 25px; }
-    .navBottom h2 {
-      font-size: 1.5rem; } }
+  .navBottom h2 {
+    font-size: 1.5rem; } }
 
+/*Netbooks and Desktops*/
 @media only screen and (min-width: 992px) {
   /*Shadowing effect*/
   #seccionMision {
-    padding: 50px 0px; }
+    padding: 75px 0px; }
     #seccionMision .fa-angle-down {
       display: none; }
     #seccionMision .container-fluid .row .CuadrosDeTexto:nth-child(1) {
@@ -198,24 +190,121 @@ section {
     #seccionMision .container-fluid .row button {
       box-shadow: 1px 5px 3px #aaaaaa;
       color: #00ADB5; }
-  #seccionPorQueElegirnos {
-    padding-top: 25px; }
-    #seccionPorQueElegirnos li {
-      margin: 50px 0px; }
+  #seccionPorQueElegirnos li {
+    margin: 50px 0px; }
   #seccionTestimonios {
-    padding-top: 25px;
     /*Saca los botones fuera del slideshow*/ }
     #seccionTestimonios .carousel-control-prev {
       margin-left: -100px; }
     #seccionTestimonios .carousel-control-next {
       margin-right: -100px; } }
 
-.navBottom {
-  padding: 30px 0px; }
+.RedesSociales {
+  padding: 0; }
 
+.RedesSociales li a {
+  width: 50px;
+  height: 50px;
+  background-color: #EEEEEE;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  margin: 0 5px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid whitesmoke;
+  z-index: 1; }
+
+.RedesSociales li a .icon {
+  position: relative;
+  color: #262626;
+  transition: .5s;
+  z-index: 3; }
+
+.RedesSociales li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg); }
+
+.RedesSociales li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: .5s;
+  z-index: 2; }
+
+.RedesSociales li a:hover:before {
+  top: 0; }
+
+.RedesSociales li:nth-child(1) a:before {
+  background: #25D366; }
+
+.RedesSociales li:nth-child(2) a:before {
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+
+/*.RedesSociales li a
+{
+  background-color: #fff;
+  text-align: center;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 1;
+}
+
+.RedesSociales li a .icon 
+{
+  position: relative;
+  color: #262626;
+  transition: .5s;
+  z-index: 3;
+}
+
+.RedesSociales li a:hover .icon 
+{
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.RedesSociales li a:before
+{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: .5s;
+  z-index: 2;
+}
+
+.RedesSociales li a:hover:before {top: 0;}
+.RedesSociales li:nth-child(1) a:before{background: #25D366;}
+
+.RedesSociales li:nth-child(2) a:before
+{
+	background: #f09433; 
+	background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+	background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+	background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+}*/
 a {
   text-decoration: none;
   color: #00ADB5; }
   a:hover {
     text-decoration: none;
     color: #00ADB5; }
+
+ul li {
+  list-style: none; }
