@@ -55,7 +55,7 @@ footer div .card {
       display: block;
       padding: 15px 10px 0px 10px; } }
 
-section {
+#index section {
   border: 1px solid black;
   padding: 50px 0px; }
 
@@ -259,3 +259,6 @@ a {
 
 ul li {
   list-style: none; }
+
+#containerGaleria .card {
+  border: 1px solid black; }
