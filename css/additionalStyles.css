@@ -262,3 +262,11 @@ ul li {
 
 #containerGaleria .card {
   border: 1px solid black; }
+
+#faq .card {
+  box-shadow: -5px 6px 2px #aaaaaa;
+  background-color: white; }
+  #faq .card .card-header {
+    background-color: #393E46; }
+    #faq .card .card-header .btn {
+      color: #00ADB5; }

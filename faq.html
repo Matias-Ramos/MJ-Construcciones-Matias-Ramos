@@ -5,66 +5,89 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>MJ Construcciones</title>
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
 		<!--Bootstrap below-->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 		<!--end Bootstrap-->
-		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" href="css/bootstrapStyle.css">
+		<link rel="stylesheet" href="css/additionalStyles.css">
+		
 		<!--GoogleFonts below-->
-		<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;1,300&family=Lato:wght@300;400&display=swap&family=Alfa+Slab+One&display=swap" rel="stylesheet"><!--End GoogleFonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap" rel="stylesheet">
+
+		<!--SocialMedia buttons -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
 		<!--SocialMedia Animation-->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 		<!--End S.M. Anim -->
 	</head>
 	<body>
-		<header>
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-12 col-sm-12 col-md-12">
-						<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
-										<a class="navbar-brand mx-auto mjLogoHeaderDesktop" href="index.html">
-										<img class="mx-auto" src="images/header_imgs/mj_logo.png" alt="Logo de MJ Construcciones">
-										</a>
-							<button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-								<p>Menú</p>
-								<span class="navbar-toggler-icon"></span>
-							</button>
-							<div class="collapse navbar-collapse" id="navbarNav">
-								<ul class="navbar-nav w-100 align-items-center">
-									<li class="mjLogoHeaderMobile">
-										<a class="navbar-brand mx-auto" href="index.html">
-										<img class="mx-auto" src="images/header_imgs/mj_logo.png" alt="Logo de MJ Construcciones">
-										</a>
-									</li>
-									<li class="nav-item flex-grow-1 text-center">
-										<a class="nav-link" aria-current="page" href="index.html">Quienes Somos</a>
-									</li>
-									<li class="nav-item flex-grow-1 text-center">
-										<a class="nav-link" href="galeria.html">Esto hemos construído</a>
-									</li>
-									<li class="nav-item flex-grow-1 text-center">
-										<a class="nav-link" href="servicios.html">Servicios</a>
-									</li>
-									<li class="nav-item flex-grow-1 text-center">
-										<a class="nav-link" href="faq.html">Preguntas Frecuentes</a>
-									</li>
-									<div class="contenedorRedesSocialesHeaderMobile">
-										<li class="RedesSociales mr-auto text-center" id="whatsapp">
-											<a href="#">
-												<i class="fab fa-whatsapp icon"></i>
-											</a>
-										</li>
-										<li class="RedesSociales text-center">
-										  	<a href="https://www.instagram.com/mj.construcciones_/?hl=en">
-										  		<i class="fab fa-instagram icon"></i>
-										  	</a>
-										</li>
-									</div>
-								</ul>
-							</div>
-						</nav>
-					</div>
-				</div>
+		<header class="container-fluid">
+			<div class="row">
+				<nav class="navbar navbar-expand-lg navbar-expand-xl navbar-dark bg-dark w-100" role="navigation">
+				    <div class="d-flex flex-grow-1">
+						
+						<!--SocialMedia icons for Mobile-->
+						<span class="w-100 align-self-center d-lg-none d-xl-none d-xs-flex d-flex d-sm-flex d-md-flex">
+							<ul class="navbar-nav d-flex flex-row">
+								<li class="d-inline-block">
+									<a href="#" class="nav-link m-2 menu-item">
+										<i class="fab fa-whatsapp icon"></i>
+									</a>
+								</li>
+								<li class="d-inline-block">
+									<a href="#" class="nav-link m-2 menu-item">
+										<i class="fab fa-instagram icon"></i>
+									</a>
+								</li>
+							</ul>
+						</span>
+
+				        <a class="navbar-brand d-none d-lg-inline-block" href="index.html">
+				            <img src="images/header_imgs/mj_logo.png" alt="Logo de MJ Construcciones">
+				        </a>
+				        <a class="navbar-brand-two mx-auto d-inline-block d-sm-inline-block d-md-inline-block d-lg-none d-xl-none" href="index.html">
+				            <img src="images/header_imgs/mj_logo.png" alt="Logo de MJ Construcciones">
+				        </a>
+				        <div class="w-100 text-right align-self-center">
+				            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+				                <span class="navbar-toggler-icon"></span>
+				            </button>
+				        </div>
+				    </div>
+				    <div class="collapse navbar-collapse flex-grow-1 text-center align-items-center" id="myNavbar">
+				        <ul class="navbar-nav ml-auto flex-nowrap">
+				            <li class="nav-item">
+				                <a href="index.html" class="nav-link m-2 menu-item nav-active">Quienes somos</a>
+				            </li>
+				            <li class="nav-item">
+				                <a href="galeria.html" class="nav-link m-2 menu-item">Esto hemos construído</a>
+				            </li>
+				            <li class="nav-item">
+				                <a href="servicios.html" class="nav-link m-2 menu-item">Servicios</a>
+				            </li>
+				            <li class="nav-item">
+				                <a href="faq.html" class="nav-link m-2 menu-item">Preguntas Frecuentes</a>
+				            </li>
+							<!--SocialMedia icons for Desktop-->
+							<ul class="d-lg-flex d-xl-flex d-xs-none d-none d-sm-none d-md-none RedesSociales">
+								<li>
+									<a href="#">
+										<i class="fab fa-whatsapp icon"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fab fa-instagram icon"></i>
+									</a>
+								</li>
+							</ul>
+				        </ul>
+				    </div>
+				</nav>
 			</div>
 		</header>
 		<main id="faq">
@@ -178,28 +201,30 @@
 				</div>
 			</section>
 
-			<!--NAV-->
 
-				<section>
-					<div class="container-fluid">
-						<div class="row py-5">
-							<div class="col-12">
-									<h2 class="bg-white d-inline">Mas sobre nosotros...</h2>
-									<div class="btn-group mx-auto d-flex justify-content-center mt-3" role="group" aria-label="Botones para navegar por el sitio web">
-										<button type="button" class="btn btn-secondary">
-											<a href="index.html">Quienes somos</a>
-										</button>
-										<button type="button" class="btn btn-secondary">
-											<a href="galeria.html">Esto hemos construído</a>
-										</button>
-										<button type="button" class="btn btn-secondary">
-											<a href="servicios.html">Servicios</a>
-										</button>
-									</div>
-							</div>
+
+				<!--NAV-->
+				<section class="navBottom container-fluid py-5">
+					<div class="row justify-content-center">
+						<div class="col-11 col-sm-11 col-md-11 col-lg-7 col-xl-6">
+							<h2 class="d-inline">Mas sobre nosotros...</h2>
+							<nav>
+								<div class="btn-group mx-auto d-flex justify-content-center mt-1" role="group" aria-label="Botones para navegar por el sitio web">
+									<button type="button" class="btn btn-secondary bg-light">
+										<a href="index.html">Quienes somos</a>
+									</button>
+									<button type="button" class="btn btn-secondary bg-light">
+										<a href="galeria.html">Esto hemos construído</a>
+									</button>
+									<button type="button" class="btn btn-secondary bg-light">
+										<a href="servicios.html">Servicios</a>
+									</button>
+								</div>
+							</nav>
 						</div>
 					</div>
 				</section>
+
 			<!--JAVASCRIPT BELOW-->
 			<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
@@ -208,24 +233,24 @@
 			<div class="container-fluid">
 				<div class="row pb-2 my-2">
 				<!-- Formulario para ser contactado-->
-					<div class="col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 bg-light mx-auto p-5 my-3">
+					<div class="col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 mx-auto bg-light">
 						<form>
 							<h5 class="text-center mb-3">Podés completar este formulario <br> para que te contactemos.</h5>
-							<div class="form-group">
+							<div class="form-group" >
 								<label for="nombre_cliente">Nombre: </label>
-								<input type="text" class="form-control" id="nombre_cliente">
+								<input type="text" class="form-control" id="nombre_cliente" aria-describedby="Campo para ingresar su nombre">
 							</div>
-							<div class="form-group">
+							<div class="form-group" >
 								<label for="email_cliente">Email: </label>
-								<input type="email" class="form-control" id="email_cliente">
+								<input type="email" class="form-control" id="email_cliente" aria-describedby="Campo para ingresar su correo electrónico">
 							</div>
 							<div class="form-group">
 								<label for="cel_cliente">Teléfono: </label>
-								<input type="text" class="form-control" id="cel_cliente">
+								<input type="text" class="form-control" id="cel_cliente" aria-describedby="Campo para ingresar su teléfono">
 							</div>
 							<div class="form-group">
 								<label for="exampleFormControlTextarea1">Dejanos tu consulta: </label>
-								<textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+								<textarea class="form-control" id="exampleFormControlTextarea1" rows="5" aria-describedby="Campo para ingresar su consulta"></textarea>
 							</div>
 							<div class="text-center">
 								<button type="submit" class="btn btn-primary w-75">Enviar</button>
@@ -233,29 +258,28 @@
 						</form>
 					</div>
 				<!-- Datos para que el cliente se pueda comunicar por sus propios medios-->
-					<div class="col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 px-0 bg-light mx-auto my-3">
-						<div class="card pt-3">
-							<h5 class="card-title">...o si deseas contactarnos, <br>estos son nuestros datos:</h5>
+					<div class="col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 bg-transparent mx-auto h-100 px-0">
+						<div class="card">
+							<h5 class="card-title">...o en caso que desees contactarnos, <br>estos son nuestros datos:</h5>
 							<div class="card-body p-0">
 								<p class="card-text">Nombre: xxxx</p>
 								<p class="card-text">Teléfono: xx-xxxx-xxxx</p>
 								<p class="card-text">Email: xxx@xxx.xxx</p>
 								<p class="card-text">Dirección: xxxxx</p>
-								<iframe src="https://www.google.com/maps/embed?		pb=!1m18!1m12!1m3!1d91746.13616726792!2d-123.03535276348553!3d44.06133015687239!2m3!1f0!2f!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54c0de472e7002bf%3A		0x536dbe99c4a3fd6!2sSpringfield%2C%20OR%2C%20SA!5e0!3m2!1sen!2sar!4v1642955758765!5m2!1sen!2sar" width="100%" height="300" style="border:1;" allowfullscreen="" loading="lazy"></iframe>
-								<div class="RedesSocialesBottom d-flex flex-row justify-content-center">
-									<ul class="d-flex">
-								        <li class="RedesSociales nav-item mr-auto text-center" id="whatsapp">
-											<a href="#">
-												<i class="fab fa-whatsapp icon"></i>
-											</a>
-								        </li>
-								        <li class="RedesSociales nav-item text-center">
-										  	<a href="https://www.instagram.com/mj.construcciones_/?hl=en">
-										  		<i class="fab fa-instagram icon"></i>
-										  	</a>
-										</li>
-							    	</ul>
-						    	</div>
+								<iframe src="https://www.google.com/maps/embed?		pb=!1m18!1m12!1m3!1d91746.13616726792!2d-123.03535276348553!3d44.06133015687239!2m3!1f0!2f!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54c0de472e7002bf%3A		0x536dbe99c4a3fd6!2sSpringfield%2C%20OR%2C%20SA!5e0!3m2!1sen!2sar!4v1642955758765!5m2!1sen!2sar" width="90%" height="300" style="border:1;" allowfullscreen="" loading="lazy"></iframe>
+								<!--SocialMedia icons for Desktop-->
+								<ul class="d-flex RedesSociales justify-content-center pt-2">
+									<li>
+										<a href="#">
+											<i class="fab fa-whatsapp icon"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fab fa-instagram icon"></i>
+										</a>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
