@@ -55,7 +55,7 @@ footer div .card {
       display: block;
       padding: 15px 10px 0px 10px; } }
 
-section {
+#index section {
   border: 1px solid black;
   padding: 50px 0px; }
 
@@ -259,3 +259,14 @@ a {
 
 ul li {
   list-style: none; }
+
+#containerGaleria .card {
+  border: 1px solid black; }
+
+#faq .card {
+  box-shadow: -5px 6px 2px #aaaaaa;
+  background-color: white; }
+  #faq .card .card-header {
+    background-color: #393E46; }
+    #faq .card .card-header .btn {
+      color: #00ADB5; }
