@@ -1,6 +1,38 @@
-
-/*Colours*/
 $colour-darkest: #222831;
 $colour-darker: #393E46;
 $colour-blueish-logo: #00ADB5;
 $colour-whiteish-cream: #EEEEEE;
+
+
+$coloresPrincipales:
+(
+	$colour-darkest: #222831,
+	$colour-darker: #393E46,
+	$colour-blueish-logo: #00ADB5,
+	$colour-whiteish-cream: #EEEEEE,
+);
+
+
+@mixin AnchoAlto($width, $height)
+{
+	width: $width;
+	height: $height;
+}
+
+.AccordionFormatting
+{
+	.card
+	{
+		box-shadow: -5px 6px 2px #aaaaaa;
+
+		background-color: white;
+		.card-header
+		{
+			background-color: map-get($coloresPrincipales, $colour-darker);
+			.btn
+			{
+				color: map-get($coloresPrincipales, $colour-blueish-logo);
+			}
+		}
+	}	
+}

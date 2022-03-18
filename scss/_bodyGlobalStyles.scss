@@ -1,7 +1,9 @@
+
+
 body
 {
 	font-family: 'Poppins', sans-serif;
-	background-color: $colour-whiteish-cream;
+	background-color: map-get($coloresPrincipales, $colour-whiteish-cream);
 }
 
 .h1container
@@ -14,7 +16,7 @@ body
 	box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF;
 	h1
 	{
-		color: $colour-darker;
+		color: map-get($coloresPrincipales, $colour-darker);
 		text-align: center;
 		font-weight: 500;
 		margin: 0;

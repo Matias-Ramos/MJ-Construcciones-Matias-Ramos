@@ -1,5 +1,12 @@
 @charset "UTF-8";
-/*Colours*/
+.AccordionFormatting .card, #seccionTrayectoria .card, #faq .card {
+  box-shadow: -5px 6px 2px #aaaaaa;
+  background-color: white; }
+  .AccordionFormatting .card .card-header, #seccionTrayectoria .card .card-header, #faq .card .card-header {
+    background-color: #393E46; }
+    .AccordionFormatting .card .card-header .btn, #seccionTrayectoria .card .card-header .btn, #faq .card .card-header .btn {
+      color: #00ADB5; }
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #EEEEEE; }
@@ -131,14 +138,8 @@ footer div .card {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn; }
 
-#seccionTrayectoria .card {
-  box-shadow: -5px 6px 2px #aaaaaa;
-  background-color: white; }
-  #seccionTrayectoria .card .card-header {
-    background-color: #393E46; }
-    #seccionTrayectoria .card .card-header .btn {
-      color: #00ADB5;
-      font-size: 20px; }
+#seccionTrayectoria .btn {
+  font-size: 20px; }
 
 #seccionTestimonios .carousel-inner .testimonio {
   text-align: left;
@@ -148,6 +149,9 @@ footer div .card {
   background-color: #00ADB5;
   border-radius: 3px;
   padding: 15px; }
+
+#seccionPorQueElegirnos p {
+  margin: 0; }
 
 /*Mobile and Tablets*/
 @media only screen and (max-width: 992px) {
@@ -262,11 +266,3 @@ ul li {
 
 #containerGaleria .card {
   border: 1px solid black; }
-
-#faq .card {
-  box-shadow: -5px 6px 2px #aaaaaa;
-  background-color: white; }
-  #faq .card .card-header {
-    background-color: #393E46; }
-    #faq .card .card-header .btn {
-      color: #00ADB5; }

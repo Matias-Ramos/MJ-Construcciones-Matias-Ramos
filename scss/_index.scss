@@ -1,3 +1,5 @@
+
+
 #index section
 {
 	border: 1px solid black;
@@ -7,14 +9,12 @@
 /*Flecha #seccionMision*/
 .arrow-container
 {
-	width: 75px;
-	height: 75px;
+	@include AnchoAlto(75px, 75px);
 	padding:0;
 	/*Estela de alrededor del botón*/
 	.arrow-1
 	{
-		width: 75px;
-		height: 75px;
+		@include AnchoAlto(75px, 75px);
 		background: #00BCD4;
 		opacity: 0.5;
 		border-radius: 50%;
@@ -24,8 +24,7 @@
 	/*Círculo de color*/
 	.arrow-2
 	{
-		width: 45px;
-		height: 45px;
+		@include AnchoAlto(45px, 45px);
 		background: #00BCD4;
 		border-radius: 50%;
 		position: relative;
@@ -36,8 +35,7 @@
 
 		&:before
 		{
-			width: 39px;
-			height: 39px;
+			@include AnchoAlto(39px, 39px);
 			content: "";
 			border: 2px solid #006064;
 			border-radius: 50%;
@@ -97,20 +95,10 @@
 
 #seccionTrayectoria
 {
-	.card
+	@extend .AccordionFormatting;
+	.btn
 	{
-		box-shadow: -5px 6px 2px #aaaaaa;
-
-		background-color: white;
-		.card-header
-		{
-			background-color: $colour-darker;
-			.btn
-			{
-				color: $colour-blueish-logo;
-				font-size: 20px;
-			}
-		}
+		font-size: 20px;
 	}
 }
 
@@ -126,11 +114,18 @@
 	}
 	.carousel-control-prev-icon,.carousel-control-next-icon
 	{
-		background-color: $colour-blueish-logo;
+		background-color: map-get($coloresPrincipales, $colour-blueish-logo);
 		border-radius: 3px;
 		padding: 15px;
 	}
 
+}
+#seccionPorQueElegirnos
+{
+	p
+	{
+		margin:0;
+	}
 }
 
 /*Mobile and Tablets*/
@@ -212,7 +207,7 @@
 				button
 				{
 					box-shadow: 1px 5px 3px #aaaaaa;
-					color: $colour-blueish-logo;
+					color: map-get($coloresPrincipales, $colour-blueish-logo);
 				}
 			}
 		}
@@ -243,9 +238,8 @@
 
 	li a
 	{
-		width: 50px;
-		height: 50px;
-		background-color: $colour-whiteish-cream;
+		@include AnchoAlto(50px, 50px);
+		background-color: map-get($coloresPrincipales, $colour-whiteish-cream);
 		text-align: center;
 		line-height: 50px;
 		font-size: 30px;

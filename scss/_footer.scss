@@ -1,7 +1,7 @@
 /*Footer global*/
 footer
 {
-	background-color: $colour-darker;
+	background-color: map-get($coloresPrincipales, $colour-darker);
 	padding:40px 0px;
 }
 

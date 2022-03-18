@@ -1,12 +1,12 @@
 a
 {
 	text-decoration:none;
-	color: $colour-blueish-logo;
+	color: map-get($coloresPrincipales, $colour-blueish-logo);
 	
 	&:hover
 	{ 
 		text-decoration:none;
-		color: $colour-blueish-logo;
+		color: map-get($coloresPrincipales, $colour-blueish-logo);
 	} 
 }
 

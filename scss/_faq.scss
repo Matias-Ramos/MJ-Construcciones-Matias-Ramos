@@ -1,17 +1,4 @@
 #faq
 {
-	.card
-	{
-		box-shadow: -5px 6px 2px #aaaaaa;
-
-		background-color: white;
-		.card-header
-		{
-			background-color: $colour-darker;
-			.btn
-			{
-				color: $colour-blueish-logo;
-			}
-		}
-	}
+	@extend .AccordionFormatting;
 }
