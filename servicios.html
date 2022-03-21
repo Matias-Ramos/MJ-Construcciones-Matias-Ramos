@@ -94,40 +94,37 @@
 				</nav>
 			</div>
 		</header>
-		<main>
+		<main class="container-fluid" id="Servicios">
 
 			<!--H1-->
-			<div class="container-fluid py-0">
-				<div class="row h1container">
-					<div class="col-12">
-						<h1>Nueva edificación</h1>
-					</div>
+			<div class="row h1container">
+				<div class="col-12 col-xs-12 col-sm-12 col-lg-12 col-xl-12">
+					<h1>Nueva edificación</h1>
 				</div>
 			</div>
 
-			<!-- Descripción de la propuesta -->
-			<section class="row d-flex justify-content-center pt-5">
-				<div class="col-11 col-xs-11 col-sm-11 col-lg-11 col-xl-11 CuadrosDeTexto">
-					<p><b>Descripción de la propuesta</b> Nos reuniremos para entender cual es tu proyección y en base a ello, armaremos planos con 5 propuestas distintas para que elijas la que vaya mas acorde a tus deseos. Acto siguiente nos pondremos manos a la obra... </p>
+			<section class="row d-flex justify-content-center">
+			
+				<!-- Descripción de la propuesta -->
+				<div class="col-11 col-xs-11 col-sm-11 col-lg-3 col-xl-3 d-flex align-items-center CuadrosDeTexto">
+					<p><b>[Descripción de la propuesta]</b><br> Nos reuniremos para entender cual es tu proyección y en base a ello, armaremos planos con 5 propuestas distintas para que elijas la que vaya mas acorde a tus deseos. Acto siguiente nos pondremos manos a la obra... </p>
 				</div>
+
+				<!--Main IMG-->
+				<div class="col-11 col-xs-11 col-sm-11 col-lg-6 col-xl-6 p-0">
+					<img src="images/arquitectura.jpg" class="w-100 h-auto" alt="Arquitecto creando planos">
+				</div>
+
+				<!-- Requisitos mínimos -->
+				<div class="col-11 col-xs-11 col-sm-11 col-lg-3 col-xl-3 d-flex flex-column  CuadrosDeTexto">
+					<p><b>[Requisitos minimos para solicitar el servicio]</b> <br> Cobramos el 35% del total por adelantado para cubrir los gastos iniciales. Cubrimos el area de Buenos Aires pero dependiendo el trabajo nos podemos movilizar a otras provinicias. Etc...</p>
+					<button type="button" class="btn btn-primary btn-block w-100 mx-auto my-2">Solicitar Asesoramiento</button>	
+				</div>
+
 			</section>
 
 
-			<!--Main IMG-->
-			<div class="row d-flex justify-content-center pt-5">
-				<div class="col-11 col-xs-11 col-sm-11 col-lg-11 col-xl-11 d-flex justify-content-center">
-					<img src="images/arquitectura.jpg" class="w-100 h-auto px-2" alt="Arquitecto creando planos">
-				</div>
-			</div>
 
-			<!-- Requisitos mínimos -->
-			<section class="row d-flex justify-content-center pt-5">
-				<div class="col-11 col-xs-11 col-sm-11 col-lg-11 col-xl-11 CuadrosDeTexto">
-					<p><b>Requisitos minimos para solicitar el servicio</b> Cobramos el 35% del total por adelantado para cubrir los gastos iniciales. Cubrimos el area de Buenos Aires pero dependiendo el trabajo nos podemos movilizar a otras provinicias. Etc...</p>
-				</div>
-			</section>
-
-			<button type="button" class="btn btn-primary btn-lg btn-block my-4">Solicitar Asesoramiento</button>	
 
 			<!--JAVASCRIPT BELOW-->
 			<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -138,8 +135,8 @@
 				<div class="row pb-2 my-2">
 				<!-- Formulario para ser contactado-->
 					<div class="col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 mx-auto bg-light">
-						<form>
-							<h5 class="text-center mb-3">Podés completar este formulario <br> para que te contactemos.</h5>
+						<form class="p-3">
+							<p class="text-center h5">Podés completar este formulario <br> para que te contactemos.</p>
 							<div class="form-group" >
 								<label for="nombre_cliente">Nombre: </label>
 								<input type="text" class="form-control" id="nombre_cliente" aria-describedby="Campo para ingresar su nombre">
@@ -163,8 +160,8 @@
 					</div>
 				<!-- Datos para que el cliente se pueda comunicar por sus propios medios-->
 					<div class="col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 bg-transparent mx-auto h-100 px-0">
-						<div class="card">
-							<h5 class="card-title">...o en caso que desees contactarnos, <br>estos son nuestros datos:</h5>
+						<div class="card text-center">
+							<p class="card-title h5 pt-3">...o en caso que desees contactarnos, <br>estos son nuestros datos:</p>
 							<div class="card-body p-0">
 								<p class="card-text">Nombre: xxxx</p>
 								<p class="card-text">Teléfono: xx-xxxx-xxxx</p>

@@ -1,0 +1,39 @@
+@media only screen and (min-width: 992px)
+{
+	.containerProyectoX .CuadrosDeTexto
+	{
+		text-align: left;
+		justify-content: left;
+		#DescriptProyX
+		{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: flex-start;
+			span
+			{
+				p
+				{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 992px)
+{
+	#CarouselProyectoX
+	{
+		padding: 0;
+	}
+	.containerProyectoX .CuadrosDeTexto
+	{
+		justify-content: center;
+		align-items: center;
+		#DescriptProyX span
+		{
+			text-align: center;
+		}
+	}
+}

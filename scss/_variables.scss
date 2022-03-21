@@ -1,9 +1,8 @@
+/*MAPAS*/
 $colour-darkest: #222831;
 $colour-darker: #393E46;
 $colour-blueish-logo: #00ADB5;
 $colour-whiteish-cream: #EEEEEE;
-
-
 $coloresPrincipales:
 (
 	$colour-darkest: #222831,
@@ -12,6 +11,13 @@ $coloresPrincipales:
 	$colour-whiteish-cream: #EEEEEE,
 );
 
+/*MIXINS*/
+
+
+@mixin BoxShadow($x, $y, $blur-rad, $color)
+{
+	box-shadow: $x $y $blur-rad $color;
+}
 
 @mixin AnchoAlto($width, $height)
 {
@@ -19,6 +25,25 @@ $coloresPrincipales:
 	height: $height;
 }
 
+@mixin TopLeft($arriba:0, $izq:0)
+{
+	top: $arriba;
+	left: $izq;
+}
+
+@mixin ZoomInParameters
+{
+	0%
+	{
+		opacity: 0;
+		-webkit-transform: scale3d(.4, .4, .4);
+		transform: scale3d(.4, .4, .4);
+	}
+	50% {opacity: 0.5;}
+	100% {opacity: 0;}
+}
+
+/*EXTENDS*/
 .AccordionFormatting
 {
 	.card
@@ -36,3 +61,4 @@ $coloresPrincipales:
 		}
 	}	
 }
+

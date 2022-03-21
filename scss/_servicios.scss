@@ -1,0 +1,24 @@
+#Servicios
+{
+	section
+	{
+		margin: 2em 0em;
+	}
+}
+@media only screen and (min-width: 992px)
+{
+	#Servicios
+	{
+		section
+		{
+			div:nth-child(3)
+			{
+				justify-content:space-evenly;
+			}
+			.btn
+			{
+				height:20%;
+			}
+		}
+	}
+}

@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/*MAPAS*/
+/*MIXINS*/
+/*EXTENDS*/
 .AccordionFormatting .card, #seccionTrayectoria .card, #faq .card {
   box-shadow: -5px 6px 2px #aaaaaa;
   background-color: white; }
@@ -6,6 +9,19 @@
     background-color: #393E46; }
     .AccordionFormatting .card .card-header .btn, #seccionTrayectoria .card .card-header .btn, #faq .card .card-header .btn {
       color: #00ADB5; }
+
+a {
+  text-decoration: none;
+  color: #00ADB5; }
+  a:hover {
+    text-decoration: none;
+    color: #00ADB5; }
+
+ul li {
+  list-style: none; }
+
+p {
+  margin-bottom: 0px; }
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -37,27 +53,13 @@ section {
 .navBottom nav {
   box-shadow: -5px 6px 2px #aaaaaa; }
 
-/*Footer global*/
 footer {
   background-color: #393E46;
   padding: 40px 0px; }
 
-/*Form - 1er panel del footer*/
-footer form {
-  padding: 10px; }
-  footer form h5 {
-    padding-top: 10px; }
-
-/*Card - 2do panel del footer*/
-footer div .card {
-  text-align: center; }
-  footer div .card .card-title {
-    padding-top: 15px; }
-
 @media only screen and (max-width: 992px) {
   footer div .card {
-    margin-top: 30px;
-    padding: 0px; }
+    margin-top: 30px; }
     footer div .card .card-title {
       display: block;
       padding: 15px 10px 0px 10px; } }
@@ -66,7 +68,7 @@ footer div .card {
   border: 1px solid black;
   padding: 50px 0px; }
 
-/*Flecha #seccionMision*/
+/*Inicio flecha #seccionMision*/
 .arrow-container {
   width: 75px;
   height: 75px;
@@ -84,23 +86,24 @@ footer div .card {
   .arrow-container .arrow-2 {
     width: 45px;
     height: 45px;
+    top: 15px;
+    left: 15px;
     background: #00BCD4;
     border-radius: 50%;
     position: relative;
-    top: 15px;
-    left: 15px;
     z-index: 1;
     display: table;
+    /*Borde negro del btn*/
     /* ">" (flecha) */ }
     .arrow-container .arrow-2:before {
       width: 39px;
       height: 39px;
+      top: 3px;
+      left: 3px;
       content: "";
       border: 2px solid #006064;
       border-radius: 50%;
-      position: absolute;
-      top: 3px;
-      left: 3px; }
+      position: absolute; }
     .arrow-container .arrow-2 i.fa {
       font-size: 25px;
       display: table-cell;
@@ -108,7 +111,7 @@ footer div .card {
       text-align: center;
       color: #006064; }
 
-/* Animación flecha */
+/* Inicio animaciones flecha */
 .animated.hinge {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
@@ -138,6 +141,8 @@ footer div .card {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn; }
 
+/* Fin animaciones flecha */
+/* Fin flecha #seccionMision*/
 #seccionTrayectoria .btn {
   font-size: 20px; }
 
@@ -153,6 +158,61 @@ footer div .card {
 #seccionPorQueElegirnos p {
   margin: 0; }
 
+/*Redes Sociales Botones*/
+.RedesSociales {
+  padding: 0; }
+  .RedesSociales li a {
+    width: 50px;
+    height: 50px;
+    background-color: #EEEEEE;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    margin: 0 5px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid whitesmoke;
+    z-index: 1; }
+    .RedesSociales li a .icon {
+      position: relative;
+      color: #262626;
+      transition: .5s;
+      z-index: 3; }
+
+/*Redes Sociales animación*/
+.RedesSociales li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg); }
+
+/*Adición de color en el flip*/
+.RedesSociales li a:before {
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: 0;
+  content: "";
+  position: absolute;
+  background: #f00;
+  transition: .5s;
+  z-index: 2; }
+
+.RedesSociales li a:hover:before {
+  top: 0; }
+
+.RedesSociales li:nth-child(1) a:before {
+  background: #25D366; }
+
+.RedesSociales li:nth-child(2) a:before {
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+
+/***********************/
+/***********************/
+/*INICIO MEDIA QUERIES*/
 /*Mobile and Tablets*/
 @media only screen and (max-width: 992px) {
   #seccionMision .fa-angle-right {
@@ -197,72 +257,56 @@ footer div .card {
   #seccionPorQueElegirnos li {
     margin: 50px 0px; }
   #seccionTestimonios {
-    /*Saca los botones fuera del slideshow*/ }
+    /*Saca los botones fuera del slideshow*/
+    /*Evita que el alto cambie por diferencia de renglones entre testimonio y testimonio y mueva las secciones que vienen debajo de esta*/ }
     #seccionTestimonios .carousel-control-prev {
       margin-left: -100px; }
     #seccionTestimonios .carousel-control-next {
-      margin-right: -100px; } }
+      margin-right: -100px; }
+    #seccionTestimonios .carousel-inner {
+      height: 75px; } }
 
-/*Redes Sociales Botones*/
-.RedesSociales {
+@media only screen and (min-width: 992px) {
+  .containerProyectoX .CuadrosDeTexto {
+    text-align: left;
+    justify-content: left; }
+    .containerProyectoX .CuadrosDeTexto #DescriptProyX {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start; }
+      .containerProyectoX .CuadrosDeTexto #DescriptProyX span p {
+        margin-bottom: 0; } }
+
+@media only screen and (max-width: 992px) {
+  #CarouselProyectoX {
+    padding: 0; }
+  .containerProyectoX .CuadrosDeTexto {
+    justify-content: center;
+    align-items: center; }
+    .containerProyectoX .CuadrosDeTexto #DescriptProyX span {
+      text-align: center; } }
+
+#containerProyectos .cardShadow {
   padding: 0; }
-  .RedesSociales li a {
-    width: 50px;
-    height: 50px;
-    background-color: #EEEEEE;
-    text-align: center;
-    line-height: 50px;
-    font-size: 30px;
-    margin: 0 5px;
-    display: block;
-    border-radius: 50%;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid whitesmoke;
-    z-index: 1; }
-    .RedesSociales li a .icon {
-      position: relative;
-      color: #262626;
-      transition: .5s;
-      z-index: 3; }
 
-/*Redes Sociales animación*/
-.RedesSociales li a:hover .icon {
-  color: #fff;
-  transform: rotateY(360deg); }
+@media only screen and (min-width: 992px) {
+  /*Sombras cards Galería*/
+  #containerProyectos .row .cardShadow:nth-child(odd) {
+    box-shadow: 10px 10px 5px #aaaaaa; }
+  #containerProyectos .row .cardShadow:nth-child(even) {
+    box-shadow: -10px 10px 5px #aaaaaa; } }
 
-.RedesSociales li a:before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #f00;
-  transition: .5s;
-  z-index: 2; }
+@media only screen and (max-width: 992px) {
+  /*Sombras cards Galería*/
+  #containerProyectos .row .cardShadow {
+    box-shadow: 3px 3px 5px #aaaaaa; } }
 
-.RedesSociales li a:hover:before {
-  top: 0; }
+#Servicios section {
+  margin: 2em 0em; }
 
-.RedesSociales li:nth-child(1) a:before {
-  background: #25D366; }
-
-.RedesSociales li:nth-child(2) a:before {
-  background: #f09433;
-  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
-
-a {
-  text-decoration: none;
-  color: #00ADB5; }
-  a:hover {
-    text-decoration: none;
-    color: #00ADB5; }
-
-ul li {
-  list-style: none; }
-
-#containerGaleria .card {
-  border: 1px solid black; }
+@media only screen and (min-width: 992px) {
+  #Servicios section div:nth-child(3) {
+    justify-content: space-evenly; }
+  #Servicios section .btn {
+    height: 20%; } }

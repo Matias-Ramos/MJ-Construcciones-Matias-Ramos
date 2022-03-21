@@ -1,9 +1,31 @@
-#containerGaleria
+
+#containerProyectos .cardShadow {padding:0;}
+
+@media only screen and (min-width:992px)
 {
-	.card
-	{
-		border:1px solid black;
-	}	
+  /*Sombras cards Galería*/
+  #containerProyectos
+  {
+    .row
+    {
+      .cardShadow:nth-child(odd) { @include BoxShadow(10px,10px,5px,#aaaaaa); }
+      .cardShadow:nth-child(even) { @include BoxShadow(-10px,10px,5px,#aaaaaa); }
+    }
+  }
 }
 
+@media only screen and (max-width:992px)
+{
+  /*Sombras cards Galería*/
+  #containerProyectos
+  {
+    .row
+    {
+      .cardShadow
+      {
+        @include BoxShadow(3px,3px,5px,#aaaaaa);
+      }
+    }
+  }
+}
 

@@ -1,5 +1,3 @@
-
-
 body
 {
 	font-family: 'Poppins', sans-serif;
@@ -38,6 +36,6 @@ section{text-align: center;}
 {
 	nav
 	{
-		box-shadow: -5px 6px 2px #aaaaaa;
+		@include BoxShadow(-5px,6px,2px,#aaaaaa);
 	}
 }

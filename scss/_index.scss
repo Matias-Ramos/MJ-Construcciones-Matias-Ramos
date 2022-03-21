@@ -1,16 +1,16 @@
 
-
 #index section
 {
 	border: 1px solid black;
 	padding: 50px 0px;
 }
 
-/*Flecha #seccionMision*/
+/*Inicio flecha #seccionMision*/
 .arrow-container
 {
 	@include AnchoAlto(75px, 75px);
 	padding:0;
+	
 	/*Estela de alrededor del botón*/
 	.arrow-1
 	{
@@ -21,27 +21,27 @@
 		position: absolute;
 		top:0;
 	}
+
 	/*Círculo de color*/
 	.arrow-2
 	{
 		@include AnchoAlto(45px, 45px);
+		@include TopLeft(15px, 15px);
 		background: #00BCD4;
 		border-radius: 50%;
 		position: relative;
-		top: 15px;
-		left: 15px;
 		z-index: 1;
 		display: table;
 
+		/*Borde negro del btn*/
 		&:before
 		{
 			@include AnchoAlto(39px, 39px);
+			@include TopLeft(3px, 3px);
 			content: "";
 			border: 2px solid #006064;
 			border-radius: 50%;
 			position: absolute;
-			top: 3px;
-			left: 3px;
 		}
 
 		/* ">" (flecha) */
@@ -56,42 +56,24 @@
 	}
 }
 
-/* Animación flecha */
+/* Inicio animaciones flecha */
 .animated.hinge
 {
 	-webkit-animation-duration: 2s;
 	animation-duration: 2s;
 	animation-iteration-count:infinite;
 }
-@-webkit-keyframes zoomIn 
-{
-	0%
-	{
-		opacity: 0;
-		-webkit-transform: scale3d(.4, .4, .4);
-		transform: scale3d(.4, .4, .4);
-	}
-	50% {opacity: 0.5;}
-	100% {opacity: 0;}
-}
-@keyframes zoomIn 
-{
-	0%
-	{
-		opacity: 0;
-		-webkit-transform: scale3d(.4, .4, .4);
-		transform: scale3d(.4, .4, .4);
-	}
-	50% {opacity: 0.5;}
-	100% {opacity: 0;}
-}
+
+@-webkit-keyframes zoomIn {	@include ZoomInParameters; }
+@keyframes zoomIn {	@include ZoomInParameters; }
+
 .zoomIn
 {
 	-webkit-animation-name: zoomIn;
 	animation-name: zoomIn;
 }
-
-
+/* Fin animaciones flecha */
+/* Fin flecha #seccionMision*/
 
 #seccionTrayectoria
 {
@@ -128,109 +110,6 @@
 	}
 }
 
-/*Mobile and Tablets*/
-@media only screen and (max-width: 992px) 
-{
-	#seccionMision
-	{
-		.fa-angle-right
-		{
-			display:none;
-		}
-
-		.CuadrosDeTexto
-		{
-			box-shadow: -10px 10px 5px #aaaaaa;
-		}
-		button
-		{
-			margin: 20px 0px;
-		}
-	}
-	#seccionPorQueElegirnos
-	{
-		.container-fluid
-		{
-			.row:nth-child(2)
-			{
-				margin-top: 1.5rem;
-			}
-		}
-	}
-	#seccionTestimonios
-	{
-		/*Saca los botones fuera del slideshow*/
-		.carousel-control-prev {display: flex;justify-content:flex-start;margin-left:-15px;}
-		.carousel-control-next {display: flex;justify-content:flex-end;margin-right:-15px;}
-	}
-
-	.navBottom
-	{
-		h2
-		{
-			font-size: 1.5rem;
-		}
-	}
-}
-
-/*Netbooks and Desktops*/
-@media only screen and (min-width: 992px)
-{
-	/*Shadowing effect*/
-	#seccionMision
-	{
-		padding: 75px 0px;
-		.fa-angle-down
-			{
-				display:none;
-			}
-		
-		.container-fluid
-		{
-			.row
-			{
-				.CuadrosDeTexto
-				{
-					&:nth-child(1)
-					{
-						margin-left: 20px;
-						text-align: left;
-						box-shadow: 10px 10px 5px #aaaaaa;
-					}
-					&:nth-child(3)
-					{
-						margin-right: 20px;
-						box-shadow: -10px 10px 5px #aaaaaa;
-						text-align: right;
-					}
-				}
-				button
-				{
-					box-shadow: 1px 5px 3px #aaaaaa;
-					color: map-get($coloresPrincipales, $colour-blueish-logo);
-				}
-			}
-		}
-	}
-	#seccionPorQueElegirnos
-	{
-		li
-		{
-			margin: 50px 0px;
-		}
-	}
-	#seccionTestimonios
-	{
-		/*Saca los botones fuera del slideshow*/
-		.carousel-control-prev {margin-left: -100px;}
-		.carousel-control-next {margin-right: -100px;}
-	}
-
-
-
-}
-
-
 /*Redes Sociales Botones*/
 .RedesSociales
 {
@@ -261,23 +140,25 @@
 	}
 }
 
-
 /*Redes Sociales animación*/
-.RedesSociales li a:hover .icon {
+.RedesSociales li a:hover .icon 
+{
   color: #fff;
   transform: rotateY(360deg);
 }
-.RedesSociales li a:before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #f00;
-  transition: .5s;
-  z-index: 2;
+
+/*Adición de color en el flip*/
+.RedesSociales li a:before 
+{
+	@include AnchoAlto(100%,100%);
+	@include TopLeft(100%,0);
+	content: "";
+	position: absolute;
+	background: #f00;
+	transition: .5s;
+	z-index: 2;
 }
+
 
 .RedesSociales li a:hover:before {top: 0;}
 
@@ -290,3 +171,99 @@
 	background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
 	background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
 }
+
+
+/***********************/
+/***********************/
+/*INICIO MEDIA QUERIES*/
+/*Mobile and Tablets*/
+@media only screen and (max-width: 992px) 
+{
+	#seccionMision
+	{
+		.fa-angle-right	{	display:none;	}
+		.CuadrosDeTexto	{	@include BoxShadow(-10px,10px,5px,#aaaaaa);	}
+		button {	margin: 20px 0px;	}
+	}
+	#seccionPorQueElegirnos
+	{
+		.container-fluid
+		{
+			.row:nth-child(2)
+			{
+				margin-top: 1.5rem;
+			}
+		}
+	}
+	#seccionTestimonios
+	{
+		/*Saca los botones fuera del slideshow*/
+		.carousel-control-prev { display: flex; justify-content:flex-start; margin-left:-15px; }
+		.carousel-control-next { display: flex; justify-content:flex-end; margin-right:-15px; }
+	}
+
+	.navBottom
+	{
+		h2 {font-size: 1.5rem;}
+	}
+}
+
+
+/*Netbooks and Desktops*/
+@media only screen and (min-width: 992px)
+{
+	/*Shadowing effect*/
+	#seccionMision
+	{
+		padding: 75px 0px;
+		.fa-angle-down
+			{
+				display:none;
+			}
+		
+		.container-fluid
+		{
+			.row
+			{
+				.CuadrosDeTexto
+				{
+					&:nth-child(1)
+					{
+						margin-left: 20px;
+						text-align: left;
+						@include BoxShadow(10px,10px,5px,#aaaaaa);
+					}
+					&:nth-child(3)
+					{
+						margin-right: 20px;
+						@include BoxShadow(-10px,10px,5px,#aaaaaa);
+						text-align: right;
+					}
+				}
+				button
+				{
+					@include BoxShadow(1px,5px,3px,#aaaaaa);
+					color: map-get($coloresPrincipales, $colour-blueish-logo);
+				}
+			}
+		}
+	}
+	#seccionPorQueElegirnos
+	{
+		li
+		{
+			margin: 50px 0px;
+		}
+	}
+	#seccionTestimonios
+	{
+		/*Saca los botones fuera del slideshow*/
+		.carousel-control-prev {margin-left: -100px;}
+		.carousel-control-next {margin-right: -100px;}
+
+		/*Evita que el alto cambie por diferencia de renglones entre testimonio y testimonio y mueva las secciones que vienen debajo de esta*/
+		.carousel-inner{height: 75px;}
+	}
+}
+
+

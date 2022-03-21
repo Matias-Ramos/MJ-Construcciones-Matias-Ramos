@@ -1,39 +1,7 @@
-/*Footer global*/
 footer
 {
 	background-color: map-get($coloresPrincipales, $colour-darker);
 	padding:40px 0px;
-}
-
-/*Form - 1er panel del footer*/
-footer
-{
-	form
-	{
-		padding:10px;
-
-		h5
-		{
-			padding-top:10px;
-		}
-	}
-}
-
-/*Card - 2do panel del footer*/
-footer
-{
-	div
-	{
-		.card
-		{
-			text-align:center;
-
-			.card-title
-			{
-				padding-top: 15px;
-			}
-		}
-	}
 }
 
 
@@ -46,8 +14,6 @@ footer
 			.card
 			{
 				margin-top:30px;
-				padding:0px;
-				
 				.card-title
 				{
 					display: block;
@@ -57,4 +23,3 @@ footer
 		}
 	}
 }
-
