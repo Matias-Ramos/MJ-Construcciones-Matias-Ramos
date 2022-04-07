@@ -4,10 +4,20 @@ body
 	background-color: map-get($coloresPrincipales, $colour-whiteish-cream);
 }
 
+header
+{
+	.mobile-only
+	{
+		li
+		{
+			font-size:1.6rem;
+		}
+	}
+}
+
 .h1container
 {
 	padding: 15px 0px;
-	background-color: lightgrey;
 	border: 1px solid black;
 	-moz-box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF;
 	-webkit-box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF;
@@ -34,8 +44,77 @@ section{text-align: center;}
 
 .navBottom
 {
+	@include SectionPadding(75px, 0px, 75px, 0px);
 	nav
 	{
-		@include BoxShadow(-5px,6px,2px,#aaaaaa);
+		@include BoxShadow(-5px,6px,2px,#ABA5A2);
 	}
+}
+
+//Redes Sociales Botones
+.RedesSociales
+{
+	padding: 0;	
+
+	li a
+	{
+		@include AnchoAlto(50px, 50px);
+		background-color: map-get($coloresPrincipales, $colour-whiteish-cream);
+		text-align: center;
+		line-height: 50px;
+		font-size: 30px;
+		margin: 0 5px;
+		display: block;
+		border-radius: 50%;
+		position: relative;
+		overflow: hidden;
+		border: 1px solid whitesmoke;
+		z-index: 1;
+
+		.icon
+		{
+			position: relative;
+			color: #262626;
+			transition: .5s;
+			z-index: 3;
+		}
+	}
+}
+
+//Redes Sociales animación
+.RedesSociales li a:hover .icon 
+{
+  color: #fff;
+  transform: rotateY(360deg);
+}
+//Adición de color en el flip
+.RedesSociales li a:before 
+{
+	@include AnchoAlto(100%,100%);
+	@include TopLeft(100%,0);
+	content: "";
+	position: absolute;
+	background: #f00;
+	transition: .5s;
+	z-index: 2;
+}
+.RedesSociales li a:hover:before {top: 0;}
+.RedesSociales li:nth-child(1) a:before{background: #25D366;}
+.RedesSociales li:nth-child(2) a:before
+{
+	background: #f09433; 
+	background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+	background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+	background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+}
+
+
+
+@media only screen and (max-width: 992px)
+{
+	.desktop-only{ display:none!important; }
+}
+@media only screen and (min-width: 992px)
+{
+	.mobile-only{ display:none!important; }
 }

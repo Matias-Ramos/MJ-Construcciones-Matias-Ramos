@@ -1,13 +1,27 @@
-#Servicios
+#servicios
 {
 	section
 	{
-		margin: 2em 0em;
+		@include SectionPadding(75px, 0px, 90px, 0px);
+
+		//Parallax
+		background-image: url("../images/h1-bckg-ver2.jpg");
+		background-size: cover;
+		background-attachment: fixed; 
+		background-position: center; 
+		background-repeat: no-repeat; 
+		background-size: cover; 
 	}
 }
+
+
+/***********************/
+/***********************/
+/*INICIO MEDIA QUERIES*/
+/*Netbooks and Desktops*/
 @media only screen and (min-width: 992px)
 {
-	#Servicios
+	#servicios
 	{
 		section
 		{
@@ -18,6 +32,28 @@
 			.btn
 			{
 				height:20%;
+			}
+			img
+			{
+				border-top:1px solid black;
+				border-bottom:1px solid black;
+			}
+		}
+	}
+}
+
+/***********************/
+/*Mobile and Tablets*/
+@media only screen and (max-width: 992px)
+{
+	#servicios
+	{
+		section
+		{
+			img
+			{
+				border-left:1px solid black;
+				border-right:1px solid black;
 			}
 		}
 	}

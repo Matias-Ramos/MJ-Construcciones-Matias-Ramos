@@ -1,8 +1,20 @@
 
-#index section
+//TEMPORAL p/ diseño visual
+#seccionPorQueElegirnos { background-color: white; }
+
+
+/******************************************************/
+
+
+
+/*Eliminación de overflow en eje X causado por Bootstrap */
+#seccionTrayectoria, #seccionPorQueElegirnos, #seccionTestimonios, .navBottom
 {
-	border: 1px solid black;
-	padding: 50px 0px;
+	.row
+	{
+		margin-right: 0;
+		margin-left: 0; 
+	}
 }
 
 /*Inicio flecha #seccionMision*/
@@ -15,22 +27,22 @@
 	.arrow-1
 	{
 		@include AnchoAlto(75px, 75px);
-		background: #00BCD4;
-		opacity: 0.5;
+		background: #6BE3D7;
+		opacity: 0.9;
 		border-radius: 50%;
 		position: absolute;
 		top:0;
 	}
 
-	/*Círculo de color*/
+	/*Círculo (fondo) de color*/
 	.arrow-2
 	{
 		@include AnchoAlto(45px, 45px);
 		@include TopLeft(15px, 15px);
-		background: #00BCD4;
+		background: map-get($coloresPrincipales, $colour-blueish-logo);
 		border-radius: 50%;
 		position: relative;
-		z-index: 1;
+		z-index: 4;
 		display: table;
 
 		/*Borde negro del btn*/
@@ -39,7 +51,7 @@
 			@include AnchoAlto(39px, 39px);
 			@include TopLeft(3px, 3px);
 			content: "";
-			border: 2px solid #006064;
+			border: 2px solid map-get($coloresPrincipales, $colour-darkest);
 			border-radius: 50%;
 			position: absolute;
 		}
@@ -51,9 +63,26 @@
 			display: table-cell;
 			vertical-align: middle;
 			text-align: center;
-			color: #006064;
+			color: map-get($coloresPrincipales, $colour-darkest);
 		}
 	}
+}
+.arrow-2:hover
+{
+	transform: scale(1.1);
+	
+	/*Borde negro del btn*/
+	&:before
+	{
+		border: 2px solid black;
+	}
+
+	/* ">" (flecha) */
+	i.fa
+	{
+		color:black;
+	}
+
 }
 
 /* Inicio animaciones flecha */
@@ -74,20 +103,60 @@
 }
 /* Fin animaciones flecha */
 /* Fin flecha #seccionMision*/
+/**************************/
+/**************************/
 
+#seccionMision{	background-image:linear-gradient(210deg, #0077b6, #caf0f8); }
+
+//Diseño visual de la sección.
 #seccionTrayectoria
 {
-	@extend .AccordionFormatting;
-	.btn
+	border-top: 1px solid black;
+	//Parallax
+	background-image: url("../images/plano6.png");
+	background-size: cover;
+	background-attachment: fixed; 
+	background-position: center; 
+	background-repeat: no-repeat; 
+	background-size: cover; 
+	.row
 	{
-		font-size: 20px;
+		//Cuadro blanco dentro del Parallax
+		border:1px solid black;
+		background-color:white;
+		display:flex;
+		align-items:center;
+
+		/*Gana precedencia por sobre el resets.scss,
+		devolviendo los -bullets characters- a los ul li*/
+		.col-lg-3
+		{
+			ul li
+			{
+				list-style: square;
+			}
+		}
+		
+		// aumenta tamaño al ">"
+		.col-lg-1 { font-size:2rem; }
 	}
+
+	@extend .AccordionFormatting;	
+	h2 { font-size:3rem; }
+	.btn { font-size: 20px; }
 }
+
 
 #seccionTestimonios
 {
+	background-color:#8d99ae;
+	color:#f1ebe5;
 	.carousel-inner
 	{
+		.carousel-item
+		{
+			font-size:1.1rem;
+		}
 		.testimonio
 		{
 			text-align: left;
@@ -104,73 +173,19 @@
 }
 #seccionPorQueElegirnos
 {
+	@include SectionPadding(100px, 0px, 100px, 0px);
+	border-top:1px solid black;
 	p
 	{
 		margin:0;
 	}
 }
 
-/*Redes Sociales Botones*/
-.RedesSociales
+.navBottom
 {
-	padding: 0;	
-
-	li a
-	{
-		@include AnchoAlto(50px, 50px);
-		background-color: map-get($coloresPrincipales, $colour-whiteish-cream);
-		text-align: center;
-		line-height: 50px;
-		font-size: 30px;
-		margin: 0 5px;
-		display: block;
-		border-radius: 50%;
-		position: relative;
-		overflow: hidden;
-		border: 1px solid whitesmoke;
-		z-index: 1;
-
-		.icon
-		{
-			position: relative;
-			color: #262626;
-			transition: .5s;
-			z-index: 3;
-		}
-	}
+	@include SectionPadding(100px, 0px, 100px, 0px);
 }
 
-/*Redes Sociales animación*/
-.RedesSociales li a:hover .icon 
-{
-  color: #fff;
-  transform: rotateY(360deg);
-}
-
-/*Adición de color en el flip*/
-.RedesSociales li a:before 
-{
-	@include AnchoAlto(100%,100%);
-	@include TopLeft(100%,0);
-	content: "";
-	position: absolute;
-	background: #f00;
-	transition: .5s;
-	z-index: 2;
-}
-
-
-.RedesSociales li a:hover:before {top: 0;}
-
-.RedesSociales li:nth-child(1) a:before{background: #25D366;}
-
-.RedesSociales li:nth-child(2) a:before
-{
-	background: #f09433; 
-	background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
-	background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-	background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-}
 
 
 /***********************/
@@ -179,11 +194,53 @@
 /*Mobile and Tablets*/
 @media only screen and (max-width: 992px) 
 {
+
 	#seccionMision
 	{
-		.fa-angle-right	{	display:none;	}
-		.CuadrosDeTexto	{	@include BoxShadow(-10px,10px,5px,#aaaaaa);	}
+		@include SectionPadding(75px, 0px, 75px, 0px);
+		.CuadrosDeTexto	{	@include BoxShadow(-5px,5px,4px,map-get($coloresPrincipales, $shadow));	}
 		button {	margin: 20px 0px;	}
+		
+		//Espacio vertical a la fecha que activa el segundo cuadro de texto
+		.container-fluid
+		{
+			.row
+			{
+				.col-12
+				{
+					margin-top:20px;
+					margin-bottom:20px;
+				}
+			}
+		}
+	}
+	#seccionTrayectoria
+	{
+		//Parallax
+		@include SectionPadding (150px, 4%, 150px, 4%);
+
+		.row
+		{
+			/*Espaciado entre elementos,
+			el selector -not- omite los ">"*/
+			.col-12:not(.rotate-sm-90)
+			{
+				padding: 20px 15px;
+			}
+
+			//Cuadro blanco dentro del Parallax.
+			@include SectionPadding(50px, 5px, 50px, 5px);
+			
+			//container "Resto del equipo".
+			.col-lg-3
+			{
+				h3 { text-align: center; }
+				ul li { text-align: left; }
+			}
+			
+			//Flechas
+			.rotate-sm-90 { transform: rotate(90deg); }
+		}
 	}
 	#seccionPorQueElegirnos
 	{
@@ -197,9 +254,23 @@
 	}
 	#seccionTestimonios
 	{
+		.carousel-inner
+		{
+			position:relative;
+		}
+		@include SectionPadding(50px, 0px, 75px, 0px);
 		/*Saca los botones fuera del slideshow*/
-		.carousel-control-prev { display: flex; justify-content:flex-start; margin-left:-15px; }
-		.carousel-control-next { display: flex; justify-content:flex-end; margin-right:-15px; }
+		.carousel-control-prev { display: flex; justify-content:flex-start; margin-left:-7px; }
+		.carousel-control-next { display: flex; justify-content:flex-end; margin-right:-7px; }
+		.row:nth-child(2) 
+		{ 
+			height: 250px;
+			.carousel-item
+			{
+				height: 250px;
+			}
+		}
+
 	}
 
 	.navBottom
@@ -209,18 +280,16 @@
 }
 
 
+
+/***********************/
 /*Netbooks and Desktops*/
 @media only screen and (min-width: 992px)
 {
+
 	/*Shadowing effect*/
 	#seccionMision
 	{
-		padding: 75px 0px;
-		.fa-angle-down
-			{
-				display:none;
-			}
-		
+		@include SectionPadding(150px, 0px, 150px, 0px);
 		.container-fluid
 		{
 			.row
@@ -231,12 +300,12 @@
 					{
 						margin-left: 20px;
 						text-align: left;
-						@include BoxShadow(10px,10px,5px,#aaaaaa);
+						@include BoxShadow(10px,10px,5px,map-get($coloresPrincipales, $shadow));
 					}
 					&:nth-child(3)
 					{
 						margin-right: 20px;
-						@include BoxShadow(-10px,10px,5px,#aaaaaa);
+						@include BoxShadow(-10px,10px,5px,map-get($coloresPrincipales, $shadow));
 						text-align: right;
 					}
 				}
@@ -244,6 +313,29 @@
 				{
 					@include BoxShadow(1px,5px,3px,#aaaaaa);
 					color: map-get($coloresPrincipales, $colour-blueish-logo);
+				}
+
+
+			}
+		}
+	}
+	#seccionTrayectoria
+	{
+		//Parallax
+		@include SectionPadding (200px, 4%, 200px, 4%);
+		.row
+		{
+			//Cuadro blanco dentro del Parallax.
+			padding:50px 25px;
+			
+			
+			//container "Resto del equipo".
+			.col-lg-3
+			{
+				text-align: left;
+				h3
+				{
+					font-size:1.5rem;
 				}
 			}
 		}
@@ -257,13 +349,17 @@
 	}
 	#seccionTestimonios
 	{
+		@include SectionPadding(50px, 0px, 15px, 0px);
 		/*Saca los botones fuera del slideshow*/
 		.carousel-control-prev {margin-left: -100px;}
 		.carousel-control-next {margin-right: -100px;}
 
 		/*Evita que el alto cambie por diferencia de renglones entre testimonio y testimonio y mueva las secciones que vienen debajo de esta*/
 		.carousel-inner{height: 75px;}
+
+		.row:nth-child(2) 
+		{ 
+			height: 170px;
+		} 
 	}
 }
-
-

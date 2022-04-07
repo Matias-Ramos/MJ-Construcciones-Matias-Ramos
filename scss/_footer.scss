@@ -1,10 +1,67 @@
+
+
 footer
 {
 	background-color: map-get($coloresPrincipales, $colour-darker);
-	padding:40px 0px;
+	padding:50px 0px;
+	position:relative;
+	.row:nth-child(2)
+	{
+		//firma
+		.col-12
+		{
+			display:flex;
+			justify-content: flex-end;
+			position:absolute;
+			bottom:-50px;
+			span
+			{
+				font-size: 0.8rem;
+				a
+				{
+					color: map-get($coloresPrincipales, $colour-whiteish-cream);
+				}
+			}
+		}
+	}
+	//De acá hasta abajo, es el logo para la apertura del footer.
+	.row
+	{
+		position:relative;
+	}
+
+	//Ambos circulos
+	.footer-item:nth-child(1)
+	{
+		display:flex;
+		justify-content: center;
+		position:absolute;
+		top:-97px;
+
+		//logo
+		img
+		{
+			z-index:3;
+		}
+
+		//Estela alrededor del logo
+		#circle
+		{
+			display:flex;
+			justify-content: center;
+			position:absolute;
+			top:-6px;
+			z-index:2;  
+			height: 90px;
+			width: 90px;
+			background-color: map-get($coloresPrincipales, $colour-blueish-logo);
+			opacity: 20%;
+			border-radius: 50%;
+		}
+	}
 }
 
-
+//MOBILE
 @media only screen and (max-width:992px)
 {
 	footer
@@ -18,6 +75,23 @@ footer
 				{
 					display: block;
 					padding: 15px 10px 0px 10px;
+				}
+
+				//alineación redes sociales mobile
+				.card-body
+				{
+					.mobile-only
+					{
+						display: flex;
+						flex-direction: row;
+						justify-content: space-evenly;
+						align-items:center;
+						height:60px;
+						li
+						{
+							font-size:2rem;
+						}
+					}
 				}
 			}
 		}

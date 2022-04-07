@@ -35,7 +35,7 @@
 				    <div class="d-flex flex-grow-1">
 						
 						<!--SocialMedia icons for Mobile-->
-						<span class="w-100 align-self-center d-lg-none d-xl-none d-xs-flex d-flex d-sm-flex d-md-flex">
+						<div class="w-100 align-self-center mobile-only">
 							<ul class="navbar-nav d-flex flex-row">
 								<li class="d-inline-block">
 									<a href="#" class="nav-link m-2 menu-item">
@@ -48,20 +48,26 @@
 									</a>
 								</li>
 							</ul>
-						</span>
+						</div>
+						
+						<!--Logo-->
+				        <a class="navbar-brand desktop-only" href="index.html">
+				            <img src="images/mj_logo.png" alt="Logo de MJ Construcciones">
+				        </a>
+				        <a class="navbar-brand-two mx-auto mobile-only" href="index.html">
+				            <img src="images/mj_logo.png" alt="Logo de MJ Construcciones">
+				        </a>
 
-				        <a class="navbar-brand d-none d-lg-inline-block" href="index.html">
-				            <img src="images/mj_logo.png" alt="Logo de MJ Construcciones">
-				        </a>
-				        <a class="navbar-brand-two mx-auto d-inline-block d-sm-inline-block d-md-inline-block d-lg-none d-xl-none" href="index.html">
-				            <img src="images/mj_logo.png" alt="Logo de MJ Construcciones">
-				        </a>
+				        <!--Hamburguesa-->
 				        <div class="w-100 text-right align-self-center">
 				            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
 				                <span class="navbar-toggler-icon"></span>
 				            </button>
 				        </div>
+
 				    </div>
+
+				    <!--Nav Items-->
 				    <div class="collapse navbar-collapse flex-grow-1 text-center align-items-center" id="myNavbar">
 				        <ul class="navbar-nav ml-auto flex-nowrap">
 				            <li class="nav-item">
@@ -76,8 +82,12 @@
 				            <li class="nav-item">
 				                <a href="faq.html" class="nav-link m-2 menu-item">Preguntas Frecuentes</a>
 				            </li>
+				            <li class="nav-item">
+				                <a href="index_nobts.html" class="nav-link m-2 menu-item">Index-No-BTS</a>
+				            </li>
+
 							<!--SocialMedia icons for Desktop-->
-							<ul class="d-lg-flex d-xl-flex d-xs-none d-none d-sm-none d-md-none RedesSociales">
+							<ul class="desktop-only d-lg-flex d-xl-flex RedesSociales">
 								<li>
 									<a href="#">
 										<i class="fab fa-whatsapp icon"></i>
@@ -89,12 +99,13 @@
 									</a>
 								</li>
 							</ul>
+
 				        </ul>
 				    </div>
 				</nav>
 			</div>
 		</header>
-		<main class="container-fluid" id="Servicios">
+		<main class="container-fluid" id="servicios">
 
 			<!--H1-->
 			<div class="row h1container">
@@ -120,21 +131,24 @@
 					<p><b>[Requisitos minimos para solicitar el servicio]</b> <br> Cobramos el 35% del total por adelantado para cubrir los gastos iniciales. Cubrimos el area de Buenos Aires pero dependiendo el trabajo nos podemos movilizar a otras provinicias. Etc...</p>
 					<button type="button" class="btn btn-primary btn-block w-100 mx-auto my-2">Solicitar Asesoramiento</button>	
 				</div>
-
 			</section>
 
-
-
-
-			<!--JAVASCRIPT BELOW-->
+			<!--BTS JAVASCRIPT BELOW-->
 			<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 		</main>
 		<footer>
 			<div class="container-fluid">
-				<div class="row pb-2 my-2">
+				<div class="row my-2">
+
+					<!-- Logo -->
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 footer-item">
+						<img src="images/mj_logo.png" alt="Logo de MJ Construcciones">
+						<div id="circle"></div>
+					</div>	
+
 				<!-- Formulario para ser contactado-->
-					<div class="col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 mx-auto bg-light">
+					<div class="col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 mx-auto bg-light footer-item">
 						<form class="p-3">
 							<p class="text-center h5">Podés completar este formulario <br> para que te contactemos.</p>
 							<div class="form-group" >
@@ -158,9 +172,10 @@
 							</div>
 						</form>
 					</div>
+
 				<!-- Datos para que el cliente se pueda comunicar por sus propios medios-->
-					<div class="col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 bg-transparent mx-auto h-100 px-0">
-						<div class="card text-center">
+					<div class="col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 bg-transparent mx-auto px-0 footer-item">
+						<div class="card text-center h-100">
 							<p class="card-title h5 pt-3">...o en caso que desees contactarnos, <br>estos son nuestros datos:</p>
 							<div class="card-body p-0">
 								<p class="card-text">Nombre: xxxx</p>
@@ -168,8 +183,9 @@
 								<p class="card-text">Email: xxx@xxx.xxx</p>
 								<p class="card-text">Dirección: xxxxx</p>
 								<iframe src="https://www.google.com/maps/embed?		pb=!1m18!1m12!1m3!1d91746.13616726792!2d-123.03535276348553!3d44.06133015687239!2m3!1f0!2f!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54c0de472e7002bf%3A		0x536dbe99c4a3fd6!2sSpringfield%2C%20OR%2C%20SA!5e0!3m2!1sen!2sar!4v1642955758765!5m2!1sen!2sar" width="90%" height="300" style="border:1;" allowfullscreen="" loading="lazy"></iframe>
+								
 								<!--SocialMedia icons for Desktop-->
-								<ul class="d-flex RedesSociales justify-content-center pt-2">
+								<ul class="desktop-only d-lg-flex d-xl-flex RedesSociales justify-content-center pt-3">
 									<li>
 										<a href="#">
 											<i class="fab fa-whatsapp icon"></i>
@@ -181,8 +197,28 @@
 										</a>
 									</li>
 								</ul>
+
+								<!--SocialMedia icons for Mobile-->
+								<ul class="navbar-nav mobile-only mt-3">
+									<li class="d-inline-block">
+										<a href="#" class="nav-link m-2 menu-item">
+											<i class="fab fa-whatsapp icon"></i>
+										</a>
+									</li>
+									<li class="d-inline-block">
+										<a href="#" class="nav-link m-2 menu-item">
+											<i class="fab fa-instagram icon"></i>
+										</a>
+									</li>
+								</ul>
+								
 							</div>
 						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<span><i>Desarrollador: <a href="https://www.linkedin.com/in/matias-ramos-a91505118/" target="_blank">M.R.</a></i></span>
 					</div>
 				</div>
 			</div>

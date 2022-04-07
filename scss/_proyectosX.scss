@@ -1,39 +1,198 @@
+
+.containerProyectoX
+{
+	//Centra verticalmente al carousel con respecto a la [Descripción del proyecto].
+	#CarouselProyectoX
+	{
+		.carousel-inner
+		{
+			display:flex;
+			align-items:center;
+		}
+	}
+	
+	//Formatea las lineas separadoras
+	.guardBand
+	{
+		height: 20px;
+		overflow:hidden;
+		img
+		{
+			width:100%;
+		}
+	}
+
+	//Elimina un espacio en blanco que se forma debajo del renglón, propio de los display:inline de los iframes.
+	.framesProyectoX
+	{
+		.row
+		{
+			iframe
+			{
+				display:block;
+			}
+		}
+	}
+
+	//formateo whitespace inner section
+	.navBottom
+	{
+		@include SectionPadding(60px, 0px, 75px, 0px);
+	}
+}
+
+
+
+/***********************/
+/*INICIO DE MEDIA QUERIES*/
+/*Netbooks and Desktops*/
 @media only screen and (min-width: 992px)
 {
-	.containerProyectoX .CuadrosDeTexto
+	.containerProyectoX 
 	{
-		text-align: left;
-		justify-content: left;
-		#DescriptProyX
+		.carousel-inner
 		{
-			display: flex;
-			flex-direction: column;
-			justify-content: space-evenly;
-			align-items: flex-start;
-			span
+			height:550px;
+		}
+		.CuadrosDeTexto
+		{
+			text-align: left;
+			justify-content: left;
+			#DescriptProyX
 			{
-				p
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				align-items: flex-start;
+			}
+		}
+
+		//Formateo iframes
+		.framesProyectoX
+		{
+			background-color: #535c68;
+			color:map-get($coloresPrincipales, $colour-whiteish-cream);
+			@include SectionPadding(50px, 0px, 50px, 0px);
+			margin-top:65px;
+			.row
+			{
+				justify-content: space-evenly;
+				//Top b&yellow guard-band
+				div:nth-child(1)
 				{
-					margin-bottom: 0;
+					padding-right: 0px;
+					padding-left: 0px;
+					margin-bottom: 30px;
+					margin-top: 30px;
+				}
+
+				//YT Video
+				div:nth-child(2)
+				{
+					padding-left: 0px;
+				}
+				
+				//Bottom b&yellow guard-band
+				div:nth-child(5)
+				{
+					padding-right: 0px;
+					padding-left: 0px;
+					margin-top: 45px;
 				}
 			}
 		}
 	}
 }
 
+
+
+/***********************/
+/*Mobile and Tablets*/
+
 @media only screen and (max-width: 992px)
 {
 	#CarouselProyectoX
 	{
 		padding: 0;
-	}
-	.containerProyectoX .CuadrosDeTexto
-	{
-		justify-content: center;
-		align-items: center;
-		#DescriptProyX span
+		
+		//extra-small phones
+		.carousel-inner
 		{
-			text-align: center;
+			height:300px;
+		}
+	}
+	.containerProyectoX 
+	{
+
+		.CuadrosDeTexto
+		{
+			justify-content: center;
+			align-items: center;
+			#DescriptProyX 
+			{
+				span
+				{
+					text-align: center;
+				}
+				h2
+				{
+					font-size:1.5rem;
+				}
+			}
+		}
+		.framesProyectoX
+		{
+			.row
+			{
+
+				//black & yellow guard-bands
+				div:nth-child(odd)
+				{
+					margin-top: 25px;
+					margin-bottom: 25px;
+				}
+
+				//iframes (YT Video + GoogleMaps)
+				div:nth-child(even)
+				{
+					h2
+					{
+						margin-bottom:20px;
+					}
+					iframe
+					{
+						margin-bottom:10px;	
+					}
+				}
+			}
+		}
+		.navBottom
+		{
+			@include SectionPadding (25px, 0px, 75px, 0px);
+		}
+	}
+}
+
+//MEDIUM-PHONE (not small)
+@media only screen and (min-width: 576px) and (max-width: 768px)
+{
+	#CarouselProyectoX
+	{
+		.carousel-inner
+		{
+			height:450px;
+		}
+	}
+}
+
+//TABLET
+@media only screen and (min-width: 768px) and (max-width: 992px)
+{
+	#CarouselProyectoX
+	{
+		.carousel-inner
+		{
+			height:600px;
 		}
 	}
 }

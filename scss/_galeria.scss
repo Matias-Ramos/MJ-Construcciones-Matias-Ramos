@@ -1,5 +1,18 @@
 
-#containerProyectos .cardShadow {padding:0;}
+#containerProyectos
+{
+  @include SectionPadding(40px, 0px, 10px, 0px);
+  .cardShadow {padding:0;}
+
+  //arregla overflow-x generado por BTS
+  .row { margin:0; }
+}
+
+
+
+/***********************/
+/*INICIO MEDIA QUERIES*/
+/*Netbooks and Desktops*/
 
 @media only screen and (min-width:992px)
 {
@@ -14,6 +27,10 @@
   }
 }
 
+
+
+/***********************/
+/*Mobile and Tablets*/
 @media only screen and (max-width:992px)
 {
   /*Sombras cards Galería*/

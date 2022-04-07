@@ -4,15 +4,18 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!--Pestaña-->
 		<title>MJ-Sobre nosotros</title>
 		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
-		<!--Bootstrap below-->
+		<!--Bootstrap-->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-		<!--end Bootstrap-->
-		<link rel="stylesheet" href="css/additionalStyles.css">
-		
-		<!--GoogleFonts below-->
+
+		<!--Wow Animate-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+		<!--GoogleFonts-->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap" rel="stylesheet">
@@ -20,13 +23,15 @@
 		<!--SocialMedia buttons -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
-		<!--SocialMedia Animation-->
+		<!--Animation of the SocialMedia buttons -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-		<!--End S.M. Anim -->
 
+		<!--SEO-->
 		<meta name="keywords" content="construcciones construccion refaccion remodelacion arquitectura constructora arquitectos casa vivienda obras planos">
 		<meta name="description" content="Empresa de construcciones en Buenos Aires. Dirección y Ejecución de las obras a cargo de Matias Chindamo (Ingeniero UTN, 4 años en el rubro) y Javier Chindamo (25 años en el rubro)"> 
 
+		<!--CSS-->
+		<link rel="stylesheet" href="css/additionalStyles.css">
 	</head>
 	<body>
 		<header class="container-fluid">
@@ -35,7 +40,7 @@
 				    <div class="d-flex flex-grow-1">
 						
 						<!--SocialMedia icons for Mobile-->
-						<span class="w-100 align-self-center d-lg-none d-xl-none d-xs-flex d-flex d-sm-flex d-md-flex">
+						<div class="w-100 align-self-center mobile-only">
 							<ul class="navbar-nav d-flex flex-row">
 								<li class="d-inline-block">
 									<a href="#" class="nav-link m-2 menu-item">
@@ -48,20 +53,26 @@
 									</a>
 								</li>
 							</ul>
-						</span>
+						</div>
+						
+						<!--Logo-->
+				        <a class="navbar-brand desktop-only" href="index.html">
+				            <img src="images/mj_logo.png" alt="Logo de MJ Construcciones">
+				        </a>
+				        <a class="navbar-brand-two mx-auto mobile-only" href="index.html">
+				            <img src="images/mj_logo.png" alt="Logo de MJ Construcciones">
+				        </a>
 
-				        <a class="navbar-brand d-none d-lg-inline-block" href="index.html">
-				            <img src="images/mj_logo.png" alt="Logo de MJ Construcciones">
-				        </a>
-				        <a class="navbar-brand-two mx-auto d-inline-block d-sm-inline-block d-md-inline-block d-lg-none d-xl-none" href="index.html">
-				            <img src="images/mj_logo.png" alt="Logo de MJ Construcciones">
-				        </a>
+				        <!--Hamburguesa-->
 				        <div class="w-100 text-right align-self-center">
 				            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
 				                <span class="navbar-toggler-icon"></span>
 				            </button>
 				        </div>
+
 				    </div>
+
+				    <!--Nav Items-->
 				    <div class="collapse navbar-collapse flex-grow-1 text-center align-items-center" id="myNavbar">
 				        <ul class="navbar-nav ml-auto flex-nowrap">
 				            <li class="nav-item">
@@ -76,8 +87,12 @@
 				            <li class="nav-item">
 				                <a href="faq.html" class="nav-link m-2 menu-item">Preguntas Frecuentes</a>
 				            </li>
+				            <li class="nav-item">
+				                <a href="index_nobts.html" class="nav-link m-2 menu-item">Index-No-BTS</a>
+				            </li>
+
 							<!--SocialMedia icons for Desktop-->
-							<ul class="d-lg-flex d-xl-flex d-xs-none d-none d-sm-none d-md-none RedesSociales">
+							<ul class="desktop-only d-lg-flex d-xl-flex RedesSociales">
 								<li>
 									<a href="#">
 										<i class="fab fa-whatsapp icon"></i>
@@ -89,6 +104,7 @@
 									</a>
 								</li>
 							</ul>
+
 				        </ul>
 				    </div>
 				</nav>
@@ -104,108 +120,115 @@
 					</div>
 				</div>
 			</div>
+
 			<!--Misión-->
 			<section id="seccionMision">
-				<div class="container-fluid">
-					<div class="row justify-content-around align-items-center">
-						<div class="col-10 col-sm-9 col-md-8 col-lg-5 col-xl-4 CuadrosDeTexto pl-3 pt-3">
-							<h2>Nuestra misión</h2>
-							<p>Empresa de arquitectura y construcción.<br>Dirección y ejecución de las obras.<br>Etc.</p>
-						</div>
-						<!--Flecha-->
-						<div class="col-12 col-sm-12 col-md-12 col-lg-1 col-xl-1 p-0 d-flex justify-content-center">
-							<div class="arrow-container animated fadeInDown">
-								<div class="arrow-2">
-									<i class="fa fa-angle-right"></i>
-									<i class="fa fa-angle-down"></i>
+					<div class="container-fluid">
+						<div class="row justify-content-around align-items-center">
+							<div class="col-10 col-sm-9 col-md-8 col-lg-5 col-xl-4 CuadrosDeTexto pl-3 pt-3">
+								<h2>Nuestra misión</h2>
+								<p>Empresa de arquitectura y construcción.<br>Dirección y ejecución de las obras.<br>Etc.</p>
+							</div>
+
+							<!--Flecha-->
+							<div class="col-12 col-sm-12 col-md-12 col-lg-1 col-xl-1 p-0 d-flex justify-content-center">
+								<div class="arrow-container animated fadeInDown">
+									<div class="arrow-2">
+										<i class="fa fa-angle-right desktop-only"></i>
+										<i class="fa fa-angle-down mobile-only"></i>
+									</div>
+									<div class="arrow-1 animated hinge zoomIn"></div>
 								</div>
-								<div class="arrow-1 animated hinge zoomIn"></div>
+							</div>
+
+							<div class="col-10 col-sm-9 col-md-8 col-lg-5 col-xl-4 CuadrosDeTexto  pt-3 animate__animated animate__fadeIn wow">
+								<h2>Información adicional</h2>
+								<p>Interacción para hacer con JS<br> Este cuadro aparecerá onclick cuando el usuario presione la flecha.</p>
 							</div>
 						</div>
-						<div class="col-10 col-sm-9 col-md-8 col-lg-5 col-xl-4 CuadrosDeTexto pr-3 pt-3">
-							<h2>Información adicional</h2>
-							<p>Interacción para hacer con JS<br> Este cuadro aparecerá onclick cuando el usuario presione la flecha.</p>
-						</div>
 					</div>
-				</div>
 			</section> 
 
 			<!--Trayectoria-->
 			<section id="seccionTrayectoria" class="container-fluid">
-				<div class="row">
-					<div class="col-12">
-						<h2>Trayectoria</h2>
-					</div>
-				</div>
 
-				<div class="row pt-5">
-					<div class="col-10 col-sm-9 col-md-8 col-lg-7 col-xl-7 mx-auto">
-						<div id="accordion">
-							<!--CARTA UNO-->
-							<div class="card">
-								<div class="card-header" id="headingOne">
-									<h5 class="mb-0">
-										<button class="btn btn-link py-3" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-											Matias Chindamo
-										</button>
-									</h5>
-								</div>
-								<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-									<div class="card-body justify-content-center row">
-										<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 align-self-center">
-											<img class="w-75"src="images/vector-person.jpg" alt="Fotografía de Matias Chindamo">
-										</div>
-										<div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
-											<p>Actualmente estudiando en la UTN, Matias tiene 25 años y está a 4 materias de recibirse en la facultad anteriormente mencionada. Previo a esta carrera Matias completó sus estudios en el colegio secundario técnico ETN1 Ingeniero Huergo. Ejerce su profesion de maestro mayor de obra desde hace 4 años ya. </p>
+					<div class="row">
+
+						<!--H2 "Plantel"-->
+						<div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+							<h2>Plantel</h2>
+						</div>
+
+						<!--Flecha-->
+						<div class="col-12 col-sm-12 col-md-12 col-lg-1 col-xl-1 rotate-sm-90"> <span>></span> </div>
+
+						<!--Los Chindamo-->
+						<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+							<div id="accordion">
+
+								<!--Carta Matias-->
+								<div class="card">
+									<div class="card-header" id="headingOne">
+										<h5 class="mb-0">
+											<button class="btn btn-link py-3" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+												Matias Chindamo
+											</button>
+										</h5>
+									</div>
+									<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+										<div class="card-body justify-content-center row">
+											<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 align-self-center">
+												<img class="w-75"src="images/vector-person.jpg" alt="Fotografía de Matias Chindamo">
+											</div>
+											<div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
+												<p>Actualmente estudiando en la UTN, Matias tiene 25 años y está a 4 materias de recibirse en la facultad anteriormente mencionada. Previo a esta carrera Matias completó sus estudios en el colegio secundario técnico ETN1 Ingeniero Huergo. Ejerce su profesion de maestro mayor de obra desde hace 4 años ya. </p>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<!--CARTA DOS-->
-							<div class="card">
-								<div class="card-header" id="headingTwo">
-									<h5 class="mb-0">
-										<button class="btn btn-link collapsed py-3" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-										  Javier Chindamo
-										</button>
-									</h5>
-								</div>
-								<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-									<div class="card-body justify-content-center row">
-										<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 align-self-center">
-											<img class="w-75"src="images/vector-person.jpg" alt="Fotografía de Javier Chindamo">
-										</div>
-										<div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
-											<p>Javier se dedica a las construcciones desde hace mas de 20 años. Ha construído desde monoambientes hasta mansiones en una considerable cantidad de localizaciones distintas, tales como Bahia Blanca, Lomas de Zamora, Tigre, Cleypole, etc.</p>
-										</div>
+
+								<!--Carta Javier-->
+								<div class="card">
+									<div class="card-header" id="headingTwo">
+										<h5 class="mb-0">
+											<button class="btn btn-link collapsed py-3" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+											  Javier Chindamo
+											</button>
+										</h5>
 									</div>
-								</div>
-							</div>
-							<!--CARTA TRES-->
-							<div class="card">
-								<div class="card-header" id="headingThree">
-									<h5 class="mb-0">
-										<button class="btn btn-link collapsed py-3" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-											Abuelo Chindamo
-										</button>
-									</h5>
-								</div>
-								<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-									<div class="card-body justify-content-center row">
-										<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 align-self-center">
-											<img class="w-75"src="images/vector-person.jpg" alt="Fotografía del Abuelo Chindamo">
-										</div>
-										<div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
-											<p>Juan de los Palotes se inició en las construcciones allá en el año 1920 y adquirió sus conocimientos no a través de estudios sino a través de la práctica. Participó en construcciones tales como la sede central de YPF y la remodelación llevada a cabo de la Casa Rosada en el año 1990, entre otras.</p>
+									<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+										<div class="card-body justify-content-center row">
+											<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 align-self-center">
+												<img class="w-75"src="images/vector-person.jpg" alt="Fotografía de Javier Chindamo">
+											</div>
+											<div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
+												<p>Javier se dedica a las construcciones desde hace mas de 20 años. Ha construído desde monoambientes hasta mansiones en una considerable cantidad de localizaciones distintas, tales como Bahia Blanca, Lomas de Zamora, Tigre, Cleypole, etc.</p>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
+
+						<!--Flecha-->
+						<div class="col-12 col-sm-12 col-md-12 col-lg-1 col-xl-1 rotate-sm-90"> <span>></span> </div>
+
+						<!--Resto del equipo-->
+						<div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
+							<h3>Con la asistencia de...</h3>
+							<ul>
+								<li>Carpinteros</li>
+								<li>Ingenieros civiles</li>
+								<li>Técnicos de impermeabilización</li>
+								<li>Directores de cantera</li>
+								<li>Albañiles</li>
+								<li>Perito de construcción</li>
+							</ul>
+						</div>
+
+					</div>	
 			</section>
-			
+
 			<!-- Por qué elegirnos -->
 			<section id="seccionPorQueElegirnos" class="container-fluid">
 				<div class="row">
@@ -214,21 +237,21 @@
 					</div>
 				</div>
 				<div class="row flex-wrap">
-					<div class="col-5 col-sm-5 col-md-5 col-lg-3 col-xl-3  mx-auto">
+					<div class="col-10 col-sm-10 col-md-4 col-lg-3 col-xl-3  mx-auto">
 						<ul class="list-unstyled">
-							<li class="media align-items-center">
+							<li class="media align-items-center animate__animated animate__slideInLeft wow">
 								<img src="images/no_bg_icons/icons8_1.png" class="align-self-center mr-3" alt="iconX">
 								<div class="media-body d-flex justify-content-start">
 									<p>Honestidad comercial</p>
 								</div>
 							</li>
-							<li class="media align-items-center my-4">
+							<li class="media align-items-center my-4 animate__animated animate__slideInLeft wow">
 								<img src="images/no_bg_icons/icons8_2.png" class="align-self-center mr-3" alt="...">
 								<div class="media-body d-flex justify-content-start">
 									<p>Respeto profesional</p>
 								</div>
 							</li>
-							<li class="media align-items-center">
+							<li class="media align-items-center animate__animated animate__slideInLeft wow">
 								<img src="images/no_bg_icons/icons8_3.png" class="align-self-center mr-3" alt="...">
 								<div class="media-body d-flex justify-content-start">
 									<p>Calidad asegurada</p>
@@ -236,21 +259,21 @@
 							</li>
 						</ul>
 					</div>
-					<div class="col-5 col-sm-5 col-md-5 col-lg-3 col-xl-3 mx-auto">
+					<div class="col-10 col-sm-10 col-md-4 col-lg-3 col-xl-3 mx-auto">
 						<ul class="list-unstyled">
-							<li class="media align-items-center mb-4">
+							<li class="media align-items-center justify-content-start mb-4 animate__animated animate__slideInRight wow">
 								<img src="images/no_bg_icons/icons8_4.png" class="align-self-center mr-3" alt="...">
 								<div class="media-body d-flex justify-content-start">
 									<p>Atención personalizada</p>
 								</div>
 							</li>
-							<li class="media align-items-center">
+							<li class="media align-items-center animate__animated animate__slideInRight wow">
 								<img src="images/no_bg_icons/icons8_5.png" class="align-self-center mr-3" alt="...">
 								<div class="media-body d-flex justify-content-start">
 									<p>Costos previsibles</p>
 								</div>
 							</li>
-							<li class="media align-items-center my-4">
+							<li class="media align-items-center my-4 animate__animated animate__slideInRight wow">
 								<img src="images/no_bg_icons/icons8_6.png" class="align-self-center mr-3" alt="...">
 								<div class="media-body d-flex justify-content-start">
 									<p>Soluciones rápidas</p>
@@ -268,13 +291,13 @@
 						<h2 class="d-inline">Testimonios</h2>
 					</div>
 				</div>
-				<div class="row py-5">
-					<div class="col-11 col-sm-11 col-md-11 col-lg-8 col-xl-8 mx-auto">
+				<div class="row pt-5">
+					<div class="col-11 col-sm-11 col-md-11 col-lg-8 col-xl-8 mx-auto p-0">
 						<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner">
 
 								<!--ITEM 1-->
-								<div class="carousel-item active" data-interval="20000">
+								<div class="carousel-item active" data-interval="25000">
 									<div class="row align-items-center">
 										<div class="col-4 col-sm-4 col-md-4 justify-content-center">
 											<span>Nacho Fernandez</span>
@@ -286,7 +309,7 @@
 								</div>
 
 								<!--ITEM 2-->
-								<div class="carousel-item" data-interval="20000">
+								<div class="carousel-item" data-interval="25000">
 									<div class="row align-items-center">
 										<div class="col-4 col-sm-4 col-md-4 justify-content-center">
 											<span>Julian Alvarez</span>
@@ -298,7 +321,7 @@
 								</div>
 
 								<!--ITEM 3-->
-								<div class="carousel-item" data-interval="20000">
+								<div class="carousel-item" data-interval="25000">
 									<div class="row align-items-center">
 										<div class="col-4 col-sm-4 col-md-4 justify-content-center">
 											<span>Franco Armani</span>
@@ -341,15 +364,28 @@
 				</div>
 			</section>
 
-			<!--JAVASCRIPT BELOW-->
+			<!--Wow JS-->
+			<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+			<script> new WOW().init(); </script>
+
+			<!--BTS JS below-->
 			<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
 		</main>
 		<footer>
 			<div class="container-fluid">
-				<div class="row pb-2 my-2">
+				<div class="row my-2">
+
+					<!-- Logo -->
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 footer-item">
+						<img src="images/mj_logo.png" alt="Logo de MJ Construcciones">
+						<div id="circle"></div>
+					</div>	
+
 				<!-- Formulario para ser contactado-->
-					<div class="col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 mx-auto bg-light">
+					<div class="col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 mx-auto bg-light footer-item">
 						<form class="p-3">
 							<p class="text-center h5">Podés completar este formulario <br> para que te contactemos.</p>
 							<div class="form-group" >
@@ -373,9 +409,10 @@
 							</div>
 						</form>
 					</div>
+
 				<!-- Datos para que el cliente se pueda comunicar por sus propios medios-->
-					<div class="col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 bg-transparent mx-auto h-100 px-0">
-						<div class="card text-center">
+					<div class="col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 bg-transparent mx-auto px-0 footer-item">
+						<div class="card text-center h-100">
 							<p class="card-title h5 pt-3">...o en caso que desees contactarnos, <br>estos son nuestros datos:</p>
 							<div class="card-body p-0">
 								<p class="card-text">Nombre: xxxx</p>
@@ -383,8 +420,9 @@
 								<p class="card-text">Email: xxx@xxx.xxx</p>
 								<p class="card-text">Dirección: xxxxx</p>
 								<iframe src="https://www.google.com/maps/embed?		pb=!1m18!1m12!1m3!1d91746.13616726792!2d-123.03535276348553!3d44.06133015687239!2m3!1f0!2f!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54c0de472e7002bf%3A		0x536dbe99c4a3fd6!2sSpringfield%2C%20OR%2C%20SA!5e0!3m2!1sen!2sar!4v1642955758765!5m2!1sen!2sar" width="90%" height="300" style="border:1;" allowfullscreen="" loading="lazy"></iframe>
+								
 								<!--SocialMedia icons for Desktop-->
-								<ul class="d-flex RedesSociales justify-content-center pt-2">
+								<ul class="desktop-only d-lg-flex d-xl-flex RedesSociales justify-content-center pt-3">
 									<li>
 										<a href="#">
 											<i class="fab fa-whatsapp icon"></i>
@@ -396,8 +434,28 @@
 										</a>
 									</li>
 								</ul>
+
+								<!--SocialMedia icons for Mobile-->
+								<ul class="navbar-nav mobile-only mt-3">
+									<li class="d-inline-block">
+										<a href="#" class="nav-link m-2 menu-item">
+											<i class="fab fa-whatsapp icon"></i>
+										</a>
+									</li>
+									<li class="d-inline-block">
+										<a href="#" class="nav-link m-2 menu-item">
+											<i class="fab fa-instagram icon"></i>
+										</a>
+									</li>
+								</ul>
+								
 							</div>
 						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<span><i>Desarrollador: <a href="https://www.linkedin.com/in/matias-ramos-a91505118/" target="_blank">M.R.</a></i></span>
 					</div>
 				</div>
 			</div>
