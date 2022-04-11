@@ -37,11 +37,11 @@ header .mobile-only li {
   font-size: 1.6rem; }
 
 .h1container {
-  padding: 15px 0px;
+  padding: 25px 0px;
   border: 1px solid black;
-  -moz-box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF;
-  -webkit-box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF;
-  box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF; }
+  /*-moz-box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF;
+	-webkit-box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF;*/
+  box-shadow: inset 0px 15px 15px 0 #BFBFBF, inset 0px -12px 22px #BFBFBF; }
   .h1container h1 {
     color: #393E46;
     text-align: center;
@@ -122,17 +122,9 @@ section {
 
 footer {
   background-color: #393E46;
-  padding: 50px 0px;
   position: relative; }
-  footer .row:nth-child(2) .col-12 {
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    bottom: -50px; }
-    footer .row:nth-child(2) .col-12 span {
-      font-size: 0.8rem; }
-      footer .row:nth-child(2) .col-12 span a {
-        color: #EEEEEE; }
+  footer .container-fluid:nth-child(2) .row .col-12 span {
+    font-size: 0.8rem; }
   footer .row {
     position: relative; }
   footer .footer-item:nth-child(1) {
@@ -155,128 +147,63 @@ footer {
       border-radius: 50%; }
 
 @media only screen and (max-width: 992px) {
-  footer div .card {
-    margin-top: 30px; }
-    footer div .card .card-title {
-      display: block;
-      padding: 15px 10px 0px 10px; }
-    footer div .card .card-body .mobile-only {
+  footer {
+    padding: 50px 0px 0px 0px; }
+    footer div .card {
+      margin-top: 30px; }
+      footer div .card .card-title {
+        display: block;
+        padding: 15px 10px 0px 10px; }
+      footer div .card .card-body .mobile-only {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 60px; }
+        footer div .card .card-body .mobile-only li {
+          font-size: 2rem; }
+    footer .container-fluid:nth-child(2) .row {
+      margin-top: 30px; }
+      footer .container-fluid:nth-child(2) .row .col-12 {
+        display: flex;
+        justify-content: center; } }
+
+@media only screen and (min-width: 992px) {
+  footer {
+    padding: 50px 0px 50px 0px; }
+    footer .card {
+      height: 100%; }
+    footer .container-fluid:nth-child(2) .row .col-12 {
       display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      align-items: center;
-      height: 60px; }
-      footer div .card .card-body .mobile-only li {
-        font-size: 2rem; } }
+      position: absolute;
+      bottom: -50px; }
+    footer .container-fluid:nth-child(2) .row .col-12:nth-child(1) {
+      justify-content: flex-start; }
+    footer .container-fluid:nth-child(2) .row .col-12:nth-child(2) {
+      justify-content: flex-end; } }
 
-#seccionPorQueElegirnos {
-  background-color: white; }
-
-/******************************************************/
+/*****************************************/
+/***********GENERAL ATTRIBUTES************/
+/*****************************************/
 /*Eliminación de overflow en eje X causado por Bootstrap */
 #seccionTrayectoria .row, #seccionPorQueElegirnos .row, #seccionTestimonios .row, .navBottom .row {
   margin-right: 0;
   margin-left: 0; }
 
-/*Inicio flecha #seccionMision*/
-.arrow-container {
-  width: 75px;
-  height: 75px;
-  padding: 0;
-  /*Estela de alrededor del botón*/
-  /*Círculo (fondo) de color*/ }
-  .arrow-container .arrow-1 {
-    width: 75px;
-    height: 75px;
-    background: #6BE3D7;
-    opacity: 0.9;
-    border-radius: 50%;
-    position: absolute;
-    top: 0; }
-  .arrow-container .arrow-2 {
-    width: 45px;
-    height: 45px;
-    top: 15px;
-    left: 15px;
-    background: #00ADB5;
-    border-radius: 50%;
-    position: relative;
-    z-index: 4;
-    display: table;
-    /*Borde negro del btn*/
-    /* ">" (flecha) */ }
-    .arrow-container .arrow-2:before {
-      width: 39px;
-      height: 39px;
-      top: 3px;
-      left: 3px;
-      content: "";
-      border: 2px solid #222831;
-      border-radius: 50%;
-      position: absolute; }
-    .arrow-container .arrow-2 i.fa {
-      font-size: 25px;
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center;
-      color: #222831; }
-
-.arrow-2:hover {
-  transform: scale(1.1);
-  /*Borde negro del btn*/
-  /* ">" (flecha) */ }
-  .arrow-2:hover:before {
-    border: 2px solid black; }
-  .arrow-2:hover i.fa {
-    color: black; }
-
-/* Inicio animaciones flecha */
-.animated.hinge {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  animation-iteration-count: infinite; }
-
-@-webkit-keyframes zoomIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale3d(0.4, 0.4, 0.4);
-    transform: scale3d(0.4, 0.4, 0.4); }
-  50% {
-    opacity: 0.5; }
-  100% {
-    opacity: 0; } }
-
-@keyframes zoomIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale3d(0.4, 0.4, 0.4);
-    transform: scale3d(0.4, 0.4, 0.4); }
-  50% {
-    opacity: 0.5; }
-  100% {
-    opacity: 0; } }
-
-.zoomIn {
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn; }
-
-/* Fin animaciones flecha */
-/* Fin flecha #seccionMision*/
-/**************************/
-/**************************/
 #seccionMision {
-  background-image: linear-gradient(210deg, #0077b6, #caf0f8); }
+  background-image: linear-gradient(210deg, white, #8dc8d8); }
 
 #seccionTrayectoria {
   border-top: 1px solid black;
-  background-image: url("../images/plano6.png");
+  background-image: url("../images/plano7.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
   #seccionTrayectoria .row {
-    border: 1px solid black;
+    border: 2px solid black;
+    border-radius: 10px;
     background-color: white;
     display: flex;
     align-items: center;
@@ -305,10 +232,30 @@ footer {
     padding: 15px; }
 
 #seccionPorQueElegirnos {
-  padding: 100px 0px 100px 0px;
+  padding: 75px 0px 100px 0px;
   border-top: 1px solid black; }
   #seccionPorQueElegirnos p {
     margin: 0; }
+  #seccionPorQueElegirnos .row:nth-child(1) {
+    margin-bottom: 50px; }
+    #seccionPorQueElegirnos .row:nth-child(1) h2 {
+      font-size: 3rem; }
+  #seccionPorQueElegirnos .row:nth-child(2) .cardIconTitleConteiner {
+    margin-bottom: 10px; }
+    #seccionPorQueElegirnos .row:nth-child(2) .cardIconTitleConteiner img {
+      margin-right: 5px; }
+  #seccionPorQueElegirnos .row:nth-child(2) .card {
+    height: 240px; }
+    #seccionPorQueElegirnos .row:nth-child(2) .card .card-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+    #seccionPorQueElegirnos .row:nth-child(2) .card .cardIconTitleConteiner {
+      display: flex;
+      align-items: center; }
+      #seccionPorQueElegirnos .row:nth-child(2) .card .cardIconTitleConteiner .card-title {
+        margin-bottom: 0; }
 
 .navBottom {
   padding: 100px 0px 100px 0px; }
@@ -316,10 +263,10 @@ footer {
 /***********************/
 /***********************/
 /*INICIO MEDIA QUERIES*/
-/*Mobile and Tablets*/
+/*mobile Y tablets*/
 @media only screen and (max-width: 992px) {
   #seccionMision {
-    padding: 75px 0px 75px 0px; }
+    padding: 0px 0px 50px 0px; }
     #seccionMision .CuadrosDeTexto {
       box-shadow: -5px 5px 4px #2d3436; }
     #seccionMision button {
@@ -328,7 +275,7 @@ footer {
       margin-top: 20px;
       margin-bottom: 20px; }
   #seccionTrayectoria {
-    padding: 150px 4% 150px 4%; }
+    padding: 150px 3% 150px 3%; }
     #seccionTrayectoria .row {
       /*Espaciado entre elementos,
 			el selector -not- omite los ">"*/
@@ -341,8 +288,6 @@ footer {
         text-align: left; }
       #seccionTrayectoria .row .rotate-sm-90 {
         transform: rotate(90deg); }
-  #seccionPorQueElegirnos .container-fluid .row:nth-child(2) {
-    margin-top: 1.5rem; }
   #seccionTestimonios {
     padding: 50px 0px 75px 0px;
     /*Saca los botones fuera del slideshow*/ }
@@ -364,36 +309,78 @@ footer {
     font-size: 1.5rem; } }
 
 /***********************/
+/***********************/
+/*MOBILE-ONLY*/
+@media only screen and (max-width: 768px) {
+  #seccionPorQueElegirnos .row:nth-child(2) .col-11 .card {
+    box-shadow: 1px 4px 5px #555D66; }
+  #seccionPorQueElegirnos .row:nth-child(2) .col-lg-4:nth-child(-n+5) {
+    margin-bottom: 25px; } }
+
+/***********************/
+/***********************/
+/*TABLET-ONLY*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #seccionPorQueElegirnos .row:nth-child(2) .col-lg-4:nth-child(-n+4) {
+    margin-bottom: 25px; }
+  #seccionPorQueElegirnos .row:nth-child(2) .col-11:nth-child(1) .card {
+    box-shadow: 3px 3px 8px #555D66; }
+  #seccionPorQueElegirnos .row:nth-child(2) .col-11:nth-child(2) .card {
+    box-shadow: -3px 3px 8px #555D66; }
+  #seccionPorQueElegirnos .row:nth-child(2) .col-11:nth-child(3) .card {
+    box-shadow: 3px 1px 8px #555D66; }
+  #seccionPorQueElegirnos .row:nth-child(2) .col-11:nth-child(4) .card {
+    box-shadow: -3px 1px 8px #555D66; }
+  #seccionPorQueElegirnos .row:nth-child(2) .col-11:nth-child(5) .card {
+    box-shadow: 3px -3px 8px #555D66; }
+  #seccionPorQueElegirnos .row:nth-child(2) .col-11:nth-child(6) .card {
+    box-shadow: -3px -3px 8px #555D66; } }
+
+/***********************/
+/***********************/
 /*Netbooks and Desktops*/
 @media only screen and (min-width: 992px) {
   /*Shadowing effect*/
   #seccionMision {
-    padding: 150px 0px 150px 0px; }
+    padding: 75px 0px 75px 0px; }
     #seccionMision .container-fluid .row .CuadrosDeTexto:nth-child(1) {
       margin-left: 20px;
       text-align: left;
-      box-shadow: 10px 10px 5px #2d3436; }
+      box-shadow: 6px 6px 5px #555D66; }
     #seccionMision .container-fluid .row .CuadrosDeTexto:nth-child(3) {
       margin-right: 20px;
-      box-shadow: -10px 10px 5px #2d3436;
+      box-shadow: -6px 6px 5px #555D66;
       text-align: right; }
     #seccionMision .container-fluid .row button {
       box-shadow: 1px 5px 3px #aaaaaa;
       color: #00ADB5; }
   #seccionTrayectoria {
-    padding: 200px 4% 200px 4%; }
+    padding: 175px 2% 175px 2%; }
     #seccionTrayectoria .row {
       padding: 50px 25px; }
       #seccionTrayectoria .row .col-lg-3 {
         text-align: left; }
         #seccionTrayectoria .row .col-lg-3 h3 {
           font-size: 1.5rem; }
-  #seccionPorQueElegirnos li {
-    margin: 50px 0px; }
+  #seccionPorQueElegirnos .row:nth-child(2) .col-lg-4:nth-child(-n+3) {
+    margin-bottom: 25px; }
+  #seccionPorQueElegirnos .row:nth-child(2) .col-11:nth-child(1) .card {
+    box-shadow: 3px 4px 5px #555D66; }
+  #seccionPorQueElegirnos .row:nth-child(2) .col-11:nth-child(4) .card {
+    box-shadow: 3px 4px 5px #555D66; }
+  #seccionPorQueElegirnos .row:nth-child(2) .col-11:nth-child(2) .card {
+    box-shadow: 1px 4px 5px #555D66; }
+  #seccionPorQueElegirnos .row:nth-child(2) .col-11:nth-child(5) .card {
+    box-shadow: 1px 4px 5px #555D66; }
+  #seccionPorQueElegirnos .row:nth-child(2) .col-11:nth-child(3) .card {
+    box-shadow: -3px 4px 5px #555D66; }
+  #seccionPorQueElegirnos .row:nth-child(2) .col-11:nth-child(6) .card {
+    box-shadow: -3px 4px 5px #555D66; }
   #seccionTestimonios {
     padding: 50px 0px 15px 0px;
     /*Saca los botones fuera del slideshow*/
-    /*Evita que el alto cambie por diferencia de renglones entre testimonio y testimonio y mueva las secciones que vienen debajo de esta*/ }
+    /*Evita que el alto cambie por diferencia de renglones entre testimonios
+		 y que eso mueva las secciones que vienen debajo de esta*/ }
     #seccionTestimonios .carousel-control-prev {
       margin-left: -100px; }
     #seccionTestimonios .carousel-control-next {
@@ -516,7 +503,7 @@ footer {
 
 #servicios section {
   padding: 75px 0px 90px 0px;
-  background-image: url("../images/h1-bckg-ver2.jpg");
+  background-image: url("../images/h1-bckg-ver2.1.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;

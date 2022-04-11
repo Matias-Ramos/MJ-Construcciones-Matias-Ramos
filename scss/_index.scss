@@ -1,11 +1,6 @@
-
-//TEMPORAL p/ diseño visual
-#seccionPorQueElegirnos { background-color: white; }
-
-
-/******************************************************/
-
-
+/*****************************************/
+/***********GENERAL ATTRIBUTES************/
+/*****************************************/
 
 /*Eliminación de overflow en eje X causado por Bootstrap */
 #seccionTrayectoria, #seccionPorQueElegirnos, #seccionTestimonios, .navBottom
@@ -17,103 +12,15 @@
 	}
 }
 
-/*Inicio flecha #seccionMision*/
-.arrow-container
-{
-	@include AnchoAlto(75px, 75px);
-	padding:0;
-	
-	/*Estela de alrededor del botón*/
-	.arrow-1
-	{
-		@include AnchoAlto(75px, 75px);
-		background: #6BE3D7;
-		opacity: 0.9;
-		border-radius: 50%;
-		position: absolute;
-		top:0;
-	}
 
-	/*Círculo (fondo) de color*/
-	.arrow-2
-	{
-		@include AnchoAlto(45px, 45px);
-		@include TopLeft(15px, 15px);
-		background: map-get($coloresPrincipales, $colour-blueish-logo);
-		border-radius: 50%;
-		position: relative;
-		z-index: 4;
-		display: table;
-
-		/*Borde negro del btn*/
-		&:before
-		{
-			@include AnchoAlto(39px, 39px);
-			@include TopLeft(3px, 3px);
-			content: "";
-			border: 2px solid map-get($coloresPrincipales, $colour-darkest);
-			border-radius: 50%;
-			position: absolute;
-		}
-
-		/* ">" (flecha) */
-		i.fa
-		{
-			font-size: 25px;
-			display: table-cell;
-			vertical-align: middle;
-			text-align: center;
-			color: map-get($coloresPrincipales, $colour-darkest);
-		}
-	}
-}
-.arrow-2:hover
-{
-	transform: scale(1.1);
-	
-	/*Borde negro del btn*/
-	&:before
-	{
-		border: 2px solid black;
-	}
-
-	/* ">" (flecha) */
-	i.fa
-	{
-		color:black;
-	}
-
-}
-
-/* Inicio animaciones flecha */
-.animated.hinge
-{
-	-webkit-animation-duration: 2s;
-	animation-duration: 2s;
-	animation-iteration-count:infinite;
-}
-
-@-webkit-keyframes zoomIn {	@include ZoomInParameters; }
-@keyframes zoomIn {	@include ZoomInParameters; }
-
-.zoomIn
-{
-	-webkit-animation-name: zoomIn;
-	animation-name: zoomIn;
-}
-/* Fin animaciones flecha */
-/* Fin flecha #seccionMision*/
-/**************************/
-/**************************/
-
-#seccionMision{	background-image:linear-gradient(210deg, #0077b6, #caf0f8); }
+#seccionMision{	background-image:linear-gradient(210deg, white, #8dc8d8); }
 
 //Diseño visual de la sección.
 #seccionTrayectoria
 {
 	border-top: 1px solid black;
 	//Parallax
-	background-image: url("../images/plano6.png");
+	background-image: url("../images/plano7.jpg");
 	background-size: cover;
 	background-attachment: fixed; 
 	background-position: center; 
@@ -122,7 +29,8 @@
 	.row
 	{
 		//Cuadro blanco dentro del Parallax
-		border:1px solid black;
+		border:2px solid black;
+		border-radius: 10px;
 		background-color:white;
 		display:flex;
 		align-items:center;
@@ -171,13 +79,58 @@
 	}
 
 }
+
+
+
+
 #seccionPorQueElegirnos
 {
-	@include SectionPadding(100px, 0px, 100px, 0px);
+	@include SectionPadding(75px, 0px, 100px, 0px);
 	border-top:1px solid black;
-	p
+	p { margin:0; }
+
+	//H2-cards spacing 
+	.row:nth-child(1)
 	{
-		margin:0;
+		margin-bottom:50px;
+		h2{font-size: 3rem;}
+	}
+
+	//cards box-modeling
+	.row:nth-child(2)
+	{
+		//card box modeling
+		.cardIconTitleConteiner
+		{
+			margin-bottom:10px;
+			img
+			{
+				margin-right:5px;
+			}
+		}
+
+		.card
+		{
+			height:240px;
+
+			.card-body
+			{
+				display:flex;
+				justify-content:center;
+				align-items:center;
+				flex-direction: column;
+			}
+
+			//posicionamiento del icono a la izq y el title a la derecha
+			.cardIconTitleConteiner
+			{
+				display:flex;
+				align-items:center;
+				
+				//elimina margin estandar del h3
+				.card-title { margin-bottom:0; }
+			}
+		}
 	}
 }
 
@@ -191,13 +144,14 @@
 /***********************/
 /***********************/
 /*INICIO MEDIA QUERIES*/
-/*Mobile and Tablets*/
+/*mobile Y tablets*/
+
 @media only screen and (max-width: 992px) 
 {
 
 	#seccionMision
 	{
-		@include SectionPadding(75px, 0px, 75px, 0px);
+		@include SectionPadding(0px, 0px, 50px, 0px);
 		.CuadrosDeTexto	{	@include BoxShadow(-5px,5px,4px,map-get($coloresPrincipales, $shadow));	}
 		button {	margin: 20px 0px;	}
 		
@@ -214,10 +168,12 @@
 			}
 		}
 	}
+
+
 	#seccionTrayectoria
 	{
 		//Parallax
-		@include SectionPadding (150px, 4%, 150px, 4%);
+		@include SectionPadding (150px, 3%, 150px, 3%);
 
 		.row
 		{
@@ -242,16 +198,10 @@
 			.rotate-sm-90 { transform: rotate(90deg); }
 		}
 	}
-	#seccionPorQueElegirnos
-	{
-		.container-fluid
-		{
-			.row:nth-child(2)
-			{
-				margin-top: 1.5rem;
-			}
-		}
-	}
+
+
+
+
 	#seccionTestimonios
 	{
 		.carousel-inner
@@ -270,7 +220,6 @@
 				height: 250px;
 			}
 		}
-
 	}
 
 	.navBottom
@@ -279,8 +228,81 @@
 	}
 }
 
+/***********************/
+/***********************/
+/*MOBILE-ONLY*/
 
+//cards-mobile
+@media only screen and (max-width: 768px)
+{
+	#seccionPorQueElegirnos
+	{
+		//cards
+		.row:nth-child(2)
+		{
 
+			//todas las cards
+			.col-11
+			{
+				.card { @include BoxShadow(1px,4px,5px,#555D66); }
+			}
+			//las primeras 5 cards
+			.col-lg-4:nth-child(-n+5) { margin-bottom:25px; }
+		}
+	}
+}
+
+/***********************/
+/***********************/
+/*TABLET-ONLY*/
+@media only screen and (min-width: 768px) and (max-width: 992px)
+{
+	#seccionPorQueElegirnos
+	{
+		//cards
+		.row:nth-child(2)
+		{
+			//las primeras 4 cards
+			.col-lg-4:nth-child(-n+4) { margin-bottom:25px; }
+
+			//sombra arriba izq
+			.col-11:nth-child(1)
+			{
+				.card { @include BoxShadow(3px,3px,8px,#555D66); }
+			}
+
+			//sombra arriba derecha
+			.col-11:nth-child(2)
+			{
+				.card { @include BoxShadow(-3px,3px,8px,#555D66); }
+			}
+
+			//sombra centro izq
+			.col-11:nth-child(3)
+			{
+				.card { @include BoxShadow(3px,1px,8px,#555D66);}
+			}
+			//sombra centro derecha
+			.col-11:nth-child(4)
+			{
+				.card { @include BoxShadow(-3px,1px,8px,#555D66); }
+			}
+
+			//sombra abajo izq
+			.col-11:nth-child(5)
+			{
+				.card { @include BoxShadow(3px,-3px,8px,#555D66); }
+			}
+			//sombra abajo derecha
+			.col-11:nth-child(6)
+			{
+				.card { @include BoxShadow(-3px,-3px,8px,#555D66); }
+			}
+		}
+	}
+}
+
+/***********************/
 /***********************/
 /*Netbooks and Desktops*/
 @media only screen and (min-width: 992px)
@@ -289,7 +311,7 @@
 	/*Shadowing effect*/
 	#seccionMision
 	{
-		@include SectionPadding(150px, 0px, 150px, 0px);
+		@include SectionPadding(75px, 0px, 75px, 0px);
 		.container-fluid
 		{
 			.row
@@ -300,12 +322,12 @@
 					{
 						margin-left: 20px;
 						text-align: left;
-						@include BoxShadow(10px,10px,5px,map-get($coloresPrincipales, $shadow));
+						@include BoxShadow(6px,6px,5px,#555D66);
 					}
 					&:nth-child(3)
 					{
 						margin-right: 20px;
-						@include BoxShadow(-10px,10px,5px,map-get($coloresPrincipales, $shadow));
+						@include BoxShadow(-6px,6px,5px,#555D66);
 						text-align: right;
 					}
 				}
@@ -322,7 +344,7 @@
 	#seccionTrayectoria
 	{
 		//Parallax
-		@include SectionPadding (200px, 4%, 200px, 4%);
+		@include SectionPadding (175px, 2%, 175px, 2%);
 		.row
 		{
 			//Cuadro blanco dentro del Parallax.
@@ -340,13 +362,50 @@
 			}
 		}
 	}
+
 	#seccionPorQueElegirnos
 	{
-		li
+		//cards
+		.row:nth-child(2)
 		{
-			margin: 50px 0px;
+			//las primeras 3 cards
+			.col-lg-4:nth-child(-n+3) { margin-bottom:25px; }
+
+			//sombra izq
+			.col-11:nth-child(1)
+			{
+				.card { @include BoxShadow(3px,4px,5px,#555D66); }
+			}
+			//sombra izq
+			.col-11:nth-child(4)
+			{
+				.card { @include BoxShadow(3px,4px,5px,#555D66); }
+			}
+
+			//sombra medio
+			.col-11:nth-child(2)
+			{
+				.card { @include BoxShadow(1px,4px,5px,#555D66); }
+			}
+			//sombra medio
+			.col-11:nth-child(5)
+			{
+				.card { @include BoxShadow(1px,4px,5px,#555D66); }
+			}
+
+			//sombra derecha
+			.col-11:nth-child(3)
+			{
+				.card { @include BoxShadow(-3px,4px,5px,#555D66); }
+			}
+			//sombra derecha
+			.col-11:nth-child(6)
+			{
+				.card { @include BoxShadow(-3px,4px,5px,#555D66); }
+			}
 		}
 	}
+
 	#seccionTestimonios
 	{
 		@include SectionPadding(50px, 0px, 15px, 0px);
@@ -354,7 +413,8 @@
 		.carousel-control-prev {margin-left: -100px;}
 		.carousel-control-next {margin-right: -100px;}
 
-		/*Evita que el alto cambie por diferencia de renglones entre testimonio y testimonio y mueva las secciones que vienen debajo de esta*/
+		/*Evita que el alto cambie por diferencia de renglones entre testimonios
+		 y que eso mueva las secciones que vienen debajo de esta*/
 		.carousel-inner{height: 75px;}
 
 		.row:nth-child(2) 

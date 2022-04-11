@@ -3,28 +3,22 @@
 footer
 {
 	background-color: map-get($coloresPrincipales, $colour-darker);
-	padding:50px 0px;
 	position:relative;
-	.row:nth-child(2)
+	//firma
+	.container-fluid:nth-child(2)
 	{
-		//firma
-		.col-12
+		.row
 		{
-			display:flex;
-			justify-content: flex-end;
-			position:absolute;
-			bottom:-50px;
-			span
+			.col-12
 			{
-				font-size: 0.8rem;
-				a
+				span
 				{
-					color: map-get($coloresPrincipales, $colour-whiteish-cream);
+					font-size: 0.8rem;
 				}
 			}
 		}
 	}
-	//De acá hasta abajo, es el logo para la apertura del footer.
+	//De acá hasta abajo, es el logo MJ para la apertura del footer.
 	.row
 	{
 		position:relative;
@@ -66,6 +60,7 @@ footer
 {
 	footer
 	{
+		@include SectionPadding(50px, 0px, 0px, 0px);
 		div
 		{
 			.card
@@ -93,6 +88,49 @@ footer
 						}
 					}
 				}
+			}
+		}
+
+		//firma
+		.container-fluid:nth-child(2)
+		{
+			.row
+			{
+				margin-top:30px;
+				.col-12
+				{
+					display:flex;
+					justify-content: center;
+				}
+			}
+		}
+	}
+}
+
+
+//DESKTOP
+@media only screen and (min-width:992px)
+{
+	footer
+	{
+		@include SectionPadding(50px, 0px, 50px, 0px);
+		.card
+		{
+			height:100%;
+		}
+		.container-fluid:nth-child(2)
+		{
+			//firma
+			.row
+			{
+				.col-12
+				{
+					display:flex;
+					position:absolute;
+					bottom:-50px;
+				}
+				.col-12:nth-child(1) { justify-content: flex-start; }
+				.col-12:nth-child(2) { justify-content: flex-end; }
 			}
 		}
 	}

@@ -17,11 +17,11 @@ header
 
 .h1container
 {
-	padding: 15px 0px;
+	padding: 25px 0px;
 	border: 1px solid black;
-	-moz-box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF;
-	-webkit-box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF;
-	box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF;
+	/*-moz-box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF;
+	-webkit-box-shadow: inset 9px 9px 9px 0 #BFBFBF, inset -9px -9px 9px #BFBFBF;*/
+	box-shadow: inset 0px 15px 15px 0 #BFBFBF, inset 0px -12px 22px #BFBFBF;
 	h1
 	{
 		color: map-get($coloresPrincipales, $colour-darker);

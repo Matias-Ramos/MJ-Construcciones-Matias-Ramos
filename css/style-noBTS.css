@@ -351,6 +351,7 @@ input[type=submit]
 	#seccionMision .CuadrosDeTexto{width: 40%;}
 	
 		/*Trayectoria*/
+
 	#seccionTrayectoria .CuadrosDeTexto
 	{
 		width: 40%;
@@ -515,7 +516,7 @@ input[type=submit]
 	{
 		display: grid;
 		grid-template-columns: 100%;
-		grid-template-rows: 100px 300px 650px 850px 500px 250px;
+		grid-template-rows: 100px 300px 800px 850px 500px 250px;
 		grid-template-areas: 
 		"title"
 		"mision"
