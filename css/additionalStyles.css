@@ -182,6 +182,14 @@ footer {
     footer .container-fluid:nth-child(2) .row .col-12:nth-child(2) {
       justify-content: flex-end; } }
 
+#seccionMision .container-fluid .row {
+  justify-content: center; }
+  #seccionMision .container-fluid .row .col-12:nth-child(1) {
+    padding: 0; }
+  #seccionMision .container-fluid .row .col-12:nth-child(2) {
+    position: absolute;
+    padding: 5px !important; }
+
 /*****************************************/
 /***********GENERAL ATTRIBUTES************/
 /*****************************************/
@@ -342,7 +350,7 @@ footer {
 @media only screen and (min-width: 992px) {
   /*Shadowing effect*/
   #seccionMision {
-    padding: 75px 0px 75px 0px; }
+    padding: 0px 0px 0px 0px; }
     #seccionMision .container-fluid .row .CuadrosDeTexto:nth-child(1) {
       margin-left: 20px;
       text-align: left;
@@ -396,6 +404,14 @@ footer {
 #faq .navBottom {
   padding: 0px 0px 75px 0px; }
 
+.containerProyectoX .container-fluid:nth-child(2) .row {
+  padding-top: 3rem; }
+  .containerProyectoX .container-fluid:nth-child(2) .row .col-12 {
+    padding: 0; }
+  .containerProyectoX .container-fluid:nth-child(2) .row img {
+    width: 100%;
+    height: auto; }
+
 .containerProyectoX #CarouselProyectoX .carousel-inner {
   display: flex;
   align-items: center; }
@@ -406,8 +422,47 @@ footer {
   .containerProyectoX .guardBand img {
     width: 100%; }
 
-.containerProyectoX .framesProyectoX .row iframe {
-  display: block; }
+.containerProyectoX .framesProyectoX {
+  margin-top: 65px; }
+  .containerProyectoX .framesProyectoX .container-fluid .row:first-child {
+    justify-content: center;
+    background-color: #535c68;
+    color: #EEEEEE; }
+    .containerProyectoX .framesProyectoX .container-fluid .row:first-child .col-lg-5 {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .containerProyectoX .framesProyectoX .container-fluid .row:first-child .col-lg-5 img {
+        margin-right: 10px; }
+      .containerProyectoX .framesProyectoX .container-fluid .row:first-child .col-lg-5 h2 {
+        margin: 0; }
+    .containerProyectoX .framesProyectoX .container-fluid .row:first-child div:nth-child(3) iframe {
+      width: 100%;
+      /*Elimina un espacio en blanco que se forma debajo del renglón, 
+						propio de los display:inline de los iframes.*/
+      display: block; }
+  .containerProyectoX .framesProyectoX .container-fluid .row:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black; }
+    .containerProyectoX .framesProyectoX .container-fluid .row:nth-child(2) .col-lg-11 div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px; }
+      .containerProyectoX .framesProyectoX .container-fluid .row:nth-child(2) .col-lg-11 div img {
+        margin-right: 10px;
+        height: 100%;
+        width: auto; }
+      .containerProyectoX .framesProyectoX .container-fluid .row:nth-child(2) .col-lg-11 div h2 {
+        margin-bottom: 0; }
+    .containerProyectoX .framesProyectoX .container-fluid .row:nth-child(2) .col-lg-11 iframe {
+      width: 100%;
+      height: 400px;
+      /*Elimina un espacio en blanco que se forma debajo del renglón, 
+						propio de los display:inline de los iframes.*/
+      display: block; }
 
 .containerProyectoX .navBottom {
   padding: 60px 0px 75px 0px; }
@@ -426,32 +481,21 @@ footer {
       flex-direction: column;
       justify-content: space-evenly;
       align-items: flex-start; }
-  .containerProyectoX .framesProyectoX {
-    background-color: #535c68;
-    color: #EEEEEE;
-    padding: 50px 0px 50px 0px;
-    margin-top: 65px; }
-    .containerProyectoX .framesProyectoX .row {
-      justify-content: space-evenly; }
-      .containerProyectoX .framesProyectoX .row div:nth-child(1) {
-        padding-right: 0px;
-        padding-left: 0px;
-        margin-bottom: 30px;
-        margin-top: 30px; }
-      .containerProyectoX .framesProyectoX .row div:nth-child(2) {
-        padding-left: 0px; }
-      .containerProyectoX .framesProyectoX .row div:nth-child(5) {
-        padding-right: 0px;
-        padding-left: 0px;
-        margin-top: 45px; } }
+  .framesProyectoX .container-fluid .row:first-child .col-lg-5 {
+    padding: 65px 0px 65px 0px; }
+  .framesProyectoX .container-fluid .row:first-child div:nth-child(3) {
+    padding: 65px 0px 65px 0px; }
+    .framesProyectoX .container-fluid .row:first-child div:nth-child(3) iframe {
+      height: 400px; }
+  .framesProyectoX .container-fluid .row:nth-child(2) {
+    background-color: white;
+    color: black; }
+    .framesProyectoX .container-fluid .row:nth-child(2) .col-lg-11 {
+      padding: 45px 0px 65px 0px; } }
 
 /***********************/
 /*Mobile and Tablets*/
 @media only screen and (max-width: 992px) {
-  #CarouselProyectoX {
-    padding: 0; }
-    #CarouselProyectoX .carousel-inner {
-      height: 300px; }
   .containerProyectoX .CuadrosDeTexto {
     justify-content: center;
     align-items: center; }
@@ -459,15 +503,23 @@ footer {
       text-align: center; }
     .containerProyectoX .CuadrosDeTexto #DescriptProyX h2 {
       font-size: 1.5rem; }
-  .containerProyectoX .framesProyectoX .row div:nth-child(odd) {
-    margin-top: 25px;
-    margin-bottom: 25px; }
-  .containerProyectoX .framesProyectoX .row div:nth-child(even) h2 {
-    margin-bottom: 20px; }
-  .containerProyectoX .framesProyectoX .row div:nth-child(even) iframe {
-    margin-bottom: 10px; }
+  .containerProyectoX #CarouselProyectoX {
+    padding: 0; }
+    .containerProyectoX #CarouselProyectoX .carousel-inner {
+      height: 300px; }
+  .containerProyectoX .framesProyectoX .container-fluid .guardBand {
+    padding: 0; }
+  .containerProyectoX .framesProyectoX .container-fluid .row:first-child .col-lg-5 {
+    padding: 25px 0px 25px 0px; }
+  .containerProyectoX .framesProyectoX .container-fluid .row:first-child div:nth-child(3) {
+    padding: 0px; }
+    .containerProyectoX .framesProyectoX .container-fluid .row:first-child div:nth-child(3) iframe {
+      height: 300px;
+      margin-bottom: 40px; }
+  .containerProyectoX .framesProyectoX .container-fluid .row:nth-child(2) .col-lg-11 {
+    padding: 35px 0px 55px 0px; }
   .containerProyectoX .navBottom {
-    padding: 25px 0px 75px 0px; } }
+    padding: 45px 0px 75px 0px; } }
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
   #CarouselProyectoX .carousel-inner {

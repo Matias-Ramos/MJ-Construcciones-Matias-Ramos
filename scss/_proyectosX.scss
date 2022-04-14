@@ -1,6 +1,23 @@
-
 .containerProyectoX
 {
+
+	//Main img 
+	.container-fluid:nth-child(2)
+	{
+		.row
+		{
+			padding-top:3rem;
+			//centra la imagen horizontalmente con el resto del contenido
+			.col-12 { padding:0; }
+			
+			img
+			{
+				width:100%;
+				height:auto;
+			}
+		}
+	}
+
 	//Centra verticalmente al carousel con respecto a la [Descripción del proyecto].
 	#CarouselProyectoX
 	{
@@ -22,14 +39,76 @@
 		}
 	}
 
-	//Elimina un espacio en blanco que se forma debajo del renglón, propio de los display:inline de los iframes.
+	
 	.framesProyectoX
 	{
-		.row
+		margin-top:65px;
+
+		.container-fluid
 		{
-			iframe
+			//b&y band, YT video, b&y band
+			.row:first-child
 			{
-				display:block;
+				justify-content: center;
+				background-color: #535c68;
+				color:map-get($coloresPrincipales, $colour-whiteish-cream);
+
+				//h2 "Video del proyecto"
+				.col-lg-5
+				{
+					display:flex;
+					align-items:center;
+					justify-content: center;
+					img { margin-right:10px; }
+					h2 { margin:0; }
+				}
+				//frame YT video
+				div:nth-child(3)
+				{
+					iframe
+					{
+						width: 100%;
+						/*Elimina un espacio en blanco que se forma debajo del renglón, 
+						propio de los display:inline de los iframes.*/
+						display:block;
+					}
+				}
+			}
+
+			//seccion GoogleMaps
+			.row:nth-child(2)
+			{
+				display:flex;
+				align-items:center;
+				justify-content: center;
+				border-bottom:1px solid black;
+
+				//GoogleMaps
+				.col-lg-11
+				{
+					div
+					{
+						display:flex;
+						justify-content: center;
+						align-items:center;
+						margin-bottom: 20px;
+						img 
+						{ 
+							margin-right: 10px; 
+							height: 100%;
+							width: auto;
+						}
+						h2 { margin-bottom:0; }
+					}
+					iframe
+					{
+						width: 100%;
+						height: 400px;
+						/*Elimina un espacio en blanco que se forma debajo del renglón, 
+						propio de los display:inline de los iframes.*/
+						display:block;
+					}
+				}
 			}
 		}
 	}
@@ -66,38 +145,41 @@
 				align-items: flex-start;
 			}
 		}
-
-		//Formateo iframes
-		.framesProyectoX
+	}
+	.framesProyectoX
+	{
+		.container-fluid
 		{
-			background-color: #535c68;
-			color:map-get($coloresPrincipales, $colour-whiteish-cream);
-			@include SectionPadding(50px, 0px, 50px, 0px);
-			margin-top:65px;
-			.row
+			//b&y band, YT video, b&y band
+			.row:first-child
 			{
-				justify-content: space-evenly;
-				//Top b&yellow guard-band
-				div:nth-child(1)
+				//h2 "Video del proyecto"
+				.col-lg-5
 				{
-					padding-right: 0px;
-					padding-left: 0px;
-					margin-bottom: 30px;
-					margin-top: 30px;
+					padding: 65px 0px 65px 0px;
 				}
 
-				//YT Video
-				div:nth-child(2)
+				//frame YT video
+				div:nth-child(3)
 				{
-					padding-left: 0px;
+					padding: 65px 0px 65px 0px;
+					iframe
+					{
+						height: 400px;
+					}
 				}
-				
-				//Bottom b&yellow guard-band
-				div:nth-child(5)
+			}
+
+			//seccion GoogleMaps
+			.row:nth-child(2)
+			{
+				background-color:white;
+				color:black;
+
+				//GoogleMaps
+				.col-lg-11
 				{
-					padding-right: 0px;
-					padding-left: 0px;
-					margin-top: 45px;
+					padding: 45px 0px 65px 0px;
 				}
 			}
 		}
@@ -106,24 +188,15 @@
 
 
 
+
 /***********************/
 /*Mobile and Tablets*/
 
 @media only screen and (max-width: 992px)
 {
-	#CarouselProyectoX
-	{
-		padding: 0;
-		
-		//extra-small phones
-		.carousel-inner
-		{
-			height:300px;
-		}
-	}
+
 	.containerProyectoX 
 	{
-
 		.CuadrosDeTexto
 		{
 			justify-content: center;
@@ -140,38 +213,82 @@
 				}
 			}
 		}
+		
+		#CarouselProyectoX
+		{
+			padding: 0;
+			.carousel-inner { height:300px; }
+		}
+		
 		.framesProyectoX
 		{
-			.row
+			.container-fluid
 			{
+				.guardBand { padding:0; }
 
-				//black & yellow guard-bands
-				div:nth-child(odd)
+				//b&y band, YT video, b&y band
+				.row:first-child
 				{
-					margin-top: 25px;
-					margin-bottom: 25px;
+					//h2 "Video del proyecto"
+					.col-lg-5
+					{
+						//padding mobile
+						padding: 25px 0px 25px 0px;
+					}
+					//frame YT video
+					div:nth-child(3)
+					{
+						//padding mobile
+						padding:0px;
+						iframe
+						{
+							//height and margin mobile
+							height: 300px;
+							margin-bottom: 40px;
+						}
+					}
 				}
 
-				//iframes (YT Video + GoogleMaps)
-				div:nth-child(even)
+				//seccion GoogleMaps
+				.row:nth-child(2)
 				{
-					h2
+					//GoogleMaps
+					.col-lg-11
 					{
-						margin-bottom:20px;
-					}
-					iframe
-					{
-						margin-bottom:10px;	
+						//mobile
+						padding: 35px 0px 55px 0px;
 					}
 				}
 			}
 		}
+		
 		.navBottom
 		{
-			@include SectionPadding (25px, 0px, 75px, 0px);
+			@include SectionPadding (45px, 0px, 75px, 0px);
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //MEDIUM-PHONE (not small)
 @media only screen and (min-width: 576px) and (max-width: 768px)
