@@ -182,14 +182,6 @@ footer {
     footer .container-fluid:nth-child(2) .row .col-12:nth-child(2) {
       justify-content: flex-end; } }
 
-#seccionMision .container-fluid .row {
-  justify-content: center; }
-  #seccionMision .container-fluid .row .col-12:nth-child(1) {
-    padding: 0; }
-  #seccionMision .container-fluid .row .col-12:nth-child(2) {
-    position: absolute;
-    padding: 5px !important; }
-
 /*****************************************/
 /***********GENERAL ATTRIBUTES************/
 /*****************************************/
@@ -199,7 +191,11 @@ footer {
   margin-left: 0; }
 
 #seccionMision {
-  background-image: linear-gradient(210deg, white, #8dc8d8); }
+  background-image: linear-gradient(310deg, #FFFFFF 50%, #DDF9FF); }
+  #seccionMision .row .col-12:nth-child(1) {
+    text-align: left; }
+  #seccionMision .row .col-12:nth-child(2) img {
+    visibility: hidden; }
 
 #seccionTrayectoria {
   border-top: 1px solid black;
@@ -273,17 +269,16 @@ footer {
 /*INICIO MEDIA QUERIES*/
 /*mobile Y tablets*/
 @media only screen and (max-width: 992px) {
-  #seccionMision {
-    padding: 0px 0px 50px 0px; }
-    #seccionMision .CuadrosDeTexto {
-      box-shadow: -5px 5px 4px #2d3436; }
-    #seccionMision button {
-      margin: 20px 0px; }
-    #seccionMision .container-fluid .row .col-12 {
-      margin-top: 20px;
-      margin-bottom: 20px; }
+  #seccionMision .row .col-12:nth-child(1) {
+    padding-top: 40px;
+    padding-bottom: 10px; }
+  #seccionMision .row .col-12:nth-child(2) {
+    clip-path: polygon(0 28%, 100% 0%, 100% 100%, 0% 100%);
+    background-image: linear-gradient(171deg, rgba(0, 0, 0, 0.9) 16%, rgba(255, 255, 255, 0) 26%), url("../images/mision.jpg");
+    background-size: cover;
+    padding: 0; }
   #seccionTrayectoria {
-    padding: 150px 3% 150px 3%; }
+    padding: 75px 3% 75px 3%; }
     #seccionTrayectoria .row {
       /*Espaciado entre elementos,
 			el selector -not- omite los ">"*/
@@ -348,22 +343,12 @@ footer {
 /***********************/
 /*Netbooks and Desktops*/
 @media only screen and (min-width: 992px) {
-  /*Shadowing effect*/
-  #seccionMision {
-    padding: 0px 0px 0px 0px; }
-    #seccionMision .container-fluid .row .CuadrosDeTexto:nth-child(1) {
-      margin-left: 20px;
-      text-align: left;
-      box-shadow: 6px 6px 5px #555D66; }
-    #seccionMision .container-fluid .row .CuadrosDeTexto:nth-child(3) {
-      margin-right: 20px;
-      box-shadow: -6px 6px 5px #555D66;
-      text-align: right; }
-    #seccionMision .container-fluid .row button {
-      box-shadow: 1px 5px 3px #aaaaaa;
-      color: #00ADB5; }
+  #seccionMision .row .col-12:nth-child(2) {
+    clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0% 100%);
+    background-image: linear-gradient(114deg, rgba(0, 0, 0, 0.9) 18%, rgba(255, 255, 255, 0) 21%), url("../images/mision.jpg");
+    background-size: cover; }
   #seccionTrayectoria {
-    padding: 175px 2% 175px 2%; }
+    padding: 100px 2% 100px 2%; }
     #seccionTrayectoria .row {
       padding: 50px 25px; }
       #seccionTrayectoria .row .col-lg-3 {
