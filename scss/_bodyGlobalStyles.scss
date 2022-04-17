@@ -1,3 +1,6 @@
+
+
+
 body
 {
 	font-family: 'Poppins', sans-serif;
@@ -12,6 +15,10 @@ header
 		{
 			font-size:1.6rem;
 		}
+	}
+	.dropdown-menu
+	{
+		z-index: 2;
 	}
 }
 
@@ -42,14 +49,31 @@ section{text-align: center;}
 	border-radius:3px;
 }
 
+
+
 .navBottom
 {
 	@include SectionPadding(75px, 0px, 75px, 0px);
-	nav
-	{
-		@include BoxShadow(-5px,6px,2px,#ABA5A2);
-	}
+	nav	{	@include BoxShadow(-5px,6px,2px,#ABA5A2); }
+	
+		//ff 3.6+
+		background:-moz-radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0) 0%, rgba(0, 188, 212, 0.08) 100%);
+
+		//safari 5.1+,chrome 10+
+		background:-webkit-radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0) 0%, rgba(0, 188, 212, 0.08) 100%);
+
+		//opera 11.10+ 
+		background:-o-radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0) 0%, rgba(0, 188, 212, 0.08) 100%);
+
+		//ie 10+
+		background:-ms-radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0) 0%, rgba(0, 188, 212, 0.08) 100%);
+
+		//global 92%+ browsers support
+		background:radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0) 0%, rgba(0, 188, 212, 0.08) 100%);
 }
+
+
+
 
 //Redes Sociales Botones
 .RedesSociales

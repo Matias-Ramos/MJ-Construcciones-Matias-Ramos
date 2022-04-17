@@ -81,34 +81,30 @@
 				display:flex;
 				align-items:center;
 				justify-content: center;
-				border-bottom:1px solid black;
-
-				//GoogleMaps
-				.col-lg-11
+				.col-xl-5
 				{
-					div
-					{
-						display:flex;
-						justify-content: center;
-						align-items:center;
-						margin-bottom: 20px;
-						img 
-						{ 
-							margin-right: 10px; 
-							height: 100%;
-							width: auto;
-						}
-						h2 { margin-bottom:0; }
-					}
-					iframe
-					{
-						width: 100%;
-						height: 400px;
-						/*Elimina un espacio en blanco que se forma debajo del renglón, 
-						propio de los display:inline de los iframes.*/
-						display:block;
-					}
+					display:flex;
+					align-items:center;
+					justify-content: center;
 				}
+				iframe
+				{
+					width:100%;
+					height:400px;
+					/*Elimina un espacio en blanco que se forma debajo del renglón, 
+					propio de los display:inline de los iframes.*/
+					display:block;
+				}
+				img
+				{
+					margin-right: 10px;
+				}
+				h2
+				{
+					display:inline-block;
+					margin:0;
+				}
+
 			}
 		}
 	}
@@ -116,6 +112,7 @@
 	//formateo whitespace inner section
 	.navBottom
 	{
+		border-top:1px solid black;
 		@include SectionPadding(60px, 0px, 75px, 0px);
 	}
 }
@@ -176,10 +173,10 @@
 				background-color:white;
 				color:black;
 
-				//GoogleMaps
-				.col-lg-11
+				//iFrame
+				.col-lg-6
 				{
-					padding: 45px 0px 65px 0px;
+					margin: 65px 0px 65px 0px;
 				}
 			}
 		}
@@ -252,12 +249,8 @@
 				//seccion GoogleMaps
 				.row:nth-child(2)
 				{
-					//GoogleMaps
-					.col-lg-11
-					{
-						//mobile
-						padding: 35px 0px 55px 0px;
-					}
+					.col-12{margin-bottom:10px;}
+					padding: 35px 0px 35px 0px;
 				}
 			}
 		}
