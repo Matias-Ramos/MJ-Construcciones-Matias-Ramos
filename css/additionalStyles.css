@@ -5,12 +5,12 @@
 /*MIXINS*/
 /*********/
 /*EXTENDS*/
-.AccordionFormatting .card, #seccionTrayectoria .card, #faq .card {
+.AccordionFormatting .card, #seccionPlantel .card, #faq .card {
   box-shadow: 5px 6px 2px #ABA5A2;
   background-color: white; }
-  .AccordionFormatting .card .card-header, #seccionTrayectoria .card .card-header, #faq .card .card-header {
+  .AccordionFormatting .card .card-header, #seccionPlantel .card .card-header, #faq .card .card-header {
     background-color: #393E46; }
-    .AccordionFormatting .card .card-header .btn, #seccionTrayectoria .card .card-header .btn, #faq .card .card-header .btn {
+    .AccordionFormatting .card .card-header .btn, #seccionPlantel .card .card-header .btn, #faq .card .card-header .btn {
       color: #00ADB5; }
 
 a {
@@ -100,7 +100,7 @@ section {
   transition: .5s;
   z-index: 2; }
 
-.RedesSociales li a:hover:before {
+header .RedesSociales li a:hover:before {
   top: 0; }
 
 .RedesSociales li:nth-child(1) a:before {
@@ -111,6 +111,21 @@ section {
   background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+
+footer .RedesSociales li:nth-child(1) a {
+  opacity: 85%;
+  background: #25D366; }
+  footer .RedesSociales li:nth-child(1) a i {
+    color: #fff; }
+
+footer .RedesSociales li:nth-child(2) a {
+  opacity: 85%;
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+  footer .RedesSociales li:nth-child(2) a i {
+    color: #fff; }
 
 @media only screen and (max-width: 992px) {
   .desktop-only {
@@ -178,15 +193,13 @@ footer {
       position: absolute;
       bottom: -50px; }
     footer .container-fluid:nth-child(2) .row .col-12:nth-child(1) {
-      justify-content: flex-start; }
-    footer .container-fluid:nth-child(2) .row .col-12:nth-child(2) {
-      justify-content: flex-end; } }
+      justify-content: center; } }
 
 /*****************************************/
 /***********GENERAL ATTRIBUTES************/
 /*****************************************/
 /*Eliminación de overflow en eje X causado por Bootstrap */
-#seccionTrayectoria .row, #seccionPorQueElegirnos .row, #seccionTestimonios .row, .navBottom .row {
+#seccionPlantel .row, #seccionPorQueElegirnos .row, #seccionTestimonios .row, .navBottom .row {
   margin-right: 0;
   margin-left: 0; }
 
@@ -197,7 +210,7 @@ footer {
   #seccionMision .row .col-12:nth-child(2) img {
     visibility: hidden; }
 
-#seccionTrayectoria {
+#seccionPlantel {
   border-top: 1px solid black;
   background-image: url("../images/plano7.jpg");
   background-size: cover;
@@ -205,21 +218,21 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
-  #seccionTrayectoria .row {
-    border: 2px solid black;
-    border-radius: 10px;
+  #seccionPlantel .row {
+    border: 1px solid black;
+    border-radius: 5px;
     background-color: white;
     display: flex;
     align-items: center;
     /*Gana precedencia por sobre el resets.scss,
 		devolviendo los -bullets characters- a los ul li*/ }
-    #seccionTrayectoria .row .col-lg-3 ul li {
+    #seccionPlantel .row .col-lg-3 ul li {
       list-style: square; }
-    #seccionTrayectoria .row .col-lg-1 {
+    #seccionPlantel .row .col-lg-1 {
       font-size: 2rem; }
-  #seccionTrayectoria h2 {
+  #seccionPlantel h2 {
     font-size: 3rem; }
-  #seccionTrayectoria .btn {
+  #seccionPlantel .btn {
     font-size: 20px; }
 
 #seccionTestimonios {
@@ -277,19 +290,19 @@ footer {
     background-image: linear-gradient(171deg, rgba(0, 0, 0, 0.9) 16%, rgba(255, 255, 255, 0) 26%), url("../images/mision.jpg");
     background-size: cover;
     padding: 0; }
-  #seccionTrayectoria {
+  #seccionPlantel {
     padding: 75px 3% 75px 3%; }
-    #seccionTrayectoria .row {
+    #seccionPlantel .row {
       /*Espaciado entre elementos,
 			el selector -not- omite los ">"*/
       padding: 50px 5px 50px 5px; }
-      #seccionTrayectoria .row .col-12:not(.rotate-sm-90) {
+      #seccionPlantel .row .col-12:not(.rotate-sm-90) {
         padding: 20px 15px; }
-      #seccionTrayectoria .row .col-lg-3 h3 {
+      #seccionPlantel .row .col-lg-3 h3 {
         text-align: center; }
-      #seccionTrayectoria .row .col-lg-3 ul li {
+      #seccionPlantel .row .col-lg-3 ul li {
         text-align: left; }
-      #seccionTrayectoria .row .rotate-sm-90 {
+      #seccionPlantel .row .rotate-sm-90 {
         transform: rotate(90deg); }
   #seccionTestimonios {
     padding: 50px 0px 75px 0px;
@@ -343,17 +356,19 @@ footer {
 /***********************/
 /*Netbooks and Desktops*/
 @media only screen and (min-width: 992px) {
+  #seccionMision .row .col-12:nth-child(1) {
+    padding-left: 50px; }
   #seccionMision .row .col-12:nth-child(2) {
     clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0% 100%);
     background-image: linear-gradient(114deg, rgba(0, 0, 0, 0.9) 18%, rgba(255, 255, 255, 0) 21%), url("../images/mision.jpg");
     background-size: cover; }
-  #seccionTrayectoria {
+  #seccionPlantel {
     padding: 100px 2% 100px 2%; }
-    #seccionTrayectoria .row {
+    #seccionPlantel .row {
       padding: 50px 25px; }
-      #seccionTrayectoria .row .col-lg-3 {
+      #seccionPlantel .row .col-lg-3 {
         text-align: left; }
-        #seccionTrayectoria .row .col-lg-3 h3 {
+        #seccionPlantel .row .col-lg-3 h3 {
           font-size: 1.5rem; }
   #seccionPorQueElegirnos .row:nth-child(2) .col-lg-4:nth-child(-n+3) {
     margin-bottom: 25px; }

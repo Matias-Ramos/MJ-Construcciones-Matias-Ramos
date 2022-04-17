@@ -4,7 +4,7 @@
 /*****************************************/
 
 /*Eliminación de overflow en eje X causado por Bootstrap */
-#seccionTrayectoria, #seccionPorQueElegirnos, #seccionTestimonios, .navBottom
+#seccionPlantel, #seccionPorQueElegirnos, #seccionTestimonios, .navBottom
 {
 	.row
 	{
@@ -36,7 +36,7 @@
 }
 
 
-#seccionTrayectoria
+#seccionPlantel
 {
 	border-top: 1px solid black;
 	//Parallax
@@ -49,8 +49,8 @@
 	.row
 	{
 		//Cuadro blanco dentro del Parallax
-		border:2px solid black;
-		border-radius: 10px;
+		border:1px solid black;
+		border-radius: 5px;
 		background-color:white;
 		display:flex;
 		align-items:center;
@@ -192,7 +192,7 @@
 		}
 	}
 
-	#seccionTrayectoria
+	#seccionPlantel
 	{
 		//Parallax
 		@include SectionPadding (75px, 3%, 75px, 3%);
@@ -331,6 +331,10 @@
 	{
 		.row
 		{
+			.col-12:nth-child(1)
+			{
+				padding-left:50px
+			}
 			//Imagen
 			.col-12:nth-child(2)
 			{
@@ -341,7 +345,7 @@
 		}
 	}
 
-	#seccionTrayectoria
+	#seccionPlantel
 	{
 		//Parallax
 		@include SectionPadding (100px, 2%, 100px, 2%);
