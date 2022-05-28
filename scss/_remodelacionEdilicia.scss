@@ -1,0 +1,342 @@
+
+#antesYdespues
+{
+	display: flex;
+	justify-content: center;
+	.col-lg-10
+	{
+		@include BoxShadow(0px,4px,6px,#555D66);
+		margin-top:50px;
+		margin-bottom:50px;
+		padding-top:50px;
+		padding-bottom:50px;
+		background:linear-gradient(90deg, rgba(204, 204, 204, 1) 0%, rgba(238, 238, 238, 1) 50%, rgba(204, 204, 204, 1) 100%);
+		border-right:1px solid #aaaaaa;
+		border-left:1px solid #aaaaaa;
+		
+		//Big picture, foto antes y después
+		.col-lg-8
+		{
+			.row{position:relative;}
+			img{@include BoxShadow(0px,4px,6px,#555D66);}
+			#conteinerBtnAntesDespues
+			{
+				position:absolute;
+				bottom:0;
+			}
+		}
+		
+		//Carousel
+		.col-lg-4
+		{
+			display: flex;
+			align-items:center;
+			.row
+			{
+				display: flex;
+				justify-content: center;
+			}
+			.carousel-item
+			{
+				//espaciado entre img de la galería (primeras dos img).
+				.col-lg-12 { margin-bottom:1rem; }
+
+				//De acá para abajo, animación hover carousel galería.
+				.col-lg-12 { position: relative; }
+				img
+				{
+					border:3px solid white;
+					display: block;
+					width: 100%;
+					height: auto;
+					@include BoxShadow(0px,2px,3px,#555D66);
+				}
+				.overlay
+				{
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					height: 100%;
+					width: 100%;
+					opacity: 0;
+					transition: .5s ease;
+					background-color: #008CBA;
+				}
+				.col-lg-12:hover .overlay {	opacity: 0.7; }
+				.text
+				{
+					color: white;
+					font-size: 20px;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					-webkit-transform: translate(-50%, -50%);
+					-ms-transform: translate(-50%, -50%);
+					transform: translate(-50%, -50%);
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+
+
+//Reemplazo del color estandar blanco de los indicadores del carousel, a un color oscuro (negro).
+.carousel-control-prev-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
+.carousel-control-next-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");}
+.carousel .carousel-indicators li {background-color: #6c757d;}
+.carousel .carousel-indicators li.active {background-color: #202020;}
+
+/*#antesYdespues
+{
+	.row
+	{
+		display: flex;
+		justify-content: center;
+		.col-lg-4
+		{
+			border:1px solid red;
+			padding-top:50px;
+			padding-bottom:50px;
+			.row
+			{
+				display:flex;
+				justify-content: center;
+			}
+		}
+		.col-lg-7
+		{
+			display: flex;
+			align-items:center;
+			justify-content: center;
+			border:1px solid green;
+			.row{position:relative;}
+			#conteinerBtnAntesDespues
+			{
+				position:absolute;
+				bottom:0;
+			}
+		}
+	}
+}
+*/
+/*#svcsRemodelacionEd
+{
+	.container-fluid:nth-child(2)
+	{
+		padding:0;
+	}
+	#antesYdespues
+	{
+	background-color: #eeeeee;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%2348afb3' fill-opacity='0.11' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+		.row
+		{
+			display:flex;
+			justify-content: center;
+			.col-xl-3	
+			{
+				background:linear-gradient(90deg, rgba(204, 204, 204, 1) 0%, rgba(238, 238, 238, 1) 50%, rgba(204, 204, 204, 1) 100%);
+				padding-top:75px;
+				padding-bottom:75px;
+				border:1px solid #aaaaaa;
+				@include BoxShadow(0px,4px,6px,#555D66);
+				.col-lg-6
+				{
+					.col-lg-12
+					{
+						padding:5px;
+					}
+				}
+			}
+			.col-lg-7
+			{
+
+				//box-shadow: inset 0px 0px 20px 0 #bfbfbf, inset 0px 0px 9px #bfbfbf;
+				padding-top:75px;
+				padding-bottom:75px;
+				
+				display:flex;
+				justify-content: center;
+				align-items:flex-end;
+				img{@include BoxShadow(2px,4px,5px,#555D66);}
+				.row{position:relative;}
+				#conteinerBtnAntesDespues
+				{
+					position:absolute;
+					bottom:0;
+				}
+			}
+		}
+	}	
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+#svcsRemodelacionEd
+{
+	.solicitarAsesoram
+	{
+		.row { height:250px; }
+	}
+}
+
+
+
+#svcsRemodelacionEd
+{
+	#antesYdespues
+	{
+		.col-12:nth-child(1)
+		{
+			margin-top:35px;
+			
+		}
+	}
+	.sectionSolicitarAsesoram { margin-top:50px; }
+}
+
+
+
+/***********************/
+/***********************/
+/*INICIO MEDIA QUERIES*/
+/*Netbooks and Desktops*/
+
+@media only screen and (min-width: 992px)
+{
+	#svcsRemodelacionEd
+	{
+		.chevron
+		{
+			.row{height:100%}
+		}
+
+		//H1
+		.chevron:nth-child(2)
+		{
+			background-color: #fdfffc;
+			.col-lg-12
+			{
+				display:flex;
+				align-items: center;
+				justify-content: center;
+				clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+				background:linear-gradient(90deg, rgba(243, 243, 243, 1) 0%, rgba(189, 198, 209, 1) 39%, rgba(148, 155, 163, 1) 100%);
+			}
+		}
+
+		//Scope
+		.chevron:nth-child(3)
+		{
+			.row
+			{
+				.col-lg-12
+				{
+					background-color: #fdfffc;
+				}
+			}
+		}
+	}
+}
+
+/***********************/
+/*Mobile and Tablets*/
+@media only screen and (max-width: 992px)
+{
+	#svcsRemodelacionEd
+	{
+		.h1yDescripcion	
+		{
+			//chevron dark
+			.chevron:nth-child(1)
+			{
+				.col-lg-12
+				{
+					height: 75px;
+					background-color: #343a40; 
+					clip-path: polygon(0% 0%, 100% 0, 100% 25%, 50% 100%, 0 25%);
+					margin-top: -1px;
+				}
+			}
+
+			//extend
+			.chevronSvcsProperties
+			{
+				margin-top: -1px;
+				display:flex;
+				justify-content: center;
+				clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
+				height: 250px;
+			}
+
+			//H1
+			.chevron:nth-child(2)
+			{
+				.row
+				{
+					background-color: #8d99ae;
+					.col-lg-12
+					{
+						@extend .chevronSvcsProperties;
+						background-color:map-get($coloresPrincipales,$colour-whiteish-cream);
+						text-align: center;
+						h1{margin-top:2rem;}
+					}
+				}
+			}
+
+			//scope
+			.chevron:nth-child(3)
+			{
+				@extend .chevronSvcsProperties;
+				background-color: #8d99ae;
+				font-size: 1.2rem;
+				ul{margin-top:2.3rem;}
+			}
+		}
+	}
+}
+
+/*Tablet only*/
+@media only screen and (min-width: 768px) and (max-width: 992px)
+{
+	#svcsRemodelacionEd
+	{
+		.h1yDescripcion	
+		{
+			//H1
+			.chevron:nth-child(2)
+			{
+				.row
+				{
+					.col-lg-12
+					{
+						h1{margin-top:5rem;}
+					}
+				}
+			}
+			//scope
+			.chevron:nth-child(3)
+			{
+				font-size: 1.3rem;
+				ul{margin-top:3rem;}
+			}
+		}
+	}
+}

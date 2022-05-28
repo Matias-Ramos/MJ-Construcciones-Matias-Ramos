@@ -1,0 +1,231 @@
+#llaveEnMano
+{
+	.solicitarAsesoram
+	{
+		.row 
+		{ 
+			display:flex;
+			justify-content: center;
+			.col-12:nth-child(1) {height:140px;}
+			.col-12:nth-child(2) {height:140px;}
+		}
+	}
+}
+
+
+#llaveEnMano
+{
+	#cuatroPasosSon
+	{
+		//Animación hover
+		.card { transition: transform .2s; }
+		.card:hover 
+		{
+			-ms-transform: scale(1.02); /* IE 9 */
+			-webkit-transform: scale(1.02); /* Safari 3-8 */
+			transform: scale(1.02); 
+		}
+	}
+}
+
+
+
+#llaveEnMano
+{
+	.card 
+	{
+		background:radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(141, 175, 210, 0.31) 100%);
+	}
+	
+	//Coloreo del H1-section
+	.h1yDescripcion
+	{
+		//llave
+		.chevron:nth-child(1)
+		{
+			.col-lg-12
+			{
+				//color del chevron img-llave
+				background-color:#5c6378;
+			}
+		}
+
+		//H1
+		.chevron:nth-child(2)
+		{
+			//color del chevron textoComplementarioI
+			background-color: #8d99ae;
+		}
+
+		//texto complementario I
+		.chevron:nth-child(3)
+		{
+			.col-lg-12
+			{
+				//color del chevron textoComplementarioI
+				background-color: #8d99ae;	
+			}
+			//color del chevron textoComplementarioII
+			background-color: #bdc6d1;
+		}
+
+		//texto complementario II
+		.chevron:nth-child(4)
+		{
+			.col-lg-12
+			{
+				//color del chevron textoComplementarioII
+				background-color: #bdc6d1;
+			}
+		}
+	}
+}
+
+/***********************/
+/***********************/
+/*INICIO MEDIA QUERIES*/
+/*Netbooks and Desktops*/
+@media only screen and (min-width: 992px)
+{
+	#llaveEnMano
+	{
+		.h1yDescripcion
+		{
+			h1 { font-size: 1.8rem; }
+			display:flex;
+			justify-content: center;
+			.chevron
+			{
+				.row{height:100%;}
+				.col-lg-12
+				{
+					display:flex;
+					align-items:center;
+				}
+			}
+
+			//llave
+			.chevron:nth-child(1)
+			{
+				//h1 background
+				background:linear-gradient(90deg, rgba(229, 230, 227, 1) 0%, rgba(239, 240, 238, 1) 100%);
+				.col-lg-12
+				{
+					clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+				}
+			}
+
+			//H1
+			.chevron:nth-child(2)
+			{
+				.col-lg-12
+				{
+					background:linear-gradient(90deg, rgba(239, 240, 238, 1) 0%, rgba(255, 255, 255, 1) 37%);
+					clip-path: polygon(-1% 0%, 85% 0%, 100% 50%, 85% 100%, -1% 100%);
+				}
+			}
+
+			//texto complementario I
+			.chevron:nth-child(3)
+			{
+				.col-lg-12
+				{
+					clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+				}
+			}
+		}
+
+		//Reunión, Render, Contrato, Inicio de Obra
+		#cuatroPasosSon
+		{
+			.card
+			{
+				.col-md-1{font-size:2rem;}
+				.col-md-7
+				{
+					display:flex;
+					align-items: center;
+					.card-body { text-align: left; }
+				}
+				@include BoxShadow(3px,3px,8px,#555D66);
+				img{@include BoxShadow(1px,1px,6px,#555D66);}
+			}
+			.col-md-4
+			{
+				img
+				{
+					height:106%!important;
+					margin-top:-10px;
+				}
+			}
+		}
+	}
+}
+
+/***********************/
+/*Mobile and Tablets*/
+@media only screen and (max-width: 992px)
+{
+#llaveEnMano
+	{
+		.h1yDescripcion
+		{
+			.chevron
+			{
+				height: 250px;
+				display:flex;
+				align-items: center;
+				justify-content: center;
+				padding-left: 0;
+				padding-right: 0;
+				.col-lg-12
+				{
+					display:flex;
+					align-items: center;
+					justify-content: center;
+					text-align: center;
+					clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
+					margin-top:-2px;
+				}
+				.row{height: 100%;width:100%;}
+			}
+			//chevron dark
+			.chevron:nth-child(1)
+			{
+				height: 75px;
+				.col-lg-12
+				{
+					background-color: #343a40; 
+					clip-path: polygon(0% 0%, 100% 0, 100% 25%, 50% 100%, 0 25%);
+				}
+			}
+
+			//H1
+			.chevron:nth-child(2)
+			{
+				.col-lg-12
+				{
+					background:linear-gradient(180deg, rgba(239, 240, 238, 1) 0%, rgba(255, 255, 255, 1) 37%);
+				}
+			}
+			//texto complementario II
+			.chevron:nth-child(4)
+			{
+				//color de fondo del sitio
+				background-color: map-get($coloresPrincipales,$colour-whiteish-cream);
+			}
+
+			//logito llave
+			.mobile-only
+			{
+				display:flex;
+				justify-content: center;
+			}
+		}
+	}
+}
+
+
+
+
+

@@ -1,0 +1,199 @@
+
+
+//iguala la altura de todos los items dentro de "estilos de pileta".
+.estiloDePileta
+{
+	height:350px;
+	.col-12
+	{
+		height:350px;
+		img{height:350px;}
+	}
+}
+
+
+#conteinerPiletas
+{
+	.solicitarAsesoram
+	{
+		.row { height:240px; }
+	}
+}
+
+
+#svcs_sistemaConstr
+{
+	border-top:1px solid map-get($coloresPrincipales,$colour-darker);
+
+	.row
+	{
+		background-color:#E3E3E3;
+
+		//alinea el paso 7 al centro
+		display:flex;
+		justify-content: center;
+
+		//espaciado entre cards
+		.col-12 { margin-top:50px; }
+		&:nth-child(2)
+		{
+			padding-bottom:4rem;
+		}
+	}
+	.card 
+	{
+		box-shadow: 3px 3px 5px #aaaaaa;
+		border-color:map-get($coloresPrincipales,$colour-darker);
+		.card-body{background: linear-gradient(360deg, #E3E3E3 0%, white 30%);}
+	}
+}
+
+
+#svcs_Construimos
+{
+	margin-top:50px;
+	margin-bottom:50px;
+}
+
+
+
+/***********************/
+/***********************/
+/*INICIO MEDIA QUERIES*/
+/*Netbooks and Desktops*/
+@media only screen and (min-width: 992px)
+{
+	#conteinerPiletas
+	{
+		#svcs_Construimos
+		{
+
+			//inversión del orden de los elementos
+			.estiloDePileta:nth-child(odd)
+			{
+				//img
+				.col-12:nth-child(2){order:1;}
+				//h2
+				.col-12:nth-child(1){order:2;}
+			}
+
+			//Animación hover
+			.estiloDePileta { transition: transform .2s; }
+			.estiloDePileta:hover 
+			{
+				-ms-transform: scale(1.01); /* IE 9 */
+				-webkit-transform: scale(1.01); /* Safari 3-8 */
+				transform: scale(1.01); 
+			}
+
+			//espaciado entre cada tipo de pileta.
+			.estiloDePileta:nth-child(1n+2) { margin-top:3rem; }
+			.estiloDePileta:nth-last-child(1){ margin-bottom:2rem;}
+			//extend
+			.formateoTextoPiletas
+			{
+				padding:0;
+				display:flex;
+				align-items: center;
+				justify-content: center;
+				box-shadow: 0px 2px 5px #555d66;
+			}
+
+			//selector de imágenes que están sobre la derecha
+			.estiloDePileta:nth-child(even)
+			{
+				padding-left:15px;
+
+				//img
+				.col-12:nth-child(2)
+				{
+					padding-left:0;
+					img
+					{
+						width:100%;
+						box-shadow: -1px 4px 5px #555d66;
+					}
+				}
+
+				//texto
+				.col-12:nth-child(1)
+				{
+					@extend .formateoTextoPiletas;
+					background:linear-gradient(90deg, rgba(238, 238, 238, 1) 51%, rgba(189, 198, 209, 1) 100%);
+				}
+			}
+
+			//selector de imágenes que están sobre la izq
+			.estiloDePileta:nth-child(odd)
+			{
+				padding-right:15px;
+
+				//img
+				.col-12:nth-child(2)
+				{
+					padding-right:0;
+					img
+					{
+						width:100%;
+						box-shadow: 1px 4px 5px #555d66;
+					}	
+				}
+
+				//texto
+				.col-12:nth-child(1)
+				{
+					@extend .formateoTextoPiletas;
+					background:linear-gradient(90deg, rgba(189, 198, 209, 1) 0%, rgba(238, 238, 238, 1) 50%);
+				}
+			}
+		}
+		#svcs_sistemaConstr
+		{
+			.card{height:100%;}
+		}
+	}
+}
+
+
+
+/***********************/
+/*Mobile and Tablets*/
+@media only screen and (max-width: 992px)
+{
+	#conteinerPiletas
+	{
+
+		#svcs_Construimos
+		{
+			padding:0;
+			//espaciado entre cada tipo de pileta.
+			.estiloDePileta { margin-top:3rem; }
+			.estiloDePileta:nth-last-child(1){ margin-bottom:3rem;}
+
+			.estiloDePileta
+			{
+				//img
+				.col-12:nth-child(2)
+				{
+					img
+					{
+						box-shadow: 1px 4px 5px #555d66;
+					}
+				}
+
+				//texto
+				.col-12:nth-child(1)
+				{
+					h2{
+						border: 1px solid black;
+						background:linear-gradient(360deg, rgba(0, 188, 212, 0.2) 0%, rgba(238, 238, 238, 1) 50%);
+						padding: 9px;
+						border-radius:2px;
+						box-shadow: 1px 4px 5px #555d66;
+					}
+				}
+			}
+		}
+
+	}
+}

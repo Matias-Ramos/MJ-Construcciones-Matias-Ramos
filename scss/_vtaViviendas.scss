@@ -1,0 +1,47 @@
+.servicios
+{
+	#containerProyectos
+	{
+		.card
+		{
+			.list-group
+			{
+				display: flex;
+				justify-content: center; 
+			}
+			.card-body
+			{
+				.row
+				{
+
+					display: flex;
+					align-items:center;
+					
+					
+					.col-12
+					{
+						//hace que no se descontrole en grande el tamaño de los svg
+						height:50px;
+						img{height:50px;}
+
+						a
+						{
+							display: flex;
+							align-items:center;
+							justify-content: center;
+    						flex-wrap: nowrap;
+						}
+					}
+					.col-12:nth-child(2)
+					{
+						span{color:black;}
+					}
+					.col-12:nth-child(3)
+					{
+						span{color:green;}
+					}
+				}
+			}
+		}
+	}
+}

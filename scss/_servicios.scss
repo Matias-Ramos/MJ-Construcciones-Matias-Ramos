@@ -1,24 +1,55 @@
-.servicios
+
+#llaveEnMano
 {
-	section
+	#cuatroPasosSon
 	{
-		@include SectionPadding(75px, 0px, 90px, 0px);
+		padding-top:4rem;
+		padding-bottom:4rem;
 	}
 }
 
 
-/***********************/
-/***********************/
-/*INICIO MEDIA QUERIES*/
-/*Netbooks and Desktops*/
-@media only screen and (min-width: 992px)
-{
 
+
+.servicios
+{
+	ul 
+	{
+		margin-bottom:0;
+		li
+		{
+			list-style-type: disc;
+		}
+	}
+	h1{margin-bottom: 0;}
 }
 
-/***********************/
-/*Mobile and Tablets*/
-@media only screen and (max-width: 992px)
-{
 
+.solicitarAsesoram
+{
+	background-color: #393E46;
+
+	.row
+	{
+		background:linear-gradient(0deg, rgba(238, 238, 238, 1) 0%, rgba(157, 221, 223, 1) 100%);
+		clip-path: polygon(99% 0, 94% 50%, 99% 100%, 1% 100%, 6% 50%, 1% 0);
+		.col-12:nth-child(1)
+		{
+			display:flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 2rem;
+			//color:white;
+		}
+		.col-12
+		{
+			button
+				{
+					box-shadow: 2px 2px 4px #3F3F3F;
+					font-size: 1.3rem;
+				}
+		}
+	}
 }
+
+
