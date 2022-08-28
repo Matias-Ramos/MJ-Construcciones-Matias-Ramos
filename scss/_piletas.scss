@@ -1,30 +1,80 @@
 
-
-//iguala la altura de todos los items dentro de "estilos de pileta".
-.estiloDePileta
+#piletas
 {
-	height:350px;
-	.col-12
+	.container-fluid:nth-child(2)
 	{
+		padding-top:75px;
+		padding-bottom:75px;
+background-color: #18549d;
+background-image: url("data:image/svg+xml,%3Csvg width='32' height='64' viewBox='0 0 32 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 28h20V16h-4v8H4V4h28v28h-4V8H8v12h4v-8h12v20H0v-4zm12 8h20v4H16v24H0v-4h12V36zm16 12h-4v12h8v4H20V44h12v12h-4v-8zM0 36h8v20H0v-4h4V40H0v-4z' fill='%230066bd' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
+		color:#fff;
+		text-shadow:0 2px 4px black;
+		
+	}
+}
+
+
+#containerEstilosDePiletas
+{
+
+	//iguala la altura de todos los items dentro de "estilos de pileta".
+	.estiloDePileta
+	{
+		display:flex;
+		justify-content:center;
 		height:350px;
-		img{height:350px;}
+		.col-12
+		{
+			height:350px;
+			img{height:350px;}
+		}
 	}
+
 }
 
 
-#conteinerPiletas
+#containerEstilosDePiletas
 {
-	.solicitarAsesoram
+	.carousel-indicators
 	{
-		.row { height:240px; }
+
+	}
+	.estiloDePileta
+	{
+		padding-right:15px;
+
+		//img
+		.col-12:nth-child(1)
+		{
+			padding-right:0;
+			img
+			{
+				width:100%;
+				border-radius: 0% 0% 0% 20%;
+			}	
+		}
+
+		//texto
+		.col-12:nth-child(2)
+		{
+			@extend .formateoTextoPiletas;
+			//background:linear-gradient(90deg, rgba(72, 202, 228, 0.86) 0%, rgba(238, 238, 238, 0.11) 60%);
+			//background:radial-gradient(circle at 50% 50%, rgba(238, 238, 238, 1) 60%, rgba(189, 198, 209, 1) 100%);
+			background: rgba( 255, 255, 255, 0.25 );
+			box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+			backdrop-filter: blur( 1px );
+			-webkit-backdrop-filter: blur( 1px );
+			border-radius: 0% 20% 0% 0%;
+			border: 1px solid rgba( 255, 255, 255, 0.18 );
+		}
 	}
 }
 
 
-#svcs_sistemaConstr
-{
-	border-top:1px solid map-get($coloresPrincipales,$colour-darker);
 
+//cards
+#sistemaConstructivo
+{
 	.row
 	{
 		background-color:#E3E3E3;
@@ -35,10 +85,7 @@
 
 		//espaciado entre cards
 		.col-12 { margin-top:50px; }
-		&:nth-child(2)
-		{
-			padding-bottom:4rem;
-		}
+		&:nth-child(2) { padding-bottom:4rem; }
 	}
 	.card 
 	{
@@ -49,11 +96,6 @@
 }
 
 
-#svcs_Construimos
-{
-	margin-top:50px;
-	margin-bottom:50px;
-}
 
 
 
@@ -63,32 +105,20 @@
 /*Netbooks and Desktops*/
 @media only screen and (min-width: 992px)
 {
-	#conteinerPiletas
+	#piletas
 	{
-		#svcs_Construimos
+		#containerEstilosDePiletas
 		{
 
-			//inversión del orden de los elementos
-			.estiloDePileta:nth-child(odd)
-			{
-				//img
-				.col-12:nth-child(2){order:1;}
-				//h2
-				.col-12:nth-child(1){order:2;}
-			}
-
 			//Animación hover
-			.estiloDePileta { transition: transform .2s; }
+			/*.estiloDePileta { transition: transform .2s; }
 			.estiloDePileta:hover 
 			{
-				-ms-transform: scale(1.01); /* IE 9 */
-				-webkit-transform: scale(1.01); /* Safari 3-8 */
+				-ms-transform: scale(1.01); // IE 9
+				-webkit-transform: scale(1.01); // Safari 3-8
 				transform: scale(1.01); 
-			}
+			}*/
 
-			//espaciado entre cada tipo de pileta.
-			.estiloDePileta:nth-child(1n+2) { margin-top:3rem; }
-			.estiloDePileta:nth-last-child(1){ margin-bottom:2rem;}
 			//extend
 			.formateoTextoPiletas
 			{
@@ -99,55 +129,8 @@
 				box-shadow: 0px 2px 5px #555d66;
 			}
 
-			//selector de imágenes que están sobre la derecha
-			.estiloDePileta:nth-child(even)
-			{
-				padding-left:15px;
-
-				//img
-				.col-12:nth-child(2)
-				{
-					padding-left:0;
-					img
-					{
-						width:100%;
-						box-shadow: -1px 4px 5px #555d66;
-					}
-				}
-
-				//texto
-				.col-12:nth-child(1)
-				{
-					@extend .formateoTextoPiletas;
-					background:linear-gradient(90deg, rgba(238, 238, 238, 1) 51%, rgba(189, 198, 209, 1) 100%);
-				}
-			}
-
-			//selector de imágenes que están sobre la izq
-			.estiloDePileta:nth-child(odd)
-			{
-				padding-right:15px;
-
-				//img
-				.col-12:nth-child(2)
-				{
-					padding-right:0;
-					img
-					{
-						width:100%;
-						box-shadow: 1px 4px 5px #555d66;
-					}	
-				}
-
-				//texto
-				.col-12:nth-child(1)
-				{
-					@extend .formateoTextoPiletas;
-					background:linear-gradient(90deg, rgba(189, 198, 209, 1) 0%, rgba(238, 238, 238, 1) 50%);
-				}
-			}
 		}
-		#svcs_sistemaConstr
+		#sistemaConstructivo
 		{
 			.card{height:100%;}
 		}
@@ -160,10 +143,10 @@
 /*Mobile and Tablets*/
 @media only screen and (max-width: 992px)
 {
-	#conteinerPiletas
+	#piletas
 	{
 
-		#svcs_Construimos
+		#containerEstilosDePiletas
 		{
 			padding:0;
 			//espaciado entre cada tipo de pileta.
@@ -173,7 +156,7 @@
 			.estiloDePileta
 			{
 				//img
-				.col-12:nth-child(2)
+				.col-12:nth-child(1)
 				{
 					img
 					{
@@ -182,7 +165,7 @@
 				}
 
 				//texto
-				.col-12:nth-child(1)
+				.col-12:nth-child(2)
 				{
 					h2{
 						border: 1px solid black;

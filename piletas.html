@@ -87,19 +87,19 @@
 				            </li>
 
 				            <li class="nav-item dropdown">
-				                <a class="nav-link m-2 dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false" href="servicios.html">Servicios</a>
+				                <a class="nav-link m-2 dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Servicios</a>
 								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-									<a class="dropdown-item" href="llave-en-mano.html">Proyecto llave en mano</a>
+									<a class="dropdown-item" href="llaveEnMano.html">Proyecto llave en mano</a>
 
 									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="remodelacion-ed.html">Remodelaciones edilicias</a>
+									<a class="dropdown-item" href="remodelaciones.html">Remodelaciones edilicias</a>
 
 									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="constr-piletas.html">Construcción de piletas</a>
+									<a class="dropdown-item" href="piletas.html">Construcción de piletas</a>
 
 									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="vta-viviendas.html">Venta de viviendas</a>
+									<a class="dropdown-item" href="vtaViviendas.html">Venta de viviendas</a>
 								</div>
 				            </li>
 
@@ -126,7 +126,7 @@
 				</nav>
 			</div>
 		</header>
-		<main class="servicios" id="conteinerPiletas">
+		<main class="servicios" id="piletas">
 
 			<!--H1-->
 			<div class="container-fluid">
@@ -137,102 +137,175 @@
 				</div>
 			</div>
 
-			<!--Construímos-->
+			<!--Carousel tipos de piletas-->
 			<div class="container-fluid">
-				<section id="svcs_Construimos">
+				<section id="containerEstilosDePiletas">
+					<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
-					<!--Hidromasaje-->
-					<div class="row estiloDePileta">
+						<div class="carousel-inner">
 
-						<!--H2-->
-						<div class="col-12 col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-							<h2>Hidromasaje</h2>
+							<!--Hidromasaje-->
+							<div class="carousel-item active">
+								<div class="row estiloDePileta">
+									<!--Img-->
+									<div class="col-12 col-xs-12 col-sm-12 col-lg-6 col-xl-6">
+										<img src="images/Servicios/piletas/productos-servicios/Jacuzzi-exterior.jpg" class="img-fluid" alt="imagen de un hidromasaje">
+									</div>
+
+									<!--H2 + prev/next btn-->
+									<div class="col-12 col-xs-12 col-sm-12 col-lg-5 col-xl-5">
+										<h2>Hidromasaje</h2>
+										<button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+											<span class="sr-only">Anterior</span>
+										</button>
+										<button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
+											<span class="sr-only">Siguiente</span>
+										</button>
+
+									</div>
+								</div>
+							</div>
+
+							<!--Borde Infinito-->
+							<div class="carousel-item">
+								<div class="row estiloDePileta">
+									<!--Img-->
+									<div class="col-12 col-xs-12 col-sm-12 col-lg-6 col-xl-6">
+										<img src="images/Servicios/piletas/productos-servicios/borde-infinito.webp" class="img-fluid" alt="imagen de una pileta con borde inifinito">
+									</div>	
+
+									<!--H2-->
+									<div class="col-12 col-xs-12 col-sm-12 col-lg-5 col-xl-5">
+										<h2>Borde infinito</h2>
+										<button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+											<span class="sr-only">Anterior</span>
+										</button>
+										<button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
+											<span class="sr-only">Siguiente</span>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<!--Climatizada-->
+							<div class="carousel-item">
+								<div class="row estiloDePileta">
+									<!--Img-->
+									<div class="col-12 col-xs-12 col-sm-12 col-lg-6 col-xl-6">
+										<img src="images/Servicios/piletas/productos-servicios/pileta-climatizada.jpg" class="img-fluid" alt="pileta climatizada">
+									</div>
+
+									<!--H2-->
+									<div class="col-12 col-xs-12 col-sm-12 col-lg-5 col-xl-5">
+										<h2>Climatizada</h2>
+										<button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+											<span class="sr-only">Anterior</span>
+										</button>
+										<button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
+											<span class="sr-only">Siguiente</span>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<!--Iluminación-->
+							<div class="carousel-item">
+								<div class="row estiloDePileta">
+									<!--Img-->
+									<div class="col-12 col-xs-12 col-sm-12 col-lg-6 col-xl-6">
+										<img src="images/Servicios/piletas/productos-servicios/pileta-iluminada.jpg" class="img-fluid" alt="pileta iluminada">
+									</div>
+
+									<!--H2-->
+									<div class="col-12 col-xs-12 col-sm-12 col-lg-5 col-xl-5">
+										<h2>Iluminada</h2>
+										<button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+											<span class="sr-only">Anterior</span>
+										</button>
+										<button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
+											<span class="sr-only">Siguiente</span>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<!--Calefacción-->
+							<div class="carousel-item">
+								<div class="row estiloDePileta">
+									<!--Img-->
+									<div class="col-12 col-xs-12 col-sm-12 col-lg-6 col-xl-6">
+										<img src="images/Servicios/piletas/productos-servicios/pileta-calefaccionada.jpg" class="img-fluid" alt="pileta calefaccionada">
+									</div>
+
+									<!--H2-->
+									<div class="col-12 col-xs-12 col-sm-12 col-lg-5 col-xl-5">
+										<h2>Calefaccionada</h2>
+										<button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+											<span class="sr-only">Anterior</span>
+										</button>
+										<button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
+											<span class="sr-only">Siguiente</span>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<!--Revestimientos-->
+							<div class="carousel-item">
+								<div class="row estiloDePileta">
+									<!--Img-->
+									<div class="col-12 col-xs-12 col-sm-12 col-lg-6 col-xl-6">
+										<img src="images/Servicios/piletas/productos-servicios/revestimientos.jpg" class="img-fluid" alt="pileta con revestimientos">
+									</div>
+
+									<!--H2-->
+									<div class="col-12 col-xs-12 col-sm-12 col-lg-5 col-xl-5">
+										<h2>Revestimientos</h2>
+										<button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+											<span class="sr-only">Anterior</span>
+										</button>
+										<button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
+											<span class="sr-only">Siguiente</span>
+										</button>
+									</div>
+								</div>
+							</div>
+
 						</div>
-
-						<!--Img-->
-						<div class="col-12 col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-							<img src="images/Servicios/piletas/productos-servicios/Jacuzzi-exterior.jpg" class="img-fluid" alt="imagen de un hidromasaje">
+						<div class="row">
+							<div class="col-12 col-xs-12 col-sm-12 col-lg-6 col-xl-6">
+							</div>
+							<div class="col-12 col-xs-12 col-sm-12 col-lg-5 col-xl-5">
+								<ol class="carousel-indicators">
+									<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+									<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+									<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+									<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+									<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+									<li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+								</ol>
+							</div>
 						</div>
 					</div>
-
-					<!--Borde infinito-->
-					<div class="row estiloDePileta">
-
-						<!--H2-->
-						<div class="col-12 col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-							<h2>Borde infinito</h2>
-						</div>
-
-						<!--Img-->
-						<div class="col-12 col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-							<img src="images/Servicios/piletas/productos-servicios/borde-infinito.webp" class="img-fluid" alt="imagen de una pileta con borde inifinito">
-						</div>			
-					</div>
-
-					<!--Climatizada-->
-					<div class="row estiloDePileta">
-
-						<!--H2-->
-						<div class="col-12 col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-							<h2>Climatizada</h2>
-						</div>
-
-						<!--Img-->
-						<div class="col-12 col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-							<img src="images/Servicios/piletas/productos-servicios/pileta-climatizada.jpg" class="img-fluid" alt="pileta climatizada">
-						</div>
-					</div>
-
-					<!--Iluminación-->
-					<div class="row estiloDePileta">
-
-						<!--H2-->
-						<div class="col-12 col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-							<h2>Iluminada</h2>
-						</div>
-
-						<!--Img-->
-						<div class="col-12 col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-							<img src="images/Servicios/piletas/productos-servicios/pileta-iluminada.jpg" class="img-fluid" alt="pileta iluminada">
-						</div>
-					</div>
-
-					<!--Calefacción-->
-					<div class="row estiloDePileta">
-
-						<!--H2-->
-						<div class="col-12 col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-							<h2>Calefaccionada</h2>
-						</div>
-
-						<!--Img-->
-						<div class="col-12 col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-							<img src="images/Servicios/piletas/productos-servicios/pileta-calefaccionada.jpg" class="img-fluid" alt="pileta calefaccionada">
-						</div>
-					</div>
-
-					<!--Revestimientos-->
-					<div class="row estiloDePileta">
-
-						<!--H2-->
-						<div class="col-12 col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-							<h2>Revestimientos</h2>
-						</div>
-
-						<!--Img-->
-						<div class="col-12 col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-							<img src="images/Servicios/piletas/productos-servicios/revestimientos.jpg" class="img-fluid" alt="pileta con revestimientos">
-						</div>
-							
-						</div>	
-					</div>
-
 				</section>
 			</div>
 
+
 			<!--Sistema Constructivo-->
 			<div class="container-fluid">
-				<section id="svcs_sistemaConstr">
+				<section id="sistemaConstructivo">
 
 					<!--H2-->
 					<div class="row">
@@ -320,7 +393,7 @@
 
 			<!--Querés construir?-->
 			<div class="container-fluid solicitarAsesoram">
-				<section class="row">
+				<section class="row" id="asesoramientoPiletas">
 					<div class="col-12 col-xs-12 col-sm-12 col-lg-12 col-xl-12">
 						<span>¿Estás buscando construir una pileta?</span>
 					</div>
@@ -329,6 +402,9 @@
 					</div>
 				</section>
 			</div>
+
+			<!--JS Nativo-->
+			<script src="js/piletas.js"></script>
 
 			<!--BTS JAVASCRIPT BELOW-->
 			<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

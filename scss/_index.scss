@@ -53,16 +53,7 @@
 		background-color:white;
 		display:flex;
 		align-items:center;
-
-		/*Gana precedencia por sobre el resets.scss,
-		devolviendo los -bullets characters- a los ul li*/
-		.col-lg-3
-		{
-			ul li
-			{
-				list-style: square;
-			}
-		}
+		@include BoxShadow(1px,4px,5px,#555D66);
 		
 		// aumenta tamaño al ">"
 		.col-lg-1 { font-size:2rem; }
@@ -74,9 +65,26 @@
 }
 
 
+#seccionPorQueElegirnos
+{
+	@include SectionPadding(15px, 0px, 15px, 0px);
+	.col-12
+	{
+		padding: 0;
+	}
+	.whiteSpace
+	{
+		background-color:map-get($coloresPrincipales,$colour-darker)
+	}
+	h2{margin:0}
+}
+
 #seccionTestimonios
 {
-	background-color:#393E46;
+	background-color:map-get($coloresPrincipales,$colour-darkest);
+	//box-shadow:0px 7px 12px #242423 inset;
+	box-shadow:0px 6px 25px #242423 inset;
+
 	color:#f1ebe5;
 	.carousel-inner
 	{
@@ -102,56 +110,7 @@
 
 
 
-#seccionPorQueElegirnos
-{
-	@include SectionPadding(75px, 0px, 100px, 0px);
-	border-top:1px solid black;
-	p { margin:0; }
 
-	//H2-cards spacing 
-	.row:nth-child(1)
-	{
-		margin-bottom:50px;
-		h2{font-size: 3rem;}
-	}
-
-	//cards box-modeling
-	.row:nth-child(2)
-	{
-		//card box modeling
-		.cardIconTitleConteiner
-		{
-			margin-bottom:10px;
-			img
-			{
-				margin-right:5px;
-			}
-		}
-
-		.card
-		{
-			height:240px;
-
-			.card-body
-			{
-				display:flex;
-				justify-content:center;
-				align-items:center;
-				flex-direction: column;
-			}
-
-			//posicionamiento del icono a la izq y el title a la derecha
-			.cardIconTitleConteiner
-			{
-				display:flex;
-				align-items:center;
-				
-				//elimina margin estandar del h3
-				.card-title { margin-bottom:0; }
-			}
-		}
-	}
-}
 
 .navBottom
 {
@@ -207,14 +166,7 @@
 
 			//Cuadro blanco dentro del Parallax.
 			@include SectionPadding(50px, 5px, 50px, 5px);
-			
-			//container "Resto del equipo".
-			.col-lg-3
-			{
-				h3 { text-align: center; }
-				ul li { text-align: left; }
-			}
-			
+						
 			//Flechas
 			.rotate-sm-90 { transform: rotate(90deg); }
 		}
@@ -251,72 +203,14 @@
 /*MOBILE-ONLY*/
 
 //cards-mobile
-@media only screen and (max-width: 768px)
+@media only screen and (max-width: 992px)
 {
 	#seccionPorQueElegirnos
 	{
-		//cards
-		.row:nth-child(2)
+		.whiteSpace
 		{
-
-			//todas las cards
-			.col-11
-			{
-				.card { @include BoxShadow(1px,4px,5px,#555D66); }
-			}
-			//las primeras 5 cards
-			.col-lg-4:nth-child(-n+5) { margin-bottom:25px; }
-		}
-	}
-}
-
-/***********************/
-/***********************/
-/*TABLET-ONLY*/
-@media only screen and (min-width: 768px) and (max-width: 992px)
-{
-	#seccionPorQueElegirnos
-	{
-		//cards
-		.row:nth-child(2)
-		{
-			//las primeras 4 cards
-			.col-lg-4:nth-child(-n+4) { margin-bottom:25px; }
-
-			//sombra arriba izq
-			.col-11:nth-child(1)
-			{
-				.card { @include BoxShadow(3px,3px,8px,#555D66); }
-			}
-
-			//sombra arriba derecha
-			.col-11:nth-child(2)
-			{
-				.card { @include BoxShadow(-3px,3px,8px,#555D66); }
-			}
-
-			//sombra centro izq
-			.col-11:nth-child(3)
-			{
-				.card { @include BoxShadow(3px,1px,8px,#555D66);}
-			}
-			//sombra centro derecha
-			.col-11:nth-child(4)
-			{
-				.card { @include BoxShadow(-3px,1px,8px,#555D66); }
-			}
-
-			//sombra abajo izq
-			.col-11:nth-child(5)
-			{
-				.card { @include BoxShadow(3px,-3px,8px,#555D66); }
-			}
-			//sombra abajo derecha
-			.col-11:nth-child(6)
-			{
-				.card { @include BoxShadow(-3px,-3px,8px,#555D66); }
-			}
-		}
+			height: 3rem;
+		}		
 	}
 }
 
@@ -352,59 +246,84 @@
 		{
 			//Cuadro blanco dentro del Parallax.
 			padding:50px 25px;
-			
-			
-			//container "Resto del equipo".
-			.col-lg-3
-			{
-				text-align: left;
-				h3
-				{
-					font-size:1.5rem;
-				}
-			}
+			display:flex;
+			justify-content: center;
 		}
 	}
 
 	#seccionPorQueElegirnos
 	{
-		//cards
-		.row:nth-child(2)
+		#cruz{transform: scale(0.8);}
+
+background-color: #D9673C;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='119' height='119' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23bf5128' fill-opacity='0.77'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.77'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+		h2
 		{
-			//las primeras 3 cards
-			.col-lg-4:nth-child(-n+3) { margin-bottom:25px; }
+			color: map-get($coloresPrincipales,$colour-whiteish-cream);
+			font-size:2.2em;
+			text-shadow: 2px 2px 4px #000000;
+		}
+		.square
+		{
+			border:1px solid #6c757d;
+			height: 280px;
+			padding: 10px;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+		}
 
-			//sombra izq
-			.col-11:nth-child(1)
+		.card-body
+		{
+			//background-color: map-get($coloresPrincipales,$colour-whiteish-cream);
+			background:radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.3) 0%, rgba(206, 212, 218, 0.77) 100%);
+			box-shadow: rgba(0, 0, 0, 0.5) 5.95px 4.95px 5.6px;
+		}
+
+		//Columna 1
+		.column:nth-child(2) 
+		{
+			//Arriba izq
+			.whiteSpace:nth-child(1) 
 			{
-				.card { @include BoxShadow(3px,4px,5px,#555D66); }
+				background-color: #323335;
+				clip-path: polygon(50% 75%, 75% 75%, 75% 50%, 100% 50%, 100% 100%, 50% 100%); 
 			}
-			//sombra izq
-			.col-11:nth-child(4)
+			
+			//Abajo izq
+			.whiteSpace:nth-child(3)
 			{
-				.card { @include BoxShadow(3px,4px,5px,#555D66); }
+				background-color: #323335;
+				clip-path: polygon(50% 25%, 75% 25%, 75% 50%, 100% 50%, 100% 0, 50% 0);
+			}
+		}
+
+		//Columna 2
+		.column:nth-child(3)
+		{
+			//h2
+			.col-12:nth-child(2)
+			{
+				background-color: #44454D;
+			}		
+		}
+
+		//Columna 3
+		.column:nth-child(4)
+		{
+			
+			//Abajo derecha
+			.whiteSpace 
+			{
+				background-color: #323335;
+				clip-path: polygon(0 50%, 25% 50%, 25% 25%, 50% 25%, 50% 0, 0 0);
 			}
 
-			//sombra medio
-			.col-11:nth-child(2)
+			//Arriba derecha
+			.whiteSpace:nth-child(1)
 			{
-				.card { @include BoxShadow(1px,4px,5px,#555D66); }
-			}
-			//sombra medio
-			.col-11:nth-child(5)
-			{
-				.card { @include BoxShadow(1px,4px,5px,#555D66); }
-			}
-
-			//sombra derecha
-			.col-11:nth-child(3)
-			{
-				.card { @include BoxShadow(-3px,4px,5px,#555D66); }
-			}
-			//sombra derecha
-			.col-11:nth-child(6)
-			{
-				.card { @include BoxShadow(-3px,4px,5px,#555D66); }
+				background-color: #323335;
+				clip-path: polygon(0 100%, 50% 100%, 50% 75%, 25% 75%, 25% 50%, 0 50%);
 			}
 		}
 	}

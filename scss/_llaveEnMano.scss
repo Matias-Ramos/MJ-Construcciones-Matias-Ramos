@@ -1,16 +1,14 @@
-#llaveEnMano
+.solicitarAsesoram
 {
-	.solicitarAsesoram
-	{
-		.row 
-		{ 
-			display:flex;
-			justify-content: center;
-			.col-12:nth-child(1) {height:140px;}
-			.col-12:nth-child(2) {height:140px;}
-		}
+	.row 
+	{ 
+		display:flex;
+		justify-content: center;
+		.col-12:nth-child(1) {height:140px;}
+		.col-12:nth-child(2) {height:140px;}
 	}
 }
+
 
 
 #llaveEnMano
