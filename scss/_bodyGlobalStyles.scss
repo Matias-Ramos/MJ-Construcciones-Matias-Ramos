@@ -78,7 +78,7 @@ section{text-align: center;}
 	li a
 	{
 		@include AnchoAlto(50px, 50px);
-		background-color: map-get($coloresPrincipales, $colour-whiteish-cream);
+		background-color: #ebf4ff;
 		text-align: center;
 		line-height: 50px;
 		font-size: 30px;
@@ -119,10 +119,10 @@ section{text-align: center;}
 }
 
 //animación del color que sube
-header
-{
+
+
 	.RedesSociales li a:hover:before {top: 0;}
-}
+ 	
 .RedesSociales li:nth-child(1) a:before{background: #25D366;}
 .RedesSociales li:nth-child(2) a:before
 {
@@ -132,44 +132,16 @@ header
 	background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
 }
 
-
-
-//Agregado de color permantente a los íconos desktop del footer
 footer
 {
 	.RedesSociales
 	{
-		//Wpp
-		li:nth-child(1)
+		li a
 		{
-			a
-			{
-				opacity:85%;
-				background: #25D366;
-				i { color: #fff; }
-			}
-		}
-		//Insta
-		li:nth-child(2)
-		{
-			a
-			{
-				opacity:85%;
-				background: #f09433;
-				background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-				background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-				background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-				i{color: #fff;}
-			}
+			border: 1px solid #a8a8a8!important;
 		}
 	}
 }
-
-
-
-
-
-
 
 
 

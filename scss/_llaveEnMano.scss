@@ -38,6 +38,7 @@
 	//Coloreo del H1-section
 	.h1yDescripcion
 	{
+
 		//llave
 		.chevron:nth-child(1)
 		{
@@ -64,18 +65,20 @@
 				background-color: #8d99ae;	
 			}
 			//color del chevron textoComplementarioII
-			background-color: #bdc6d1;
+			background-color: white;
+			/*este color combina, es mas clarito
+			background-color: #bdc6d1;*/
 		}
 
 		//texto complementario II
-		.chevron:nth-child(4)
+		/*.chevron:nth-child(4)
 		{
 			.col-lg-12
 			{
 				//color del chevron textoComplementarioII
 				background-color: #bdc6d1;
 			}
-		}
+		}*/
 	}
 }
 
@@ -126,9 +129,11 @@
 			//texto complementario I
 			.chevron:nth-child(3)
 			{
+				margin-left:-1px;
 				.col-lg-12
 				{
 					clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+					p{font-size: 1.1rem;}
 				}
 			}
 		}
@@ -207,11 +212,11 @@
 				}
 			}
 			//texto complementario II
-			.chevron:nth-child(4)
+			/*.chevron:nth-child(4)
 			{
 				//color de fondo del sitio
 				background-color: map-get($coloresPrincipales,$colour-whiteish-cream);
-			}
+			}*/
 
 			//logito llave
 			.mobile-only
