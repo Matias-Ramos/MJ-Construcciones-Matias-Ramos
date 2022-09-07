@@ -75,27 +75,32 @@ section{text-align: center;}
 {
 	padding: 0;	
 
-	li a
+	li 
 	{
-		@include AnchoAlto(50px, 50px);
-		background-color: #ebf4ff;
-		text-align: center;
-		line-height: 50px;
-		font-size: 30px;
-		margin: 0 5px;
-		display: block;
-		border-radius: 50%;
-		position: relative;
-		overflow: hidden;
-		border: 1px solid whitesmoke;
-		z-index: 1;
-
-		.icon
+		display: flex;
+		align-items: center;
+		a
 		{
+			@include AnchoAlto(50px, 50px);
+			background-color: #ebf4ff;
+			text-align: center;
+			line-height: 50px;
+			font-size: 30px;
+			margin: 0 5px;
+			display: block;
+			border-radius: 50%;
 			position: relative;
-			color: #262626;
-			transition: .5s;
-			z-index: 3;
+			overflow: hidden;
+			border: 1px solid whitesmoke;
+			z-index: 1;
+
+			.icon
+			{
+				position: relative;
+				color: #262626;
+				transition: .5s;
+				z-index: 3;
+			}
 		}
 	}
 }

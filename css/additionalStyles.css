@@ -78,25 +78,28 @@ section {
 
 .RedesSociales {
   padding: 0; }
-  .RedesSociales li a {
-    width: 50px;
-    height: 50px;
-    background-color: #ebf4ff;
-    text-align: center;
-    line-height: 50px;
-    font-size: 30px;
-    margin: 0 5px;
-    display: block;
-    border-radius: 50%;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid whitesmoke;
-    z-index: 1; }
-    .RedesSociales li a .icon {
+  .RedesSociales li {
+    display: flex;
+    align-items: center; }
+    .RedesSociales li a {
+      width: 50px;
+      height: 50px;
+      background-color: #ebf4ff;
+      text-align: center;
+      line-height: 50px;
+      font-size: 30px;
+      margin: 0 5px;
+      display: block;
+      border-radius: 50%;
       position: relative;
-      color: #262626;
-      transition: .5s;
-      z-index: 3; }
+      overflow: hidden;
+      border: 1px solid whitesmoke;
+      z-index: 1; }
+      .RedesSociales li a .icon {
+        position: relative;
+        color: #262626;
+        transition: .5s;
+        z-index: 3; }
 
 .RedesSociales li a:hover .icon {
   color: #fff;
@@ -161,6 +164,11 @@ footer {
       background-color: #00ADB5;
       opacity: 20%;
       border-radius: 50%; }
+  footer .footer-item:nth-child(3) .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
 
 @media only screen and (max-width: 992px) {
   footer {
@@ -182,7 +190,10 @@ footer {
       margin-top: 30px; }
       footer .container-fluid:nth-child(2) .row .col-12 {
         display: flex;
-        justify-content: center; } }
+        justify-content: center;
+        order: 2; }
+      footer .container-fluid:nth-child(2) .row .col-12:nth-child(2) {
+        order: 1; } }
 
 @media only screen and (min-width: 992px) {
   footer {
@@ -191,21 +202,26 @@ footer {
       height: 100%; }
     footer .container-fluid:nth-child(2) .row .col-12 {
       display: flex;
-      position: absolute;
-      bottom: -50px; }
-    footer .container-fluid:nth-child(2) .row .col-12:nth-child(1) {
-      justify-content: center; } }
+      justify-content: center;
+      bottom: -50px; } }
 
 #vidrioPqElegirnos {
   padding: 2rem;
-  margin: 6rem;
+  margin: 6rem 2rem 6rem 2rem;
   background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18); }
 
+/*.navBottom .btn-group
+{
+  	margin: 0 0.5rem;
+	border:1px solid red;
+	animation: pulse;
+  	animation-duration: 3s;
+  	animation-iteration-count: 2;
+}*/
 /*****************************************/
 /***********GENERAL ATTRIBUTES************/
 /*****************************************/
@@ -347,7 +363,7 @@ footer {
       text-shadow: 2px 2px 4px #000000; }
     #seccionPorQueElegirnos .square {
       border: 1px solid #6c757d;
-      height: 280px;
+      height: 300px;
       padding: 10px;
       display: flex;
       justify-content: center;
@@ -397,6 +413,11 @@ footer {
   .containerProyectoX .container-fluid:nth-child(2) .row img {
     width: 100%;
     height: auto; }
+
+.containerProyectoX #CarouselProyectoX .carousel-control-next-icon, .containerProyectoX #CarouselProyectoX .carousel-control-prev-icon {
+  background-color: turquoise;
+  width: 30px;
+  height: 30px; }
 
 .containerProyectoX #CarouselProyectoX .carousel-inner {
   display: flex;
@@ -709,6 +730,7 @@ footer {
       justify-content: center; } }
 
 #antesYdespues {
+  background-image: url("../images/Servicios/remodelaciones/lightBckg.webp");
   display: flex;
   justify-content: center; }
   #antesYdespues .col-lg-10 {
@@ -727,6 +749,8 @@ footer {
     #antesYdespues .col-lg-10 .col-lg-8 #conteinerBtnAntesDespues {
       position: absolute;
       bottom: 0; }
+      #antesYdespues .col-lg-10 .col-lg-8 #conteinerBtnAntesDespues button {
+        border: 1px solid black; }
     #antesYdespues .col-lg-10 .col-lg-4 {
       display: flex;
       align-items: center; }
@@ -767,21 +791,21 @@ footer {
         transform: translate(-50%, -50%);
         text-align: center; }
 
-.carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
-
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); }
-
-.carousel .carousel-indicators li {
-  background-color: #6c757d; }
-
-.carousel .carousel-indicators li.active {
-  background-color: #202020; }
-
 #asesoramientoRemodelaciones {
   display: flex;
   justify-content: center; }
+
+#remodelaciones .carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
+
+#remodelaciones .carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); }
+
+#remodelaciones .carousel .carousel-indicators li {
+  background-color: #6c757d; }
+
+#remodelaciones .carousel .carousel-indicators li.active {
+  background-color: #202020; }
 
 #remodelaciones #antesYdespues .col-12:nth-child(1) {
   margin-top: 35px; }
@@ -795,7 +819,7 @@ footer {
 /*Netbooks and Desktops*/
 @media only screen and (min-width: 992px) {
   #remodelaciones .chevron .row {
-    height: 100%; }
+    height: 10rem; }
   #remodelaciones .chevron:nth-child(2) {
     background-color: #fdfffc; }
     #remodelaciones .chevron:nth-child(2) .col-lg-12 {
@@ -805,7 +829,11 @@ footer {
       clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
       background: linear-gradient(90deg, #f3f3f3 0%, #bdc6d1 39%, #949ba3 100%); }
   #remodelaciones .chevron:nth-child(3) .row .col-lg-12 {
-    background-color: #fdfffc; } }
+    background-color: #fdfffc;
+    display: flex;
+    align-items: center; }
+  #remodelaciones #conteinerBtnAntesDespues button {
+    width: 8rem; } }
 
 /***********************/
 /*Mobile and Tablets*/

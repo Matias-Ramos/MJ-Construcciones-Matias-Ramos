@@ -18,9 +18,17 @@
 		}
 	}
 
-	//Centra verticalmente al carousel con respecto a la [Descripción del proyecto].
 	#CarouselProyectoX
 	{
+		//Modifica color de los botones izq y der
+		.carousel-control-next-icon, .carousel-control-prev-icon
+		{
+			background-color: turquoise;
+			width: 30px;
+			height: 30px;
+		}
+		
+		//Centra verticalmente al carousel con respecto a la [Descripción del proyecto].
 		.carousel-inner
 		{
 			display:flex;
