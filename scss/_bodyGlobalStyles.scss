@@ -45,9 +45,23 @@ section{text-align: center;}
 }
 
 
+.fullwidth
+{
+	width:100%;
+	margin-left:0;
+	margin-right:0;
+	padding-left:0;
+	padding-right:0;
+	display:block;
+	text-align:center;
+}
 
 .navBottom
 {
+
+	//"servicios mj"
+	.dropdown-toggle{ color: map-get( $coloresPrincipales,$colour-blueish-logo) }
+
 	@include SectionPadding(75px, 0px, 75px, 0px);
 	nav	{	@include BoxShadow(-5px,6px,2px,#ABA5A2); }
 	

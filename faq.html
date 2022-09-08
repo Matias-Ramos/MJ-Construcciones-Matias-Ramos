@@ -254,22 +254,39 @@
 				<div class="row justify-content-center">
 					<div class="col-11 col-sm-11 col-md-11 col-lg-7 col-xl-6">
 						<h2 class="d-inline">Mas sobre nosotros...</h2>
-						<nav data-aos="zoom-out" data-aos-duration="1500">
-							<div class="btn-group mx-auto d-flex justify-content-center mt-1" role="group" aria-label="Botones para navegar por el sitio web">
-								<button type="button" class="btn btn-secondary bg-light">
-									<a href="index.html">Quienes somos</a>
+						<nav data-aos="zoom-out" data-aos-duration="1500" data-aos-once="true">
+							<div class="btn-group mx-auto d-flex justify-content-center mt-3 animated wow bounceInLeft" role="group" aria-label="Botones para navegar por el sitio web">
+
+								<!--Index-->
+								<button type="button" class="btn btn-secondary bg-light p-0">
+									<a href="index.html" class="fullwidth">Quienes somos</a>
 								</button>
-								<button type="button" class="btn btn-secondary bg-light">
-									<a href="galeria.html">Esto hemos construído</a>
+
+								<!--Servicios-->
+								<button type="button" class="btn btn-secondary bg-light p-0">
+									<a href="galeria.html" class="fullwidth">Esto hemos construído</a>							
 								</button>
-								<button type="button" class="btn btn-secondary bg-light">
-									<a href="servicios.html">Servicios</a>
-								</button>
+
+								<!--Boton desplegable-->
+								<div class="btn-group" role="group">
+									<button type="button" class="btn btn-secondary bg-light dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Servicios MJ construcciones</button>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="llaveEnMano.html">Proyecto llave en mano</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="remodelaciones.html">Remodelaciones edilicias</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="piletas.html">Construcción de piletas</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="vtaViviendas.html">Venta de viviendas</a>
+									</div>
+								</div>
+
 							</div>
 						</nav>
 					</div>
 				</div>
 			</section>
+
 
 			<!-- AOS JS-->
 			<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

@@ -66,19 +66,7 @@
 			}
 			//color del chevron textoComplementarioII
 			background-color: white;
-			/*este color combina, es mas clarito
-			background-color: #bdc6d1;*/
 		}
-
-		//texto complementario II
-		/*.chevron:nth-child(4)
-		{
-			.col-lg-12
-			{
-				//color del chevron textoComplementarioII
-				background-color: #bdc6d1;
-			}
-		}*/
 	}
 }
 
@@ -141,6 +129,8 @@
 		//Reunión, Render, Contrato, Inicio de Obra
 		#cuatroPasosSon
 		{
+			padding-left: 3rem;
+			padding-right: 3rem;
 			.card
 			{
 				.col-md-1{font-size:2rem;}

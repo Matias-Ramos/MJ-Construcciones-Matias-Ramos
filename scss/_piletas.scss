@@ -5,8 +5,8 @@
 	{
 		padding-top:75px;
 		padding-bottom:75px;
-background-color: #18549d;
-background-image: url("data:image/svg+xml,%3Csvg width='32' height='64' viewBox='0 0 32 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 28h20V16h-4v8H4V4h28v28h-4V8H8v12h4v-8h12v20H0v-4zm12 8h20v4H16v24H0v-4h12V36zm16 12h-4v12h8v4H20V44h12v12h-4v-8zM0 36h8v20H0v-4h4V40H0v-4z' fill='%230066bd' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
+		background-color: #18549d;
+		background-image: url("data:image/svg+xml,%3Csvg width='32' height='64' viewBox='0 0 32 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 28h20V16h-4v8H4V4h28v28h-4V8H8v12h4v-8h12v20H0v-4zm12 8h20v4H16v24H0v-4h12V36zm16 12h-4v12h8v4H20V44h12v12h-4v-8zM0 36h8v20H0v-4h4V40H0v-4z' fill='%230066bd' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
 		color:#fff;
 		text-shadow:0 2px 4px black;
 		
@@ -110,15 +110,6 @@ background-image: url("data:image/svg+xml,%3Csvg width='32' height='64' viewBox=
 		#containerEstilosDePiletas
 		{
 
-			//Animación hover
-			/*.estiloDePileta { transition: transform .2s; }
-			.estiloDePileta:hover 
-			{
-				-ms-transform: scale(1.01); // IE 9
-				-webkit-transform: scale(1.01); // Safari 3-8
-				transform: scale(1.01); 
-			}*/
-
 			//extend
 			.formateoTextoPiletas
 			{
@@ -133,6 +124,13 @@ background-image: url("data:image/svg+xml,%3Csvg width='32' height='64' viewBox=
 		#sistemaConstructivo
 		{
 			.card{height:100%;}
+
+			//achica las cards
+			.row:nth-child(2)
+			{
+				padding-left:4rem;
+				padding-right:4rem;
+			}
 		}
 	}
 }

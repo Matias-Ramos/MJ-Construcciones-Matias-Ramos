@@ -151,7 +151,7 @@
 							</div>
 
 							<!-- Imagen vivienda-->
-							<div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8" data-aos="fade-left" data-aos-duration="1700">
+							<div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8" data-aos="fade-left" data-aos-duration="1700" data-aos-once="true">
 								<img src="images/mision.jpg" class="img-fluid" alt="Vivienda construída por Chindamo">
 							</div>
 
@@ -165,15 +165,15 @@
 					<div class="row">
 
 						<!--H2 "Plantel"-->
-						<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+						<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4" data-aos="fade-right" data-aos-offset="300"  data-aos-duration="750" data-aos-once="true">
 							<h2>Líderes de equipo</h2>
 						</div>
 
 						<!--Flecha-->
-						<div class="col-12 col-sm-12 col-md-12 col-lg-1 col-xl-1 rotate-sm-90"> <span>></span> </div>
+						<div class="col-12 col-sm-12 col-md-12 col-lg-1 col-xl-1 rotate-sm-90" data-aos="fade-right" data-aos-offset="200"  data-aos-duration="750" data-aos-once="true"> <span>></span> </div>
 
 						<!--Los Chindamo-->
-						<div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
+						<div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7" data-aos="fade-right" data-aos-offset="300"  data-aos-duration="750" data-aos-once="true">
 							<div id="accordion">
 
 								<!--Carta Matias-->
@@ -276,7 +276,7 @@
 
 									<!--H2-->
 									<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 whiteSpace square">
-										<h2 class="desktop-only">Por qué elegirnos</h2>
+										<h2 class="desktop-only"  data-aos="zoom-in" data-aos-offset="200"  data-aos-duration="850" data-aos-once="true">Por qué elegirnos</h2>
 									</div>
 
 									<!--Card Soluciones Rápidas-->
@@ -394,14 +394,28 @@
 				<div class="row justify-content-center">
 					<div class="col-11 col-sm-11 col-md-11 col-lg-7 col-xl-6">
 						<h2 class="d-inline">Mas sobre nosotros...</h2>
-						<nav data-aos="zoom-out" data-aos-duration="1500">
-							<div class="btn-group mx-auto d-flex justify-content-center mt-1 animated wow bounceInLeft" role="group" aria-label="Botones para navegar por el sitio web">
-								<button type="button" class="btn btn-secondary bg-light">
-									<a href="galeria.html">Esto hemos construído</a>
+						<nav data-aos="zoom-out" data-aos-duration="1500" data-aos-once="true">
+							<div class="btn-group mx-auto d-flex justify-content-center mt-3 animated wow bounceInLeft" role="group" aria-label="Botones para navegar por el sitio web">
+
+								<!--Servicios-->
+								<button type="button" class="btn btn-secondary bg-light p-0">
+									<a href="galeria.html" class="fullwidth">Esto hemos construído</a>							
 								</button>
-								<button type="button" class="btn btn-secondary bg-light">
-									<a href="servicios.html">Servicios MJ construcciones</a>
-								</button>
+
+								<!--Boton desplegable-->
+								<div class="btn-group" role="group">
+									<button type="button" class="btn btn-secondary bg-light dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Servicios MJ construcciones</button>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="llaveEnMano.html">Proyecto llave en mano</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="remodelaciones.html">Remodelaciones edilicias</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="piletas.html">Construcción de piletas</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="vtaViviendas.html">Venta de viviendas</a>
+									</div>
+								</div>
+
 							</div>
 						</nav>
 					</div>
@@ -513,24 +527,32 @@
 			<div class="container-fluid">
 				<div class="row">
 
+					<!--Firma desarrollador-->
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+						<span><i>Desarrollo Full Stack por: <a href="https://www.linkedin.com/in/matias-ramos-a91505118/" target="_blank">Matias Ramos</a></i></span>
+					</div>
+
 					<!--SVG backg-->
-					<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
 						<span>
 							<i>Imagen vectorial de <a href="https://www.svgbackgrounds.com/" target="_blank">svgbackgrounds</a></i>
 						</span>
 					</div>
 
-					<!--Firma desarrollador-->
-					<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-						<span><i>Desarrollo Full Stack por: <a href="https://www.linkedin.com/in/matias-ramos-a91505118/" target="_blank">Matias Ramos</a></i></span>
-					</div>
-
 					<!--Efecto Vidrio-->
-					<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
 						<span>
 							<i>Efecto vidrio de <a href="https://hype4.academy/tools/glassmorphism-generator" target="_blank">hype4.academy</a></i>
 						</span>
 					</div>
+
+					<!--Íconos-->
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+						<span>
+							<i>Íconos de <a href="https://icons8.com/" target="_blank">icons8</a></i>
+						</span>
+					</div>
+
 				</div>
 			</div>
 		</footer>

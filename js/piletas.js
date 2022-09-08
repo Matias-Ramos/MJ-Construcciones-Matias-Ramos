@@ -13,7 +13,7 @@ function expandirForm()
         <!--Descripción libre-->
         <div class="form-group">
             <label for="descripcionLibre">Información adicional que desee indicar: </label>
-            <textarea class="form-control" id="descripcionLibre" placeholder="Por ejemplo:&#10;-Medida: 3x7, 4x8, 5x10.&#10;-Con revestimientos.&#10;-Con vereda térmica.&#10;-Otros." rows="5"></textarea>
+            <textarea class="form-control" id="descripcionLibre" placeholder="Por ejemplo:&#10;-Medida: 3x7, 4x8, 5x10...&#10;-Con revestimientos.&#10;-Con vereda térmica.&#10;-Otros." rows="5"></textarea>
         </div>
         <!--email-->
         <div class="form-group">

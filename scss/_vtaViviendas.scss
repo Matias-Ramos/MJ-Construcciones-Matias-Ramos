@@ -2,15 +2,26 @@
 {
 	#containerProyectos
 	{
+		//contorno card
+		.col-10{ border:1px solid black; }
+
 		.card
 		{
 			.list-group
 			{
 				display: flex;
-				justify-content: center; 
+				justify-content: center;
+				.list-group-item
+				{
+					border: none;
+					border-left: 1px solid rgba(0,0,0,.125);
+					border-right: 1px solid rgba(0,0,0,.125);
+				}
 			}
 			.card-body
 			{
+				.ecommerceLink:hover{transform: scale(1.07)}
+
 				.row
 				{
 
