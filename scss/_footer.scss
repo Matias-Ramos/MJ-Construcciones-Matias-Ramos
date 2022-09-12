@@ -3,9 +3,9 @@
 footer
 {
 	//z-index para que el dropdown menu del navBottom quede por delante.
-	z-index:-2;
+	z-index:0;
 	background-color: map-get($coloresPrincipales, $colour-darker);
-	position:relative;
+	
 	//firma
 	.container-fluid:nth-child(2)
 	{

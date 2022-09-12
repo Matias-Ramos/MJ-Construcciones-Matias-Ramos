@@ -59,8 +59,15 @@ section{text-align: center;}
 .navBottom
 {
 
+	.dropdown-menu{
+		z-index:10;
+		position:relative;
+	}
 	//"servicios mj"
-	.dropdown-toggle{ color: map-get( $coloresPrincipales,$colour-blueish-logo) }
+	.dropdown-toggle{ 
+		color: map-get( $coloresPrincipales,$colour-blueish-logo);
+		
+	}
 
 	@include SectionPadding(75px, 0px, 75px, 0px);
 	nav	{	@include BoxShadow(-5px,6px,2px,#ABA5A2); }
