@@ -1,3 +1,12 @@
+.CuadrosDeTexto
+{	
+	display: inline-block;
+	border: 1px solid black;
+	background-color: #F0F0F0;
+	padding: 9px;
+	border-radius:3px;
+}
+
 .containerProyectoX
 {
 
@@ -121,7 +130,7 @@
 	.navBottom
 	{
 		border-top:1px solid black;
-		@include SectionPadding(60px, 0px, 75px, 0px);
+		@include SectionPadding(3.7rem, 0px, 4.7rem, 0px);
 	}
 }
 

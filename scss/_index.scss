@@ -1,16 +1,3 @@
-
-#vidrioPqElegirnos
-{
-	padding:0;
-	background: rgba( 255, 255, 255, 0.25 );
-	backdrop-filter: blur( 4px );
-	-webkit-backdrop-filter: blur( 4px );
-	border-radius: 10px;
-	border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
-
-
-
 /*****************************************/
 /***********GENERAL ATTRIBUTES************/
 /*****************************************/
@@ -33,10 +20,7 @@
 	.row
 	{
 		//Texto
-		.col-12:nth-child(1) 
-		{
-			text-align: left;
-		}
+		.col-12:nth-child(1) { text-align: left; }
 		
 		//Imagen del html reemplazada por background-img de css
 		.col-12:nth-child(2) 
@@ -69,27 +53,37 @@
 		@include BoxShadow(1px,4px,5px,#555D66);
 		
 		// aumenta tamaño al ">"
-		.col-lg-1 { font-size:2rem; }
+		.col-lg-1 { font-size:3rem; }
 	}
 
 	@extend .AccordionFormatting;	
-	h2 { font-size:3rem; }
-	.btn { font-size: 20px; }
+	h2 { font-size:2rem; }
 }
 
 
 #seccionPorQueElegirnos
 {
-	@include SectionPadding(1px, 0px, 1px, 0px);
-	.col-12
+	.container-fluid
 	{
 		padding: 0;
+		#vidrioPqElegirnos
+		{
+			padding:0;	
+			background: rgba( 132, 173, 225, 0.25 );
+
+
+			backdrop-filter: blur( 2.5px );
+			-webkit-backdrop-filter: blur( 2.5px );
+			border-radius: 10px;
+			border: 1px solid rgba( 255, 255, 255, 0.18 );
+		}
+		//mantiene junta la cruz
+		.col-12	{ padding: 0; }
+		//centra h2 verticalmente
+		h2{margin:0}	
+
 	}
-	.whiteSpace
-	{
-		background-color:map-get($coloresPrincipales,$colour-darker)
-	}
-	h2{margin:0}
+
 }
 
 #seccionTestimonios
@@ -116,19 +110,15 @@
 		border-radius: 3px;
 		
 		//padding = tamaño de los botones left-right
-		padding: 25px;
+		padding: 1.6rem;
 	}
 
 }
 
 
-
-
-
-
-.navBottom
+#index 
 {
-	@include SectionPadding(100px, 0px, 100px, 0px);
+ .navBottom { @include SectionPadding(6.2rem, 0px, 6.2rem, 0px); } 
 }
 
 
@@ -167,7 +157,7 @@
 	#seccionPlantel
 	{
 		//Parallax
-		@include SectionPadding (75px, 3%, 75px, 3%);
+		@include SectionPadding (4.7rem, 3%, 4.7rem, 3%);
 
 		.row
 		{
@@ -179,7 +169,7 @@
 			}
 
 			//Cuadro blanco dentro del Parallax.
-			@include SectionPadding(50px, 5px, 50px, 5px);
+			@include SectionPadding(3.1rem, 5px, 3.1rem, 5px);
 						
 			//Flechas
 			.rotate-sm-90 { transform: rotate(90deg); }
@@ -188,21 +178,16 @@
 
 	#seccionTestimonios
 	{
-		.carousel-inner
-		{
-			position:relative;
-		}
-		@include SectionPadding(50px, 0px, 75px, 0px);
+		@include SectionPadding(3.1rem, 0px, 4.7rem, 0px);
+		.carousel-inner { position:relative; }
+				
 		/*Saca los botones fuera del slideshow*/
 		.carousel-control-prev { display: flex; justify-content:flex-start; margin-left:-7px; }
 		.carousel-control-next { display: flex; justify-content:flex-end; margin-right:-7px; }
 		.row:nth-child(2) 
 		{ 
-			height: 250px;
-			.carousel-item
-			{
-				height: 250px;
-			}
+			height: 15.6rem;
+			.carousel-item { height: 15.6rem; }
 		}
 	}
 
@@ -230,7 +215,7 @@
 
 /***********************/
 /***********************/
-/*Netbooks and Desktops*/
+/*Notebooks and Desktops*/
 @media only screen and (min-width: 992px)
 {
 
@@ -238,10 +223,9 @@
 	{
 		.row
 		{
-			.col-12:nth-child(1)
-			{
-				padding-left:50px
-			}
+			//presentación escrita
+			.col-12:nth-child(1) { padding-left:3.1em; }
+
 			//Imagen
 			.col-12:nth-child(2)
 			{
@@ -255,11 +239,11 @@
 	#seccionPlantel
 	{
 		//Parallax
-		@include SectionPadding (4rem, 2%, 4rem, 2%);
+		@include SectionPadding (5.5rem, 2%, 5.5rem, 2%);
 		.row
 		{
 			//Cuadro blanco dentro del Parallax.
-			padding:50px 25px;
+			padding:3.1rem 1.5rem;
 			display:flex;
 			justify-content: center;
 		}
@@ -268,10 +252,15 @@
 	#seccionPorQueElegirnos
 	{
 		#cruz{transform: scale(0.9);}
-		#vidrioPqElegirnos{margin: 4rem;}
-
-		background-color: #D9673C;
-		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='119' height='119' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23bf5128' fill-opacity='0.77'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.77'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+		#vidrioPqElegirnos
+		{
+			margin-top: 4rem;
+			margin-bottom: 4rem;
+		}
+		background-color: #C9E0E1;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='104' height='104' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23a5bbbc' fill-opacity='0.7'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.7'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+		
+		
 		h2
 		{
 			color: map-get($coloresPrincipales,$colour-whiteish-cream);
@@ -281,8 +270,8 @@
 		.square
 		{
 			border:1px solid #6c757d;
-			height: 300px;
-			padding: 10px;
+			height: 19rem;
+			padding: 0.6em;
 			display: flex;
 			justify-content: center;
 			flex-direction: column;
@@ -345,7 +334,14 @@
 
 	#seccionTestimonios
 	{
-		@include SectionPadding(7rem, 0rem, 7rem, 0rem);
+		@include SectionPadding(4rem, 0px, 4rem, 0px);
+
+		#testimoniosCarouselContainer
+		{
+			display: flex;
+			align-items: center;
+		}
+
 		/*Saca los botones fuera del slideshow*/
 		.carousel-control-prev {margin-left: -100px;}
 		.carousel-control-next {margin-right: -100px;}

@@ -2,30 +2,12 @@
 
 footer
 {
-	//z-index para que el dropdown menu del navBottom quede por delante.
-	z-index:0;
 	background-color: map-get($coloresPrincipales, $colour-darker);
-	
-	//firma
-	.container-fluid:nth-child(2)
-	{
-		.row
-		{
-			.col-12
-			{
-				span
-				{
-					font-size: 0.8rem;
-				}
-			}
-		}
-	}
-	//De acá hasta abajo, es el logo MJ para la apertura del footer.
-	.row
-	{
-		position:relative;
-	}
+	//Créditos
+	.containerCreditos { font-size: 0.8rem;	}
 
+	//De acá hasta abajo, es el logo MJ para la apertura del footer.
+	.row { position:relative; }
 	//Ambos circulos
 	.footer-item:nth-child(1)
 	{
@@ -35,10 +17,7 @@ footer
 		top:-97px;
 
 		//logo
-		img
-		{
-			z-index:3;
-		}
+		img	{ z-index:3; }
 
 		//Estela alrededor del logo
 		#circle
@@ -70,37 +49,35 @@ footer
 
 }
 
+/***********************/
+/***********************/
 //MOBILE
 @media only screen and (max-width:992px)
 {
 	footer
 	{
-		@include SectionPadding(50px, 0px, 0px, 0px);
-		div
+		.card
 		{
-			.card
+			margin-top:1.9rem;
+			.card-title
 			{
-				margin-top:30px;
-				.card-title
-				{
-					display: block;
-					padding: 15px 10px 0px 10px;
-				}
+				display: block;
+				padding: 0.9rem 0.6rem 0px 0.6rem;
+			}
 
-				//alineación redes sociales mobile
-				.card-body
+			//alineación redes sociales mobile
+			.card-body
+			{
+				.mobile-only
 				{
-					.mobile-only
+					display: flex;
+					flex-direction: row;
+					justify-content: space-evenly;
+					align-items:center;
+					height:3.6rem;
+					li
 					{
-						display: flex;
-						flex-direction: row;
-						justify-content: space-evenly;
-						align-items:center;
-						height:60px;
-						li
-						{
-							font-size:2rem;
-						}
+						font-size:2rem;
 					}
 				}
 			}
@@ -111,7 +88,7 @@ footer
 		{
 			.row
 			{
-				margin-top:30px;
+				margin-top:1.8rem;
 				.col-12
 				{
 					display:flex;
@@ -120,38 +97,28 @@ footer
 				}
 
 				//Sube la firma desarrollador en version mobile sobreescribiendo el orden de 2 a 1.
-				.col-12:nth-child(2)
-				{
-					order:1;
-				}
+				.col-12:nth-child(2) { order:1; }
 			}
 		}
 	}
 }
 
 
+/***********************/
+/***********************/
 //DESKTOP
 @media only screen and (min-width:992px)
 {
 	footer
 	{
-		@include SectionPadding(50px, 0px, 50px, 0px);
-		.card
+		@include SectionPadding(3.1rem, 0px, 50px, 0px);
+		.card { height:100%; }
+		.containerCreditos
 		{
-			height:100%;
-		}
-		.container-fluid:nth-child(2)
-		{
-			//firma
-			.row
-			{
-				.col-12
-				{
-					display:flex;
-					justify-content: center;
-					bottom:-50px;
-				}
-			}
+			display:flex;
+			justify-content: center;
+			//estos 50px coinciden con el extend del SectionPadding footer
+			bottom:-50px;
 		}
 	}
 }
