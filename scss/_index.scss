@@ -206,10 +206,7 @@
 {
 	#seccionPorQueElegirnos
 	{
-		.whiteSpace
-		{
-			height: 3rem;
-		}		
+		.whiteSpace{ height: 3rem; }		
 	}
 }
 
@@ -306,10 +303,7 @@
 		.column:nth-child(3)
 		{
 			//h2
-			.col-12:nth-child(2)
-			{
-				background-color: #44454D;
-			}		
+			.col-12:nth-child(2){ background-color: #44454D; }		
 		}
 
 		//Columna 3
@@ -350,10 +344,7 @@
 		 y que eso mueva las secciones que vienen debajo de esta*/
 		.carousel-inner{height: 5rem;}
 
-		.row:nth-child(2) 
-		{ 
-			height: 170px;
-		} 
+		.row:nth-child(2){ height: 170px; } 
 	}
 }
 

@@ -1,56 +1,53 @@
-.servicios
+#containerProyectos
 {
-	#containerProyectos
+	//contorno card
+	.col-10{ border:1px solid black; }
+
+	.card
 	{
-		//contorno card
-		.col-10{ border:1px solid black; }
-
-		.card
+		.list-group
 		{
-			.list-group
+			display: flex;
+			justify-content: center;
+			.list-group-item
 			{
-				display: flex;
-				justify-content: center;
-				.list-group-item
-				{
-					border: none;
-					border-left: 1px solid rgba(0,0,0,.125);
-					border-right: 1px solid rgba(0,0,0,.125);
-				}
+				border: none;
+				border-left: 1px solid rgba(0,0,0,.125);
+				border-right: 1px solid rgba(0,0,0,.125);
 			}
-			.card-body
+		}
+		.card-body
+		{
+			.ecommerceLink:hover{transform: scale(1.07)}
+
+			.row
 			{
-				.ecommerceLink:hover{transform: scale(1.07)}
 
-				.row
+				display: flex;
+				align-items:center;
+				
+				
+				.col-12
 				{
+					//hace que no se descontrole en grande el tamaño de los svg
+					height:50px;
+					img{height:50px;}
 
-					display: flex;
-					align-items:center;
-					
-					
-					.col-12
+					a
 					{
-						//hace que no se descontrole en grande el tamaño de los svg
-						height:50px;
-						img{height:50px;}
-
-						a
-						{
-							display: flex;
-							align-items:center;
-							justify-content: center;
-    						flex-wrap: nowrap;
-						}
+						display: flex;
+						align-items:center;
+						justify-content: center;
+						flex-wrap: nowrap;
 					}
-					.col-12:nth-child(2)
-					{
-						span{color:black;}
-					}
-					.col-12:nth-child(3)
-					{
-						span{color:green;}
-					}
+				}
+				.col-12:nth-child(2)
+				{
+					span{color:black;}
+				}
+				.col-12:nth-child(3)
+				{
+					span{color:green;}
 				}
 			}
 		}
