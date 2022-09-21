@@ -3,6 +3,7 @@
 	//carousel tipos de piletas
 	.container-fluid:nth-child(2)
 	{
+		box-shadow: 0px 0px 17px #242423 inset;
 		padding-top:75px;
 		padding-bottom:75px;
 		background-color: #18549d;
@@ -51,13 +52,17 @@
 		}
 	}
 
+	.container-fluid:nth-child(3)
+	{
+		background-image: url("../images/Servicios/remodelaciones/lightBckg.webp");
+	}
+
+
 	//cards
 	#sistemaConstructivo
 	{
 		.row
 		{
-			background-color:#E3E3E3;
-
 			//alinea el paso 7 al centro
 			display:flex;
 			justify-content: center;

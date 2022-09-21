@@ -1,5 +1,4 @@
 
-
 footer
 {
 	background-color: map-get($coloresPrincipales, $colour-darker);
@@ -108,14 +107,12 @@ footer
 {
 	footer
 	{
-		@include SectionPadding(3.1rem, 0px, 50px, 0px);
+		@include SectionPadding(3.1rem, 0px, 0px, 0px);
 		.card { height:100%; }
 		.containerCreditos
 		{
-			display:flex;
-			justify-content: center;
-			//estos 50px coinciden con el extend del SectionPadding footer
-			bottom:-50px;
+			margin-top: 50px;
+			text-align: center;
 		}
 	}
 }

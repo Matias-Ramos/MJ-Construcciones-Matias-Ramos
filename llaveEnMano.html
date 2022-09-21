@@ -26,6 +26,9 @@
 		<meta name="keywords" content="nueva vivienda, construcciones, servicios, arquitectura, planos">
 		<meta name="description" content="En este link te ofrecemos la posibilidad de ser contactado por un arquitecto para comprender tu visión, diagramar una serie de opciones para que elijas una y ponernos manos a la obra."> 
 
+		<!-- AOS Animate-->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 		<!--CSS-->
 		<link rel="stylesheet" href="css/additionalStyles.css">
 
@@ -135,7 +138,7 @@
 					<div class="col-lg-2 col-xl-2 chevron">
 						<div class="row">
 							<div class="col-lg-12 col-xl-12">
-								<img src="images/no_bg_icons/icons8_key.png" class="img-fluid desktop-only" alt="Logo de una llave">	
+								<img src="images/no_bg_icons/icons8_key.png" class="img-fluid desktop-only" alt="Logo de una llave" data-aos="fade-right" data-aos-duration="900">
 							</div>
 						</div>
 					</div>
@@ -144,7 +147,7 @@
 					<div class="col-12 col-xs-12 col-sm-12 col-lg-3 col-xl-3 chevron">
 						<div class="row">
 							<div class="col-12 col-xs-12 col-sm-12 col-lg-12 col-xl-12">
-								<h1>Proyecto:<br>Llave en mano</h1>	
+								<h1 data-aos="fade-right" data-aos-duration="1200">Proyecto:<br>Llave en mano</h1>	
 							</div>
 						</div>
 					</div>
@@ -153,19 +156,10 @@
 					<div class="col-12 col-xs-12 col-sm-12 col-lg-7 col-xl-7 chevron">
 						<div class="row">
 							<div class="col-12 col-xs-12 col-sm-12 col-lg-12 col-xl-12">
-								<p>Diseñamos y ejecutamos una obra según tus especificaciones <br> y te la entregamos lista para habitar</p>
+								<p data-aos="fade-right" data-aos-duration="1400">Diseñamos y ejecutamos una obra según tus especificaciones <br> y te la entregamos lista para habitar</p>
 							</div>
 						</div>
 					</div>
-
-					<!--texto complementario II-->
-					<!--<div class="col-12 col-xs-12 col-sm-12 col-lg-1 col-xl-1 chevron">
-						<div class="row">
-							<div class="col-12 col-xs-12 col-sm-12 col-lg-12 col-xl-12">
-								<p>Luego de conocer tus preferencias, diseñaremos y ejecutaremos todas las acciones necesarias para la construcción de la obra.</p>
-							</div>
-						</div>
-					</div>-->
 
 					<!--Img-->
 					<div class="col-12 col-xs-12 col-sm-12 mobile-only">
@@ -237,8 +231,6 @@
 						</div>
 					</div>
 
-
-
 					<!--Card4-->
 					<div class="card mb-3">
 						<div class="row no-gutters">
@@ -275,6 +267,10 @@
 
 			<!--JS Nativo-->
 			<script src="js/llaveEnMano.js"></script>
+
+			<!-- AOS JS-->
+			<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+			<script> AOS.init(); </script>
 
 			<!--BTS JAVASCRIPT BELOW-->
 			<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -373,7 +369,7 @@
 			</div>
 
 			<!--firmas-->
-			<div class="container-fluid">
+			<div class="container-fluid containerCreditos">
 				<div class="row">
 
 					<!--Firma desarrollador-->
