@@ -75,12 +75,15 @@ main
 
 footer
 {
+	.navBottom
+	{
+		//Aplica wrap al dropdown toggle de Servicios MJ en vista mobile.
+		.dropdown-toggle{ white-space: normal; }
+	}
+
 	.RedesSociales
 	{
-		li a
-		{
-			border: 1px solid #a8a8a8!important;
-		}
+		li a { border: 1px solid #a8a8a8!important;}
 	}
 }
 
