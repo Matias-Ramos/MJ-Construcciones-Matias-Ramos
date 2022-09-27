@@ -11,9 +11,9 @@
 		color:#fff;
 		text-shadow:0 2px 4px black;
 
-		#containerEstilosDePiletas
+		.containerSlidesServicios
 		{
-			.estiloDePileta
+			.rowVitral
 			{
 				padding-right:15px;
 				//iguala la altura de todos los items dentro de "estilos de pileta".
@@ -38,6 +38,7 @@
 				//texto
 				.col-12:nth-child(2)
 				{
+
 					@extend .formateoTextoPiletas;
 					//background:linear-gradient(90deg, rgba(72, 202, 228, 0.86) 0%, rgba(238, 238, 238, 0.11) 60%);
 					//background:radial-gradient(circle at 50% 50%, rgba(238, 238, 238, 1) 60%, rgba(189, 198, 209, 1) 100%);
@@ -89,7 +90,7 @@
 {
 	#piletas
 	{
-		#containerEstilosDePiletas
+		.containerSlidesServicios
 		{
 
 			//extend
@@ -125,14 +126,14 @@
 	#piletas
 	{
 
-		#containerEstilosDePiletas
+		.containerSlidesServicios
 		{
 			padding:0;
 			//espaciado entre cada tipo de pileta.
-			.estiloDePileta { margin-top:3rem; }
-			.estiloDePileta:nth-last-child(1){ margin-bottom:3rem;}
+			.rowVitral { margin-top:3rem; }
+			.rowVitral:nth-last-child(1){ margin-bottom:3rem;}
 
-			.estiloDePileta
+			.rowVitral
 			{
 				//img
 				.col-12:nth-child(1)

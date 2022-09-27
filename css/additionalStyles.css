@@ -5,12 +5,12 @@
 /*MIXINS*/
 /*********/
 /*EXTENDS*/
-.AccordionFormatting .card, #seccionPlantel .card, #faq .card {
+.AccordionFormatting .card, #seccionPlantel .card, #faq .card, #remodelaciones section .container-fluid > .row .card {
   box-shadow: 5px 6px 2px #ABA5A2;
   background-color: white; }
-  .AccordionFormatting .card .card-header, #seccionPlantel .card .card-header, #faq .card .card-header {
+  .AccordionFormatting .card .card-header, #seccionPlantel .card .card-header, #faq .card .card-header, #remodelaciones section .container-fluid > .row .card .card-header {
     background-color: #393E46; }
-    .AccordionFormatting .card .card-header .btn, #seccionPlantel .card .card-header .btn, #faq .card .card-header .btn {
+    .AccordionFormatting .card .card-header .btn, #seccionPlantel .card .card-header .btn, #faq .card .card-header .btn, #remodelaciones section .container-fluid > .row .card .card-header .btn {
       color: #00ADB5; }
 
 a {
@@ -738,79 +738,22 @@ footer {
     display: flex;
     justify-content: center; } }
 
-#remodelaciones .carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
+#remodelaciones section:nth-child(2) {
+  padding: 4rem 0px 4rem 0px; }
 
-#remodelaciones .carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); }
-
-#remodelaciones .carousel .carousel-indicators li {
-  background-color: #6c757d; }
-
-#remodelaciones .carousel .carousel-indicators li.active {
-  background-color: #202020; }
-
-#remodelaciones #antesYdespues {
-  background-image: url("../images/Servicios/remodelaciones/lightBckg.webp");
+#remodelaciones section .container-fluid > .row {
   display: flex;
   justify-content: center; }
-  #remodelaciones #antesYdespues .col-lg-10 {
-    box-shadow: 0px 4px 6px #555D66;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background: linear-gradient(90deg, #cccccc 0%, #eeeeee 50%, #cccccc 100%);
-    border-right: 1px solid #aaaaaa;
-    border-left: 1px solid #aaaaaa; }
-    #remodelaciones #antesYdespues .col-lg-10 .col-lg-8 .row {
-      position: relative; }
-    #remodelaciones #antesYdespues .col-lg-10 .col-lg-8 img {
-      box-shadow: 0px 4px 6px #555D66; }
-    #remodelaciones #antesYdespues .col-lg-10 .col-lg-8 #conteinerBtnAntesDespues {
-      position: absolute;
-      bottom: 0; }
-      #remodelaciones #antesYdespues .col-lg-10 .col-lg-8 #conteinerBtnAntesDespues button {
-        border: 1px solid black; }
-    #remodelaciones #antesYdespues .col-lg-10 .col-lg-4 {
-      display: flex;
-      align-items: center; }
-      #remodelaciones #antesYdespues .col-lg-10 .col-lg-4 .row {
-        display: flex;
-        justify-content: center; }
-      #remodelaciones #antesYdespues .col-lg-10 .col-lg-4 .carousel-item .col-lg-12 {
-        margin-bottom: 1rem; }
-      #remodelaciones #antesYdespues .col-lg-10 .col-lg-4 .carousel-item .col-lg-12 {
-        position: relative; }
-      #remodelaciones #antesYdespues .col-lg-10 .col-lg-4 .carousel-item img {
-        border: 3px solid white;
-        display: block;
-        width: 100%;
-        height: auto;
-        box-shadow: 0px 2px 3px #555D66; }
-      #remodelaciones #antesYdespues .col-lg-10 .col-lg-4 .carousel-item .overlay {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        transition: .5s ease;
-        background-color: #008CBA; }
-      #remodelaciones #antesYdespues .col-lg-10 .col-lg-4 .carousel-item .col-lg-12:hover .overlay {
-        opacity: 0.7; }
-      #remodelaciones #antesYdespues .col-lg-10 .col-lg-4 .carousel-item .text {
-        color: white;
-        font-size: 20px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        text-align: center; }
+  #remodelaciones section .container-fluid > .row button {
+    font-size: 1.15rem; }
+  #remodelaciones section .container-fluid > .row .card-body .row {
+    display: flex;
+    justify-content: center; }
+    #remodelaciones section .container-fluid > .row .card-body .row img {
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; }
+    #remodelaciones section .container-fluid > .row .card-body .row .col-12:nth-child(5) {
+      margin-top: 2rem;
+      margin-bottom: 1rem; }
 
 /***********************/
 /***********************/
@@ -826,7 +769,7 @@ footer {
       align-items: center;
       justify-content: center;
       clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
-      background: linear-gradient(90deg, #f3f3f3 0%, #bdc6d1 39%, #949ba3 100%); }
+      background: linear-gradient(90deg, rgba(245, 245, 245, 0.59) 16%, rgba(15, 134, 140, 0.21) 100%); }
   #remodelaciones .chevron:nth-child(3) .row .col-lg-12 {
     background-color: #fdfffc;
     display: flex;
@@ -859,7 +802,17 @@ footer {
     background-color: #8d99ae;
     font-size: 1.2rem; }
     #remodelaciones .h1yDescripcion .chevron:nth-child(3) ul {
-      margin-top: 2.3rem; } }
+      margin-top: 2.3rem; }
+  #remodelaciones section .container-fluid > .row .card-body .row .col-12:nth-child(1) {
+    order: 1; }
+  #remodelaciones section .container-fluid > .row .card-body .row .col-12:nth-child(2) {
+    order: 3; }
+  #remodelaciones section .container-fluid > .row .card-body .row .col-12:nth-child(3) {
+    order: 2; }
+  #remodelaciones section .container-fluid > .row .card-body .row .col-12:nth-child(4) {
+    order: 4; }
+  #remodelaciones section .container-fluid > .row .card-body .row .col-12:nth-child(5) {
+    order: 5; } }
 
 /*Tablet only*/
 @media only screen and (min-width: 768px) and (max-width: 992px) {
@@ -878,20 +831,20 @@ footer {
   background-image: url("data:image/svg+xml,%3Csvg width='32' height='64' viewBox='0 0 32 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 28h20V16h-4v8H4V4h28v28h-4V8H8v12h4v-8h12v20H0v-4zm12 8h20v4H16v24H0v-4h12V36zm16 12h-4v12h8v4H20V44h12v12h-4v-8zM0 36h8v20H0v-4h4V40H0v-4z' fill='%230066bd' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
   color: #fff;
   text-shadow: 0 2px 4px black; }
-  #piletas .container-fluid:nth-child(2) #containerEstilosDePiletas .estiloDePileta {
+  #piletas .container-fluid:nth-child(2) .containerSlidesServicios .rowVitral {
     padding-right: 15px;
     display: flex;
     justify-content: center;
     height: 350px; }
-    #piletas .container-fluid:nth-child(2) #containerEstilosDePiletas .estiloDePileta .col-12 {
+    #piletas .container-fluid:nth-child(2) .containerSlidesServicios .rowVitral .col-12 {
       height: 350px; }
-    #piletas .container-fluid:nth-child(2) #containerEstilosDePiletas .estiloDePileta .col-12:nth-child(1) {
+    #piletas .container-fluid:nth-child(2) .containerSlidesServicios .rowVitral .col-12:nth-child(1) {
       padding-right: 0; }
-      #piletas .container-fluid:nth-child(2) #containerEstilosDePiletas .estiloDePileta .col-12:nth-child(1) img {
+      #piletas .container-fluid:nth-child(2) .containerSlidesServicios .rowVitral .col-12:nth-child(1) img {
         height: 350px;
         width: 100%;
         border-radius: 0% 0% 0% 20%; }
-    #piletas .container-fluid:nth-child(2) #containerEstilosDePiletas .estiloDePileta .col-12:nth-child(2) {
+    #piletas .container-fluid:nth-child(2) .containerSlidesServicios .rowVitral .col-12:nth-child(2) {
       background: rgba(255, 255, 255, 0.25);
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       backdrop-filter: blur(1px);
@@ -921,7 +874,7 @@ footer {
 /*INICIO MEDIA QUERIES*/
 /*Netbooks and Desktops*/
 @media only screen and (min-width: 992px) {
-  #piletas #containerEstilosDePiletas .formateoTextoPiletas, #piletas .container-fluid:nth-child(2) #containerEstilosDePiletas .estiloDePileta .col-12:nth-child(2) {
+  #piletas .containerSlidesServicios .formateoTextoPiletas, #piletas .container-fluid:nth-child(2) .containerSlidesServicios .rowVitral .col-12:nth-child(2) {
     padding: 0;
     display: flex;
     align-items: center;
@@ -936,15 +889,15 @@ footer {
 /***********************/
 /*Mobile and Tablets*/
 @media only screen and (max-width: 992px) {
-  #piletas #containerEstilosDePiletas {
+  #piletas .containerSlidesServicios {
     padding: 0; }
-    #piletas #containerEstilosDePiletas .estiloDePileta {
+    #piletas .containerSlidesServicios .rowVitral {
       margin-top: 3rem; }
-    #piletas #containerEstilosDePiletas .estiloDePileta:nth-last-child(1) {
+    #piletas .containerSlidesServicios .rowVitral:nth-last-child(1) {
       margin-bottom: 3rem; }
-    #piletas #containerEstilosDePiletas .estiloDePileta .col-12:nth-child(1) img {
+    #piletas .containerSlidesServicios .rowVitral .col-12:nth-child(1) img {
       box-shadow: 1px 4px 5px #555d66; }
-    #piletas #containerEstilosDePiletas .estiloDePileta .col-12:nth-child(2) h2 {
+    #piletas .containerSlidesServicios .rowVitral .col-12:nth-child(2) h2 {
       border: 1px solid black;
       background: linear-gradient(360deg, rgba(0, 188, 212, 0.2) 0%, #eeeeee 50%);
       padding: 9px;

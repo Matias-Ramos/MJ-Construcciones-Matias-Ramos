@@ -1,93 +1,31 @@
 #remodelaciones
 {
-	//Reemplazo del color estandar blanco de los indicadores del carousel, a un color oscuro (negro).
-	.carousel-control-prev-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
-	.carousel-control-next-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");}
-	.carousel .carousel-indicators li {background-color: #6c757d;}
-	.carousel .carousel-indicators li.active {background-color: #202020;}
-	
-	#antesYdespues
+	section
 	{
-		background-image: url("../images/Servicios/remodelaciones/lightBckg.webp");
-		display: flex;
-		justify-content: center;
-		.col-lg-10
+		//carousel section...for some reason.
+		&:nth-child(2){@include SectionPadding(4rem, 0px, 4rem, 0px);}
+
+		.container-fluid > .row
 		{
-			@include BoxShadow(0px,4px,6px,#555D66);
-			margin-top:50px;
-			margin-bottom:50px;
-			padding-top:50px;
-			padding-bottom:50px;
-			background:linear-gradient(90deg, rgba(204, 204, 204, 1) 0%, rgba(238, 238, 238, 1) 50%, rgba(204, 204, 204, 1) 100%);
-
-
-			border-right:1px solid #aaaaaa;
-			border-left:1px solid #aaaaaa;
-			
-			//Big picture, foto antes y después
-			.col-lg-8
+			@extend .AccordionFormatting;
+			button{font-size: 1.15rem;}
+			//centra accordion en ver desktop
+			display: flex;
+			justify-content: center;
+			.card-body 
 			{
-				.row{position:relative;}
-				img{@include BoxShadow(0px,4px,6px,#555D66);}
-				#conteinerBtnAntesDespues
-				{
-					position:absolute;
-					bottom:0;
-					button { border:1px solid black; }
-
-				}
-			}
-			
-			//Carousel
-			.col-lg-4
-			{
-				display: flex;
-				align-items:center;
 				.row
 				{
 					display: flex;
 					justify-content: center;
-				}
-				.carousel-item
-				{
-					//espaciado entre img de la galería (primeras dos img).
-					.col-lg-12 { margin-bottom:1rem; }
 
-					//De acá para abajo, animación hover carousel galería.
-					.col-lg-12 { position: relative; }
-					img
+					img{box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;}
+					
+					//descripción del proyecto
+					.col-12:nth-child(5)
 					{
-						border:3px solid white;
-						display: block;
-						width: 100%;
-						height: auto;
-						@include BoxShadow(0px,2px,3px,#555D66);
-					}
-					.overlay
-					{
-						position: absolute;
-						top: 0;
-						bottom: 0;
-						left: 0;
-						right: 0;
-						height: 100%;
-						width: 100%;
-						opacity: 0;
-						transition: .5s ease;
-						background-color: #008CBA;
-					}
-					.col-lg-12:hover .overlay {	opacity: 0.7; }
-					.text
-					{
-						color: white;
-						font-size: 20px;
-						position: absolute;
-						top: 50%;
-						left: 50%;
-						-webkit-transform: translate(-50%, -50%);
-						-ms-transform: translate(-50%, -50%);
-						transform: translate(-50%, -50%);
-						text-align: center;
+						margin-top:2rem;
+						margin-bottom:1rem;
 					}
 				}
 			}
@@ -120,7 +58,7 @@
 				align-items: center;
 				justify-content: center;
 				clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
-				background:linear-gradient(90deg, rgba(243, 243, 243, 1) 0%, rgba(189, 198, 209, 1) 39%, rgba(148, 155, 163, 1) 100%);
+			    background:linear-gradient(90deg, rgba(245, 245, 245, 0.59) 16%, rgba(15, 134, 140, 0.21) 100%);
 			}
 		}
 
@@ -198,6 +136,25 @@
 				background-color: #8d99ae;
 				font-size: 1.2rem;
 				ul{margin-top:2.3rem;}
+			}
+		}
+
+		section
+		{
+			.container-fluid > .row
+			{
+				.card-body 
+				{
+					.row
+					{
+						.col-12:nth-child(1){ order: 1; }
+						.col-12:nth-child(2){ order: 3; }
+						.col-12:nth-child(3){ order: 2; }
+						.col-12:nth-child(4){ order: 4; }
+						.col-12:nth-child(5){ order: 5; }
+
+					}
+				}
 			}
 		}
 	}
