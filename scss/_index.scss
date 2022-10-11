@@ -61,7 +61,73 @@
 }
 
 
+#seccionPorQueElegirnos
+{
+	position:relative;
+	border-top:1px solid lightgrey;
 
+	.container-fluid
+	{
+		padding:0;
+		
+		//row del h2
+		& > .row:first-child
+		{
+			.col-12
+			{
+				padding:0;
+				display: flex;
+				align-items: center;
+				h2 {
+					padding: 0px 0px 0px 11px;
+					margin:0;
+				}
+			}
+		}
+
+
+		//centra todo el contenido
+		.row
+		{
+			display: flex;
+			justify-content: center;
+		}
+
+		#containerPqEleg-3caract
+		{
+			margin-top:2rem;
+			padding:0;
+			background-color:#F2F2F2;
+			box-shadow:1px 4px 5px #555d66;
+			border-radius: 5px;
+			z-index: 2; //sube el container por encima de wave 
+			.caracteristica
+			{
+				padding:2rem 1rem;
+				span{display: block;}
+				&:hover{ background-color:#E8E8E8; }
+			}
+		}
+		.wave 
+		{
+		    position: absolute;
+		    bottom: 0;
+		    left: 0;
+		    width: 100%;
+		    overflow: hidden;
+		    line-height: 0;
+		    transform: rotate(180deg);
+		    .shape-fill { fill: #00ADB5; }
+		    svg
+		    {
+			    position: relative;
+			    display: block;
+			    width: calc(192% + 1.3px);
+			    height: 296px;
+			}	
+		}
+	}
+}
 
 #seccionTestimonios
 {
@@ -153,6 +219,27 @@
 		}
 	}
 
+	#seccionPorQueElegirnos
+	{
+
+		@include SectionPadding(2.2rem, 1rem, 7.2rem, 1rem);
+		background:linear-gradient(100deg, rgba(0, 188, 212, 0.11) 0%, rgba(255, 255, 0, 0) 100%);
+
+		.container-fluid > .row:first-child 
+		{
+			.col-12 { justify-content: center; } //columna del <h2>
+		}
+
+		#containerPqEleg-3caract
+		{
+			.caracteristica:nth-child(2)
+			{
+				border-top:1px solid lightgrey;
+				border-bottom:1px solid lightgrey;
+			}
+		}
+	}
+
 	#seccionTestimonios
 	{
 		@include SectionPadding(3.1rem, 0px, 4.7rem, 0px);
@@ -171,19 +258,6 @@
 	.navBottom
 	{
 		h2 {font-size: 1.5rem;}
-	}
-}
-
-/***********************/
-/***********************/
-/*MOBILE-ONLY*/
-
-//cards-mobile
-@media only screen and (max-width: 992px)
-{
-	#seccionPorQueElegirnos
-	{
-		
 	}
 }
 
@@ -223,21 +297,21 @@
 		}
 	}
 
-	#seccionPorQueElegirnos 
+	#seccionPorQueElegirnos
 	{
-		#containerH2
+		@include SectionPadding(3.2rem, 2rem, 6.2rem, 2rem);
+		background:linear-gradient(90deg, rgba(0, 188, 212, 0.08) 0%, rgba(255, 255, 0, 0) 70%);
+
+		#containerPqEleg-3caract
 		{
-			.glass { width: 40%; }
-		}
-		
-		//alto fijo para qe la diferencia de texto no afecte el alto de las cartas
-		.card-body{ height: 16rem; }
-		.card-deck
-		{
-			padding-left: 1.4rem;
-			padding-right: 1.4rem;
+			.caracteristica:nth-child(2)
+			{
+				border-right:1px solid lightgrey;
+				border-left:1px solid lightgrey;
+			}
 		}
 	}
+
 
 	#seccionTestimonios
 	{
