@@ -3,7 +3,7 @@
 /*****************************************/
 
 /*Eliminación de overflow en eje X causado por Bootstrap */
-#seccionPlantel, #seccionPorQueElegirnos, #seccionTestimonios, .navBottom
+#seccionPlantel, #seccionPorQueElegirnos, .navBottom
 {
 	.row
 	{
@@ -97,15 +97,17 @@
 		{
 			margin-top:2rem;
 			padding:0;
-			background-color:#F2F2F2;
+			background-color:#E8E8E8;
 			box-shadow:1px 4px 5px #555d66;
 			border-radius: 5px;
+			border-top:1px solid lightgrey;
 			z-index: 2; //sube el container por encima de wave 
 			.caracteristica
 			{
 				padding:2rem 1rem;
 				span{display: block;}
-				&:hover{ background-color:#E8E8E8; }
+				img { margin-bottom:0.6rem; }
+				&:hover{ background-color:#DEDEDE; }
 			}
 		}
 		.wave 
@@ -117,7 +119,7 @@
 		    overflow: hidden;
 		    line-height: 0;
 		    transform: rotate(180deg);
-		    .shape-fill { fill: #00ADB5; }
+		    .shape-fill { fill: #BAD9DB87; }
 		    svg
 		    {
 			    position: relative;
@@ -128,42 +130,6 @@
 		}
 	}
 }
-
-#seccionTestimonios
-{
-	background-color:map-get($coloresPrincipales,$colour-darkest);
-	box-shadow:0px 6px 25px #242423 inset;
-	color:#f1ebe5;
-
-	.carousel-inner
-	{
-		.carousel-item
-		{
-			font-size:1.1rem;
-		}
-		.testimonio
-		{
-			text-align: left;
-			border-left: 1px solid black;
-		}
-	}
-	.carousel-control-prev-icon,.carousel-control-next-icon
-	{
-		background-color: map-get($coloresPrincipales, $colour-blueish-logo);
-		border-radius: 3px;
-		
-		//padding = tamaño de los botones left-right
-		padding: 1.6rem;
-	}
-
-}
-
-
-#index 
-{
- .navBottom { @include SectionPadding(6.2rem, 0px, 6.2rem, 0px); } 
-}
-
 
 
 /***********************/
@@ -240,25 +206,7 @@
 		}
 	}
 
-	#seccionTestimonios
-	{
-		@include SectionPadding(3.1rem, 0px, 4.7rem, 0px);
-		.carousel-inner { position:relative; }
-				
-		/*Saca los botones fuera del slideshow*/
-		.carousel-control-prev { display: flex; justify-content:flex-start; margin-left:-7px; }
-		.carousel-control-next { display: flex; justify-content:flex-end; margin-right:-7px; }
-		.row:nth-child(2) 
-		{ 
-			height: 15.6rem;
-			.carousel-item { height: 15.6rem; }
-		}
-	}
 
-	.navBottom
-	{
-		h2 {font-size: 1.5rem;}
-	}
 }
 
 /***********************/
@@ -300,38 +248,16 @@
 	#seccionPorQueElegirnos
 	{
 		@include SectionPadding(3.2rem, 2rem, 6.2rem, 2rem);
-		background:linear-gradient(90deg, rgba(0, 188, 212, 0.08) 0%, rgba(255, 255, 0, 0) 70%);
+		background:linear-gradient(90deg, rgba(0, 188, 212, 0.08) 0%, rgba(255, 255, 0, 0) 60%);
 
 		#containerPqEleg-3caract
 		{
 			.caracteristica:nth-child(2)
 			{
 				border-right:1px solid lightgrey;
-				border-left:1px solid lightgrey;
+				border-left:1px solid lightgrey;				
 			}
 		}
-	}
-
-
-	#seccionTestimonios
-	{
-		@include SectionPadding(4rem, 0px, 4rem, 0px);
-
-		#testimoniosCarouselContainer
-		{
-			display: flex;
-			align-items: center;
-		}
-
-		/*Saca los botones fuera del slideshow*/
-		.carousel-control-prev {margin-left: -100px;}
-		.carousel-control-next {margin-right: -100px;}
-
-		/*Evita que el alto cambie por diferencia de renglones entre testimonios
-		 y que eso mueva las secciones que vienen debajo de esta*/
-		.carousel-inner{height: 5rem;}
-
-		.row:nth-child(2){ height: 170px; } 
 	}
 }
 

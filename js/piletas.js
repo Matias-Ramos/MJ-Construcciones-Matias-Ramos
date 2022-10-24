@@ -27,7 +27,7 @@ function expandirForm()
             <input class="form-control" id="telefono">
         </div>
         
-        <button type="submit" class="btn btn-primary mt-3 mb-5 w-50">Enviar</button>
+        <button type="submit" class="btn btn-primary mt-3 mb-5">Enviar</button>
     </form>`;
     divAsesoram.append(formContacto);
 
@@ -44,7 +44,7 @@ function expandirForm()
 function deshabilitarBtn()
 {
     btnExpandirAsesoram.setAttribute("disabled","");
-    btnExpandirAsesoram.setAttribute("class","btn btn-outline-primary w-50")
+    btnExpandirAsesoram.setAttribute("class","btn btn-outline-primary")
     btnExpandirAsesoram.style.boxShadow = "none";
     btnExpandirAsesoram.style.height = "100px";
 }

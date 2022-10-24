@@ -29,6 +29,14 @@ p {
 body {
   overflow-x: hidden; }
 
+@media only screen and (max-width: 992px) {
+  .desktop-only {
+    display: none !important; } }
+
+@media only screen and (min-width: 992px) {
+  .mobile-only {
+    display: none !important; } }
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #EEEEEE; }
@@ -63,26 +71,10 @@ main {
     background: -o-radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0) 0%, rgba(0, 188, 212, 0.08) 100%);
     background: -ms-radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0) 0%, rgba(0, 188, 212, 0.08) 100%);
     background: radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0) 0%, rgba(0, 188, 212, 0.08) 100%); }
-    main .navBottom nav {
-      box-shadow: -5px 6px 2px #ABA5A2; }
     main .navBottom button {
       font-size: 1.15rem; }
     main .navBottom .dropdown-toggle {
       color: #00ADB5; }
-  main .fullwidth {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-    display: block;
-    text-align: center; }
-
-footer .navBottom .dropdown-toggle {
-  white-space: normal; }
-
-footer .RedesSociales li a {
-  border: 1px solid #a8a8a8 !important; }
 
 header .RedesSociales, footer .RedesSociales {
   padding: 0; }
@@ -136,16 +128,33 @@ header .RedesSociales li:nth-child(2) a:before, footer .RedesSociales li:nth-chi
   background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
 
+/***********************/
+/***********************/
+/*Mobile devices*/
 @media only screen and (max-width: 992px) {
-  .desktop-only {
-    display: none !important; } }
+  .navBottom {
+    padding: 4.5rem 0px 6.2rem 0px; }
+    .navBottom h2 {
+      font-size: 1.5rem; }
+    .navBottom button {
+      margin: 0.5rem 0px;
+      box-shadow: -5px 6px 2px #ABA5A2; } }
 
+/***********************/
+/***********************/
+/*Notebooks and Desktops*/
 @media only screen and (min-width: 992px) {
-  .mobile-only {
-    display: none !important; } }
+  .navBottom {
+    padding: 6.2rem 0px 6.2rem 0px; }
+    .navBottom nav {
+      box-shadow: -5px 6px 2px #ABA5A2; } }
 
 footer {
   background-color: #393E46; }
+  footer .navBottom .dropdown-toggle {
+    white-space: normal; }
+  footer .RedesSociales li a {
+    border: 1px solid #a8a8a8 !important; }
   footer .containerCreditos {
     font-size: 0.8rem; }
   footer .row {
@@ -177,27 +186,26 @@ footer {
 /***********************/
 /***********************/
 @media only screen and (max-width: 992px) {
-  footer .card {
-    margin-top: 1.9rem; }
-    footer .card .card-title {
-      display: block;
-      padding: 0.9rem 0.6rem 0px 0.6rem; }
-    footer .card .card-body .mobile-only {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      align-items: center;
-      height: 3.6rem; }
-      footer .card .card-body .mobile-only li {
-        font-size: 2rem; }
-  footer .container-fluid:nth-child(2) .row {
-    margin-top: 1.8rem; }
-    footer .container-fluid:nth-child(2) .row .col-12 {
-      display: flex;
-      justify-content: center;
-      order: 2; }
-    footer .container-fluid:nth-child(2) .row .col-12:nth-child(2) {
-      order: 1; } }
+  footer {
+    padding-top: 3rem; }
+    footer .card {
+      margin-top: 1.9rem; }
+      footer .card .card-title {
+        display: block;
+        padding: 0.9rem 0.6rem 0px 0.6rem; }
+      footer .card .card-body .mobile-only {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 3.6rem; }
+        footer .card .card-body .mobile-only li {
+          font-size: 2rem; }
+    footer .container-fluid:nth-child(2) .row {
+      margin-top: 1.8rem; }
+      footer .container-fluid:nth-child(2) .row .col-12 {
+        display: flex;
+        justify-content: center; } }
 
 /***********************/
 /***********************/
@@ -214,7 +222,7 @@ footer {
 /***********GENERAL ATTRIBUTES************/
 /*****************************************/
 /*Eliminación de overflow en eje X causado por Bootstrap */
-#seccionPlantel .row, #seccionPorQueElegirnos .row, #seccionTestimonios .row, .navBottom .row {
+#seccionPlantel .row, #seccionPorQueElegirnos .row, .navBottom .row {
   margin-right: 0;
   margin-left: 0; }
 
@@ -264,16 +272,19 @@ footer {
     #seccionPorQueElegirnos .container-fluid #containerPqEleg-3caract {
       margin-top: 2rem;
       padding: 0;
-      background-color: #F2F2F2;
+      background-color: #E8E8E8;
       box-shadow: 1px 4px 5px #555d66;
       border-radius: 5px;
+      border-top: 1px solid lightgrey;
       z-index: 2; }
       #seccionPorQueElegirnos .container-fluid #containerPqEleg-3caract .caracteristica {
         padding: 2rem 1rem; }
         #seccionPorQueElegirnos .container-fluid #containerPqEleg-3caract .caracteristica span {
           display: block; }
+        #seccionPorQueElegirnos .container-fluid #containerPqEleg-3caract .caracteristica img {
+          margin-bottom: 0.6rem; }
         #seccionPorQueElegirnos .container-fluid #containerPqEleg-3caract .caracteristica:hover {
-          background-color: #E8E8E8; }
+          background-color: #DEDEDE; }
     #seccionPorQueElegirnos .container-fluid .wave {
       position: absolute;
       bottom: 0;
@@ -283,29 +294,12 @@ footer {
       line-height: 0;
       transform: rotate(180deg); }
       #seccionPorQueElegirnos .container-fluid .wave .shape-fill {
-        fill: #00ADB5; }
+        fill: #BAD9DB87; }
       #seccionPorQueElegirnos .container-fluid .wave svg {
         position: relative;
         display: block;
         width: calc(192% + 1.3px);
         height: 296px; }
-
-#seccionTestimonios {
-  background-color: #222831;
-  box-shadow: 0px 6px 25px #242423 inset;
-  color: #f1ebe5; }
-  #seccionTestimonios .carousel-inner .carousel-item {
-    font-size: 1.1rem; }
-  #seccionTestimonios .carousel-inner .testimonio {
-    text-align: left;
-    border-left: 1px solid black; }
-  #seccionTestimonios .carousel-control-prev-icon, #seccionTestimonios .carousel-control-next-icon {
-    background-color: #00ADB5;
-    border-radius: 3px;
-    padding: 1.6rem; }
-
-#index .navBottom {
-  padding: 6.2rem 0px 6.2rem 0px; }
 
 /***********************/
 /***********************/
@@ -337,26 +331,7 @@ footer {
       justify-content: center; }
     #seccionPorQueElegirnos #containerPqEleg-3caract .caracteristica:nth-child(2) {
       border-top: 1px solid lightgrey;
-      border-bottom: 1px solid lightgrey; }
-  #seccionTestimonios {
-    padding: 3.1rem 0px 4.7rem 0px;
-    /*Saca los botones fuera del slideshow*/ }
-    #seccionTestimonios .carousel-inner {
-      position: relative; }
-    #seccionTestimonios .carousel-control-prev {
-      display: flex;
-      justify-content: flex-start;
-      margin-left: -7px; }
-    #seccionTestimonios .carousel-control-next {
-      display: flex;
-      justify-content: flex-end;
-      margin-right: -7px; }
-    #seccionTestimonios .row:nth-child(2) {
-      height: 15.6rem; }
-      #seccionTestimonios .row:nth-child(2) .carousel-item {
-        height: 15.6rem; }
-  .navBottom h2 {
-    font-size: 1.5rem; } }
+      border-bottom: 1px solid lightgrey; } }
 
 /***********************/
 /***********************/
@@ -376,26 +351,10 @@ footer {
       justify-content: center; }
   #seccionPorQueElegirnos {
     padding: 3.2rem 2rem 6.2rem 2rem;
-    background: linear-gradient(90deg, rgba(0, 188, 212, 0.08) 0%, rgba(255, 255, 0, 0) 70%); }
+    background: linear-gradient(90deg, rgba(0, 188, 212, 0.08) 0%, rgba(255, 255, 0, 0) 60%); }
     #seccionPorQueElegirnos #containerPqEleg-3caract .caracteristica:nth-child(2) {
       border-right: 1px solid lightgrey;
-      border-left: 1px solid lightgrey; }
-  #seccionTestimonios {
-    padding: 4rem 0px 4rem 0px;
-    /*Saca los botones fuera del slideshow*/
-    /*Evita que el alto cambie por diferencia de renglones entre testimonios
-		 y que eso mueva las secciones que vienen debajo de esta*/ }
-    #seccionTestimonios #testimoniosCarouselContainer {
-      display: flex;
-      align-items: center; }
-    #seccionTestimonios .carousel-control-prev {
-      margin-left: -100px; }
-    #seccionTestimonios .carousel-control-next {
-      margin-right: -100px; }
-    #seccionTestimonios .carousel-inner {
-      height: 5rem; }
-    #seccionTestimonios .row:nth-child(2) {
-      height: 170px; } }
+      border-left: 1px solid lightgrey; } }
 
 #faq section {
   padding: 2.5rem 0px 2.5rem 0px; }
@@ -403,6 +362,14 @@ footer {
 #faq .navBottom {
   padding: 3.1rem 0px 4.1rem 0px;
   border-top: 1px solid lightgrey; }
+  #faq .navBottom nav {
+    box-shadow: none; }
+    #faq .navBottom nav button:nth-child(2) {
+      margin: 1.5rem 0px; }
+    #faq .navBottom nav button {
+      box-shadow: -4px 4px 2px #ABA5A2; }
+    #faq .navBottom nav btn-group {
+      box-shadow: -4px 4px 2px #ABA5A2; }
 
 .containerProyectoX .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
@@ -435,7 +402,7 @@ footer {
   align-items: center; }
 
 .containerProyectoX .guardBand {
-  height: 20px;
+  height: 15px;
   overflow: hidden; }
   .containerProyectoX .guardBand img {
     width: 100%; }
@@ -572,6 +539,9 @@ footer {
   #containerGaleriaProyectos .row .cardShadow {
     box-shadow: 3px 3px 5px #aaaaaa; } }
 
+.servicios .filtroDeContenido {
+  padding: 0; }
+
 .servicios ul {
   margin-bottom: 0; }
   .servicios ul li {
@@ -594,41 +564,105 @@ footer {
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
-      height: 140px; }
+      font-size: 2rem; }
     .solicitarAsesoram .row .col-12:nth-child(2) {
-      height: 140px; }
+      height: 10.5rem; }
 
-#containerProyectos .col-10 {
-  border: 1px solid black; }
+/***********************/
+/***********************/
+/*Notebooks and Desktops*/
+@media only screen and (min-width: 992px) {
+  .solicitarAsesoram button {
+    width: 50%; }
+  .solicitarAsesoram .row .col-12:nth-child(1) {
+    height: 10rem; }
+  .solicitarAsesoram .row .col-12:nth-child(2) {
+    height: 8rem; } }
 
-#containerProyectos .card .list-group {
-  display: flex;
-  justify-content: center; }
-  #containerProyectos .card .list-group .list-group-item {
-    border: none;
-    border-left: 1px solid rgba(0, 0, 0, 0.125);
-    border-right: 1px solid rgba(0, 0, 0, 0.125); }
+/***********************/
+/***********************/
+/*INICIO MEDIA QUERIES*/
+/*mobile Y tablets*/
+@media only screen and (max-width: 992px) {
+  .solicitarAsesoram button {
+    width: 75%;
+    margin-top: 1.5rem; }
+  .solicitarAsesoram .row .col-12:nth-child(1) {
+    height: auto;
+    margin: 1rem 0px;
+    padding: 0px 20px; }
+  .solicitarAsesoram .row .col-12:nth-child(2) {
+    height: 10rem; } }
 
-#containerProyectos .card .card-body .ecommerceLink:hover {
-  transform: scale(1.07); }
+#containerProyectos > .row:first-child {
+  padding-top: 2rem; }
 
-#containerProyectos .card .card-body .row {
-  display: flex;
-  align-items: center; }
-  #containerProyectos .card .card-body .row .col-12 {
-    height: 50px; }
-    #containerProyectos .card .card-body .row .col-12 img {
-      height: 50px; }
-    #containerProyectos .card .card-body .row .col-12 a {
+#containerProyectos .price {
+  margin-top: 1rem; }
+
+#containerProyectos .card {
+  margin-bottom: 3.5rem;
+  box-shadow: -5px 6px 5px #aaaaaa; }
+  #containerProyectos .card .list-group {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #containerProyectos .card .list-group .list-group-item {
+      border: none; }
+  #containerProyectos .card .ecommerceContainer {
+    padding: 0px 1rem; }
+  #containerProyectos .card .card-body .card-text {
+    background-color: #393E46;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 2px; }
+  #containerProyectos .card .card-body .row {
+    display: flex;
+    align-items: center; }
+    #containerProyectos .card .card-body .row .ecommerceLink {
+      padding: 15px 0px;
+      border-radius: 3px; }
+      #containerProyectos .card .card-body .row .ecommerceLink img {
+        height: 50px; }
+      #containerProyectos .card .card-body .row .ecommerceLink a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap; }
+    #containerProyectos .card .card-body .row .ecommerceLink:hover {
+      background-color: #e9ecef;
+      transition: 0.4s; }
+    #containerProyectos .card .card-body .row .col-12:nth-child(2) span {
+      color: black; }
+    #containerProyectos .card .card-body .row .col-12:nth-child(3) span {
+      color: green; }
+
+/***********************/
+/***********************/
+/*INICIO MEDIA QUERIES*/
+/*Notebooks and Desktops*/
+@media only screen and (min-width: 992px) {
+  #containerProyectos .col-xl-5 {
+    padding: 0; } }
+
+/***********************/
+/***********************/
+/*Mobile*/
+@media only screen and (max-width: 992px) {
+  #containerProyectos .card .ecommerceContainer .row {
+    margin: auto; }
+  #containerProyectos .card .list-group-horizontal {
+    flex-wrap: wrap; }
+  #containerProyectos .card .card-body {
+    padding: 0; }
+    #containerProyectos .card .card-body .row {
       display: flex;
       align-items: center;
-      justify-content: center;
-      flex-wrap: nowrap; }
-  #containerProyectos .card .card-body .row .col-12:nth-child(2) span {
-    color: black; }
-  #containerProyectos .card .card-body .row .col-12:nth-child(3) span {
-    color: green; }
+      padding: 1rem 0px; }
+      #containerProyectos .card .card-body .row .ecommerceLink {
+        padding: 0.5rem 0px; }
+  #containerProyectos .card .card-body:first-of-type {
+    padding: 0.7rem 0.4rem 0.7rem 0.4rem; } }
 
 #llaveEnMano .h1yDescripcion .chevron:nth-child(1) .col-lg-12 {
   background-color: #5c6378; }
@@ -645,14 +679,9 @@ footer {
   padding-top: 4rem;
   padding-bottom: 4rem; }
   #llaveEnMano #cuatroPasosSon .card {
-    background: radial-gradient(circle at 50% 50%, white 0%, rgba(141, 175, 210, 0.31) 100%);
-    transition: transform .2s; }
+    background: radial-gradient(circle at 50% 50%, white 0%, rgba(141, 175, 210, 0.31) 100%); }
   #llaveEnMano #cuatroPasosSon .card:hover {
-    -ms-transform: scale(1.02);
-    /* IE 9 */
-    -webkit-transform: scale(1.02);
-    /* Safari 3-8 */
-    transform: scale(1.02); }
+    background: radial-gradient(circle at 50% 50%, white 0%, rgba(141, 175, 210, 0.51) 100%); }
 
 /***********************/
 /***********************/
@@ -716,7 +745,7 @@ footer {
       justify-content: center;
       text-align: center;
       clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
-      margin-top: -2px; }
+      margin-top: -1px; }
     #llaveEnMano .h1yDescripcion .chevron .row {
       height: 100%;
       width: 100%; }
@@ -727,9 +756,12 @@ footer {
       clip-path: polygon(0% 0%, 100% 0, 100% 25%, 50% 100%, 0 25%); }
   #llaveEnMano .h1yDescripcion .chevron:nth-child(2) .col-lg-12 {
     background: linear-gradient(180deg, #eff0ee 0%, white 37%); }
-  #llaveEnMano .h1yDescripcion .mobile-only {
-    display: flex;
-    justify-content: center; } }
+  #llaveEnMano .h1yDescripcion .chevron:nth-child(3) {
+    background-color: #EEEEEE; }
+  #llaveEnMano #cuatroPasosSon span {
+    font-size: 1.3rem; }
+  #llaveEnMano #cuatroPasosSon li {
+    text-align: left; } }
 
 #remodelaciones section:nth-child(2) {
   padding: 4rem 0px 4rem 0px; }
@@ -825,74 +857,69 @@ footer {
   color: #fff;
   text-shadow: 0 2px 4px black; }
   #piletas .container-fluid:nth-child(2) .containerSlidesServicios .rowVitral {
-    padding-right: 15px;
     display: flex;
-    justify-content: center;
-    height: 350px; }
-    #piletas .container-fluid:nth-child(2) .containerSlidesServicios .rowVitral .col-12 {
-      height: 350px; }
+    justify-content: center; }
     #piletas .container-fluid:nth-child(2) .containerSlidesServicios .rowVitral .col-12:nth-child(1) {
       padding-right: 0; }
       #piletas .container-fluid:nth-child(2) .containerSlidesServicios .rowVitral .col-12:nth-child(1) img {
-        height: 350px;
         width: 100%;
         border-radius: 0% 0% 0% 20%; }
     #piletas .container-fluid:nth-child(2) .containerSlidesServicios .rowVitral .col-12:nth-child(2) {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 2px 5px #555d66;
       background: rgba(255, 255, 255, 0.25);
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       backdrop-filter: blur(1px);
       -webkit-backdrop-filter: blur(1px);
-      border-radius: 0% 20% 0% 0%;
       border: 1px solid rgba(255, 255, 255, 0.18); }
 
 #piletas .container-fluid:nth-child(3) {
   background-image: url("../images/Servicios/remodelaciones/lightBckg.webp"); }
-
-#piletas #sistemaConstructivo .row {
-  display: flex;
-  justify-content: center; }
-  #piletas #sistemaConstructivo .row .col-12 {
+  #piletas .container-fluid:nth-child(3) #sistemaConstructivo .row .col-12 {
     margin-top: 50px; }
-  #piletas #sistemaConstructivo .row:nth-child(2) {
+  #piletas .container-fluid:nth-child(3) #sistemaConstructivo .row:nth-child(2) {
     padding-bottom: 4rem; }
-
-#piletas #sistemaConstructivo .card {
-  box-shadow: 3px 3px 5px #aaaaaa;
-  border-color: #393E46; }
-  #piletas #sistemaConstructivo .card .card-body {
-    background: linear-gradient(360deg, #E3E3E3 0%, white 30%); }
+  #piletas .container-fluid:nth-child(3) #sistemaConstructivo .card {
+    box-shadow: 3px 3px 5px #aaaaaa;
+    border-color: #393E46; }
+    #piletas .container-fluid:nth-child(3) #sistemaConstructivo .card .card-body {
+      background: linear-gradient(360deg, #E3E3E3 0%, white 30%); }
 
 /***********************/
 /***********************/
 /*INICIO MEDIA QUERIES*/
 /*Netbooks and Desktops*/
 @media only screen and (min-width: 992px) {
-  #piletas .containerSlidesServicios .formateoTextoPiletas, #piletas .container-fluid:nth-child(2) .containerSlidesServicios .rowVitral .col-12:nth-child(2) {
-    padding: 0;
+  #piletas .containerSlidesServicios .rowVitral {
+    padding-right: 15px; }
+    #piletas .containerSlidesServicios .rowVitral .col-12 {
+      height: 21.8rem; }
+    #piletas .containerSlidesServicios .rowVitral .col-12:nth-child(1) img {
+      height: 21.8rem; }
+    #piletas .containerSlidesServicios .rowVitral .col-12:nth-child(2) {
+      border-radius: 0% 20% 0% 0%; }
+  #piletas #sistemaConstructivo .row {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 2px 5px #555d66; }
-  #piletas #sistemaConstructivo .card {
-    height: 100%; }
-  #piletas #sistemaConstructivo .row:nth-child(2) {
-    padding-left: 4rem;
-    padding-right: 4rem; } }
+    justify-content: center; }
+    #piletas #sistemaConstructivo .row .card {
+      height: 100%; }
+    #piletas #sistemaConstructivo .row:nth-child(2) {
+      padding-left: 4rem;
+      padding-right: 4rem; } }
 
 /***********************/
 /*Mobile and Tablets*/
 @media only screen and (max-width: 992px) {
   #piletas .containerSlidesServicios {
+    height: 23rem;
     padding: 0; }
-    #piletas .containerSlidesServicios .rowVitral {
-      margin-top: 3rem; }
-    #piletas .containerSlidesServicios .rowVitral:nth-last-child(1) {
-      margin-bottom: 3rem; }
-    #piletas .containerSlidesServicios .rowVitral .col-12:nth-child(1) img {
-      box-shadow: 1px 4px 5px #555d66; }
-    #piletas .containerSlidesServicios .rowVitral .col-12:nth-child(2) h2 {
-      border: 1px solid black;
-      background: linear-gradient(360deg, rgba(0, 188, 212, 0.2) 0%, #eeeeee 50%);
-      padding: 9px;
-      border-radius: 2px;
-      box-shadow: 1px 4px 5px #555d66; } }
+    #piletas .containerSlidesServicios .rowVitral .col-12:nth-child(1) {
+      order: 2; }
+    #piletas .containerSlidesServicios .rowVitral .col-12:nth-child(2) {
+      order: 1; }
+      #piletas .containerSlidesServicios .rowVitral .col-12:nth-child(2) h2 {
+        margin: 0px;
+        padding: 1.5rem; } }

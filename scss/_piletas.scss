@@ -1,82 +1,72 @@
 #piletas
 {
-	//carousel tipos de piletas
-	.container-fluid:nth-child(2)
-	{
-		box-shadow: 0px 0px 17px #242423 inset;
-		padding-top:75px;
-		padding-bottom:75px;
-		background-color: #18549d;
-		background-image: url("data:image/svg+xml,%3Csvg width='32' height='64' viewBox='0 0 32 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 28h20V16h-4v8H4V4h28v28h-4V8H8v12h4v-8h12v20H0v-4zm12 8h20v4H16v24H0v-4h12V36zm16 12h-4v12h8v4H20V44h12v12h-4v-8zM0 36h8v20H0v-4h4V40H0v-4z' fill='%230066bd' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
-		color:#fff;
-		text-shadow:0 2px 4px black;
-
-		.containerSlidesServicios
+	.container-fluid
+	{	
+		&:nth-child(2) //carousel tipos de piletas 
 		{
-			.rowVitral
+			box-shadow: 0px 0px 17px #242423 inset;
+			padding-top:75px;
+			padding-bottom:75px;
+			background-color: #18549d;
+			background-image: url("data:image/svg+xml,%3Csvg width='32' height='64' viewBox='0 0 32 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 28h20V16h-4v8H4V4h28v28h-4V8H8v12h4v-8h12v20H0v-4zm12 8h20v4H16v24H0v-4h12V36zm16 12h-4v12h8v4H20V44h12v12h-4v-8zM0 36h8v20H0v-4h4V40H0v-4z' fill='%230066bd' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
+			color:#fff;
+			text-shadow:0 2px 4px black;
+
+			.containerSlidesServicios
 			{
-				padding-right:15px;
-				//iguala la altura de todos los items dentro de "estilos de pileta".
-				display:flex;
-				justify-content:center;
-				height:350px;
-
-				.col-12{ height:350px; }
-
-				//img
-				.col-12:nth-child(1)
+				.rowVitral
 				{
-					padding-right:0;
-					img
+					//centra el vitral
+					display:flex;
+					justify-content:center;
+					
+					.col-12:nth-child(1) //img
 					{
-						height:350px;
-						width:100%;
-						border-radius: 0% 0% 0% 20%;
-					}	
-				}
+						padding-right:0;
+						img
+						{
+							width:100%;
+							border-radius: 0% 0% 0% 20%;
+						}	
+					}
 
-				//texto
-				.col-12:nth-child(2)
-				{
+					.col-12:nth-child(2) //texto
+					{
+						padding:0;
+						display:flex;
+						align-items: center;
+						justify-content: center;
+						box-shadow: 0px 2px 5px #555d66;
 
-					@extend .formateoTextoPiletas;
-					//background:linear-gradient(90deg, rgba(72, 202, 228, 0.86) 0%, rgba(238, 238, 238, 0.11) 60%);
-					//background:radial-gradient(circle at 50% 50%, rgba(238, 238, 238, 1) 60%, rgba(189, 198, 209, 1) 100%);
-					background: rgba( 255, 255, 255, 0.25 );
-					box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-					backdrop-filter: blur( 1px );
-					-webkit-backdrop-filter: blur( 1px );
-					border-radius: 0% 20% 0% 0%;
-					border: 1px solid rgba( 255, 255, 255, 0.18 );
+						//glass effect
+						background: rgba( 255, 255, 255, 0.25 );
+						box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+						backdrop-filter: blur( 1px );
+						-webkit-backdrop-filter: blur( 1px );
+						border: 1px solid rgba( 255, 255, 255, 0.18 );
+					}
 				}
 			}
 		}
-	}
 
-	.container-fluid:nth-child(3)
-	{
-		background-image: url("../images/Servicios/remodelaciones/lightBckg.webp");
-	}
-
-
-	//cards
-	#sistemaConstructivo
-	{
-		.row
+		&:nth-child(3) //sist. constr.
 		{
-			//alinea el paso 7 al centro
-			display:flex;
-			justify-content: center;
-
-			//espaciado entre cards
-			.col-12 { margin-top:50px; }
-			&:nth-child(2) { padding-bottom:4rem; }
-		}
-		.card 
-		{
-			box-shadow: 3px 3px 5px #aaaaaa;
-			border-color:map-get($coloresPrincipales,$colour-darker);
-			.card-body{background: linear-gradient(360deg, #E3E3E3 0%, white 30%);}
+			background-image: url("../images/Servicios/remodelaciones/lightBckg.webp");
+			#sistemaConstructivo //cards
+			{
+				.row
+				{
+					//espaciado entre cards
+					.col-12 { margin-top:50px; }
+					&:nth-child(2) { padding-bottom:4rem; }
+				}
+				.card 
+				{
+					box-shadow: 3px 3px 5px #aaaaaa;
+					border-color:map-get($coloresPrincipales,$colour-darker);
+					.card-body{background: linear-gradient(360deg, #E3E3E3 0%, white 30%);}
+				}
+			}
 		}
 	}
 }
@@ -92,28 +82,37 @@
 	{
 		.containerSlidesServicios
 		{
-
-			//extend
-			.formateoTextoPiletas
+			.rowVitral
 			{
-				padding:0;
-				display:flex;
-				align-items: center;
-				justify-content: center;
-				box-shadow: 0px 2px 5px #555d66;
+				padding-right:15px;
+				
+				.col-12{ height:21.8rem; }
+				//img
+				.col-12:nth-child(1)
+				{
+					img { height:21.8rem; }	
+				}
+				//texto
+				.col-12:nth-child(2) { border-radius: 0% 20% 0% 0%; }
 			}
-
 		}
+
 		#sistemaConstructivo
 		{
-			.card{height:100%;}
-
-			//achica las cards
-			.row:nth-child(2)
+			.row
 			{
-				padding-left:4rem;
-				padding-right:4rem;
-			}
+				.card{height:100%;}
+
+				//alinea el paso 7 al centro
+				display:flex;
+				justify-content: center;
+
+				&:nth-child(2) //achica las cards
+				{
+					padding-left:4rem;
+					padding-right:4rem;
+				}
+			}			
 		}
 	}
 }
@@ -125,35 +124,25 @@
 {
 	#piletas
 	{
-
 		.containerSlidesServicios
 		{
+			height: 23rem;
 			padding:0;
-			//espaciado entre cada tipo de pileta.
-			.rowVitral { margin-top:3rem; }
-			.rowVitral:nth-last-child(1){ margin-bottom:3rem;}
 
 			.rowVitral
 			{
 				//img
-				.col-12:nth-child(1)
-				{
-					img{ box-shadow: 1px 4px 5px #555d66; }
-				}
+				.col-12:nth-child(1) { order:2; }
 
-				//texto
-				.col-12:nth-child(2)
+				.col-12:nth-child(2) //texto
 				{
+					order:1;
 					h2{
-						border: 1px solid black;
-						background:linear-gradient(360deg, rgba(0, 188, 212, 0.2) 0%, rgba(238, 238, 238, 1) 50%);
-						padding: 9px;
-						border-radius:2px;
-						box-shadow: 1px 4px 5px #555d66;
+						margin: 0px;
+						padding: 1.5rem;
 					}
 				}
 			}
 		}
-
 	}
 }

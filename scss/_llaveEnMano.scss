@@ -43,14 +43,10 @@
 		.card 
 		{ 
 			background:radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(141, 175, 210, 0.31) 100%);
-			//Animación hover
-			transition: transform .2s; 
 		}
 		.card:hover 
 		{
-			-ms-transform: scale(1.02); /* IE 9 */
-			-webkit-transform: scale(1.02); /* Safari 3-8 */
-			transform: scale(1.02); 
+			background:radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(141, 175, 210, 0.51) 100%);
 		}
 	}
 }
@@ -164,7 +160,7 @@
 					justify-content: center;
 					text-align: center;
 					clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
-					margin-top:-2px;
+					margin-top:-1px;
 				}
 				
 				.row{ height: 100%;width:100%; }
@@ -183,15 +179,20 @@
 			//H1
 			.chevron:nth-child(2)
 			{
-				.col-lg-12 { background:linear-gradient(180deg, rgba(239, 240, 238, 1) 0%, rgba(255, 255, 255, 1) 37%); }
+				.col-lg-12 
+				{
+					background:linear-gradient(180deg, rgba(239, 240, 238, 1) 0%, rgba(255, 255, 255, 1) 37%);
+				}
 			}
+			//texto complementario I
+			.chevron:nth-child(3) { background-color:#EEEEEE; }
 
-			//logito llave
-			.mobile-only
-			{
-				display:flex;
-				justify-content: center;
-			}
+		}
+
+		#cuatroPasosSon
+		{
+			span{font-size: 1.3rem;}
+			li{text-align: left;}
 		}
 	}
 }

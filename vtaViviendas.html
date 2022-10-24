@@ -30,7 +30,7 @@
 		<link rel="stylesheet" href="css/additionalStyles.css">
 
 	</head>
-	<body>
+	<body id="vtaViviendas">
 		<header class="container-fluid">
 			<div class="row">
 				<nav class="navbar navbar-expand-lg navbar-expand-xl navbar-dark bg-dark w-100" role="navigation">
@@ -126,13 +126,15 @@
 				</nav>
 			</div>
 		</header>
-		<main class="container-fluid servicios">
+		<main class="servicios">
 
 			<!--H1-->
-			<div class="row h1container">
-				<div class="col-12 col-xs-12 col-sm-12 col-lg-12 col-xl-12">
-					<h1>Venta de viviendas</h1>
-				</div>
+			<div class="container-fluid">
+				<div class="row h1container">
+					<div class="col-12 col-xs-12 col-sm-12 col-lg-12 col-xl-12">
+						<h1>Venta de viviendas</h1>
+					</div>
+				</div>				
 			</div>
 
 			<!-- Filtros Desktop-->
@@ -164,7 +166,7 @@
 							<button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
 							Filtrar por:
 							</button>
-							<div class="dropdown-menu w-100 text-center" style="transform: translate3d(0px, 38px, 0px) !important;" aria-labelledby="dropdownMenuButton">
+							<div class="dropdown-menu w-100 text-center" aria-labelledby="dropdownMenuButton">
 								<a class="dropdown-item" href="#">Viviendas en venta</a>
 								<a class="dropdown-item" href="#">Ventas en pozo</a>
 								<a class="dropdown-item" href="#">Mostrar todo</a>
@@ -179,40 +181,42 @@
 				<div class="row justify-content-around">
 
 					<!--Garay 1827-->
-					<div class="col-10 col-xs-10 col-sm-10 col-lg-5 col-xl-5 mb-5 cardShadow">
+					<div class="col-12 col-xs-12 col-sm-12 col-lg-5 col-xl-5 cardShadow">
 						<div class="card border">
 							<img src="images/Proyecto_X/foto_principal-compressed.jpg" class="card-img-top" alt="...">
 							<div class="card-body">
-								<h2 class="card-title">Avenida Garay 1827</h2>
-								<p class="card-text">Vivienda a la venta</p>
+								<h2 class="card-title">Av. Garay 1827</h2>
+								<span class="card-text">Vivienda a la venta</span>
 							</div>
-							<ul class="list-group list-group-horizontal">
+							<ul class="list-group caracteristicasContainer">
 								<li class="list-group-item">3 dormitorios</li>
 								<li class="list-group-item">2 baños</li>
 								<li class="list-group-item">170m2</li>
 							</ul>
-							<ul class="list-group list-group-flush">
+							<ul class="list-group list-group-flush price">
 								<li class="list-group-item">$40.000.000</li>
 							</ul>
 							<!--Links-->
-							<div class="card-body">
-								<div class="row">
-									<div class="col-12 col-xs-12 col-sm-4 col-lg-4 col-xl-4 ecommerceLink">
-										<a href="#">
-											<img src="images/Servicios/vtaViviendas/mercado-libre.svg" class="img-fluid" alt="logo Mercado Libre">
-										</a>
-									</div>
-									<div class="col-12 col-xs-12 col-sm-4 col-lg-4 col-xl-4 ecommerceLink">
-										<a href="#">
-											<img src="images/Servicios/vtaViviendas/zona-prop2.svg" class="" alt="logo Zona Prop">
-											<span>ZonaProp</span>
-										</a>
-									</div>
-									<div class="col-12 col-xs-12 col-sm-4 col-lg-4 col-xl-4 ecommerceLink">
-										<a href="#">
-											<img src="images/Servicios/vtaViviendas/IconArgenProp7.png" class="img-fluid d-inline-block" alt="logo Mercado Libre">
-											<span>ArgenProp</span>
-										</a>
+							<div class="card-body ecommerceContainer">
+								<div class="container-fluid p-0">
+									<div class="row">
+										<div class="col-12 col-xs-12 col-sm-12 col-lg-4 col-xl-4 ecommerceLink">
+											<a href="#">
+												<img src="images/Servicios/vtaViviendas/mercado-libre.svg" class="img-fluid" alt="logo Mercado Libre">
+											</a>
+										</div>
+										<div class="col-12 col-xs-12 col-sm-12 col-lg-4 col-xl-4 ecommerceLink">
+											<a href="#">
+												<img src="images/Servicios/vtaViviendas/zona-prop2.svg" class="" alt="logo Zona Prop">
+												<span>ZonaProp</span>
+											</a>
+										</div>
+										<div class="col-12 col-xs-12 col-sm-12 col-lg-4 col-xl-4 ecommerceLink">
+											<a href="#">
+												<img src="images/Servicios/vtaViviendas/IconArgenProp7.png" class="img-fluid d-inline-block" alt="logo Mercado Libre">
+												<span>ArgenProp</span>
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -220,23 +224,23 @@
 					</div>
 
 					<!--Coghlan 643-->
-					<div class="col-10 col-xs-10 col-sm-10 col-lg-5 col-xl-5 mb-5 cardShadow">
+					<div class="col-12 col-xs-12 col-sm-12 col-lg-5 col-xl-5 cardShadow">
 						<div class="card border">
 							<img src="images/Proyecto_X/foto_principal-compressed.jpg" class="card-img-top" alt="...">
 							<div class="card-body">
 								<h2 class="card-title">Coghlan 643</h2>
-								<p class="card-text">Vivienda a la venta</p>
+								<span class="card-text">Venta en pozo</span>
 							</div>
-							<ul class="list-group list-group-horizontal">
+							<ul class="list-group caracteristicasContainer">
 								<li class="list-group-item">2 dormitorios</li>
 								<li class="list-group-item">1 baños</li>
 								<li class="list-group-item">140m2</li>
 							</ul>
-							<ul class="list-group list-group-flush">
-								<li class="list-group-item">$60.000.000</li>
+							<ul class="list-group list-group-flush price">
+								<li class="list-group-item">$60.000.000 + Cuotas</li>
 							</ul>
 							<!--Links-->
-							<div class="card-body">
+							<div class="card-body ecommerceContainer">
 								<div class="row">
 									<div class="col-12 col-xs-12 col-sm-4 col-lg-4 col-xl-4 ecommerceLink">
 										<a href="#">
@@ -260,24 +264,24 @@
 						</div>
 					</div>
 
-					<!--Avenida La Plata 173-->
-					<div class="col-10 col-xs-10 col-sm-10 col-lg-5 col-xl-5 mb-5 cardShadow">
+					<!--Av. La Plata 173-->
+					<div class="col-12 col-xs-12 col-sm-12 col-lg-5 col-xl-5 cardShadow">
 						<div class="card border">
 							<img src="images/Proyecto_X/foto_principal-compressed.jpg" class="card-img-top" alt="...">
 							<div class="card-body">
-								<h2 class="card-title">Avenida La Plata 173</h2>
-								<p class="card-text">Venta en pozo</p>
+								<h2 class="card-title">Av. La Plata 173</h2>
+								<span class="card-text">Venta en pozo</span>
 							</div>
-							<ul class="list-group list-group-horizontal">
+							<ul class="list-group caracteristicasContainer">
 								<li class="list-group-item">4 dormitorios</li>
 								<li class="list-group-item">2 baños</li>
 								<li class="list-group-item">210m2</li>
 							</ul>
-							<ul class="list-group list-group-flush">
+							<ul class="list-group list-group-flush price">
 								<li class="list-group-item">$12.000.000 + Cuotas</li>
 							</ul>
 							<!--Links-->
-							<div class="card-body">
+							<div class="card-body ecommerceContainer">
 								<div class="row">
 									<div class="col-12 col-xs-12 col-sm-4 col-lg-4 col-xl-4 ecommerceLink">
 										<a href="#">
@@ -302,23 +306,23 @@
 					</div>
 
 					<!--Dock Sud 777-->
-					<div class="col-10 col-xs-10 col-sm-10 col-lg-5 col-xl-5 mb-5 cardShadow">
+					<div class="col-12 col-xs-12 col-sm-12 col-lg-5 col-xl-5 cardShadow">
 						<div class="card border">
 							<img src="images/Proyecto_X/foto_principal-compressed.jpg" class="card-img-top" alt="...">
 							<div class="card-body">
 								<h2 class="card-title">Dock Sud 777</h2>
-								<p class="card-text">Venta en pozo</p>
+								<span class="card-text">Venta en pozo</span>
 							</div>
-							<ul class="list-group list-group-horizontal">
+							<ul class="list-group caracteristicasContainer">
 								<li class="list-group-item">5 dormitorios</li>
 								<li class="list-group-item">3 baños</li>
 								<li class="list-group-item">280m2</li>
 							</ul>
-							<ul class="list-group list-group-flush">
+							<ul class="list-group list-group-flush price">
 								<li class="list-group-item">$8.000.000 + Cuotas</li>
 							</ul>
 							<!--Links-->
-							<div class="card-body">
+							<div class="card-body ecommerceContainer">
 								<div class="row">
 									<div class="col-12 col-xs-12 col-sm-4 col-lg-4 col-xl-4 ecommerceLink">
 										<a href="#">
@@ -348,6 +352,10 @@
 			<!--BTS JAVASCRIPT BELOW-->
 			<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+			<!-- Local JS file -->
+			<script src="./js/vtaViviendas.js"></script>
+			
 		</main>
 		<footer>
 			<div class="container-fluid">
@@ -444,19 +452,10 @@
 			<!--firmas-->
 			<div class="container-fluid containerCreditos">
 				<div class="row">
-
 					<!--Firma desarrollador-->
 					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 						<span><i>Desarrollo Full Stack por: <a href="https://www.linkedin.com/in/matias-ramos-a91505118/" target="_blank">Matias Ramos</a></i></span>
 					</div>
-
-					<!--reservado para un 2do crédito-->
-					<!--<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-						<span>
-							<i>Imagen vectorial de <a href="https://www.svgbackgrounds.com/" target="_blank">svgbackgrounds</a></i>
-						</span>
-					</div>-->
-
 				</div>
 			</div>
 		</footer>

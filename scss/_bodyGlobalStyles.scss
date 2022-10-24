@@ -40,7 +40,6 @@ main
 
 	.navBottom
 	{
-		nav	{ @include BoxShadow(-5px,6px,2px,#ABA5A2); }
 		button{font-size: 1.15rem;}
 
 
@@ -57,33 +56,6 @@ main
 		background:-ms-radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0) 0%, rgba(0, 188, 212, 0.08) 100%);
 		//global 92%+ browsers support
 		background:radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0) 0%, rgba(0, 188, 212, 0.08) 100%);
-	}
-
-
-	.fullwidth
-	{
-		width:100%;
-		margin-left:0;
-		margin-right:0;
-		padding-left:0;
-		padding-right:0;
-		display:block;
-		text-align:center;
-	}
-}
-
-
-footer
-{
-	.navBottom
-	{
-		//Aplica wrap al dropdown toggle de Servicios MJ en vista mobile.
-		.dropdown-toggle{ white-space: normal; }
-	}
-
-	.RedesSociales
-	{
-		li a { border: 1px solid #a8a8a8!important;}
 	}
 }
 
@@ -156,11 +128,32 @@ header, footer
 }
 
 
+/***********************/
+/***********************/
+/*Mobile devices*/
 @media only screen and (max-width: 992px)
 {
-	.desktop-only{ display:none!important; }
+	.navBottom
+	{
+		@include SectionPadding(4.5rem, 0px, 6.2rem, 0px);
+		h2 {font-size: 1.5rem;}
+		button
+		{
+			margin:0.5rem 0px;
+			@include BoxShadow(-5px,6px,2px,#ABA5A2);
+		}
+	}
 }
+/***********************/
+/***********************/
+/*Notebooks and Desktops*/
 @media only screen and (min-width: 992px)
 {
-	.mobile-only{ display:none!important; }
+	.navBottom
+	{
+		@include SectionPadding(6.2rem, 0px, 6.2rem, 0px);
+		
+		//sombre al btn-group only if btn-group (!btn-group-vertical)
+		nav	{ @include BoxShadow(-5px,6px,2px,#ABA5A2); }
+	}
 }

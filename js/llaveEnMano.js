@@ -44,7 +44,7 @@ function expandirForm()
 function deshabilitarBtn()
 {
     btnExpandirAsesoram.setAttribute("disabled","");
-    btnExpandirAsesoram.setAttribute("class","btn btn-outline-primary w-50")
+    btnExpandirAsesoram.setAttribute("class","btn btn-outline-primary")
     btnExpandirAsesoram.style.boxShadow = "none";
     btnExpandirAsesoram.style.height = "100px";
 }

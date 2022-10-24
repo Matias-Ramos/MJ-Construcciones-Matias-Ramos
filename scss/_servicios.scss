@@ -1,5 +1,6 @@
 .servicios
 {
+	.filtroDeContenido{padding: 0;}
 	ul 
 	{
 		margin-bottom:0;
@@ -29,17 +30,64 @@
 					font-size: 1.3rem;
 				}
 		}
+		//call to action
 		.col-12:nth-child(1)
 		{
 			display:flex;
 			align-items: center;
 			justify-content: center;
 			font-size: 2rem;
-			height:140px;
 		}
-		.col-12:nth-child(2) {height:140px;}
+		.col-12:nth-child(2) {height:10.5rem;}
 
 	}
 }
 
 
+/***********************/
+/***********************/
+/*Notebooks and Desktops*/
+@media only screen and (min-width: 992px)
+{
+	.solicitarAsesoram
+	{
+		button { width:50%; }
+		.row
+		{
+			//call to action
+			.col-12:nth-child(1) { height:10rem; }
+			//btn
+			.col-12:nth-child(2) {height:8rem;}
+		}
+
+	}
+}
+
+/***********************/
+/***********************/
+/*INICIO MEDIA QUERIES*/
+/*mobile Y tablets*/
+
+@media only screen and (max-width: 992px) 
+{
+	.solicitarAsesoram
+	{
+		button
+		{
+			width:75%;
+			margin-top:1.5rem;
+		}
+		.row
+		{
+			//call to action
+			.col-12:nth-child(1)
+			{
+				height:auto;
+				margin: 1rem 0px;
+				padding:0px 20px;
+			}
+			//btn
+			.col-12:nth-child(2) {height:10rem;}
+		}
+	}
+}

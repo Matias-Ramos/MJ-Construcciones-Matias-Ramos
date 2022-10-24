@@ -1,36 +1,46 @@
+
 #containerProyectos
 {
-	//contorno card
-	.col-10{ border:1px solid black; }
-
+	& > .row:first-child { padding-top:2rem; }
+	.price { margin-top:1rem }
 	.card
 	{
+		margin-bottom:3.5rem;
+		box-shadow: -5px 6px 5px #aaaaaa;
+
 		.list-group
 		{
 			display: flex;
 			justify-content: center;
-			.list-group-item
-			{
-				border: none;
-				border-left: 1px solid rgba(0,0,0,.125);
-				border-right: 1px solid rgba(0,0,0,.125);
-			}
+			align-items: center;
+
+			.list-group-item { border: none; }
+		}
+		.ecommerceContainer
+		{
+			padding: 0px 1rem;
 		}
 		.card-body
 		{
-			.ecommerceLink:hover{transform: scale(1.07)}
+			//texto vta. viv. / pozo
+			.card-text 
+			{ 
+				background-color: map-get($coloresPrincipales,$colour-darker); 
+				color: white;
+				padding: 2px 5px;
+				border-radius:2px;
+			}
 
 			.row
 			{
-
 				display: flex;
 				align-items:center;
-				
-				
-				.col-12
+
+				.ecommerceLink
 				{
-					//hace que no se descontrole en grande el tamaño de los svg
-					height:50px;
+					padding: 15px 0px;
+					border-radius:3px;
+					//hace que no se descontrole en grande el tamaño de los logos svg
 					img{height:50px;}
 
 					a
@@ -40,6 +50,12 @@
 						justify-content: center;
 						flex-wrap: nowrap;
 					}
+				}
+				.ecommerceLink:hover
+				{
+					//transform: scale(1.07);
+					background-color: #e9ecef;
+					transition: 0.4s;
 				}
 				.col-12:nth-child(2)
 				{
@@ -53,3 +69,53 @@
 		}
 	}
 }
+
+
+/***********************/
+/***********************/
+/*INICIO MEDIA QUERIES*/
+/*Notebooks and Desktops*/
+
+@media only screen and (min-width: 992px)
+{
+	#containerProyectos
+	{
+		.col-xl-5 {	padding:0 } //container cards
+	}
+}
+
+/***********************/
+/***********************/
+/*Mobile*/
+
+@media only screen and (max-width: 992px)
+{
+	#containerProyectos
+	{
+		.card
+		{
+			//evita que el row salga por fuera de la card
+			.ecommerceContainer .row { margin:auto; }
+
+			//domitorios, baños, m2
+			.list-group-horizontal { flex-wrap: wrap; }
+
+			.card-body
+			{
+				padding:0;
+				.row
+				{
+					display: flex;
+					align-items:center;
+					padding:1rem 0px;
+					.ecommerceLink { padding: 0.5rem 0px; }
+				}
+			}
+			.card-body:first-of-type //título de la propiedad
+			{
+			padding: 0.7rem 0.4rem 0.7rem 0.4rem; 
+			}
+		}
+	}
+}
+

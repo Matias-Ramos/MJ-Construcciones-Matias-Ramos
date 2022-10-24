@@ -9,6 +9,16 @@
 	{
 		@include SectionPadding(3.1rem, 0px, 4.1rem, 0px);
 		border-top:1px solid lightgrey;
+		nav
+		{
+			box-shadow: none; //pisa el shadow del nav estandar(horizontal) 
+			button:nth-child(2)
+			{
+				margin:1.5rem 0px;
+			}
+			button{@include BoxShadow(-4px,4px,2px,#ABA5A2);}
+			btn-group{@include BoxShadow(-4px,4px,2px,#ABA5A2);	}
+		}
 	}
 
 }
