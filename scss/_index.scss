@@ -235,7 +235,7 @@
 	#seccionPlantel
 	{
 		//Parallax
-		@include SectionPadding (5.5rem, 2%, 5.5rem, 2%);
+		@include SectionPadding (8.5rem, 2%, 8.5rem, 2%);
 		.row
 		{
 			//Cuadro blanco dentro del Parallax.
@@ -247,7 +247,7 @@
 
 	#seccionPorQueElegirnos
 	{
-		@include SectionPadding(3.2rem, 2rem, 6.2rem, 2rem);
+		@include SectionPadding(2.2rem, 2rem, 10.2rem, 2rem);
 		background:linear-gradient(90deg, rgba(0, 188, 212, 0.08) 0%, rgba(255, 255, 0, 0) 60%);
 
 		#containerPqEleg-3caract
