@@ -1,8 +1,9 @@
 body
 {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 500;
+	font-size:20px;
 	background-color: map-get($coloresPrincipales, $colour-whiteish-cream);
-
 }
 
 header
@@ -37,6 +38,26 @@ main
 	}
 	
 	section{text-align: center;}
+
+	.accordionFullyClickable
+	{
+		.card-header
+		{
+			padding: 0;
+			button
+			{
+				padding:1.3rem;
+				height: 100%;
+				width: 100%;
+				font-size: 1.2rem;
+			}
+		}
+		.card-body
+		{	
+			font-family: 'Open Sans', sans-serif;
+			font-size:17px;
+		}
+	}
 
 	.navBottom
 	{
@@ -151,9 +172,8 @@ header, footer
 {
 	.navBottom
 	{
-		@include SectionPadding(6.2rem, 0px, 6.2rem, 0px);
-		
-		//sombre al btn-group only if btn-group (!btn-group-vertical)
+		@include SectionPadding(5.2rem, 0px, 6.2rem, 0px);		
+		//sombra al btn-group only if btn-group (!btn-group-vertical)
 		nav	{ @include BoxShadow(-5px,6px,2px,#ABA5A2); }
 	}
 }

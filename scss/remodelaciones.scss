@@ -8,8 +8,8 @@
 		.container-fluid > .row
 		{
 			@extend .AccordionFormatting;
-			button{font-size: 1.15rem;}
-			//centra accordion en ver desktop
+
+			//centra accordion en vers. desktop
 			display: flex;
 			justify-content: center;
 			.card-body 
@@ -43,6 +43,7 @@
 {
 	#remodelaciones
 	{
+		h2{font-size:1.4rem;}
 		.chevron
 		{
 			.row{height:10rem;}
@@ -141,6 +142,7 @@
 
 		section
 		{
+			h2{font-size:1.2rem;}
 			.container-fluid > .row
 			{
 				.card-body 

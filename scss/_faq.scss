@@ -1,9 +1,10 @@
 #faq
 {
 	@extend .AccordionFormatting;
+	
 	section
 	{
-		@include SectionPadding(2.5rem, 0px, 2.5rem, 0px);
+		@include SectionPadding(2.5rem, 0px, 4.5rem, 0px);
 	}
 	.navBottom
 	{
@@ -16,7 +17,10 @@
 			{
 				margin:1.5rem 0px;
 			}
-			button{@include BoxShadow(-4px,4px,2px,#ABA5A2);}
+			button
+			{
+				@include BoxShadow(-4px,4px,2px,#ABA5A2);
+			}
 			btn-group{@include BoxShadow(-4px,4px,2px,#ABA5A2);	}
 		}
 	}
