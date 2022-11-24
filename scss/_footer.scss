@@ -2,12 +2,6 @@ footer
 {
 	background-color: map-get($coloresPrincipales, $colour-darker);
 
-	.navBottom
-	{
-		//Aplica wrap al dropdown toggle de Servicios MJ en vista mobile.
-		.dropdown-toggle{ white-space: normal; }
-	}
-
 	.RedesSociales
 	{
 		li a { border: 1px solid #a8a8a8!important;}
@@ -17,7 +11,10 @@ footer
 	.containerCreditos { font-size: 0.8rem;	}
 
 	//De acá hasta abajo, es el logo MJ para la apertura del footer.
-	.row { position:relative; }
+	.row {
+		position:relative; 
+		z-index:1;
+	}
 	//Ambos circulos
 	.footer-item:nth-child(1)
 	{

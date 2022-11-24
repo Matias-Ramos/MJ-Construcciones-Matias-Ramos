@@ -13,8 +13,16 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			background-color:#d9d9d9;
+			box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 8px;
+			z-index:2;//evita que el hover de los botones quede por encima de la sombra.
 
-			.list-group-item { border: none; }
+			.list-group-item
+			{
+				border: none;
+				background-color:#d9d9d9;
+				
+			}
 		}
 		.ecommerceContainer
 		{

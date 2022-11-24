@@ -78,6 +78,8 @@ main {
     font-family: 'Open Sans', sans-serif;
     font-size: 17px; }
   main .navBottom {
+    position: relative;
+    z-index: 10;
     background: -moz-radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0) 0%, rgba(0, 188, 212, 0.08) 100%);
     background: -webkit-radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0) 0%, rgba(0, 188, 212, 0.08) 100%);
     background: -o-radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0) 0%, rgba(0, 188, 212, 0.08) 100%);
@@ -86,6 +88,7 @@ main {
     main .navBottom button {
       font-size: 1.15rem; }
     main .navBottom .dropdown-toggle {
+      white-space: normal;
       color: #00ADB5; }
 
 header .RedesSociales, footer .RedesSociales {
@@ -163,14 +166,13 @@ header .RedesSociales li:nth-child(2) a:before, footer .RedesSociales li:nth-chi
 
 footer {
   background-color: #393E46; }
-  footer .navBottom .dropdown-toggle {
-    white-space: normal; }
   footer .RedesSociales li a {
     border: 1px solid #a8a8a8 !important; }
   footer .containerCreditos {
     font-size: 0.8rem; }
   footer .row {
-    position: relative; }
+    position: relative;
+    z-index: 1; }
   footer .footer-item:nth-child(1) {
     display: flex;
     justify-content: center;
@@ -643,9 +645,13 @@ footer {
   #containerProyectos .card .list-group {
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    background-color: #d9d9d9;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 8px;
+    z-index: 2; }
     #containerProyectos .card .list-group .list-group-item {
-      border: none; }
+      border: none;
+      background-color: #d9d9d9; }
   #containerProyectos .card .ecommerceContainer {
     padding: 0px 1rem; }
   #containerProyectos .card .card-body .card-text {
