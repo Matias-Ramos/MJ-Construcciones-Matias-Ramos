@@ -155,7 +155,7 @@
 						</div>
 						<div class="custom-control custom-radio">
 							<input type="radio" class="custom-control-input" id="mostrarTodos" name="filtrarProyectos" value="mostrarTodos" checked>
-							<label class="custom-control-label" for="mostrarTodos">Mostrar todos</label>
+							<label class="custom-control-label" for="mostrarTodos">Mostrar todo</label>
 						</div>
 					</div>
 				</div>
@@ -169,11 +169,11 @@
 							<button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
 							Filtrar por:
 							</button>
-							<div class="dropdown-menu w-100 text-center" style="transform: translate3d(0px, 38px, 0px) !important;" aria-labelledby="dropdownMenuButton">
-								<a class="dropdown-item" href="#">Nuevas Edificaciones</a>
-								<a class="dropdown-item" href="#">Remodelaciones</a>
-								<a class="dropdown-item" href="#">Piletas</a>
-								<a class="dropdown-item" href="#">Mostrar todo</a>
+							<div class="dropdown-menu w-100 text-center filtroDeContenido" style="transform: translate3d(0px, 38px, 0px) !important;" aria-labelledby="dropdownMenuButton">
+								<button class="nuevasViviendas dropdown-item">Nuevas Edificaciones</button>
+								<button class="Remodelaciones dropdown-item">Remodelaciones</button>
+								<button class="Piletas dropdown-item">Piletas</button>
+								<button class="mostrarTodos dropdown-item">Mostrar todo</button>
 							</div>
 						</div>
 					</div>
@@ -186,7 +186,7 @@
 
 					<!--Proyecto 1-->
 					<div class="col-10 col-xs-10 col-sm-10 col-lg-5 col-xl-5 mb-5 cardShadow">
-						<div class="card border border-dark nuevasViviendas">
+						<div class="nuevasViviendas card border border-dark">
 							<a href="./proyectos/casa1/proyecto_x.html"><img src="./images/proyectosRealizados/casa1/1.jpeg" class="img-fluid card-img-top" alt="Casa beige 3 ambientes con patio trasero en la tranquilidad de Canning"></a>
 							<div class="card-body">
 								<h2 class="card-title">Vivienda en Canning</h2>
@@ -198,7 +198,7 @@
 
 					<!--Proyecto 2-->
 					<div class="col-10 col-xs-10 col-sm-10 col-lg-5 col-xl-5 mb-5 cardShadow">
-						<div class="card border border-dark">
+						<div class="nuevasViviendas card border border-dark">
 							<a href="./proyectos/casa1/proyecto_x.html"><img src="./images/proyectosRealizados/casa1/1.jpeg" class="img-fluid card-img-top" alt="Casa beige 3 ambientes con patio trasero en la tranquilidad de Canning"></a>
 							<div class="card-body">
 								<h2 class="card-title">Vivienda en Canning</h2>
@@ -210,11 +210,11 @@
 
 					<!--Proyecto 3-->
 					<div class="col-10 col-xs-10 col-sm-10 col-lg-5 col-xl-5 mb-5 cardShadow">
-						<div class="card border border-dark">
-							<a href="./proyectos/casa1/proyecto_x.html"><img src="./images/proyectosRealizados/casa1/1.jpeg" class="img-fluid card-img-top" alt="Casa beige 3 ambientes con patio trasero en la tranquilidad de Canning"></a>
+						<div class="Piletas card border border-dark">
+							<a href="./proyectos/casa1/proyecto_x.html"><img src="./images/proyectosRealizados/casa1/1.jpeg" class="img-fluid card-img-top" alt="Pileta"></a>
 							<div class="card-body">
-								<h2 class="card-title">Vivienda en Canning</h2>
-								<p class="card-text">Vivienda unifamiliar 140m2 <br>Proyecto llave en mano</p>
+								<h2 class="card-title">Pileta en Claypole</h2>
+								<p class="card-text">4x7mts <br>Border infinito</p>
 								<a href="./proyectos/casa1/proyecto_x.html" class="btn btn-primary">Ver proyecto</a>
 							</div>
 						</div>
@@ -222,7 +222,7 @@
 
 					<!--Proyecto 4-->
 					<div class="col-10 col-xs-10 col-sm-10 col-lg-5 col-xl-5 mb-5 cardShadow">
-						<div class="card border border-dark">
+						<div class="nuevasViviendas card border border-dark">
 							<a href="./proyectos/casa1/proyecto_x.html"><img src="./images/proyectosRealizados/casa1/1.jpeg" class="img-fluid card-img-top" alt="Casa beige 3 ambientes con patio trasero en la tranquilidad de Canning"></a>
 							<div class="card-body">
 								<h2 class="card-title">Vivienda en Canning</h2>
@@ -234,7 +234,7 @@
 
 					<!--Link a remodelaciones edilicias-->
 					<div class="col-10 col-xs-10 col-sm-10 col-lg-8 col-xl-8 mb-5 cardShadow">
-						<div class="card border border-dark">
+						<div class="Remodelaciones card border border-dark">
 							<a href="remodelaciones.html"><img src="images/Servicios/remodelaciones/antesYdespues.png" class="img-fluid card-img-top" alt="Antes y despues de una remodelacion edilicia"></a>
 							<div class="card-body">
 								<h2 class="card-title">Remodelaciones edilicias</h2>
@@ -249,7 +249,7 @@
 			<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 			<!-- Local JS file -->
-			<script src="./js/FIlters.js"></script>
+			<script src="./js/Filters.js"></script>
 		</main>
 		<footer>
 			<div class="container-fluid">

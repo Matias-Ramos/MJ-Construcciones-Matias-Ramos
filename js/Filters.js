@@ -1,50 +1,40 @@
-//sintax chosenFilter -> Nuevas Viviendas
-//sintax cardCategory -> filtroVivienda
-
-const filters = document.querySelector(".filtroDeContenido");
-filters.addEventListener("click", filtrar);
+const filters = document.querySelectorAll(".filtroDeContenido"); //0:desktop, 1:mobile
 const cards = document.querySelectorAll(".cardShadow")
 
+if(window.innerWidth < 993)
+	filters[1].addEventListener("click", function(e){filter(e,true)})
+else
+	filters[0].addEventListener("click", function(e){filter(e,false)})
 
 
+function filter(e,isMobile){
 
-function filtrar(e){
-	let chosenFilter = e.target;
-	console.log("chosenFilter: ", chosenFilter.id);
-	// switch(chosenFilter)
-	// {
-	// 	case "Nuevas Viviendas":
-			
-	// }
-	// let filteredCards = cards.filter( card => {
-	// 	const cardCategory = card.children[0].classList[3];
-	// 	if(cardCategory===)
-	// })
-	
-	// cards.forEach( card => {
-	// 	let cardCategory = card.children[0].classList[3];
-		
-	// })
-	//chosenFilter.value
+	let chosenFilter = null;
+
+	if(isMobile){
+		chosenFilter = e.target.classList[0];
+		switchDisplay(e, chosenFilter);		
+	}
+
+	else {
+		if(e.target.nodeName==`INPUT`){ //checks proper click (not on bar nor label)
+			chosenFilter = e.target.value;
+			switchDisplay(e, chosenFilter);
+		}
+	}
 }
 
-
-
-
-// const accordionPlantel = document.querySelector("#seccionPlantel #accordion");
-// accordionPlantel.addEventListener("click", centerViewport);
-
-// function centerViewport(e){
-// 	let clickedCard = null;
-// 	switch(e.target.nodeName)
-// 	{
-// 		case "H3":
-// 			clickedCard = e.target.parentNode.parentNode.parentNode;
-// 			break;
-// 		case "BUTTON":
-// 			clickedCard = e.target.parentNode.parentNode;
-// 			break;
-// 	}
-// 	const imgOfClickedCard = clickedCard.children[1].childNodes[1].childNodes[1];
-// 	setTimeout( ()=> { imgOfClickedCard.scrollIntoView( {behavior: "smooth", block: "center"}) }, 175);
-// }
+function switchDisplay(e, chosenFilter){
+	cards.forEach( card => {
+		let cardCategory = card.childNodes[1].classList[0];
+		switch(true)
+		{
+			case cardCategory===chosenFilter || chosenFilter==='mostrarTodos':
+				card.style.display = "block";
+			break;
+			case cardCategory !== chosenFilter:
+				card.style.display = "none";
+			break;
+		}
+	})
+}
