@@ -22,7 +22,6 @@
 					
 					.col-12:nth-child(1) //img
 					{
-						padding-right:0;
 						img
 						{
 							width:100%;
@@ -59,6 +58,11 @@
 					//espaciado entre cards
 					.col-12 { margin-top:50px; }
 					&:nth-child(2) { padding-bottom:4rem; }
+	
+					//alinea el paso 7 al centro
+					display:flex;
+					justify-content: center;
+
 				}
 				.card 
 				{
@@ -90,6 +94,7 @@
 				//img
 				.col-12:nth-child(1)
 				{
+					padding-right:0;
 					img { height:21.8rem; }	
 				}
 				//texto
@@ -102,11 +107,6 @@
 			.row
 			{
 				.card{height:100%;}
-
-				//alinea el paso 7 al centro
-				display:flex;
-				justify-content: center;
-
 				&:nth-child(2) //achica las cards
 				{
 					padding-left:4rem;
@@ -141,6 +141,26 @@
 						margin: 0px;
 						padding: 1.5rem;
 					}
+				}
+			}
+		}
+	}
+}
+
+/***********************/
+/*Tablets only*/
+@media only screen and (min-width: 768px) and (max-width: 992px)
+{
+	#piletas
+	{
+		.containerSlidesServicios
+		{
+			height: 37.5rem;
+			.rowVitral
+			{
+				.col-12:nth-child(1) //img
+				{
+					padding: 0;
 				}
 			}
 		}

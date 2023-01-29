@@ -555,17 +555,24 @@ footer {
     margin: 0; }
   #containerGaleriaProyectos .card {
     height: 100%; }
+    #containerGaleriaProyectos .card a:nth-child(1) {
+      display: flex; }
     #containerGaleriaProyectos .card .card-body {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between; }
+  #containerGaleriaProyectos #cardRemod a:nth-child(1) {
+    display: block;
+    height: auto; }
 
 /***********************/
 /*INICIO MEDIA QUERIES*/
 /*Netbooks and Desktops*/
 @media only screen and (min-width: 992px) {
   /*Sombras cards Galería*/
+  #containerGaleriaProyectos .row .card a:nth-child(1) {
+    height: 14rem; }
   #containerGaleriaProyectos .row .cardShadow:nth-child(odd) {
     box-shadow: 10px 10px 5px #aaaaaa; }
   #containerGaleriaProyectos .row .cardShadow:nth-child(even) {
@@ -876,7 +883,8 @@ footer {
   #remodelaciones section .container-fluid > .row .card-body .row .col-12:nth-child(1) {
     order: 1; }
   #remodelaciones section .container-fluid > .row .card-body .row .col-12:nth-child(2) {
-    order: 3; }
+    order: 3;
+    margin-top: 1rem; }
   #remodelaciones section .container-fluid > .row .card-body .row .col-12:nth-child(3) {
     order: 2; }
   #remodelaciones section .container-fluid > .row .card-body .row .col-12:nth-child(4) {
@@ -904,11 +912,9 @@ footer {
   #piletas .container-fluid:nth-child(2) .containerSlidesServicios .rowVitral {
     display: flex;
     justify-content: center; }
-    #piletas .container-fluid:nth-child(2) .containerSlidesServicios .rowVitral .col-12:nth-child(1) {
-      padding-right: 0; }
-      #piletas .container-fluid:nth-child(2) .containerSlidesServicios .rowVitral .col-12:nth-child(1) img {
-        width: 100%;
-        border-radius: 0% 0% 0% 20%; }
+    #piletas .container-fluid:nth-child(2) .containerSlidesServicios .rowVitral .col-12:nth-child(1) img {
+      width: 100%;
+      border-radius: 0% 0% 0% 20%; }
     #piletas .container-fluid:nth-child(2) .containerSlidesServicios .rowVitral .col-12:nth-child(2) {
       padding: 0;
       display: flex;
@@ -923,10 +929,13 @@ footer {
 
 #piletas .container-fluid:nth-child(3) {
   background-image: url("../images/Servicios/piletas/sistema-constructivo/lightBckg.png"); }
-  #piletas .container-fluid:nth-child(3) #sistemaConstructivo .row .col-12 {
-    margin-top: 50px; }
-  #piletas .container-fluid:nth-child(3) #sistemaConstructivo .row:nth-child(2) {
-    padding-bottom: 4rem; }
+  #piletas .container-fluid:nth-child(3) #sistemaConstructivo .row {
+    display: flex;
+    justify-content: center; }
+    #piletas .container-fluid:nth-child(3) #sistemaConstructivo .row .col-12 {
+      margin-top: 50px; }
+    #piletas .container-fluid:nth-child(3) #sistemaConstructivo .row:nth-child(2) {
+      padding-bottom: 4rem; }
   #piletas .container-fluid:nth-child(3) #sistemaConstructivo .card {
     box-shadow: 3px 3px 5px #aaaaaa;
     border-color: #393E46; }
@@ -942,18 +951,17 @@ footer {
     padding-right: 15px; }
     #piletas .containerSlidesServicios .rowVitral .col-12 {
       height: 21.8rem; }
-    #piletas .containerSlidesServicios .rowVitral .col-12:nth-child(1) img {
-      height: 21.8rem; }
+    #piletas .containerSlidesServicios .rowVitral .col-12:nth-child(1) {
+      padding-right: 0; }
+      #piletas .containerSlidesServicios .rowVitral .col-12:nth-child(1) img {
+        height: 21.8rem; }
     #piletas .containerSlidesServicios .rowVitral .col-12:nth-child(2) {
       border-radius: 0% 20% 0% 0%; }
-  #piletas #sistemaConstructivo .row {
-    display: flex;
-    justify-content: center; }
-    #piletas #sistemaConstructivo .row .card {
-      height: 100%; }
-    #piletas #sistemaConstructivo .row:nth-child(2) {
-      padding-left: 4rem;
-      padding-right: 4rem; } }
+  #piletas #sistemaConstructivo .row .card {
+    height: 100%; }
+  #piletas #sistemaConstructivo .row:nth-child(2) {
+    padding-left: 4rem;
+    padding-right: 4rem; } }
 
 /***********************/
 /*Mobile and Tablets*/
@@ -968,3 +976,11 @@ footer {
       #piletas .containerSlidesServicios .rowVitral .col-12:nth-child(2) h2 {
         margin: 0px;
         padding: 1.5rem; } }
+
+/***********************/
+/*Tablets only*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #piletas .containerSlidesServicios {
+    height: 37.5rem; }
+    #piletas .containerSlidesServicios .rowVitral .col-12:nth-child(1) {
+      padding: 0; } }

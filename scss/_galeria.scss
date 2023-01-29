@@ -6,6 +6,7 @@
   .card
   {
     height:100%;
+    a:nth-child(1){ display: flex; }
     .card-body
     {
       display:flex;
@@ -13,7 +14,14 @@
       align-items: center;
       justify-content: space-between;
     }
-  } 
+  }
+  #cardRemod{
+    a:nth-child(1){
+      display:block;
+      height: auto;
+    }
+  }
+
 }
 
 
@@ -29,11 +37,16 @@
   {
     .row
     {
+      .card
+      { 
+        a:nth-child(1) { height: 14rem; }
+      }
       .cardShadow:nth-child(odd) { @include BoxShadow(10px,10px,5px,#aaaaaa); }
       .cardShadow:nth-child(even) { @include BoxShadow(-10px,10px,5px,#aaaaaa); }
     }
   }
 }
+
 
 
 
@@ -45,7 +58,7 @@
   #containerGaleriaProyectos
   {
     .row
-    {
+    {    
       .cardShadow
       {
         @include BoxShadow(3px,3px,5px,#aaaaaa);
@@ -53,4 +66,3 @@
     }
   }
 }
-
