@@ -80,6 +80,7 @@ main
 		//global 92%+ browsers support
 		background:radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0) 0%, rgba(0, 188, 212, 0.08) 100%);
 	}
+	.carousel-control-next, .carousel-control-prev{ opacity: 0.6;  } //less opacity than bts default
 }
 
 

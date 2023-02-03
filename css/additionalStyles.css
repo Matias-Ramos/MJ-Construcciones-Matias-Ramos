@@ -90,6 +90,8 @@ main {
     main .navBottom .dropdown-toggle {
       white-space: normal;
       color: #00ADB5; }
+  main .carousel-control-next, main .carousel-control-prev {
+    opacity: 0.6; }
 
 header .RedesSociales, footer .RedesSociales {
   padding: 0; }
@@ -389,6 +391,78 @@ footer {
     #faq .navBottom nav btn-group {
       box-shadow: -4px 4px 2px #ABA5A2; }
 
+.containerProyectoX .modalCarouselImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s; }
+
+.containerProyectoX .modalCarouselImg:hover {
+  opacity: 0.9; }
+
+.containerProyectoX #modalContainer {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 2;
+  /* Sit on top */
+  padding-top: 3.8rem;
+  /* Location of the box */
+  padding-bottom: 1rem;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */ }
+
+.containerProyectoX #modal-content {
+  margin: auto;
+  display: block;
+  width: 100%; }
+
+.containerProyectoX #modal-content {
+  animation-name: zoom;
+  animation-duration: 0.6s; }
+
+@keyframes zoom {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1); } }
+
+.containerProyectoX #modalCloseBtn {
+  position: absolute;
+  z-index: 3;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s; }
+
+.containerProyectoX #modalCloseBtn:hover,
+.containerProyectoX #modalCloseBtn:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer; }
+
+/***********************/
+/***********************/
+/*INICIO MEDIA QUERIES*/
+/*Mobile only*/
+/***********************/
+/*Tablets only*/
+/***********************/
+/***********************/
+/*Notebooks and Desktops*/
 .containerProyectoX .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
 
