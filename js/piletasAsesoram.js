@@ -47,6 +47,7 @@ function deshabilitarBtn()
     btnExpandirAsesoram.setAttribute("class","btn btn-outline-primary")
     btnExpandirAsesoram.style.boxShadow = "none";
     btnExpandirAsesoram.style.height = "100px";
+    btnExpandirAsesoram.removeEventListener("click", actualizarStorageTrue)
 }
 function abrirSeccionAsesoramiento()
 {

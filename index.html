@@ -332,23 +332,23 @@
 
 				<!-- Formulario para ser contactado-->
 					<div class="col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 mx-auto bg-light footer-item">
-						<form class="p-3">
+						<form class="p-3" action="https://formsubmit.co/mattsk97@gmail.com" method="POST">
 							<p class="text-center h5">Podés completar este formulario <br> para que te contactemos.</p>
 							<div class="form-group" >
 								<label for="nombre_cliente">Nombre: </label>
-								<input type="text" class="form-control" id="nombre_cliente" aria-describedby="Campo para ingresar su nombre">
+								<input type="text" class="form-control" name="nombre_cliente" id="nombre_cliente" aria-describedby="Campo para ingresar su nombre" required>
 							</div>
 							<div class="form-group" >
 								<label for="email_cliente">Email: </label>
-								<input type="email" class="form-control" id="email_cliente" aria-describedby="Campo para ingresar su correo electrónico">
+								<input type="email" class="form-control" name="email_cliente" id="email_cliente" aria-describedby="Campo para ingresar su correo electrónico" required>
 							</div>
 							<div class="form-group">
 								<label for="cel_cliente">Teléfono: </label>
-								<input type="text" class="form-control" id="cel_cliente" aria-describedby="Campo para ingresar su teléfono">
+								<input type="text" class="form-control" name="cel_cliente" id="cel_cliente" aria-describedby="Campo para ingresar su teléfono" required>
 							</div>
 							<div class="form-group">
-								<label for="exampleFormControlTextarea1">Dejanos tu consulta: </label>
-								<textarea class="form-control" id="exampleFormControlTextarea1" rows="5" aria-describedby="Campo para ingresar su consulta"></textarea>
+								<label for="consulta_cliente">Dejanos tu consulta: </label>
+								<textarea class="form-control" name="consulta_cliente" id="consulta_cliente" rows="5" aria-describedby="Campo para ingresar su consulta" required></textarea>
 							</div>
 							<div class="text-center">
 								<button type="submit" class="btn btn-primary w-75">Enviar</button>
