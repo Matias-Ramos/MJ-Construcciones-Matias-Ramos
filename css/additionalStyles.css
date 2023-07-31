@@ -767,8 +767,6 @@ footer {
 @media only screen and (max-width: 992px) {
   #containerProyectos .card .ecommerceContainer .row {
     margin: auto; }
-  #containerProyectos .card .list-group-horizontal {
-    flex-wrap: wrap; }
   #containerProyectos .card .card-body {
     padding: 0; }
     #containerProyectos .card .card-body .row {

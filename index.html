@@ -284,12 +284,12 @@
 
 								<!--Servicios-->
 								<button type="button" class="btn btn-secondary bg-light p-0 text-wrap">
-									<a href="galeria.html">Esto hemos construído</a>						
+									<a href="galeria.html" class="fullwidth">Esto hemos construído</a>						
 								</button>
 
 								<!--Boton desplegable-->
 								<div class="btn-group" role="group">
-									<button type="button" class="btn btn-secondary bg-light dropdown-toggle text-wrap" data-toggle="dropdown" aria-expanded="false">Servicios MJ construcciones</button>
+									<button type="button" class="btn btn-secondary bg-light dropdown-toggle text-wrap fullwidth" data-toggle="dropdown" aria-expanded="false">Servicios MJ construcciones</button>
 									<div class="dropdown-menu dropdown-menu-right">
 										<a class="dropdown-item" href="llaveEnMano.html">Proyecto llave en mano</a>
 										<div class="dropdown-divider"></div>
@@ -333,6 +333,9 @@
 				<!-- Formulario para ser contactado-->
 					<div class="col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 mx-auto bg-light footer-item">
 						<form class="p-3" action="https://formsubmit.co/mattsk97@gmail.com" method="POST">
+							<!--Título del email que recibe MJ-->
+							<input value="Consulta web" class="form-control d-none" name="_subject" id="email_title" rows="1" >
+
 							<p class="text-center h5">Podés completar este formulario <br> para que te contactemos.</p>
 							<div class="form-group" >
 								<label for="nombre_cliente">Nombre: </label>

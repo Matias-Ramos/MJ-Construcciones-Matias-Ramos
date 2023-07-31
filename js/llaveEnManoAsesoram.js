@@ -4,27 +4,32 @@ function expandirForm()
     let formContacto = document.createElement("div");
     formContacto.setAttribute("class","col-10 col-xs-10 col-sm-10 col-lg-6 col-xl-6");
     formContacto.innerHTML = `
-    <form class="mb-4">
+    <form class="mb-4" action="https://formsubmit.co/mattsk97@gmail.com" method="POST">
+
+        <!--Título del email que recibe MJ-->
+        <input value="Asesoramiento llave en mano" class="form-control d-none" name="_subject" id="email_title" rows="1" >
+
         <!--Zona-->
         <div class="form-group">
             <label for="zona">Ubicación de la obra: </label>
-            <textarea class="form-control" id="zona" rows="1"></textarea>
+            <textarea class="form-control" name="zona" id="zona" rows="1" required></textarea>
         </div>
+
         <!--Descripción libre-->
         <div class="form-group">
             <label for="descripcionLibre">Información adicional que desee indicar: </label>
-            <textarea class="form-control" id="descripcionLibre" placeholder="Por ejemplo:&#10;-mts² aproximados.&#10;-Material deseado.&#10;-Otro." rows="4"></textarea>
+            <textarea class="form-control" name="descripción" id="descripcionLibre" placeholder="Por ejemplo:&#10;-mts² aproximados.&#10;-Material deseado.&#10;-Otro." rows="4" required></textarea>
         </div>
         <!--Email-->
         <div class="form-group">
             <label for="email">Direccion de correo electrónico:</label>
-            <input type="email" class="form-control" id="email">
+            <input type="email" class="form-control" name="email" id="email" required>
         </div>
 
         <!--Teléfono-->
         <div class="form-group">
             <label for="telefono">Teléfono:</label>
-            <input class="form-control" id="telefono">
+            <input class="form-control" name="telefono" id="telefono" required>
         </div>
 
         <button type="submit" class="btn btn-primary mt-3 mb-5 w-50">Enviar</button>
