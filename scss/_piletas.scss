@@ -47,31 +47,6 @@
 				}
 			}
 		}
-
-		&:nth-child(3) //sist. constr.
-		{
-			background-image: url("../images/Servicios/piletas/sistema-constructivo/lightBckg.png");
-			#sistemaConstructivo //cards
-			{
-				.row
-				{
-					//espaciado entre cards
-					.col-12 { margin-top:50px; }
-					&:nth-child(2) { padding-bottom:4rem; }
-	
-					//alinea el paso 7 al centro
-					display:flex;
-					justify-content: center;
-
-				}
-				.card 
-				{
-					box-shadow: 3px 3px 5px #aaaaaa;
-					border-color:map-get($coloresPrincipales,$colour-darker);
-					.card-body{background: linear-gradient(360deg, #E3E3E3 0%, white 30%);}
-				}
-			}
-		}
 	}
 }
 
@@ -100,19 +75,6 @@
 				//texto
 				.col-12:nth-child(2) { border-radius: 0% 20% 0% 0%; }
 			}
-		}
-
-		#sistemaConstructivo
-		{
-			.row
-			{
-				.card{height:100%;}
-				&:nth-child(2) //achica las cards
-				{
-					padding-left:4rem;
-					padding-right:4rem;
-				}
-			}			
 		}
 	}
 }

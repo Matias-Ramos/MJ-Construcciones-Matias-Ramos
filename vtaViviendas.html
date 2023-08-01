@@ -30,7 +30,7 @@
 		<link rel="stylesheet" href="css/additionalStyles.css">
 
 	</head>
-	<body id="vtaViviendas">
+	<body>
 		<header class="container-fluid">
 			<div class="row">
 				<nav class="navbar navbar-expand-lg navbar-expand-xl navbar-dark bg-dark w-100" role="navigation">
@@ -126,7 +126,7 @@
 				</nav>
 			</div>
 		</header>
-		<main class="servicios">
+		<main class="servicios" id="vtaViviendas">
 
 			<!--H1-->
 			<div class="container-fluid">
@@ -137,217 +137,28 @@
 				</div>				
 			</div>
 
-			<!-- Filtros Desktop-->
-			<div class="container-fluid sticky-top filtroDeContenido">
-				<div class="row">
-					<div class="col-12 d-none d-xs-none d-sm-none d-lg-flex d-xl-flex justify-content-around bg-light">
-						<span>Filtrar por: </span>
-						<div class="custom-control custom-radio">
-							<input type="radio" class="custom-control-input" id="vtaVivienda" name="filtrarProyectos" value="vtaVivienda">
-							<label class="custom-control-label" for="vtaVivienda">Viviendas en venta</label>
+
+
+			<div class="container" id="vtaViviendasContainer">
+				<div class="row" id="vtaViviendasTxt">
+					<div class="col-11 col-xs-11 col-sm-11 col-lg-10 col-xl-10">
+						<p>
+							Desde casas elegantes hasta modernos apartamentos,<br> te conectamos con una agencia inmobiliaria de confianza que te mostrará las opciones más atractivas. 
+						</p>
+					</div>
+					<div class="col-12 col-xs-12 col-sm-12 col-lg-12 col-xl-12">
+						<div class="vtaVivChevronContainer">
+							<div class="vtaVivChevron"></div>
+							<div class="vtaVivChevron"></div>
+							<div class="vtaVivChevron"></div>
 						</div>
-						<div class="custom-control custom-radio">
-							<input type="radio" class="custom-control-input" id="vtaEnPozo" name="filtrarProyectos" value="vtaEnPozo">
-							<label class="custom-control-label" for="vtaEnPozo">Ventas en pozo</label>
-						</div>
-						<div class="custom-control custom-radio">
-							<input type="radio" class="custom-control-input" id="mostrarTodos" name="filtrarProyectos" value="mostrarTodos" checked>
-							<label class="custom-control-label" for="mostrarTodos">Mostrar todos</label>
-						</div>
+					</div>
+					<div id="callToActionVtaViv" class="col-12 col-xs-12 col-sm-12 col-lg-12 col-xl-12">
+						Hacé click debajo para comenzar tu búsqueda
+						<button type="button" class="btn btn-primary">DelSurProps.com</button>
 					</div>
 				</div>
 			</div>
-
-			<!-- Filtros Mobile-->
-			<div class="container-fluid d-lg-none d-xl-none p-0 sticky-top">
-				<div class="row mx-0">
-					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0">
-						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
-							Filtrar por:
-							</button>
-							<div class="dropdown-menu w-100 text-center filtroDeContenido" aria-labelledby="dropdownMenuButton">
-								<button class="vtaVivienda dropdown-item">Viviendas en venta</button>
-								<button class="vtaEnPozo dropdown-item">Ventas en pozo</button>
-								<button class="mostrarTodos dropdown-item">Mostrar todo</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Cards de proyectos-->
-			<section id="containerProyectos" class="container-fluid">
-				<div class="row justify-content-around">
-
-					<!--Garay 1827-->
-					<div class="col-12 col-xs-12 col-sm-12 col-lg-5 col-xl-5 cardShadow">
-						<div class="vtaVivienda card border">
-							<img src="images/proyectosRealizados/foto_principal-compressed.jpg" class="card-img-top" alt="...">
-							<div class="card-body">
-								<h2 class="card-title">Av. Garay 1827</h2>
-								<span class="card-text">Vivienda a la venta</span>
-							</div>
-							<ul class="list-group caracteristicasContainer">
-								<li class="list-group-item">3 dormitorios</li>
-								<li class="list-group-item">2 baños</li>
-								<li class="list-group-item">170m2</li>
-							</ul>
-							<ul class="list-group list-group-flush price">
-								<li class="list-group-item">$40.000.000</li>
-							</ul>
-							<!--Links-->
-							<div class="card-body ecommerceContainer">
-								<div class="container-fluid p-0">
-									<div class="row">
-										<div class="col-12 col-xs-12 col-sm-12 col-lg-4 col-xl-4 ecommerceLink">
-											<a href="#">
-												<img src="images/Servicios/vtaViviendas/mercado-libre.svg" class="img-fluid" alt="logo Mercado Libre">
-											</a>
-										</div>
-										<div class="col-12 col-xs-12 col-sm-12 col-lg-4 col-xl-4 ecommerceLink">
-											<a href="#">
-												<img src="images/Servicios/vtaViviendas/zona-prop2.svg" class="" alt="logo Zona Prop">
-												<span>ZonaProp</span>
-											</a>
-										</div>
-										<div class="col-12 col-xs-12 col-sm-12 col-lg-4 col-xl-4 ecommerceLink">
-											<a href="#">
-												<img src="images/Servicios/vtaViviendas/IconArgenProp7.png" class="img-fluid d-inline-block" alt="logo Mercado Libre">
-												<span>ArgenProp</span>
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!--Coghlan 643-->
-					<div class="col-12 col-xs-12 col-sm-12 col-lg-5 col-xl-5 cardShadow">
-						<div class="vtaEnPozo card border">
-							<img src="images/proyectosRealizados/foto_principal-compressed.jpg" class="card-img-top" alt="...">
-							<div class="card-body">
-								<h2 class="card-title">Coghlan 643</h2>
-								<span class="card-text">Venta en pozo</span>
-							</div>
-							<ul class="list-group caracteristicasContainer">
-								<li class="list-group-item">2 dormitorios</li>
-								<li class="list-group-item">1 baños</li>
-								<li class="list-group-item">140m2</li>
-							</ul>
-							<ul class="list-group list-group-flush price">
-								<li class="list-group-item">$60.000.000 + Cuotas</li>
-							</ul>
-							<!--Links-->
-							<div class="card-body ecommerceContainer">
-								<div class="row">
-									<div class="col-12 col-xs-12 col-sm-4 col-lg-4 col-xl-4 ecommerceLink">
-										<a href="#">
-											<img src="images/Servicios/vtaViviendas/mercado-libre.svg" class="img-fluid" alt="logo Mercado Libre">
-										</a>
-									</div>
-									<div class="col-12 col-xs-12 col-sm-4 col-lg-4 col-xl-4 ecommerceLink">
-										<a href="#">
-											<img src="images/Servicios/vtaViviendas/zona-prop2.svg" class="" alt="logo Zona Prop">
-											<span>ZonaProp</span>
-										</a>
-									</div>
-									<div class="col-12 col-xs-12 col-sm-4 col-lg-4 col-xl-4 ecommerceLink">
-										<a href="#">
-											<img src="images/Servicios/vtaViviendas/IconArgenProp7.png" class="img-fluid d-inline-block" alt="logo Mercado Libre">
-											<span>ArgenProp</span>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!--Av. La Plata 173-->
-					<div class="col-12 col-xs-12 col-sm-12 col-lg-5 col-xl-5 cardShadow">
-						<div class="vtaEnPozo card border">
-							<img src="images/proyectosRealizados/foto_principal-compressed.jpg" class="card-img-top" alt="...">
-							<div class="card-body">
-								<h2 class="card-title">Av. La Plata 173</h2>
-								<span class="card-text">Venta en pozo</span>
-							</div>
-							<ul class="list-group caracteristicasContainer">
-								<li class="list-group-item">4 dormitorios</li>
-								<li class="list-group-item">2 baños</li>
-								<li class="list-group-item">210m2</li>
-							</ul>
-							<ul class="list-group list-group-flush price">
-								<li class="list-group-item">$12.000.000 + Cuotas</li>
-							</ul>
-							<!--Links-->
-							<div class="card-body ecommerceContainer">
-								<div class="row">
-									<div class="col-12 col-xs-12 col-sm-4 col-lg-4 col-xl-4 ecommerceLink">
-										<a href="#">
-											<img src="images/Servicios/vtaViviendas/mercado-libre.svg" class="img-fluid" alt="logo Mercado Libre">
-										</a>
-									</div>
-									<div class="col-12 col-xs-12 col-sm-4 col-lg-4 col-xl-4 ecommerceLink">
-										<a href="#">
-											<img src="images/Servicios/vtaViviendas/zona-prop2.svg" class="" alt="logo Zona Prop">
-											<span>ZonaProp</span>
-										</a>
-									</div>
-									<div class="col-12 col-xs-12 col-sm-4 col-lg-4 col-xl-4 ecommerceLink">
-										<a href="#">
-											<img src="images/Servicios/vtaViviendas/IconArgenProp7.png" class="img-fluid d-inline-block" alt="logo Mercado Libre">
-											<span>ArgenProp</span>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!--Dock Sud 777-->
-					<div class="col-12 col-xs-12 col-sm-12 col-lg-5 col-xl-5 cardShadow">
-						<div class="vtaEnPozo card border">
-							<img src="images/proyectosRealizados/foto_principal-compressed.jpg" class="card-img-top" alt="...">
-							<div class="card-body">
-								<h2 class="card-title">Dock Sud 777</h2>
-								<span class="card-text">Venta en pozo</span>
-							</div>
-							<ul class="list-group caracteristicasContainer">
-								<li class="list-group-item">5 dormitorios</li>
-								<li class="list-group-item">3 baños</li>
-								<li class="list-group-item">280m2</li>
-							</ul>
-							<ul class="list-group list-group-flush price">
-								<li class="list-group-item">$8.000.000 + Cuotas</li>
-							</ul>
-							<!--Links-->
-							<div class="card-body ecommerceContainer">
-								<div class="row">
-									<div class="col-12 col-xs-12 col-sm-4 col-lg-4 col-xl-4 ecommerceLink">
-										<a href="#">
-											<img src="images/Servicios/vtaViviendas/mercado-libre.svg" class="img-fluid" alt="logo Mercado Libre">
-										</a>
-									</div>
-									<div class="col-12 col-xs-12 col-sm-4 col-lg-4 col-xl-4 ecommerceLink">
-										<a href="#">
-											<img src="images/Servicios/vtaViviendas/zona-prop2.svg" class="" alt="logo Zona Prop">
-											<span>ZonaProp</span>
-										</a>
-									</div>
-									<div class="col-12 col-xs-12 col-sm-4 col-lg-4 col-xl-4 ecommerceLink">
-										<a href="#">
-											<img src="images/Servicios/vtaViviendas/IconArgenProp7.png" class="img-fluid d-inline-block" alt="logo Mercado Libre">
-											<span>ArgenProp</span>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
 
 			<!--BTS JAVASCRIPT BELOW-->
 			<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

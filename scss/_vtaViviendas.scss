@@ -1,80 +1,122 @@
 
-#containerProyectos
-{
-	& > .row:first-child { padding-top:2rem; }
-	.price { margin-top:1rem }
-	.card
-	{
-		margin-bottom:3.5rem;
-		box-shadow: -5px 6px 5px #aaaaaa;
+$base: 0.6rem;
+.vtaVivChevronContainer {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	width: 100%;
+	height: 7rem;
+	.vtaVivChevron {
+		position: absolute;
+		width: $base * 3.5;
+		height: $base * 0.8;
+		opacity: 0;
+		transform: scale(0.3);
+		animation: move-vtaVivChevron 3s ease-out infinite;
+		&:first-child {
+			animation: move-vtaVivChevron 3s ease-out 1s infinite;
+		}
+		&:nth-child(2) {
+			animation: move-vtaVivChevron 3s ease-out 2s infinite;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			height: 100%;
+			width: 50%;
+			background: #2c3e50;
+			left: 0;
+			transform: skewY(30deg);
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			height: 100%;
+			width: 50%;
+			background: #2c3e50;
+			right: 0;
+			width: 50%;
+			transform: skewY(-30deg);
+		}
+	}
+}
+@keyframes move-vtaVivChevron {
+ 25% {
+  opacity: 1;
+	}
+ 33.3% {
+  opacity: 1;
+  transform: translateY($base * 3.8);
+ }
+ 66.6% {
+  opacity: 1;
+  transform: translateY($base * 5.2);
+ }
+ 100% {
+  opacity: 0;
+  transform: translateY($base * 8) scale(0.5);
+ }
+}
 
-		.list-group
-		{
+///////////////////////////////////////////////////////
+#vtaViviendas{
+	
+	background-image: url("../images/index/plano.jpg");
+	background-size: cover; 
+	background-attachment: fixed; 
+	background-position: center; 
+	background-repeat: no-repeat; 
+
+	#vtaViviendasContainer{
+		padding-top: 3rem;
+		padding-bottom: 6rem;
+		#vtaViviendasTxt{
+			padding-top: 3rem;
 			display: flex;
+			border: 1px solid black;
+			box-shadow: 0px 7px 13px #555D66;
+			//ff 3.6+
+			background:-moz-radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0) 0%, rgba(0, 188, 212, 0.08) 100%);
+			//safari 5.1+,chrome 10+
+			background:-webkit-radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0) 0%, rgba(0, 188, 212, 0.08) 100%);
+			//opera 11.10+ 
+			background:-o-radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0) 0%, rgba(0, 188, 212, 0.08) 100%);
+			//ie 10+
+			background:-ms-radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0) 0%, rgba(0, 188, 212, 0.08) 100%);
+			//global 92%+ browsers support
+			background:radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0) 0%, rgba(0, 188, 212, 0.08) 100%);
+			background-color: map-get($coloresPrincipales, $colour-whiteish-cream);
 			justify-content: center;
-			align-items: center;
-			background-color:#d9d9d9;
-			box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 8px;
-			z-index:2;//evita que el hover de los botones quede por encima de la sombra.
-
-			.list-group-item
-			{
-				border: none;
-				background-color:#d9d9d9;
-				
+			p{
+				text-align: center;
+				margin-bottom: 2rem;
 			}
 		}
-		.ecommerceContainer
-		{
-			padding: 0px 1rem;
-		}
-		.card-body
-		{
-			//texto vta. viv. / pozo
-			.card-text 
-			{ 
-				background-color: map-get($coloresPrincipales,$colour-darker); 
-				color: white;
-				padding: 2px 5px;
-				border-radius:2px;
-			}
+	}
+}
+#callToActionVtaViv{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	button
+	{
+		box-shadow: 2px 2px 4px #3F3F3F;
+		font-size: 1.3rem;
+		margin-top:0.7rem;
+	}
+}
 
-			.row
-			{
-				display: flex;
-				align-items:center;
 
-				.ecommerceLink
-				{
-					padding: 15px 0px;
-					border-radius:3px;
-					//hace que no se descontrole en grande el tamaño de los logos svg
-					img{height:50px;}
-
-					a
-					{
-						display: flex;
-						align-items:center;
-						justify-content: center;
-						flex-wrap: nowrap;
-					}
-				}
-				.ecommerceLink:hover
-				{
-					//transform: scale(1.07);
-					background-color: #e9ecef;
-					transition: 0.4s;
-				}
-				.col-12:nth-child(2)
-				{
-					span{color:black;}
-				}
-				.col-12:nth-child(3)
-				{
-					span{color:green;}
-				}
-			}
-		}
+/***********************/
+/***********************/
+/*Notebooks and Desktops*/
+@media only screen and (min-width: 992px)
+{
+	#callToActionVtaViv {
+		margin-bottom:5rem;
+		button { width:50%; }
 	}
 }
 
@@ -82,45 +124,20 @@
 /***********************/
 /***********************/
 /*INICIO MEDIA QUERIES*/
-/*Notebooks and Desktops*/
+/*mobile Y tablets*/
 
-@media only screen and (min-width: 992px)
+@media only screen and (max-width: 992px) 
 {
-	#containerProyectos
+	#vtaViviendas
 	{
-		.col-xl-5 {	padding:0 } //container cards
-	}
-}
-
-/***********************/
-/***********************/
-/*Mobile*/
-
-@media only screen and (max-width: 992px)
-{
-	#containerProyectos
-	{
-		.card
+		#callToActionVtaViv
 		{
-			//evita que el row salga por fuera de la card
-			.ecommerceContainer .row { margin:auto; }
-
-			.card-body
+			height: 10rem;
+			button
 			{
-				padding:0;
-				.row
-				{
-					display: flex;
-					align-items:center;
-					padding:1rem 0px;
-					.ecommerceLink { padding: 0.5rem 0px; }
-				}
-			}
-			.card-body:first-of-type //título de la propiedad
-			{
-			padding: 0.7rem 0.4rem 0.7rem 0.4rem; 
+				width:75%;
+				margin-top:1.5rem;
 			}
 		}
 	}
 }
-

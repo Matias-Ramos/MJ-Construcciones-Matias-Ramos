@@ -37,17 +37,6 @@ $coloresPrincipales:
 {
 	padding: $top $right $bottom $left;
 }
-@mixin ZoomInParameters
-{
-	0%
-	{
-		opacity: 0;
-		-webkit-transform: scale3d(.4, .4, .4);
-		transform: scale3d(.4, .4, .4);
-	}
-	50% {opacity: 0.5;}
-	100% {opacity: 0;}
-}
 
 /*********/
 /*EXTENDS*/
