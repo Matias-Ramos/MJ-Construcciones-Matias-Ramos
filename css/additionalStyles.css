@@ -789,8 +789,8 @@ footer {
   background-image: url("../images/index/plano.jpg");
   background-size: cover;
   background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-position: center; }
   #vtaViviendas #vtaViviendasContainer {
     padding-top: 3rem;
     padding-bottom: 6rem; }
