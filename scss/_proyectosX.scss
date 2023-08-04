@@ -1,51 +1,53 @@
-.containerProyectoX
-{
+.containerProyectoX {
 
 	//Reemplazo del color estandar blanco de los indicadores del carousel, a un color oscuro (negro).
-	.carousel-control-prev-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
-	.carousel-control-next-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");}
+	.carousel-control-prev-icon {
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+	}
+
+	.carousel-control-next-icon {
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+	}
 
 	//Main img 
-	.container-fluid:nth-child(2)
-	{
-		.row
-		{
-			padding-top:3rem;
+	.container-fluid:nth-child(2) {
+		.row {
+			padding-top: 3rem;
+
 			//centra la imagen horizontalmente con el resto del contenido
-			.col-12 { padding:0; }
-			
-			img
-			{
-				width:100%;
-				height:auto;
+			.col-12 {
+				padding: 0;
+			}
+
+			img {
+				width: 100%;
+				height: auto;
 			}
 		}
 	}
 
-	.CuadrosDeTexto
-	{	
+	.CuadrosDeTexto {
 		display: inline-block;
 		border: 1px solid black;
 		background-color: #F0F0F0;
 		padding: 9px;
-		border-radius:3px;
+		border-radius: 3px;
 	}
 
-	#CarouselProyectoX
-	{
+	#CarouselProyectoX {
+
 		//Modifica color de los botones izq y der
-		.carousel-control-next-icon, .carousel-control-prev-icon
-		{
+		.carousel-control-next-icon,
+		.carousel-control-prev-icon {
 			background-color: turquoise;
 			width: 30px;
 			height: 30px;
 		}
-		
+
 		//Centra verticalmente al carousel con respecto a la [Descripción del proyecto].
-		.carousel-inner
-		{
-			display:flex;
-			align-items:center;
+		.carousel-inner {
+			display: flex;
+			align-items: center;
 		}
 
 		img {
@@ -62,133 +64,154 @@
 
 
 
-	#modalContainer 
-	{
-		display: none; 				/* Hidden by default */
-		position: fixed; 			/* Stay in place */
-		z-index: 11;				/* Sit on top */
-		padding-top: 3.8rem;		/* Location of the box */
-		padding-bottom: 1rem;		/* Location of the box */
-		width: 100%;				/* Full width */
-		height: 100%;				/* Full height */
-		overflow: auto;				/* Enable scroll if needed */
+	#modalContainer {
+		display: none;
+		/* Hidden by default */
+		position: fixed;
+		/* Stay in place */
+		z-index: 11;
+		/* Sit on top */
+		padding-top: 3.8rem;
+		/* Location of the box */
+		padding-bottom: 1rem;
+		/* Location of the box */
+		width: 100%;
+		/* Full width */
+		height: 100%;
+		/* Full height */
+		overflow: auto;
+		/* Enable scroll if needed */
 		left: 0;
 		top: 0;
-		background-color: rgb(0, 0, 0);			/* Fallback color */
-		background-color: rgba(0, 0, 0, 0.9);	/* Black w/ opacity */
+		background-color: rgb(0, 0, 0);
+		/* Fallback color */
+		background-color: rgba(0, 0, 0, 0.9);
+
+		/* Black w/ opacity */
 		#modal-content {
-		  margin: auto;
-		  display: block;
-		  height: 80vh;
-		  width: auto;
-		  animation-name: zoom;
-		  animation-duration: 0.6s;
+			margin: auto;
+			display: block;
+			height: 80vh;
+			width: auto;
+			animation-name: zoom;
+			animation-duration: 0.6s;
 		}
 
 		@keyframes zoom {
-		  from 	{ transform: scale(0) }
-		  to 	{ transform: scale(1) }
+			from {
+				transform: scale(0)
+			}
+
+			to {
+				transform: scale(1)
+			}
 		}
 
 		#modalCloseBtn {
-		  position: fixed;
-		  z-index: 3;		/* Sets the close-btn above the modal-img */
-		  top: 15px;
-		  right: 35px;
-		  color: white;
-		  font-size: 50px;
-		  font-weight: bold;
-		  transition: 0.3s;
+			position: fixed;
+			z-index: 3;
+			/* Sets the close-btn above the modal-img */
+			top: 15px;
+			right: 35px;
+			color: white;
+			font-size: 50px;
+			font-weight: bold;
+			transition: 0.3s;
 		}
 
 		#modalCloseBtn:hover,
 		#modalCloseBtn:focus {
-		  color: #bbb;
-		  text-decoration: none;
-		  cursor: pointer;
+			color: #bbb;
+			text-decoration: none;
+			cursor: pointer;
 		}
 	}
 
 
 	//Formatea las lineas separadoras
-	.guardBand
-	{
+	.guardBand {
 		height: 15px;
-		overflow:hidden;
-		img{ width:100%; }
-	}
-	
-	.framesProyectoX
-	{
-		h2{	font-family: 'Poppins', sans-serif;}
+		overflow: hidden;
 
-		.container-fluid
-		{
+		img {
+			width: 100%;
+		}
+	}
+
+	.framesProyectoX {
+		h2 {
+			font-family: 'Poppins', sans-serif;
+		}
+
+		.container-fluid {
+
 			//b&y band, YT video, b&y band
-			.row:first-child
-			{
+			.row:first-child {
 				justify-content: center;
 				background-color: #535c68;
-				color:map-get($coloresPrincipales, $colour-whiteish-cream);
+				color: map-get($coloresPrincipales, $colour-whiteish-cream);
 
 				//h2 "Video del proyecto"
-				.col-lg-5
-				{
-					display:flex;
-					align-items:center;
+				.col-lg-5 {
+					display: flex;
+					align-items: center;
 					justify-content: center;
-					img { margin: 0px 10px;  }
-					h2 { margin:0; }
+
+					img {
+						margin: 0px 10px;
+					}
+
+					h2 {
+						margin: 0;
+					}
 				}
+
 				//frame YT video
-				div:nth-child(3)
-				{
-					iframe
-					{
+				div:nth-child(3) {
+					iframe {
 						width: 100%;
 						/*Elimina un espacio en blanco que se forma debajo del renglón, 
 						propio de los display:inline de los iframes.*/
-						display:block;
+						display: block;
 					}
 				}
 			}
 
 			//seccion GoogleMaps
-			.row:nth-child(2)
-			{
-				display:flex;
-				align-items:center;
+			.row:nth-child(2) {
+				display: flex;
+				align-items: center;
 				justify-content: center;
-				.col-xl-5
-				{
-					display:flex;
-					align-items:center;
+
+				.col-xl-5 {
+					display: flex;
+					align-items: center;
 					justify-content: center;
 				}
-				iframe
-				{
-					width:100%;
-					height:400px;
+
+				iframe {
+					width: 100%;
+					height: 400px;
 					/*Elimina un espacio en blanco que se forma debajo del renglón, 
 					propio de los display:inline de los iframes.*/
-					display:block;
+					display: block;
 				}
-				
-				img{ margin-right: 10px; }
 
-				h2
-				{
-					display:inline-block;
-					margin:0;
+				img {
+					margin-right: 10px;
+				}
+
+				h2 {
+					display: inline-block;
+					margin: 0;
 				}
 
 			}
 		}
 	}
 
-	.navBottom
-	{
-		border-top:1px solid black;
+	.navBottom {
+		border-top: 1px solid black;
 	}
 }
 
@@ -197,60 +220,71 @@
 /***********************/
 /*INICIO DE MEDIA QUERIES*/
 /*Netbooks and Desktops*/
-@media only screen and (min-width: 992px)
-{
-	.containerProyectoX 
-	{
-		.carousel-inner { height:550px; }
-		.CuadrosDeTexto
-		{
+@media only screen and (min-width: 992px) {
+	.containerProyectoX {
+		.carousel-inner {
+			height: 550px;
+		}
+
+		.CuadrosDeTexto {
 			text-align: left;
 			justify-content: left;
-			#DescriptProyX
-			{
+
+			#DescriptProyX {
 				display: flex;
 				flex-direction: column;
 				justify-content: space-evenly;
 				align-items: flex-start;
 			}
 		}
-		.navBottom
-		{
-			border-top:1px solid black;
+
+		.navBottom {
+			border-top: 1px solid black;
 			@include SectionPadding(4.7rem, 0px, 6.7rem, 0px);
 		}
 	}
-	.framesProyectoX
-	{
-		margin-top:4rem;
-		.container-fluid
-		{
+
+	.framesProyectoX {
+		margin-top: 4rem;
+
+		.container-fluid {
+
 			//b&y band, YT video, b&y band
-			.row:first-child
-			{
+			.row:first-child {
+
 				//h2 "Video del proyecto"
-				.col-lg-5 { padding: 4rem 0px 4rem 0px; }
+				.col-lg-5 {
+					padding: 4rem 0px 4rem 0px;
+				}
 
 				//frame YT video
-				div:nth-child(3)
-				{
+				div:nth-child(3) {
 					padding: 4rem 0px 4rem 0px;
-					iframe { height: 400px; }
+
+					iframe {
+						height: 400px;
+					}
 				}
 
 				//agranda la sección de YT
-				.guardBand:nth-child(even) { margin-top:2rem; }
-				.guardBand:nth-child(odd) { margin-bottom:2rem; }
+				.guardBand:nth-child(even) {
+					margin-top: 2rem;
+				}
+
+				.guardBand:nth-child(odd) {
+					margin-bottom: 2rem;
+				}
 			}
 
 			//seccion GoogleMaps
-			.row:nth-child(2)
-			{
-				background-color:white;
-				color:black;
+			.row:nth-child(2) {
+				background-color: white;
+				color: black;
 
 				//iFrame
-				.col-lg-6 { margin: 4rem 0px 4rem 0px; }
+				.col-lg-6 {
+					margin: 4rem 0px 4rem 0px;
+				}
 			}
 		}
 	}
@@ -262,70 +296,80 @@
 /***********************/
 /*Mobile and Tablets*/
 
-@media only screen and (max-width: 992px)
-{
+@media only screen and (max-width: 992px) {
 
-	.containerProyectoX 
-	{
-		.CuadrosDeTexto
-		{
+	.containerProyectoX {
+		.CuadrosDeTexto {
 			justify-content: center;
 			align-items: center;
-			#DescriptProyX 
-			{
-				span{ text-align: center; }
-				h2{ font-size:1.5rem; }
+
+			#DescriptProyX {
+				span {
+					text-align: center;
+				}
+
+				h2 {
+					font-size: 1.5rem;
+				}
 			}
 		}
-		
-		#CarouselProyectoX
-		{
-			padding: 0;
-			.carousel-inner { height:18.7rem; }
-		}
-		
-		.framesProyectoX
-		{
-			margin-top:2rem;
 
-			.container-fluid
-			{
+		#CarouselProyectoX {
+			padding: 0;
+
+			.carousel-inner {
+				height: 18.7rem;
+			}
+		}
+
+		.framesProyectoX {
+			margin-top: 2rem;
+
+			.container-fluid {
 
 				//b&y band, YT video, b&y band
-				.row:first-child
-				{
+				.row:first-child {
+
 					//h2 "Video del proyecto"
-					.col-lg-5 { padding: 4rem 0px 3rem 0px; }
-					
+					.col-lg-5 {
+						padding: 4rem 0px 3rem 0px;
+					}
+
 					//frame YT video
-					div:nth-child(3)
-					{
+					div:nth-child(3) {
 						//padding mobile
-						padding:0px;
-						iframe
-						{
+						padding: 0px;
+
+						iframe {
 							//height and margin mobile
 							height: 18.7rem;
 							margin-bottom: 2.5rem;
 						}
 					}
 
-					.guardBand { padding:0; }
-					.guardBand:nth-child(even) { margin-top:2rem; }
+					.guardBand {
+						padding: 0;
+					}
+
+					.guardBand:nth-child(even) {
+						margin-top: 2rem;
+					}
 				}
 
 				//seccion GoogleMaps
-				.row:nth-child(2)
-				{
-					background-color:white;
-					.col-12{margin-bottom:2rem;}
+				.row:nth-child(2) {
+					background-color: white;
+
+					.col-12 {
+						margin-bottom: 2rem;
+					}
+
 					padding: 3.2rem 0px 2.2rem 0px;
 				}
 			}
 		}
-		
-		.navBottom
-		{
+
+		.navBottom {
 			@include SectionPadding (4rem, 0px, 6.7, 0px);
 		}
 	}
@@ -335,19 +379,19 @@
 
 
 //MEDIUM-PHONE (not small)
-@media only screen and (min-width: 576px) and (max-width: 768px)
-{
-	#CarouselProyectoX
-	{
-		.carousel-inner { height:450px; }
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+	#CarouselProyectoX {
+		.carousel-inner {
+			height: 450px;
+		}
 	}
 }
 
 //TABLET
-@media only screen and (min-width: 768px) and (max-width: 992px)
-{
-	#CarouselProyectoX
-	{
-		.carousel-inner { height:600px; }
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+	#CarouselProyectoX {
+		.carousel-inner {
+			height: 600px;
+		}
 	}
 }

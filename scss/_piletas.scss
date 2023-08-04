@@ -1,48 +1,46 @@
-#piletas
-{
-	.container-fluid
-	{	
+#piletas {
+	.container-fluid {
 		&:nth-child(2) //carousel tipos de piletas 
-		{
+
+			{
 			box-shadow: 0px 0px 17px #242423 inset;
-			padding-top:75px;
-			padding-bottom:75px;
+			padding-top: 75px;
+			padding-bottom: 75px;
 			background-color: #18549d;
 			background-image: url("data:image/svg+xml,%3Csvg width='32' height='64' viewBox='0 0 32 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 28h20V16h-4v8H4V4h28v28h-4V8H8v12h4v-8h12v20H0v-4zm12 8h20v4H16v24H0v-4h12V36zm16 12h-4v12h8v4H20V44h12v12h-4v-8zM0 36h8v20H0v-4h4V40H0v-4z' fill='%230066bd' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
-			color:#fff;
-			text-shadow:0 2px 4px black;
+			color: #fff;
+			text-shadow: 0 2px 4px black;
 
-			.containerSlidesServicios
-			{
-				.rowVitral
-				{
+			.containerSlidesServicios {
+				.rowVitral {
 					//centra el vitral
-					display:flex;
-					justify-content:center;
-					
+					display: flex;
+					justify-content: center;
+
 					.col-12:nth-child(1) //img
-					{
-						img
+
 						{
-							width:100%;
+						img {
+							width: 100%;
 							border-radius: 0% 0% 0% 20%;
-						}	
+						}
 					}
 
 					.col-12:nth-child(2) //texto
-					{
-						padding:0;
-						display:flex;
+
+						{
+						padding: 0;
+						display: flex;
 						align-items: center;
 						justify-content: center;
 						box-shadow: 0px 2px 5px #555d66;
 
 						//glass effect
-						background: rgba( 255, 255, 255, 0.25 );
-						box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-						backdrop-filter: blur( 1px );
-						-webkit-backdrop-filter: blur( 1px );
-						border: 1px solid rgba( 255, 255, 255, 0.18 );
+						background: rgba(255, 255, 255, 0.25);
+						box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+						backdrop-filter: blur(1px);
+						-webkit-backdrop-filter: blur(1px);
+						border: 1px solid rgba(255, 255, 255, 0.18);
 					}
 				}
 			}
@@ -55,25 +53,29 @@
 /***********************/
 /*INICIO MEDIA QUERIES*/
 /*Netbooks and Desktops*/
-@media only screen and (min-width: 992px)
-{
-	#piletas
-	{
-		.containerSlidesServicios
-		{
-			.rowVitral
-			{
-				padding-right:15px;
-				
-				.col-12{ height:21.8rem; }
-				//img
-				.col-12:nth-child(1)
-				{
-					padding-right:0;
-					img { height:21.8rem; }	
+@media only screen and (min-width: 992px) {
+	#piletas {
+		.containerSlidesServicios {
+			.rowVitral {
+				padding-right: 15px;
+
+				.col-12 {
+					height: 21.8rem;
 				}
+
+				//img
+				.col-12:nth-child(1) {
+					padding-right: 0;
+
+					img {
+						height: 21.8rem;
+					}
+				}
+
 				//texto
-				.col-12:nth-child(2) { border-radius: 0% 20% 0% 0%; }
+				.col-12:nth-child(2) {
+					border-radius: 0% 20% 0% 0%;
+				}
 			}
 		}
 	}
@@ -82,24 +84,25 @@
 
 /***********************/
 /*Mobile and Tablets*/
-@media only screen and (max-width: 992px)
-{
-	#piletas
-	{
-		.containerSlidesServicios
-		{
+@media only screen and (max-width: 992px) {
+	#piletas {
+		.containerSlidesServicios {
 			height: 23rem;
-			padding:0;
+			padding: 0;
 
-			.rowVitral
-			{
+			.rowVitral {
+
 				//img
-				.col-12:nth-child(1) { order:2; }
+				.col-12:nth-child(1) {
+					order: 2;
+				}
 
 				.col-12:nth-child(2) //texto
-				{
-					order:1;
-					h2{
+
+					{
+					order: 1;
+
+					h2 {
 						margin: 0px;
 						padding: 1.5rem;
 					}
@@ -111,17 +114,15 @@
 
 /***********************/
 /*Tablets only*/
-@media only screen and (min-width: 768px) and (max-width: 992px)
-{
-	#piletas
-	{
-		.containerSlidesServicios
-		{
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+	#piletas {
+		.containerSlidesServicios {
 			height: 37.5rem;
-			.rowVitral
-			{
+
+			.rowVitral {
 				.col-12:nth-child(1) //img
-				{
+
+					{
 					padding: 0;
 				}
 			}

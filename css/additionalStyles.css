@@ -37,11 +37,17 @@ body {
   .mobile-only {
     display: none !important; } }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   font-family: 'Titillium Web', sans-serif;
   font-weight: 500;
   font-size: 20px;
   background-color: #EEEEEE; }
+
+header #myNavbar .navbar-nav {
+  align-items: center; }
 
 header .mobile-only li {
   font-size: 1.6rem; }
@@ -94,15 +100,19 @@ main {
     main .navBottom .dropdown-toggle {
       white-space: normal;
       color: #00ADB5; }
-  main .carousel-control-next, main .carousel-control-prev {
+  main .carousel-control-next,
+  main .carousel-control-prev {
     opacity: 0.6; }
 
-header .RedesSociales, footer .RedesSociales {
+header .RedesSociales,
+footer .RedesSociales {
   padding: 0; }
-  header .RedesSociales li, footer .RedesSociales li {
+  header .RedesSociales li,
+  footer .RedesSociales li {
     display: flex;
     align-items: center; }
-    header .RedesSociales li a, footer .RedesSociales li a {
+    header .RedesSociales li a,
+    footer .RedesSociales li a {
       width: 50px;
       height: 50px;
       background-color: #ebf4ff;
@@ -116,17 +126,20 @@ header .RedesSociales, footer .RedesSociales {
       overflow: hidden;
       border: 1px solid whitesmoke;
       z-index: 1; }
-      header .RedesSociales li a .icon, footer .RedesSociales li a .icon {
+      header .RedesSociales li a .icon,
+      footer .RedesSociales li a .icon {
         position: relative;
         color: #262626;
         transition: .5s;
         z-index: 3; }
 
-header .RedesSociales li a:hover .icon, footer .RedesSociales li a:hover .icon {
+header .RedesSociales li a:hover .icon,
+footer .RedesSociales li a:hover .icon {
   color: #fff;
   transform: rotateY(360deg); }
 
-header .RedesSociales li a:before, footer .RedesSociales li a:before {
+header .RedesSociales li a:before,
+footer .RedesSociales li a:before {
   width: 100%;
   height: 100%;
   top: 100%;
@@ -137,13 +150,16 @@ header .RedesSociales li a:before, footer .RedesSociales li a:before {
   transition: .5s;
   z-index: 2; }
 
-header .RedesSociales li a:hover:before, footer .RedesSociales li a:hover:before {
+header .RedesSociales li a:hover:before,
+footer .RedesSociales li a:hover:before {
   top: 0; }
 
-header .RedesSociales li:nth-child(1) a:before, footer .RedesSociales li:nth-child(1) a:before {
+header .RedesSociales li:nth-child(1) a:before,
+footer .RedesSociales li:nth-child(1) a:before {
   background: #25D366; }
 
-header .RedesSociales li:nth-child(2) a:before, footer .RedesSociales li:nth-child(2) a:before {
+header .RedesSociales li:nth-child(2) a:before,
+footer .RedesSociales li:nth-child(2) a:before {
   background: #f09433;
   background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
@@ -242,7 +258,9 @@ footer {
 /***********GENERAL ATTRIBUTES************/
 /*****************************************/
 /*Eliminación de overflow en eje X causado por Bootstrap */
-#seccionPlantel .row, #seccionPorQueElegirnos .row, .navBottom .row {
+#seccionPlantel .row,
+#seccionPorQueElegirnos .row,
+.navBottom .row {
   margin-right: 0;
   margin-left: 0; }
 
@@ -270,6 +288,10 @@ footer {
     box-shadow: 1px 4px 5px #555D66; }
     #seccionPlantel .row .col-lg-1 {
       font-size: 3rem; }
+    #seccionPlantel .row #popoverContainer {
+      width: 40%; }
+      #seccionPlantel .row #popoverContainer .popover img {
+        width: 35px; }
   #seccionPlantel h2 {
     font-size: 2rem; }
 
@@ -379,21 +401,27 @@ footer {
   #index .navBottom {
     padding: 5.2rem 0px 6.2rem 0px; } }
 
-#faq {
-  overflow: hidden; }
-  #faq section {
-    padding: 2.5rem 0px 4.5rem 0px; }
-  #faq .navBottom {
-    padding: 3.1rem 0px 4.1rem 0px;
-    border-top: 1px solid lightgrey; }
-    #faq .navBottom nav {
-      box-shadow: none; }
-      #faq .navBottom nav button:nth-child(2) {
-        margin: 1.5rem 0px; }
-      #faq .navBottom nav button {
-        box-shadow: -4px 4px 2px #ABA5A2; }
-      #faq .navBottom nav btn-group {
-        box-shadow: -4px 4px 2px #ABA5A2; }
+/***********************/
+/***********************/
+/*Desktops extra wide screen*/
+@media only screen and (min-width: 1900px) {
+  #seccionMision .row .col-12:nth-child(2) {
+    clip-path: polygon(24% 0, 100% 0%, 100% 100%, 5% 100%); } }
+
+#faq section {
+  padding: 2.5rem 0px 4.5rem 0px; }
+
+#faq .navBottom {
+  padding: 3.1rem 0px 4.1rem 0px;
+  border-top: 1px solid lightgrey; }
+  #faq .navBottom nav {
+    box-shadow: none; }
+    #faq .navBottom nav button:nth-child(2) {
+      margin: 1.5rem 0px; }
+    #faq .navBottom nav button {
+      box-shadow: -4px 4px 2px #ABA5A2; }
+    #faq .navBottom nav btn-group {
+      box-shadow: -4px 4px 2px #ABA5A2; }
 
 .containerProyectoX .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
@@ -416,7 +444,8 @@ footer {
   padding: 9px;
   border-radius: 3px; }
 
-.containerProyectoX #CarouselProyectoX .carousel-control-next-icon, .containerProyectoX #CarouselProyectoX .carousel-control-prev-icon {
+.containerProyectoX #CarouselProyectoX .carousel-control-next-icon,
+.containerProyectoX #CarouselProyectoX .carousel-control-prev-icon {
   background-color: turquoise;
   width: 30px;
   height: 30px; }
@@ -854,7 +883,7 @@ footer {
     #llaveEnMano .h1yDescripcion .chevron:nth-child(3) {
       margin-left: -1px; }
       #llaveEnMano .h1yDescripcion .chevron:nth-child(3) .col-lg-12 {
-        clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%); }
+        clip-path: polygon(0% -1%, 90% 0%, 100% 50%, 90% 100%, -1% 100%); }
         #llaveEnMano .h1yDescripcion .chevron:nth-child(3) .col-lg-12 p {
           font-size: 1.1rem; }
   #llaveEnMano #cuatroPasosSon {

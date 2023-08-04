@@ -1,23 +1,33 @@
-#containerGaleriaProyectos
-{
+#containerGaleriaProyectos {
   @include SectionPadding(40px, 0px, 10px, 0px);
-  .cardShadow {padding:0;}
-  .row { margin:0; } //arregla overflow-x generado por BTS
-  .card
-  {
-    height:100%;
-    a:nth-child(1){ display: flex; }
-    .card-body
-    {
-      display:flex;
-      flex-direction:column;
+
+  .cardShadow {
+    padding: 0;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  //arregla overflow-x generado por BTS
+  .card {
+    height: 100%;
+
+    a:nth-child(1) {
+      display: flex;
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: space-between;
     }
   }
-  #cardRemod{
-    a:nth-child(1){
-      display:block;
+
+  #cardRemod {
+    a:nth-child(1) {
+      display: block;
       height: auto;
     }
   }
@@ -30,19 +40,24 @@
 /*INICIO MEDIA QUERIES*/
 /*Netbooks and Desktops*/
 
-@media only screen and (min-width:992px)
-{
+@media only screen and (min-width:992px) {
+
   /*Sombras cards Galería*/
-  #containerGaleriaProyectos
-  {
-    .row
-    {
-      .card
-      { 
-        a:nth-child(1) { height: 14rem; }
+  #containerGaleriaProyectos {
+    .row {
+      .card {
+        a:nth-child(1) {
+          height: 14rem;
+        }
       }
-      .cardShadow:nth-child(odd) { @include BoxShadow(10px,10px,5px,#aaaaaa); }
-      .cardShadow:nth-child(even) { @include BoxShadow(-10px,10px,5px,#aaaaaa); }
+
+      .cardShadow:nth-child(odd) {
+        @include BoxShadow(10px, 10px, 5px, #aaaaaa);
+      }
+
+      .cardShadow:nth-child(even) {
+        @include BoxShadow(-10px, 10px, 5px, #aaaaaa);
+      }
     }
   }
 }
@@ -52,16 +67,13 @@
 
 /***********************/
 /*Mobile and Tablets*/
-@media only screen and (max-width:992px)
-{
+@media only screen and (max-width:992px) {
+
   /*Sombras cards Galería*/
-  #containerGaleriaProyectos
-  {
-    .row
-    {    
-      .cardShadow
-      {
-        @include BoxShadow(3px,3px,5px,#aaaaaa);
+  #containerGaleriaProyectos {
+    .row {
+      .cardShadow {
+        @include BoxShadow(3px, 3px, 5px, #aaaaaa);
       }
     }
   }

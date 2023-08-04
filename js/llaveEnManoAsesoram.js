@@ -1,10 +1,12 @@
-function expandirForm()
-{
-    let divAsesoram = document.querySelector(".solicitarAsesoram section");
-    let formContacto = document.createElement("div");
-    formContacto.setAttribute("class","col-10 col-xs-10 col-sm-10 col-lg-6 col-xl-6");
-    formContacto.innerHTML = `
-    <form class="mb-4" action="https://formsubmit.co/mattsk97@gmail.com" method="POST">
+function expandirForm() {
+  let divAsesoram = document.querySelector(".solicitarAsesoram section");
+  let formContacto = document.createElement("div");
+  formContacto.setAttribute(
+    "class",
+    "col-10 col-xs-10 col-sm-10 col-lg-6 col-xl-6"
+  );
+  formContacto.innerHTML = `
+    <form class="mb-4" action="https://formsubmit.co/6dc0d61678dc5bc1af87fd3dee39b791" method="POST">
 
         <!--Título del email que recibe MJ-->
         <input value="Asesoramiento llave en mano" class="form-control d-none" name="_subject" id="email_title" rows="1" >
@@ -34,47 +36,44 @@ function expandirForm()
 
         <button type="submit" class="btn btn-primary mt-3 mb-5 w-50">Enviar</button>
     </form>`;
-    divAsesoram.append(formContacto);
+  divAsesoram.append(formContacto);
 
-    let agrandarFuente = () =>
-    {
-    let formContent = document.querySelectorAll(".solicitarAsesoram .form-group");
-    for(let i=0; i<formContent.length; i++)
-        formContent[i].style.fontSize = "larger";
-    }
-    agrandarFuente();
-
-    
+  let agrandarFuente = () => {
+    let formContent = document.querySelectorAll(
+      ".solicitarAsesoram .form-group"
+    );
+    for (let i = 0; i < formContent.length; i++)
+      formContent[i].style.fontSize = "larger";
+  };
+  agrandarFuente();
 }
-function deshabilitarBtn()
-{
-    btnExpandirAsesoram.setAttribute("disabled","");
-    btnExpandirAsesoram.setAttribute("class","btn btn-outline-primary")
-    btnExpandirAsesoram.style.boxShadow = "none";
-    btnExpandirAsesoram.style.height = "100px";
-    btnExpandirAsesoram.removeEventListener("click", actualizarStorageTrue)
+function deshabilitarBtn() {
+  btnExpandirAsesoram.setAttribute("disabled", "");
+  btnExpandirAsesoram.setAttribute("class", "btn btn-outline-primary");
+  btnExpandirAsesoram.style.boxShadow = "none";
+  btnExpandirAsesoram.style.height = "100px";
+  btnExpandirAsesoram.removeEventListener("click", actualizarStorageTrue);
 }
-function abrirSeccionAsesoramiento()
-{
-    expandirForm();
-    deshabilitarBtn();
+function abrirSeccionAsesoramiento() {
+  expandirForm();
+  deshabilitarBtn();
 }
-function actualizarStorageTrue()
-{
-    sessionStorage.setItem('asesoramLlaveClicked', true);
-    abrirSeccionAsesoramiento();
+function actualizarStorageTrue() {
+  sessionStorage.setItem("asesoramLlaveClicked", true);
+  abrirSeccionAsesoramiento();
 }
-function checkStorage(formDisplayed)
-{
-    if(formDisplayed===null) //(if btnExpandirAsesoram. nunca clickeado) -> creación status default: "false".
-        sessionStorage.setItem('asesoramLlaveClicked', false);
-    else
-    {
-        if(formDisplayed=="true") //Si ya fue clickeado, mantener el formulario abierto.
-            abrirSeccionAsesoramiento();
-    }
+function checkStorage(formDisplayed) {
+  if (formDisplayed === null)
+    //(if btnExpandirAsesoram. nunca clickeado) -> creación status default: "false".
+    sessionStorage.setItem("asesoramLlaveClicked", false);
+  else {
+    if (formDisplayed == "true")
+      //Si ya fue clickeado, mantener el formulario abierto.
+      abrirSeccionAsesoramiento();
+  }
 }
 
-window.onload = () => checkStorage(sessionStorage.getItem("asesoramLlaveClicked"));
+window.onload = () =>
+  checkStorage(sessionStorage.getItem("asesoramLlaveClicked"));
 let btnExpandirAsesoram = document.querySelector(".solicitarAsesoram button");
-btnExpandirAsesoram.addEventListener("click",actualizarStorageTrue);
+btnExpandirAsesoram.addEventListener("click", actualizarStorageTrue);

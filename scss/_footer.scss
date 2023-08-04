@@ -1,39 +1,42 @@
-footer
-{
+footer {
 	background-color: map-get($coloresPrincipales, $colour-darker);
 
-	.RedesSociales
-	{
-		li a { border: 1px solid #a8a8a8!important;}
+	.RedesSociales {
+		li a {
+			border: 1px solid #a8a8a8 !important;
+		}
 	}
 
 	//Créditos
-	.containerCreditos { font-size: 0.8rem;	}
+	.containerCreditos {
+		font-size: 0.8rem;
+	}
 
 	//De acá hasta abajo, es el logo MJ para la apertura del footer.
 	.row {
-		position:relative; 
-		z-index:1;
+		position: relative;
+		z-index: 1;
 	}
+
 	//Ambos circulos
-	.footer-item:nth-child(1)
-	{
-		display:flex;
+	.footer-item:nth-child(1) {
+		display: flex;
 		justify-content: center;
-		position:absolute;
-		top:-97px;
+		position: absolute;
+		top: -97px;
 
 		//logo
-		img	{ z-index:3; }
+		img {
+			z-index: 3;
+		}
 
 		//Estela alrededor del logo
-		#circle
-		{
-			display:flex;
+		#circle {
+			display: flex;
 			justify-content: center;
-			position:absolute;
-			top:-6px;
-			z-index:2;  
+			position: absolute;
+			top: -6px;
+			z-index: 2;
 			height: 90px;
 			width: 90px;
 			background-color: map-get($coloresPrincipales, $colour-blueish-logo);
@@ -43,14 +46,12 @@ footer
 	}
 
 	//Alineacion de formulario datos personales MJ
-	.footer-item:nth-child(3)
-	{
-		.card-body
-		{
+	.footer-item:nth-child(3) {
+		.card-body {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-evenly;
-			align-items:center;
+			align-items: center;
 		}
 	}
 
@@ -59,44 +60,41 @@ footer
 /***********************/
 /***********************/
 //MOBILE
-@media only screen and (max-width:992px)
-{
-	footer
-	{
-		padding-top:3rem; //eleva el color oscuro hasta la mitad del logo.
-		.card
-		{
-			margin-top:1.9rem;
-			.card-title
-			{
+@media only screen and (max-width:992px) {
+	footer {
+		padding-top: 3rem; //eleva el color oscuro hasta la mitad del logo.
+
+		.card {
+			margin-top: 1.9rem;
+
+			.card-title {
 				display: block;
 				padding: 0.9rem 0.6rem 0px 0.6rem;
 			}
 
 			//alineación redes sociales mobile
-			.card-body
-			{
-				.mobile-only
-				{
+			.card-body {
+				.mobile-only {
 					display: flex;
 					flex-direction: row;
 					justify-content: space-evenly;
-					align-items:center;
-					height:3.6rem;
-					li { font-size:2rem; }
+					align-items: center;
+					height: 3.6rem;
+
+					li {
+						font-size: 2rem;
+					}
 				}
 			}
 		}
 
 		//firma
-		.container-fluid:nth-child(2)
-		{
-			.row
-			{
-				margin-top:1.8rem;
-				.col-12
-				{
-					display:flex;
+		.container-fluid:nth-child(2) {
+			.row {
+				margin-top: 1.8rem;
+
+				.col-12 {
+					display: flex;
 					justify-content: center;
 				}
 			}
@@ -108,14 +106,15 @@ footer
 /***********************/
 /***********************/
 //DESKTOP
-@media only screen and (min-width:992px)
-{
-	footer
-	{
+@media only screen and (min-width:992px) {
+	footer {
 		@include SectionPadding(3.1rem, 0px, 0px, 0px);
-		.card { height:100%; }
-		.containerCreditos
-		{
+
+		.card {
+			height: 100%;
+		}
+
+		.containerCreditos {
 			margin-top: 50px;
 			text-align: center;
 		}

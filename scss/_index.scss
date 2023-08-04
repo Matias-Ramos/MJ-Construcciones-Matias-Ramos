@@ -3,130 +3,156 @@
 /*****************************************/
 
 /*Eliminación de overflow en eje X causado por Bootstrap */
-#seccionPlantel, #seccionPorQueElegirnos, .navBottom
-{
-	.row
-	{
+#seccionPlantel,
+#seccionPorQueElegirnos,
+.navBottom {
+	.row {
 		margin-right: 0;
-		margin-left: 0; 
+		margin-left: 0;
 	}
 }
 
 
-#seccionMision
-{
+#seccionMision {
 	//Gradiente celeste
-	background-image:linear-gradient(310deg, #FFFFFF 50%, #DDF9FF);
-	.row
-	{
+	background-image: linear-gradient(310deg, #FFFFFF 50%, #DDF9FF);
+
+	.row {
+
 		//Texto
-		.col-12:nth-child(1) { text-align: left; }
-		
+		.col-12:nth-child(1) {
+			text-align: left;
+		}
+
 		//Imagen del html reemplazada por background-img de css
-		.col-12:nth-child(2) 
-		{
-			img { visibility: hidden; }
+		.col-12:nth-child(2) {
+			img {
+				visibility: hidden;
+			}
 		}
 	}
 }
 
 
-#seccionPlantel
-{
+#seccionPlantel {
 	border-top: 1px solid black;
 	//Parallax
 	background-image: url("../images/index/plano.jpg"); //imagen parallax plano sin copyright de https://pixabay.com/es/photos/edificio-arquitecto-departamento-6848037/
 	background-size: cover;
-	background-attachment: fixed; 
-	background-position: center; 
-	background-repeat: no-repeat; 
-	.row
-	{
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	.row {
 		//Cuadro blanco dentro del Parallax
-		border:2px solid black;
+		border: 2px solid black;
 		border-radius: 5px;
-		background-color:map-get($coloresPrincipales,$colour-whiteish-cream);
+		background-color: map-get($coloresPrincipales, $colour-whiteish-cream);
 		box-shadow: inset 0px 15px 15px 0 #BFBFBF, inset 0px -12px 22px #BFBFBF;
-		display:flex;
-		align-items:center;
-		@include BoxShadow(1px,4px,5px,#555D66);
-		
+		display: flex;
+		align-items: center;
+		@include BoxShadow(1px, 4px, 5px, #555D66);
+
 		// aumenta tamaño al ">"
-		.col-lg-1 { font-size:3rem; }
+		.col-lg-1 {
+			font-size: 3rem;
+		}
+
+		#popoverContainer {
+			width: 40%;
+
+			.popover {
+				img {
+					width: 35px;
+				}
+			}
+		}
 	}
 
-	@extend .AccordionFormatting;	
-	h2 { font-size:2rem; }
+	@extend .AccordionFormatting;
+
+	h2 {
+		font-size: 2rem;
+	}
 }
 
+#seccionPorQueElegirnos {
+	h3 {
+		font-weight: 600;
+	}
 
-#seccionPorQueElegirnos
-{
-	h3{font-weight: 600;}
 	position:relative;
 	border-top:1px solid lightgrey;
 
-	.container-fluid
-	{
-		padding:0;
-		
+	.container-fluid {
+		padding: 0;
+
 		//row del h2
-		& > .row:first-child
-		{
-			.col-12
-			{
-				padding:0;
+		&>.row:first-child {
+			.col-12 {
+				padding: 0;
 				display: flex;
 				align-items: center;
+
 				h2 {
 					padding: 0px 0px 0px 11px;
-					margin:0;
+					margin: 0;
 				}
 			}
 		}
 
 
 		//centra todo el contenido
-		.row
-		{
+		.row {
 			display: flex;
 			justify-content: center;
 		}
 
-		#containerPqEleg-3caract
-		{
-			margin-top:2rem;
-			padding:0;
-			background-color:#E8E8E8;
-			box-shadow:1px 4px 5px #555d66;
+		#containerPqEleg-3caract {
+			margin-top: 2rem;
+			padding: 0;
+			background-color: #E8E8E8;
+			box-shadow: 1px 4px 5px #555d66;
 			border-radius: 5px;
-			border-top:1px solid lightgrey;
+			border-top: 1px solid lightgrey;
 			z-index: 2; //sube el container por encima de wave 
-			.caracteristica
-			{
-				padding:2rem 1rem;
-				span{display: block;}
-				img { margin-bottom:0.6rem; }
-				&:hover{ background-color:#DEDEDE; }
+
+			.caracteristica {
+				padding: 2rem 1rem;
+
+				span {
+					display: block;
+				}
+
+				img {
+					margin-bottom: 0.6rem;
+				}
+
+				&:hover {
+					background-color: #DEDEDE;
+				}
 			}
 		}
-		.wave 
-		{
-		    position: absolute;
-		    bottom: 0;
-		    left: 0;
-		    width: 100%;
-		    overflow: hidden;
-		    line-height: 0;
-		    transform: rotate(180deg);
-		    .shape-fill { fill: #BAD9DB87; }
-		    svg
-		    {
-			    position: relative;
-			    display: block;
-			    width: calc(192% + 1.3px);
-			    height: 296px;
-			}	
+
+		.wave {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			overflow: hidden;
+			line-height: 0;
+			transform: rotate(180deg);
+
+			.shape-fill {
+				fill: #BAD9DB87;
+			}
+
+			svg {
+				position: relative;
+				display: block;
+				width: calc(192% + 1.3px);
+				height: 296px;
+			}
 		}
 	}
 }
@@ -137,71 +163,66 @@
 /*INICIO MEDIA QUERIES*/
 /*mobile Y tablets*/
 
-@media only screen and (max-width: 992px) 
-{
-	#seccionMision
-	{
-		.row
-		{
+@media only screen and (max-width: 992px) {
+	#seccionMision {
+		.row {
+
 			//Texto
-			.col-12:nth-child(1)
-			{
-				padding-top: 40px ;
+			.col-12:nth-child(1) {
+				padding-top: 40px;
 				padding-bottom: 10px;
 			}
 
 			//Imagen
-			.col-12:nth-child(2)
-			{
-			    clip-path: polygon(0 28%, 100% 0%, 100% 100%, 0% 100%);
-			    background-image: linear-gradient(171deg, rgba(0,0,0,0.9) 16%, rgba(255,255,255,0) 26%), url('../images/index/mision.jpg');
-			    background-size: cover;
-			 
-			    //Solo en mobile?
-			    padding:0;   
+			.col-12:nth-child(2) {
+				clip-path: polygon(0 28%, 100% 0%, 100% 100%, 0% 100%);
+				background-image: linear-gradient(171deg, rgba(0, 0, 0, 0.9) 16%, rgba(255, 255, 255, 0) 26%), url('../images/index/mision.jpg');
+				background-size: cover;
+
+				padding: 0;
 			}
 		}
 	}
 
-	#seccionPlantel
-	{
+	#seccionPlantel {
 		//Parallax
 		@include SectionPadding (4.7rem, 3%, 8.7rem, 3%);
 
-		.row
-		{
+		.row {
+
 			/*Espaciado entre elementos,
 			el selector -not- omite los ">"*/
-			.col-12:not(.rotate-sm-90)
-			{
+			.col-12:not(.rotate-sm-90) {
 				padding: 20px 15px;
 			}
 
 			//Cuadro blanco dentro del Parallax.
 			@include SectionPadding(3.1rem, 5px, 3.1rem, 5px);
-						
+
 			//Flechas
-			.rotate-sm-90 { transform: rotate(90deg); }
+			.rotate-sm-90 {
+				transform: rotate(90deg);
+			}
 		}
 	}
 
-	#seccionPorQueElegirnos
-	{
+	#seccionPorQueElegirnos {
 
 		@include SectionPadding(2.2rem, 1rem, 7.2rem, 1rem);
-		background:linear-gradient(100deg, rgba(0, 188, 212, 0.11) 0%, rgba(255, 255, 0, 0) 100%);
+		background: linear-gradient(100deg, rgba(0, 188, 212, 0.11) 0%, rgba(255, 255, 0, 0) 100%);
 
-		.container-fluid > .row:first-child 
-		{
-			.col-12 { justify-content: center; } //columna del <h2>
+		.container-fluid>.row:first-child {
+			.col-12 {
+				justify-content: center;
+			}
+
+			//columna del <h2>
 		}
 
-		#containerPqEleg-3caract
-		{
-			.caracteristica:nth-child(2)
-			{
-				border-top:1px solid lightgrey;
-				border-bottom:1px solid lightgrey;
+		#containerPqEleg-3caract {
+			.caracteristica:nth-child(2) {
+				border-top: 1px solid lightgrey;
+				border-bottom: 1px solid lightgrey;
 			}
 		}
 	}
@@ -212,58 +233,64 @@
 /***********************/
 /***********************/
 /*Notebooks and Desktops*/
-@media only screen and (min-width: 992px)
-{
+@media only screen and (min-width: 992px) {
 
-	#seccionMision
-	{
-		.row
-		{
+	#seccionMision {
+		.row {
+
 			//presentación escrita
-			.col-12:nth-child(1) { padding-left:3.1em; }
+			.col-12:nth-child(1) {
+				padding-left: 3.1em;
+			}
 
 			//Imagen
-			.col-12:nth-child(2)
-			{
+			.col-12:nth-child(2) {
 				clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0% 100%);
-			    background-image: linear-gradient(114deg, rgba(0,0,0,0.9) 18%, rgba(255,255,255,0) 21%), url('../images/index/mision.jpg');
-			    background-size: cover;
+				background-image: linear-gradient(114deg, rgba(0, 0, 0, 0.9) 18%, rgba(255, 255, 255, 0) 21%), url('../images/index/mision.jpg');
+				background-size: cover;
 			}
 		}
 	}
 
-	#seccionPlantel
-	{
+	#seccionPlantel {
 		//Parallax
 		@include SectionPadding (8.5rem, 2%, 8.5rem, 2%);
-		.row
-		{
+
+		.row {
 			//Cuadro blanco dentro del Parallax.
-			padding:3.1rem 1.5rem;
-			display:flex;
+			padding: 3.1rem 1.5rem;
+			display: flex;
 			justify-content: center;
 		}
 	}
 
-	#seccionPorQueElegirnos
-	{
+	#seccionPorQueElegirnos {
 		@include SectionPadding(2.2rem, 2rem, 10.2rem, 2rem);
-		background:linear-gradient(90deg, rgba(0, 188, 212, 0.08) 0%, rgba(255, 255, 0, 0) 60%);
+		background: linear-gradient(90deg, rgba(0, 188, 212, 0.08) 0%, rgba(255, 255, 0, 0) 60%);
 
-		#containerPqEleg-3caract
-		{
-			.caracteristica:nth-child(2)
-			{
-				border-right:1px solid lightgrey;
-				border-left:1px solid lightgrey;				
+		#containerPqEleg-3caract {
+			.caracteristica:nth-child(2) {
+				border-right: 1px solid lightgrey;
+				border-left: 1px solid lightgrey;
 			}
 		}
 	}
 
-	#index .navBottom
-	{
+	#index .navBottom {
 		@include SectionPadding(5.2rem, 0px, 6.2rem, 0px);
 	}
-	
+
 }
 
+/***********************/
+/***********************/
+/*Desktops extra wide screen*/
+@media only screen and (min-width: 1900px) {
+	#seccionMision .row {
+
+		//Imagen
+		.col-12:nth-child(2) {
+			clip-path: polygon(24% 0, 100% 0%, 100% 100%, 5% 100%);
+		}
+	}
+}
