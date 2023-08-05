@@ -8,33 +8,48 @@
 
 
 <url>
-  <loc>https://mjconstr.000webhostapp.com/</loc>
-  <lastmod>2022-03-21T23:38:57+00:00</lastmod>
+  <loc>https://matias-ramos.github.io/MJ-Construcciones/index.html</loc>
+  <lastmod>2023-08-05T02:36:01+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://mjconstr.000webhostapp.com/index.html</loc>
-  <lastmod>2022-03-21T23:38:57+00:00</lastmod>
+  <loc>https://matias-ramos.github.io/MJ-Construcciones/galeria.html</loc>
+  <lastmod>2023-08-05T02:36:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://mjconstr.000webhostapp.com/galeria.html</loc>
-  <lastmod>2022-03-21T23:38:57+00:00</lastmod>
+  <loc>https://matias-ramos.github.io/MJ-Construcciones/llaveEnMano.html</loc>
+  <lastmod>2023-08-05T02:36:01+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://mjconstr.000webhostapp.com/servicios.html</loc>
-  <lastmod>2022-03-21T23:38:57+00:00</lastmod>
+  <loc>https://matias-ramos.github.io/MJ-Construcciones/remodelaciones.html</loc>
+  <lastmod>2023-08-05T02:36:01+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://mjconstr.000webhostapp.com/faq.html</loc>
-  <lastmod>2022-03-21T23:38:57+00:00</lastmod>
+  <loc>https://matias-ramos.github.io/MJ-Construcciones/piletas.html</loc>
+  <lastmod>2023-08-05T02:36:01+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://mjconstr.000webhostapp.com/proyecto_x.html</loc>
-  <lastmod>2022-03-21T23:38:57+00:00</lastmod>
+  <loc>https://matias-ramos.github.io/MJ-Construcciones/vtaViviendas.html</loc>
+  <lastmod>2023-08-05T02:36:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://matias-ramos.github.io/MJ-Construcciones/faq.html</loc>
+  <lastmod>2023-08-05T02:36:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://matias-ramos.github.io/MJ-Construcciones/proyectos/casa1/proyecto_x.html</loc>
+  <lastmod>2023-08-05T02:36:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://matias-ramos.github.io/MJ-Construcciones/proyectos/casa2/proyecto_x.html</loc>
+  <lastmod>2023-08-05T02:36:01+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
