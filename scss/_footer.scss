@@ -10,6 +10,7 @@ footer {
 	//Créditos
 	.containerCreditos {
 		font-size: 0.8rem;
+		color: map-get($coloresPrincipales, $colour-whiteish-cream);
 	}
 
 	//De acá hasta abajo, es el logo MJ para la apertura del footer.

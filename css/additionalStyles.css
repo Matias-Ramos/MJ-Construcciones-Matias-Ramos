@@ -191,7 +191,8 @@ footer {
   footer .RedesSociales li a {
     border: 1px solid #a8a8a8 !important; }
   footer .containerCreditos {
-    font-size: 0.8rem; }
+    font-size: 0.8rem;
+    color: #EEEEEE; }
   footer .row {
     position: relative;
     z-index: 1; }

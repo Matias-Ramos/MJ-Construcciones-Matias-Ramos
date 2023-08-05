@@ -1,7 +1,7 @@
 {
   "name": "mj-construcciones-node",
   "version": "1.0.0",
-  "description": "proyecto anual coder house",
+  "description": "Portfolio de la constructora MJ construcciones",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
