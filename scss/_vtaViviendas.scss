@@ -142,8 +142,13 @@ $base: 0.6rem;
 
 @media only screen and (max-width: 992px) {
 	#vtaViviendas {
+		#vtaViviendasTxt{
+			width: 100%;
+			margin: 0;
+		}
 		#callToActionVtaViv {
 			height: 10rem;
+			text-align: center;
 
 			button {
 				width: 75%;

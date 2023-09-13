@@ -839,8 +839,12 @@ footer {
 /*INICIO MEDIA QUERIES*/
 /*mobile Y tablets*/
 @media only screen and (max-width: 992px) {
+  #vtaViviendas #vtaViviendasTxt {
+    width: 100%;
+    margin: 0; }
   #vtaViviendas #callToActionVtaViv {
-    height: 10rem; }
+    height: 10rem;
+    text-align: center; }
     #vtaViviendas #callToActionVtaViv button {
       width: 75%;
       margin-top: 1.5rem; } }
