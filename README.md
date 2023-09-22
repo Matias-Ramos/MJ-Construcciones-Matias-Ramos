@@ -37,7 +37,7 @@ AOS: https://michalsnik.github.io/aos/
 
 ### Directory tree
 
-![Directory tree image](directory_tree-1.png)
+![Directory tree](directory_tree-1.png)
 
 ### Code explanation
 
@@ -47,7 +47,7 @@ They do basically the same, which are two things: Insert the form in the DOM, an
 
 The reason for this implementation is to encourage the user to finish the transaction if he already started it.
 
-![FormLogic](js/FormLogic.png)
+![Form logic](FormLogic.png)
 
 
 ## Deployment
