@@ -16,7 +16,7 @@ $(document).ready(function () {
       html: true,
       content: `
         <div class="media">
-          <img src="/images/icons/pointer.svg" alt="Ícono de mouse puntero">
+          <img src="images/icons/pointer.svg" alt="Ícono de mouse puntero">
         </div>`,
       container: "#popoverContainer",
     })

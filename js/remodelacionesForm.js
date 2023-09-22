@@ -6,7 +6,7 @@ function expandirForm() {
     "col-10 col-xs-10 col-sm-10 col-lg-6 col-xl-6"
   );
   formContacto.innerHTML = `
-    <form class="my-4" action="https://formsubmit.co/6dc0d61678dc5bc1af87fd3dee39b791" method="POST">
+    <form class="my-4" action="https://formsubmit.co/mjconstruciones.arg@gmail.com" method="POST">
     
         <!--Título del email que recibe MJ-->
         <input value="Asesoramiento remodelaciones edilicias" class="form-control d-none" name="_subject" id="email_title" rows="1" >

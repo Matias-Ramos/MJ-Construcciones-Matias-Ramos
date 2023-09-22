@@ -1,0 +1,202 @@
+/********* */
+/********* */
+// HTML 
+<div class="row">
+
+	<!-- B&Yellow Guard Band -->
+	<div class="col-12 col-xs-12 col-sm-12 p-0 guardBand">
+		<img src="../../../images/proyectos_realizados/assets/guard-band.png"
+			alt="Banda amarilla y negra para separar contenido">
+	</div>
+
+	<!-- YT Video-->
+	<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+		<img src="../../../images/proyectos_realizados/assets/youtube-logo2.png" alt="Logo de YouTube">
+		<h2>Video del proyecto</h2>
+	</div>
+	<div class="col-12 col-sm-12 col-md-10 col-lg-6 col-xl-6">
+		<iframe src="https://www.youtube.com/embed/jkFKCLmugFs" title="YouTube video player"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen></iframe>
+	</div>
+
+	<!--B&Yellow Guard Band-->
+	<div class="col-12 col-xs-12 col-sm-12 p-0 guardBand">
+		<img src="../../../images/proyectos_realizados/assets/guard-band.png"
+			alt="Banda amarilla y negra para separar contenido">
+	</div>
+</div>
+
+
+/********* */
+/********* */
+// CSS 
+.containerProyectoX {
+		.framesProyectoX {
+		h2 {
+			font-family: 'Poppins', sans-serif;
+		}
+
+		.container-fluid {
+
+			//b&y band, YT video, b&y band
+			.row:first-child {
+				justify-content: center;
+				background-color: #535c68;
+				color: map-get($coloresPrincipales, $colour-whiteish-cream);
+
+				//h2 "Video del proyecto"
+				.col-lg-5 {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					img {
+						margin: 0px 10px;
+					}
+
+					h2 {
+						margin: 0;
+					}
+				}
+
+				//frame YT video
+				div:nth-child(3) {
+					iframe {
+						width: 100%;
+						/*Elimina un espacio en blanco que se forma debajo del renglón, 
+						propio de los display:inline de los iframes.*/
+						display: block;
+					}
+				}
+			}
+
+			//seccion GoogleMaps
+			.row:nth-child(2) {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				.col-xl-5 {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+
+				iframe {
+					width: 100%;
+					height: 400px;
+					/*Elimina un espacio en blanco que se forma debajo del renglón, 
+					propio de los display:inline de los iframes.*/
+					display: block;
+				}
+
+				img {
+					margin-right: 10px;
+				}
+
+				h2 {
+					display: inline-block;
+					margin: 0;
+				}
+
+			}
+		}
+	}
+}
+@media only screen and (min-width: 992px) {
+	.framesProyectoX {
+		margin-top: 4rem;
+
+		.container-fluid {
+
+			//b&y band, YT video, b&y band
+			.row:first-child {
+
+				//h2 "Video del proyecto"
+				.col-lg-5 {
+					padding: 4rem 0px 4rem 0px;
+				}
+
+				//frame YT video
+				div:nth-child(3) {
+					padding: 4rem 0px 4rem 0px;
+
+					iframe {
+						height: 400px;
+					}
+				}
+
+				//agranda la sección de YT
+				.guardBand:nth-child(even) {
+					margin-top: 2rem;
+				}
+
+				.guardBand:nth-child(odd) {
+					margin-bottom: 2rem;
+				}
+			}
+
+			//seccion GoogleMaps
+			.row:nth-child(2) {
+				background-color: white;
+				color: black;
+
+				//iFrame
+				.col-lg-6 {
+					margin: 4rem 0px 4rem 0px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.framesProyectoX {
+		margin-top: 2rem;
+
+		.container-fluid {
+
+			//b&y band, YT video, b&y band
+			.row:first-child {
+
+				//h2 "Video del proyecto"
+				.col-lg-5 {
+					padding: 4rem 0px 3rem 0px;
+				}
+
+				//frame YT video
+				div:nth-child(3) {
+					//padding mobile
+					padding: 0px;
+
+					iframe {
+						//height and margin mobile
+						height: 18.7rem;
+						margin-bottom: 2.5rem;
+					}
+				}
+
+				.guardBand {
+					padding: 0;
+				}
+
+				.guardBand:nth-child(even) {
+					margin-top: 2rem;
+				}
+			}
+
+			//seccion GoogleMaps
+			.row:nth-child(2) {
+				background-color: white;
+
+				.col-12 {
+					margin-bottom: 2rem;
+				}
+
+				padding: 3.2rem 0px 2.2rem 0px;
+			}
+		}
+	}
+}

@@ -1,3 +1,7 @@
+/*************************************** */
+// Activate form
+
+
 function expandirForm() {
   let divAsesoram = document.querySelector(".solicitarAsesoram section");
   let formContacto = document.createElement("div");
@@ -6,7 +10,7 @@ function expandirForm() {
     "col-10 col-xs-10 col-sm-10 col-lg-6 col-xl-6"
   );
   formContacto.innerHTML = `
-    <form class="mb-4" action="https://formsubmit.co/6dc0d61678dc5bc1af87fd3dee39b791" method="POST">
+    <form class="mb-4" action="https://formsubmit.co/mjconstruciones.arg@gmail.com" method="POST">
 
         <!--Título del email que recibe MJ-->
         <input value="Asesoramiento llave en mano" class="form-control d-none" name="_subject" id="email_title" rows="1" >
@@ -62,18 +66,32 @@ function actualizarStorageTrue() {
   sessionStorage.setItem("asesoramLlaveClicked", true);
   abrirSeccionAsesoramiento();
 }
+
+
+
+/*************************************** */
+// Button "Solicitar asesoramiento" clicked
+
+let btnExpandirAsesoram = document.querySelector(".solicitarAsesoram button");
+btnExpandirAsesoram.addEventListener("click", actualizarStorageTrue);
+
+
+/***************************************** */
+// Window on load local storage verification
+
 function checkStorage(formDisplayed) {
   if (formDisplayed === null)
-    //(if btnExpandirAsesoram. nunca clickeado) -> creación status default: "false".
+    // if btnExpandirAsesoram. was never clicked -> set localSt. variable asesoramLlaveClicked to "false".
     sessionStorage.setItem("asesoramLlaveClicked", false);
   else {
     if (formDisplayed == "true")
-      //Si ya fue clickeado, mantener el formulario abierto.
       abrirSeccionAsesoramiento();
   }
 }
-
 window.onload = () =>
-  checkStorage(sessionStorage.getItem("asesoramLlaveClicked"));
-let btnExpandirAsesoram = document.querySelector(".solicitarAsesoram button");
-btnExpandirAsesoram.addEventListener("click", actualizarStorageTrue);
+ checkStorage(sessionStorage.getItem("asesoramLlaveClicked"));
+
+
+
+
+

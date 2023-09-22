@@ -48,20 +48,24 @@ footer {
 
 	//Alineacion de formulario datos personales MJ
 	.footer-item:nth-child(3) {
-		.card{
+		.card {
 			clip-path: polygon(100% 0, 100% 90%, 90% 100%, 0 100%, 0 0);
+
 			.card-body {
 				display: flex;
 				flex-direction: column;
-				.dataPersonalMJ{
+
+				.dataPersonalMJ {
 					padding-left: 0.8rem;
-					.card-text{
+
+					.card-text {
 						display: block;
 						text-align: left;
+
 						&:nth-child(2n) {
-							margin-bottom:1.9rem;
+							margin-bottom: 1.9rem;
 						}
-					}			
+					}
 				}
 			}
 		}
@@ -121,6 +125,7 @@ footer {
 @media only screen and (min-width:992px) {
 	footer {
 		@include SectionPadding(3.1rem, 0px, 0px, 0px);
+
 		.containerCreditos {
 			margin-top: 50px;
 			text-align: center;
